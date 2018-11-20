@@ -247,7 +247,7 @@ Por otro lado, podemos apreciar los diferentes puntos de entrega para cada saga:
 
 * **_The Legend of Zelda:_** *el típico cofre visto en la saga.* 
 
-* **_Minecraft:_** *una mesa de crafting.
+* **_Minecraft:_** una mesa de crafting.
 
 <div id="FlujodejuegoGameLoop"></ol>
 
