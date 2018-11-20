@@ -1,0 +1,390 @@
+<!--TODO -->
+<html>
+
+<head>
+        <link href="style/bootstrap4.min.css" rel="stylesheet">
+        <link href="style/main.css" rel="stylesheet">
+
+        <title >Timmy Is Happy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <script src="unityGame/TemplateData/UnityProgress.js"></script>  
+        <script src="unityGame/Build/UnityLoader.js"></script>
+        <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "unityGame/Build/unityGame.json", {onProgress: UnityProgress});
+        </script>
+</head>
+
+<body style="background-color: rgb(85, 219, 179); ">
+        <section>
+                <div id="title_row" class="row">
+                                <div class="col-12"><h1 class="display-4" style="text-align:center; font-size:5vw;">Timmy is Happy</h1></div>
+                                
+                        <div class="col-4"></div>
+                        <div class=" col-4" style="text-align: center;">
+                                <img src="assets/img/Caca_spritesheet.png" class="img-fluid" style=" height: auto; width: 30%">
+                        </div>
+                        <div class="col-4"></div>
+
+                </div>
+
+
+
+                <div id="subtitle_row" class="row justify-content-center">
+
+                        <div class="col-4 pl-4 " style=" text-align: right;">
+                                <h4 ><a class="navbar-brand js-scroll-trigger " href="#howto_section">How to play </a>
+                                </h4>
+                        </div>
+                        <div class="col-1" style="text-align: center;">
+                                <h3>|</h3>
+                        </div>
+                        <div class="col-4" style="text-align: left;">
+                                <h4><a class="navbar-brand js-scroll-trigger" href="#team_section" >Team</a> </h4>
+                        </div>
+
+
+                </div>
+        </section>
+
+
+        <section id="game_section">
+                <div id="game_row" class="row">
+                        <div class="col-2"></div>
+
+                        <div class="canvasContainer col-8 mb-5 mt-2">
+                                <!--<img src="image_sample.png" class="img-fluid" style=" height: auto; width: 100%">-->
+                                <div class="webgl-content">
+                                        <div id="gameContainer"></div>
+                                        <div class="footer">
+                                          <div class="webgl-logo"></div>
+                                          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+                                          <div class="title">GameMakerMaker</div>
+                                        </div>
+                                      </div>
+                                <!--<canvas id="gameCanvas-hitbox" width="1280" height="720"></canvas> -->
+
+                        </div>
+                        <div class="col-2"></div>
+                </div>
+
+
+        </section>
+
+        <section id="howto_section">
+                <div id="how_row" class="row ">
+                                <div class="col-2"></div>
+                                <div class="col-8 " style="text-align: center; background-color: rgb(194, 194, 194); border-radius: 25px 25px 0px 0px;"> <h1 style="font-size:5vw;" class="display-4">How to play</h1></div>
+                                <div class="col-2"></div>
+               
+                
+                        
+                        <div class="col-2"></div>
+                        <div class="col-8 text-dark" style="margin-bottom: 5%; background-color: rgb(194, 194, 194); border-radius: 0px 0px 25px 25px;">
+                                <p class="text-justify ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                                        viverra venenatis purus in pretium. Maecenas sed consequat mi. Etiam feugiat,
+                                        odio vel consectetur tempor, purus ex tempus odio, ac rutrum lectus turpis sed
+                                        dui. Sed nibh sem, accumsan non felis quis, blandit laoreet sapien. Aenean
+                                        eleifend lorem nec nibh tempor vulputate. In leo nunc, dictum finibus nunc et,
+                                        commodo hendrerit orci. Vivamus et lorem congue, porta nulla id, sagittis dui.
+                                        Nunc viverra lorem et felis interdum ultrices.
+
+                                        Cras odio augue, eleifend ac scelerisque nec, blandit nec magna. Donec arcu
+                                        eros, pulvinar sed sollicitudin nec, posuere ut quam. Praesent venenatis nec
+                                        metus eget auctor. Fusce tincidunt, metus id suscipit facilisis, eros leo
+                                        mattis metus, sit amet aliquam lacus purus at tortor. Quisque euismod finibus
+                                        lorem, at auctor velit porta non. Donec placerat nisi id lectus vulputate, eu
+                                        euismod neque rutrum. Sed a nulla scelerisque, aliquam turpis vitae, volutpat
+                                        erat. Fusce tincidunt sapien sit amet semper convallis. Donec eu massa
+                                        porttitor, ornare nulla ac, molestie libero. Aliquam pellentesque lobortis
+                                        mauris ut eleifend.
+                                        <br>
+                                        <br>
+                                        Suspendisse nibh dolor, mollis a metus id, tristique eleifend leo. Etiam congue
+                                        tincidunt eros sed vestibulum. Suspendisse sit amet dignissim massa, at viverra
+                                        magna. In est quam, dignissim id nibh quis, sollicitudin dapibus mi. Quisque
+                                        euismod varius faucibus. Praesent efficitur, quam id imperdiet bibendum, urna
+                                        tortor convallis turpis, vitae malesuada libero magna vitae erat. Vivamus
+                                        tempus, risus mattis auctor condimentum, mauris nulla fermentum nisi, et
+                                        bibendum metus lectus in lectus. Pellentesque habitant morbi tristique senectus
+                                        et netus et malesuada fames ac turpis egestas. Etiam vitae varius turpis.
+                                        Aliquam erat volutpat. Quisque dictum velit ut arcu sagittis, at pretium metus
+                                        hendrerit. Aliquam commodo diam feugiat mi cursus fringilla.
+
+
+
+                                </p>
+                        </div>
+                        <div class="col-2"></div>
+                </div>
+        </section>
+
+
+        <section id="team_section">
+                <div id="team_row" class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8" style="background-color: rgb(172, 209, 103); border-radius: 25px 25px 0px 0px;">
+                                <h1 class="display-4"style="text-align: center;  font-size:5vw;">Team</h1>
+
+                        </div>
+                        <div class="col-2"></div>
+                </div>
+
+
+                <div class="row">
+                        <div class="col-2"></div>
+
+                        <!--los 6 en fila en XL: -->
+                        <div class="col-8 d-none d-xl-block " style="background-color: rgb(172, 209, 103);  border-radius: 0px 0px 25px 25px; margin-bottom: 1%">
+                                <div class="d-flex flex-row bd-highlight">
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Pablo.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4 >Pablo Rodríguez Vicente</h4>
+                                                        <p>Programmer</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/JoseDaniel.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Jose Daniel Campos</h4>
+                                                        <p>Programmer</p>
+
+                                                </div>
+                                        </div>
+                                        <div class="p-2  bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Raquel.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Raquel Gastón Vicente</h4>
+                                                        <p>Artist</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-2 flex-fill bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Guille.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width:712px; height: auto;">
+                                                        <h4>Guille Amigó Urda</h4>
+                                                        <p>Game Designer / Sound</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-2 flex-fill bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Camu.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Alejandro Camuñas Casas</h4>
+                                                        <p>Game Designer / Marketing</p>
+
+                                                </div>
+                                        </div>
+                                        <div class="p-2 flex-fill bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Andres.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Andrés Felipe García</h4>
+                                                        <p>Web Designer</p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+                        <!-- De 3 en 3 en lg-->
+                        <div class="col-8 d-none d-sm-block d-xl-none " style="background-color: rgb(172, 209, 103);  border-radius: 0px 0px 25px 25px; margin-bottom: 1%">
+                                <div class="d-flex flex-row bd-highlight">
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Pablo.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Pablo Rodríguez Vicente</h4>
+                                                        <p>Programmer</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/JoseDaniel.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Jose Daniel Campos</h4>
+                                                        <p>Programmer</p>
+
+                                                </div>
+                                        </div>
+                                        <div class="p-2  bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Raquel.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Raquel Gastón Vicente</h4>
+                                                        <p>Artist</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="d-flex flex-row bd-highlight">
+
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Guille.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width:712px; height: auto;">
+                                                        <h4>Guille Amigó Urda</h4>
+                                                        <p>Game Designer / Sound</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-2  bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Camu.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Alejandro Camuñas Casas</h4>
+                                                        <p>Game Designer / Marketing</p>
+
+                                                </div>
+                                        </div>
+                                        <div class="p-2  bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Andres.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Andrés Felipe García</h4>
+                                                        <p>Web Designer</p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+
+                        <!-- De 2 en 2 en xs-->
+                        <div class="col-8 d-block d-sm-none " style="background-color: rgb(172, 209, 103);  border-radius: 0px 0px 25px 25px; margin-bottom: 1%">
+                                <div class="d-flex flex-row bd-highlight">
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Pablo.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Pablo Rodríguez Vicente</h4>
+                                                        <p>Programmer</p>
+                                                </div>
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/JoseDaniel.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Jose Daniel Campos</h4>
+                                                        <p>Programmer</p>
+
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="d-flex flex-row bd-highlight">
+                                        <div class="p-2  bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Raquel.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Raquel Gastón Vicente</h4>
+                                                        <p>Artist</p>
+                                                </div>
+                                        </div>
+
+
+                                        <div class="p-2 bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Guille.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width:712px; height: auto;">
+                                                        <h4>Guille Amigó Urda</h4>
+                                                        <p>Game Designer / Sound</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="d-flex flex-row bd-highlight">
+                                        <div class="p-2  bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Camu.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Alejandro Camuñas Casas</h4>
+                                                        <p>Game Designer / Marketing</p>
+
+                                                </div>
+                                        </div>
+                                        <div class="p-2  bd-highlight">
+                                                <div class="box-team">
+                                                        <img src="sources/img/Andres.jpg" alt="" class="rounded-circle img-fluid"
+                                                                style="width: 712px; height: auto;">
+                                                        <h4>Andrés Felipe García</h4>
+                                                        <p>Web Designer</p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+
+                        <div class="col-2"></div>
+                </div>
+
+
+
+
+        </section>
+
+
+        <section id="contact_section">
+                <footer>
+                        <div class="container-fluid">
+                                <div class="row text-light bg-secondary" style="text-align: center;  border-radius: 60px 60px 0px 0px; margin-top: 5%">
+                                        <div class="col-2"></div>
+                                        <div class="col-8" style="text-align: center; ">
+                                                <h1 class="display-4" >Timmy is Happy</h1>
+                                                <p class="PDays">We’ve been working hard to make new games for the past
+                                                        %% days!</p>
+                                                <script>
+                                                        window.addEventListener("load", function () {
+                                                                var html = document.getElementsByClassName("PDays");
+                                                                var text = html[0].innerText;
+                                                                var firstDate = new Date("09/19/2018");
+                                                                var EndDate = new Date();
+                                                                var timeDiff = Math.abs(firstDate.getTime() - EndDate.getTime());
+                                                                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                                                                text = text.replace("%%", diffDays);
+                                                                for (var o of html) {
+                                                                        o.innerText = text;
+                                                                }
+                                                        });
+                                                </script>
+                                                <p>
+                                                        --- <br> Copyright &copy; <a href="https://simplegamecompany.github.io/portfolio/" style="color:bisque">SimpleGameCompany.</a> All rights
+                                                        reserved.
+                                                </p>
+
+                                        </div>
+                                        <div class="col-2"></div>
+
+                                </div>
+                        </div>
+                </footer>
+
+
+        </section>
+
+        <!--Resto de Scripts para Juego-->
+        <script src="js/library/jquery-3.3.1.min.js"></script>
+        <script src="js/library/bootstrap4.min.js"></script>
+        <script src="js/library/LightCanvas.js"></script>
+        <script src="js/placeholder.js"></script>
+
+
+
+
+
+
+
+
+
+
+        <!--Plugins para Scroll-->
+        <script src="js/library/jquery-easing/jquery.easing.min.js"></script>
+
+        <!--Script para que el scroll funcione-->
+        <script src="js/library/creative.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
