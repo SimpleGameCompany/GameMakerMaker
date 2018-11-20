@@ -7,11 +7,7 @@
 
         <title >Timmy Is Happy</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <script src="unityGame/TemplateData/UnityProgress.js"></script>  
-        <script src="unityGame/Build/UnityLoader.js"></script>
-        <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "unityGame/Build/unityGame.json", {onProgress: UnityProgress});
-        </script>
+       
 </head>
 
 <body style="background-color: rgb(85, 219, 179); ">
@@ -379,7 +375,11 @@
 
         <!--Script para que el scroll funcione-->
         <script src="js/library/creative.js"></script>
-
+        <script src="unityGame/TemplateData/UnityProgress.js"></script>  
+        <script src="unityGame/Build/UnityLoader.js"></script>
+        <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "unityGame/Build/unityGame.json", {onProgress: UnityProgress});
+        </script>
 
 
 
