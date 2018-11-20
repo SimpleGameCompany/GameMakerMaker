@@ -35,7 +35,7 @@
 
 # **1. Introducción**
 
-*Game Maker Maker***_ _**es un videojuego para **navegador y dispositivos móviles, con estética 3D, desarrollado mediante el motor de videojuegos Unity. **En este documento se van a plasmar los aspectos relacionados con el diseño fundamental del videojuego, de forma que nos sirva como carta de presentación ante futuros colaboradores.
+*Game Maker Maker* es un videojuego para *navegador y dispositivos móviles*, con estética 3D, desarrollado mediante el motor de videojuegos Unity. En este documento se van a plasmar los aspectos relacionados con el diseño fundamental del videojuego, de forma que nos sirva como carta de presentación ante futuros colaboradores.
 
 <div id="Concepto"></ol>
 
@@ -43,7 +43,7 @@
 
 *Todos conocemos las setas de Super Mario, las Pokebolas de Pokémon, o las frutas del Pac-Man, pero ¿de dónde vienen? En Game Maker Maker, ¡tenemos la respuesta! ¡Ponte en  los zapatos de un empleado de la fábrica mundial de props, y prepárate para dar vida a todas esas sagas que tanto adoras! Pero, cuidado: no va a ser tarea fácil. Necesitarás mucha rapidez y coordinación. ¿Estarás a la altura del reto que supone ser un verdadero creador de videojuegos?*
 
-El juego nos pone en los zapatos de un empleado de una** fábrica de "props" de videojuegos,** es decir, de todos aquellos objetos (decorativos o no) que se utilizan para su desarrollo (ejemplo: una seta de *Super Mario*, una mesa, un arma, etc.).  Así, la intención del juego será proponer una idea graciosa y atractiva, en la que muchos jugadores puedan reconocer guiños a sus sagas favoritas, al mismo tiempo que experimentan una jugabilidad muy similar a la de juegos como *Overcooked!.*
+El juego nos pone en los zapatos de un empleado de una **fábrica de "props" de videojuegos,** es decir, de todos aquellos objetos (decorativos o no) que se utilizan para su desarrollo (ejemplo: una seta de *Super Mario*, una mesa, un arma, etc.).  Así, la intención del juego será proponer una idea graciosa y atractiva, en la que muchos jugadores puedan reconocer guiños a sus sagas favoritas, al mismo tiempo que experimentan una jugabilidad muy similar a la de juegos como *Overcooked!.*
 
 Comenzaremos en un pequeño escenario, visto desde arriba, donde tendremos una **cinta transportadora** (por la que van llegando objetos para ser tratados), varios **puntos de preparación** para llevar a cabo el tratamiento, y mesas vacías para depositar objetos temporalmente. De igual manera, se dispondrán de un par de **puntos de entrega** de props, dependiendo del videojuego al que pertenezcan.
 
@@ -66,7 +66,7 @@ El diseño de los puntos de preparación será lo más intuitivo posible para pe
 
 * **Jugabilidad extensible**: sistema de niveles y flujo de juego acorde a ellos, lo cual otorga al juego de alta escalabilidad para añadir contenido en un futuro.
 
-* **Temática divertida: **la naturaleza de la premisa del juego, así como de la sencillez de sus mecánicas, dan lugar a una dinámica final que busca provocar la sonrisa en el jugador, al mismo tiempo que atraparle en su jugabilidad.
+* **Temática divertida:**la naturaleza de la premisa del juego, así como de la sencillez de sus mecánicas, dan lugar a una dinámica final que busca provocar la sonrisa en el jugador, al mismo tiempo que atraparle en su jugabilidad.
 
 <div id="Genero"></ol>
 
@@ -98,11 +98,11 @@ Debido a que el juego está planteado por niveles, dispondrá de una gran escala
 
 Los niveles serán realizados de forma progresiva y tendrán distintos niveles de dificultad. Las características principales de los niveles serán:
 
-* **Dificultad incremental: **los niveles avanzados presentarán un reto mayor, debido a un número incrementado de elementos que gestionar, y al propio diseño del nivel.
+* **Dificultad incremental:**los niveles avanzados presentarán un reto mayor, debido a un número incrementado de elementos que gestionar, y al propio diseño del nivel.
 
-* **Diferentes props: **Cada nivel dispondrá de un número de props diferente. De esta manera, por ejemplo, el primer nivel tendrá 4 props, de 2 juegos diferentes, y el segundo, 8 props, de 4 juegos diferentes.
+* **Diferentes props:**Cada nivel dispondrá de un número de props diferente. De esta manera, por ejemplo, el primer nivel tendrá 4 props, de 2 juegos diferentes, y el segundo, 8 props, de 4 juegos diferentes.
 
-* **Controles "Point & Click": **los controles, como se ha mencionado anteriormente, junto a la cámara aérea, permitirán visualizar y manipular el nivel en su completitud, posibilitando al usuario gestionar todos los props, puntos de interacción y demás elementos del escenario.
+* **Controles "Point & Click":**los controles, como se ha mencionado anteriormente, junto a la cámara aérea, permitirán visualizar y manipular el nivel en su completitud, posibilitando al usuario gestionar todos los props, puntos de interacción y demás elementos del escenario.
 
 <div id="Propositoypublicoobjetivo"></ol>
 
@@ -127,7 +127,7 @@ En esta sección, trataremos todas las cuestiones referentes al funcionamiento b
 
 ## **2.1. Jugabilidad**
 
-* **Niveles:** los niveles del juego consistirán en una planta de montaje de la fábrica de props, con cintas transportadoras, elementos de almacenaje y elaboración, etc. En cada nivel, dispondremos de un **número determinado de props que deberemos completar para superarlo, con un número específico de vidas. **Si un prop no es recogido de la cinta transportadora (caerá a la papelera situada al final de la misma), se perderá una vida.
+* **Niveles:** los niveles del juego consistirán en una planta de montaje de la fábrica de props, con cintas transportadoras, elementos de almacenaje y elaboración, etc. En cada nivel, dispondremos de un **número determinado de props que deberemos completar para superarlo, con un número específico de vidas.** Si un prop no es recogido de la cinta transportadora (caerá a la papelera situada al final de la misma), se perderá una vida.
 
 * **Dificultad:** la dificultad irá aumentando con cada nivel, de forma que un nivel más avanzado tendrá una distribución más compleja y complicada de navegar, un mayor número de props y sagas a las que pertenecen, y más complejidad en las "recetas" de éstos.
 
@@ -231,19 +231,19 @@ A continuación se concretan los diferentes puntos de elaboración de props:
 
 * **Texturizador:** otorga las texturas necesarias al prop, por lo que es bastante utilizado. Este punto de interacción será el más crítico debido al número de assets que deben introducirse aquí y por ello habrá varias unidades en el juego.
 
-* **Fundición de metales: **utilizado para crear todos aquellos objetos metálicos, que necesitan un material especialmente resistente.
+* **Fundición de metales:**utilizado para crear todos aquellos objetos metálicos, que necesitan un material especialmente resistente.
 
-* **Caldero mágico: **utilizado para crear objetos mágicos o especiales.
+* **Caldero mágico:**utilizado para crear objetos mágicos o especiales.
 
 Por otro lado, podemos apreciar los diferentes puntos de entrega para cada saga:
 
-* **_Super Mario Bros: _**una tubería verde, típica de este videojuego.
+* **_Super Mario Bros:_**una tubería verde, típica de este videojuego.
 
-* **_Pac-Man: _**un "comecocos" gigante, que engulle los props entregados.
+* **_Pac-Man:_**un "comecocos" gigante, que engulle los props entregados.
 
 * **_Portal:_*** *un portal naranja, a no se sabe muy bien dónde.
 
-* **_Pokémon: _**el clásico PC de Bill.
+* **_Pokémon:_**el clásico PC de Bill.
 
 * **_The Legend of Zelda:_*** *el típico cofre visto en la saga.* *
 
@@ -258,7 +258,7 @@ Por otro lado, podemos apreciar los diferentes puntos de entrega para cada saga:
 
 El Game Loop estándar de una partida consistirá en lo siguiente:
 
-* Al comenzar la partida, **se visualizará una sola vez el libro de recetas, **para que el jugador pueda apreciar en un solo vistazo qué props deberá elaborar y cómo es el proceso. Si el jugador se toma la molestia de memorizar los pasos, será recompensado al resultar más fácil la partida.
+* Al comenzar la partida, **se visualizará una sola vez el libro de recetas,**para que el jugador pueda apreciar en un solo vistazo qué props deberá elaborar y cómo es el proceso. Si el jugador se toma la molestia de memorizar los pasos, será recompensado al resultar más fácil la partida.
 
 * Una vez cerrado el libro de recetas, comienza la partida como tal. Continuamente **van llegando props por la cinta transportadora** del escenario. **Si alguno de ellos no es recogido por el jugador, **sino que llega a la papelera situada al final de la cinta, **el jugador perderá una vida.**
 
@@ -266,7 +266,7 @@ El Game Loop estándar de una partida consistirá en lo siguiente:
 
 ![image alt text](assets/GDD/image_1.png)
 
-* La mecánica principal consistirá en que el jugador vaya a la cinta a recoger un prop, y de ahí lo lleve al **punto de preparación **que corresponda según su receta. Una vez se esté preparando, deberá estar atento de **no dejarlo ahí demasiado tiempo, pues el punto se sobrecargará, **quedando inutilizado unos instantes y perdiendo el prop.
+* La mecánica principal consistirá en que el jugador vaya a la cinta a recoger un prop, y de ahí lo lleve al **punto de preparación** que corresponda según su receta. Una vez se esté preparando, deberá estar atento de **no dejarlo ahí demasiado tiempo, pues el punto se sobrecargará,** quedando inutilizado unos instantes y perdiendo el prop.
 
 ![image alt text](assets/GDD/image_2.png)
 
@@ -284,7 +284,7 @@ El Game Loop estándar de una partida consistirá en lo siguiente:
 
 ![image alt text](assets/GDD/image_8.png)
 
-* Una vez se haya completado el proceso de preparación de un prop, pasando por todos los puntos necesarios, se deberá recoger y llevar al **punto de entrega de la saga a la que pertenezca. **Si se deposita en un punto de entrega erróneo, éste quedará inutilizado unos instantes, y se perderá el prop.
+* Una vez se haya completado el proceso de preparación de un prop, pasando por todos los puntos necesarios, se deberá recoger y llevar al **punto de entrega de la saga a la que pertenezca.** Si se deposita en un punto de entrega erróneo, éste quedará inutilizado unos instantes, y se perderá el prop.
 
 ![image alt text](assets/GDD/image_9.png)
 
@@ -292,9 +292,9 @@ El Game Loop estándar de una partida consistirá en lo siguiente:
 
 ![image alt text](assets/GDD/image_11.png)
 
-* En caso de que el jugador no recuerde o no sea capaz de deducir correctamente cuál es el proceso de preparación de un prop, es decir, su receta, **podrá consultar el libro visto al empezar la partida en algún punto del escenario, **aunque ir hasta allí, y visualizarlo, implica perder tiempo mientras aparecen props por la cinta, incentivando así al jugador a intentar memorizar o intuir las recetas en lugar de consultarlas continuamente.
+* En caso de que el jugador no recuerde o no sea capaz de deducir correctamente cuál es el proceso de preparación de un prop, es decir, su receta, **podrá consultar el libro visto al empezar la partida en algún punto del escenario,** aunque ir hasta allí, y visualizarlo, implica perder tiempo mientras aparecen props por la cinta, incentivando así al jugador a intentar memorizar o intuir las recetas en lugar de consultarlas continuamente.
 
-* Una vez se hayan** entregado el número de props necesario, se superará el nivel satisfactoriamente, **pudiendo visualizar la puntuación obtenida y pasando al siguiente nivel, si procede. Si, por el contrario, no es capaz de elaborar el número de props requerido, sino que en su lugar **pierde todas las vidas de las que dispone, perderá la partida, **teniendo que reiniciar el nivel.
+* Una vez se hayan **entregado el número de props necesario, se superará el nivel satisfactoriamente,** pudiendo visualizar la puntuación obtenida y pasando al siguiente nivel, si procede. Si, por el contrario, no es capaz de elaborar el número de props requerido, sino que en su lugar **pierde todas las vidas de las que dispone, perderá la partida,** teniendo que reiniciar el nivel.
 
 <div id="Camara"></ol>
 
@@ -308,7 +308,7 @@ La cámara del juego será **fija o estática, con una perspectiva aérea,** cas
 
 ## **2.6. Controles**
 
-Los controles consistirán únicamente del **click o pulsación sobre la región de la pantalla, propios del tipo "Point & Click".** Por lo tanto, pulsar sobre un lugar, el personaje se desplazará hacia dicho punto. Si pulsamos sobre un objeto, el personaje se desplazará hasta él, y posteriormente lo recogerá o realizará la acción correspondiente. Para mostrar visualmente qué es lo que va a hacer el personaje,** se mostrará un pequeño indicador visual sobre el punto **del mapa o el objeto determinado.
+Los controles consistirán únicamente del **click o pulsación sobre la región de la pantalla, propios del tipo "Point & Click".** Por lo tanto, pulsar sobre un lugar, el personaje se desplazará hacia dicho punto. Si pulsamos sobre un objeto, el personaje se desplazará hasta él, y posteriormente lo recogerá o realizará la acción correspondiente. Para mostrar visualmente qué es lo que va a hacer el personaje, **se mostrará un pequeño indicador visual sobre el punto** del mapa o el objeto determinado.
 
 Cabe mencionar que, si mientras se está desplazando o realizando una acción, recibe otra orden (hacemos click en otro punto de la pantalla), **se anulará la acción anterior, dando prioridad a la nueva.**
 
@@ -323,11 +323,11 @@ Un ejemplo de diseño de nivel esquemático sería el siguiente:
 
 ![image alt text](assets/GDD/image_12.png)
 
-Los mapas tendrán un número de **puntos de preparación ("hornos") **distintos repartidos por el escenario, a la vez que una serie **puntos de entrega (“tuberías”), **que serán referentes a su respectivo juego. 
+Los mapas tendrán un número de **puntos de preparación ("hornos")** distintos repartidos por el escenario, a la vez que una serie **puntos de entrega (“tuberías”),** que serán referentes a su respectivo juego. 
 
-El jugador podrá llevar los props que **salgan de la cinta transportadora a una de las mesas o bien a los "hornos", y una vez preparados, a las “tuberías”. **
+El jugador podrá llevar los props que **salgan de la cinta transportadora a una de las mesas o bien a los "hornos", y una vez preparados, a las “tuberías”.**
 
-En todo momento podrá consultar el** libro de recetas o combinaciones, **colocado en un lugar generalmente alejado de la acción.
+En todo momento podrá consultar el **libro de recetas o combinaciones,** colocado en un lugar generalmente alejado de la acción.
 
 <div id="inInterfaz"></ol>
 
