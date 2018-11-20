@@ -1,4 +1,4 @@
-![image alt text](assets/GDD/title.png)
+![image alt text](assets/GDD/Title.png)
 
 # Game Maker Maker
 
