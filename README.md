@@ -1,3 +1,5 @@
+![image alt text](assets/GDD/title.png)
+
 # Game Maker Maker
 
 ## Game Design Document
