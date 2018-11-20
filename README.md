@@ -66,7 +66,7 @@ El diseño de los puntos de preparación será lo más intuitivo posible para pe
 
 * **Jugabilidad extensible**: sistema de niveles y flujo de juego acorde a ellos, lo cual otorga al juego de alta escalabilidad para añadir contenido en un futuro.
 
-* **Temática divertida:**la naturaleza de la premisa del juego, así como de la sencillez de sus mecánicas, dan lugar a una dinámica final que busca provocar la sonrisa en el jugador, al mismo tiempo que atraparle en su jugabilidad.
+* **Temática divertida:** la naturaleza de la premisa del juego, así como de la sencillez de sus mecánicas, dan lugar a una dinámica final que busca provocar la sonrisa en el jugador, al mismo tiempo que atraparle en su jugabilidad.
 
 <div id="Genero"></ol>
 
@@ -98,11 +98,11 @@ Debido a que el juego está planteado por niveles, dispondrá de una gran escala
 
 Los niveles serán realizados de forma progresiva y tendrán distintos niveles de dificultad. Las características principales de los niveles serán:
 
-* **Dificultad incremental:**los niveles avanzados presentarán un reto mayor, debido a un número incrementado de elementos que gestionar, y al propio diseño del nivel.
+* **Dificultad incremental:** los niveles avanzados presentarán un reto mayor, debido a un número incrementado de elementos que gestionar, y al propio diseño del nivel.
 
-* **Diferentes props:**Cada nivel dispondrá de un número de props diferente. De esta manera, por ejemplo, el primer nivel tendrá 4 props, de 2 juegos diferentes, y el segundo, 8 props, de 4 juegos diferentes.
+* **Diferentes props:** Cada nivel dispondrá de un número de props diferente. De esta manera, por ejemplo, el primer nivel tendrá 4 props, de 2 juegos diferentes, y el segundo, 8 props, de 4 juegos diferentes.
 
-* **Controles "Point & Click":**los controles, como se ha mencionado anteriormente, junto a la cámara aérea, permitirán visualizar y manipular el nivel en su completitud, posibilitando al usuario gestionar todos los props, puntos de interacción y demás elementos del escenario.
+* **Controles "Point & Click":** los controles, como se ha mencionado anteriormente, junto a la cámara aérea, permitirán visualizar y manipular el nivel en su completitud, posibilitando al usuario gestionar todos los props, puntos de interacción y demás elementos del escenario.
 
 <div id="Propositoypublicoobjetivo"></ol>
 
@@ -231,23 +231,23 @@ A continuación se concretan los diferentes puntos de elaboración de props:
 
 * **Texturizador:** otorga las texturas necesarias al prop, por lo que es bastante utilizado. Este punto de interacción será el más crítico debido al número de assets que deben introducirse aquí y por ello habrá varias unidades en el juego.
 
-* **Fundición de metales:**utilizado para crear todos aquellos objetos metálicos, que necesitan un material especialmente resistente.
+* **Fundición de metales:** utilizado para crear todos aquellos objetos metálicos, que necesitan un material especialmente resistente.
 
-* **Caldero mágico:**utilizado para crear objetos mágicos o especiales.
+* **Caldero mágico:** utilizado para crear objetos mágicos o especiales.
 
 Por otro lado, podemos apreciar los diferentes puntos de entrega para cada saga:
 
-* **_Super Mario Bros:_**una tubería verde, típica de este videojuego.
+* **_Super Mario Bros:_** una tubería verde, típica de este videojuego.
 
-* **_Pac-Man:_**un "comecocos" gigante, que engulle los props entregados.
+* **_Pac-Man:_** un "comecocos" gigante, que engulle los props entregados.
 
-* **_Portal:_*** *un portal naranja, a no se sabe muy bien dónde.
+* **_Portal:_** un portal naranja, a no se sabe muy bien dónde.
 
-* **_Pokémon:_**el clásico PC de Bill.
+* **_Pokémon:_** el clásico PC de Bill.
 
-* **_The Legend of Zelda:_*** *el típico cofre visto en la saga.* *
+* **_The Legend of Zelda:_** *el típico cofre visto en la saga.* 
 
-* **_Minecraft:_*** *una mesa de crafting.
+* **_Minecraft:_** *una mesa de crafting.
 
 <div id="FlujodejuegoGameLoop"></ol>
 
@@ -258,9 +258,9 @@ Por otro lado, podemos apreciar los diferentes puntos de entrega para cada saga:
 
 El Game Loop estándar de una partida consistirá en lo siguiente:
 
-* Al comenzar la partida, **se visualizará una sola vez el libro de recetas,**para que el jugador pueda apreciar en un solo vistazo qué props deberá elaborar y cómo es el proceso. Si el jugador se toma la molestia de memorizar los pasos, será recompensado al resultar más fácil la partida.
+* Al comenzar la partida, **se visualizará una sola vez el libro de recetas,** para que el jugador pueda apreciar en un solo vistazo qué props deberá elaborar y cómo es el proceso. Si el jugador se toma la molestia de memorizar los pasos, será recompensado al resultar más fácil la partida.
 
-* Una vez cerrado el libro de recetas, comienza la partida como tal. Continuamente **van llegando props por la cinta transportadora** del escenario. **Si alguno de ellos no es recogido por el jugador, **sino que llega a la papelera situada al final de la cinta, **el jugador perderá una vida.**
+* Una vez cerrado el libro de recetas, comienza la partida como tal. Continuamente **van llegando props por la cinta transportadora** del escenario. **Si alguno de ellos no es recogido por el jugador,** sino que llega a la papelera situada al final de la cinta, **el jugador perderá una vida.**
 
 ![image alt text](assets/GDD/image_0.png)
 
