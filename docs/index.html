@@ -4,7 +4,8 @@
 <head>
         <link href="style/bootstrap4.min.css" rel="stylesheet">
         <link href="style/main.css" rel="stylesheet">
-
+        <link rel="shortcut icon" href="unityGame/TemplateData/favicon.ico">
+        <link rel="stylesheet" href="unityGame/TemplateData/style.css">
         <title >Game Maker Maker</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
        
@@ -50,7 +51,7 @@
                         <div class="canvasContainer col-8 mb-5 mt-2">
                                 <!--<img src="image_sample.png" class="img-fluid" style=" height: auto; width: 100%">-->
                                 <div class="webgl-content" >
-                                        <div id="gameContainer" style="width: 100%; height: auto"></div>
+                                        <div id="gameContainer"></div>
                                         <div class="footer">
                                           <div class="webgl-logo"></div>
                                           <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
@@ -375,6 +376,7 @@
 
         <!--Script para que el scroll funcione-->
         <script src="js/library/creative.js"></script>
+        <!--Scripst de Unity-->
         <script src="unityGame/TemplateData/UnityProgress.js"></script>  
         <script src="unityGame/Build/UnityLoader.js"></script>
         <script>
