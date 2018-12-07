@@ -1,4 +1,32 @@
+@font-face {
+    font-family: "dumb3d";
+    src: url("../fonts/3Dumb.ttf");
+}
+
+#back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:  rgba(70, 70, 70, 0.712); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    /*transition: background 0.5s;*/
+  }
+
+#back-to-top:hover {
+    background-color:  rgba(0, 0, 0, 0.712); /* Add a dark-grey background on hover */
+}
+
 canvas {
+    top: 0;
+    left: 0;
     width: 100%;
     height: auto;
 }
@@ -9,24 +37,91 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 8;  
+    -webkit-user-drag: none;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: left;
+    -webkit-user-drag: none;
+}
+.text{
+    position: absolute;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    
+    
+}
+.scoreText{
+    background: #000000AA;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    border-left-width: 0.7vw;
+    border-right-width: 0.7vw;
+}
+.divgamecontainer { 
+    
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 2;  
+}
+.divgamecolumm { 
+    -webkit-user-drag: none;
+    position: absolute;
+    z-index: 10;  
+}
+.inputClass{
+    position: absolute;
+    box-sizing: content-box;
+    text-align: center;
+    z-index: 10;
+    border: 2px solid black;
+    border-radius: 80px;
+}
+#imagenesToLoad{
+    display: none;
+}
+.background-responsive { 
+    
+    position: absolute;
+    z-index: -9;  
+}
+#col_div_border_game_01{
+    padding :0;
+}
+#col_div_border_game_02{
+    padding :0;
+}
+
+.display-4 {
+    font-size: 30px;
 }
 
 .canvasContainer {
     position: relative;
     padding: 0px;
+    border-top:2px solid #000000;
+    border-bottom: 2px solid #000000;
 }
 
 #gameCanvas {
     position: relative;
-    z-index: 1;
+    z-index: 5;
 }
 
 #gameCanvas-hitbox {
-    position: relative;
-    z-index: 0;
+    position: absolute;
+    z-index: -1;
 }
-
 
 .box-team img {
 	margin-bottom: 30px;
@@ -35,14 +130,170 @@ canvas {
 .box-team, .box-team img {
     text-align: center;
 }
+
 .box-team img {
     float: none;
     margin:0 auto;
     padding: 10%
 }
+
 .box-team {
     margin-bottom: 30px;
 }
-html{
+
+.row-bottom-team {
+    margin-bottom: 2%
+}
+
+.team-color {
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
+.row-top-howto {
+    padding-bottom: 2%;
+}
+
+.howto-color {
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
+.row-bottom-howto {
+    margin-bottom: 2%;
+}
+
+.responsive-title {
+    font-family: dumb3d;
+    text-align: center;
+    font-size:6.5vw;
+    padding-top: 2%;
+}
+
+.title-section{
+    font-family: dumb3d;
+    text-align: center;
+    font-size:6.5vw;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+
+#header_title {
+    font-family: dumb3d;
+    text-align: center;
+    font-size: 6vw;
+    padding-bottom: 1%;
+}
+
+.merchandising-color {
+    background-color:rgba(0, 0, 0, 0.712);
+}
+
+.top-row-rounded {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.bottom-row-rounded{
+    border-radius: 0px 0px 25px 25px;
+    padding-bottom: 2%;
+}
+
+.futer {
+    background-color:rgba(0, 0, 0, 0.712);
+    border-radius: 0px 0px 0px 0px; margin-top: 5%
+}
+
+.center-text {
+    text-align: center; 
+}
+
+.all-rounded {
+    border-radius: 25px 25px 25px 25px;
+}
+
+.ocultar {
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    .header_sub {
+      font-size: 30px;
+    }
+
+    .text-justify {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .header_sub {
+      font-size: 3vw;
+    }
+
+    .text-justify {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .text-justify {
+        font-size:18px;
+    }
+
+    .teamname{
+        font-size: 18px;
+    }
+
+    .teamRole {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .text-justify {
+        font-size:12px;
+    }
+
+    .teamname{
+        font-size: 12px;
+    }
+
+    .teamRole {
+        font-size: 10px;
+    }
+}
+
+html {
     overflow-x: hidden;
+}
+
+.title-color {
+    color:rgb(0, 0, 0);
+    text-shadow: 0 0 30px rgb(0, 5, 29);
+}
+
+.header_sub{
+    text-shadow: 0 0 2px rgb(0, 5, 29);
+}
+
+.title-footer{
+    padding-top: 1%;
+}
+
+.teamImage{
+    width: 712px; height: auto;
+}
+
+body {
+    background:  #92b8f0;
+    /*background: -moz-linear-gradient(top,   #92b8f0 0%,  #5677a8 100%);
+    background: -webkit-linear-gradient(top,  #92b8f0 0%, #5677a8 100%);
+    background: linear-gradient(to bottom,  #92b8f0 0%, #5677a8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #5677a8', endColorstr='#7db9e8',GradientType=0 );*/
+    
+    /*background-position: center;  Center the image */
+    /* background-repeat: no-repeat; Do not repeat the image */
+    /*background-attachment: fixed;*/
+    /*background-size: cover;  Resize the background image to cover the entire container */
+    /*background-image: url("../assets/img/Web/background.png");*/
 }
