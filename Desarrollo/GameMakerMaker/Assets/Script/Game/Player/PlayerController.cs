@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 
     NavMeshAgent agent;
     Interactuable actualTask;
+    [HideInInspector]
+    public  PropBehaviour PickedObjet;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
 	}
