@@ -3,8 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PropBehaviour : Interactuable {
+    public enum PropWorld
+    {
+        Mario,
+        Portal,
+        Pacman
+    }
 
-
+    //Esto realmente no se donde meterlo jajaja
+    [SerializeField]
+    public PropWorld world;
     public Recipe recipe;
     public override void PostAction(PlayerController player)
     {
@@ -22,6 +30,7 @@ public class PropBehaviour : Interactuable {
         else
             return false;
     }
+
 
 
     private void Start()

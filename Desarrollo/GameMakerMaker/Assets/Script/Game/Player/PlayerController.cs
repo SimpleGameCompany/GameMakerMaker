@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     Interactuable actualTask;
     [HideInInspector]
     public  PropBehaviour PickedObjet;
+    private NavMeshHit navMeshHit;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
 	}
@@ -28,9 +29,12 @@ public class PlayerController : MonoBehaviour {
                 {
                     actualTask = inter;
                     StopCoroutine(GoToPoint());
-                    if (inter.PreAction(this)) {              
-                        agent.SetDestination(hit.point);                      
-                        StartCoroutine(GoToPoint());
+                    if (inter.PreAction(this)) {
+                        if (NavMesh.SamplePosition(hit.point, out navMeshHit, 2, NavMesh.AllAreas))
+                        {
+                            agent.SetDestination(navMeshHit.position);
+                            StartCoroutine(GoToPoint());
+                        }
                     }
                 }
             }

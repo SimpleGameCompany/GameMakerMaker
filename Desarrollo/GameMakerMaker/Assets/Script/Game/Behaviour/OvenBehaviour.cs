@@ -45,7 +45,8 @@ public class OvenBehaviour : Interactuable
         switch (ovenState)
         {
             case State.Empty:
-                return true;
+
+                return player.PickedObjet == null;
                 break;
             case State.Coocking:
                 return false;
@@ -75,6 +76,7 @@ public class OvenBehaviour : Interactuable
                 CookingProp = player.PickedObjet;
                 player.PickedObjet = null;
                 CookingProp.transform.SetParent(transform);
+                CookingProp.transform.localPosition = Vector3.zero;
                 StartCoroutine(Cooking());
                 break;
             case State.Coocking:
@@ -83,9 +85,9 @@ public class OvenBehaviour : Interactuable
                 player.PickedObjet = CookingProp;
                 CookingProp.transform.SetParent(player.transform);
                 CookingProp = null;
+                player.PickedObjet.transform.localPosition = Vector3.zero;
                 ovenState = State.Empty;
-                StopCoroutine(Cooking());
-                
+                StopCoroutine(Cooking());              
                 break;
             case State.Wasted:
                 break;
@@ -98,6 +100,7 @@ public class OvenBehaviour : Interactuable
     IEnumerator Cooking()
     {
         OvenInstruction task = (from x in CookingProp.recipe.Tasks where x.Type == this.Type && !x.Complete  select x ).FirstOrDefault();
+        Debug.Log(task.Complete);
         if (task != null) {
             ovenState = State.Coocking;
             while (time < task.Time)

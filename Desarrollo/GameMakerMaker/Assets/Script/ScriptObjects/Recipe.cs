@@ -5,4 +5,5 @@ using UnityEngine;
 public class Recipe : ScriptableObject {
 
     public OvenInstruction[] Tasks;
+    public int score;
 }
