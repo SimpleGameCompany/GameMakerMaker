@@ -1,14 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
+using UnityEngine.UI;
+using TMPro;
+
 public class OvenBehaviour : Interactuable
 {
-
+    public Image progress;
     // Use this for initialization
 
     PropBehaviour CookingProp;
-    WaitForEndOfFrame waiter;
+    WaitForEndOfFrame wait;
     float time = 0;
+    public float brokenTime;
+    float currentBrokenTime = 0;
+    public TextMeshProUGUI textDebug;
+
     public enum OvenType
     {
         Magic,
@@ -30,7 +37,7 @@ public class OvenBehaviour : Interactuable
     public OvenType Type;
     void Start()
     {
-        waiter = new WaitForEndOfFrame();
+        wait = new WaitForEndOfFrame();
         ovenState = State.Empty;
     }
 
@@ -45,24 +52,17 @@ public class OvenBehaviour : Interactuable
         switch (ovenState)
         {
             case State.Empty:
-
-                return player.PickedObjet == null;
-                break;
+                return player.PickedObjet != null;
             case State.Coocking:
                 return false;
-                break;
             case State.Prepare:
                 return true;
-                break;
             case State.Wasted:
                 return false;
-                break;
             case State.Broken:
                 return false;
-                break;
             default:
                 return true;
-                break;
                
         }
         
@@ -86,6 +86,10 @@ public class OvenBehaviour : Interactuable
                 CookingProp.transform.SetParent(player.transform);
                 CookingProp = null;
                 player.PickedObjet.transform.localPosition = Vector3.zero;
+                progress.fillAmount = 0;
+                progress.color = new Color(1, 1, 1);
+                time = 0;
+                textDebug.text = "";
                 ovenState = State.Empty;
                 StopCoroutine(Cooking());              
                 break;
@@ -100,22 +104,37 @@ public class OvenBehaviour : Interactuable
     IEnumerator Cooking()
     {
         OvenInstruction task = (from x in CookingProp.recipe.Tasks where x.Type == this.Type && !x.Complete  select x ).FirstOrDefault();
-        Debug.Log(task.Complete);
+        //Debug.Log(task.Complete);
         if (task != null) {
             ovenState = State.Coocking;
+            textDebug.text = ("Por fin haces algo bien");
             while (time < task.Time)
             {
-                time += Time.deltaTime;   
-                yield return waiter;
+                time += Time.deltaTime;
+                progress.fillAmount = (time / task.Time);
+                yield return wait;
             }
-            Debug.Log("Cocinado");
+            textDebug.text = ("Seguro que ha salido amorfo");
+            progress.color = new Color(0, 1, 0);
             task.Complete = true;
             ovenState = State.Prepare;
-
         }
         else
         {
             ovenState = State.Broken;
+            textDebug.text = ("Ya la has cagado");
+            progress.color = new Color(1, 0, 0);
+            while (currentBrokenTime < brokenTime)
+            {
+                currentBrokenTime += Time.deltaTime;
+                progress.fillAmount = (currentBrokenTime / brokenTime);
+                yield return wait;
+            }
+            textDebug.text = ("Aprende de tus errores, tonto");
+            progress.fillAmount = 0;
+            progress.color = new Color(1, 1, 1);
+            currentBrokenTime = 0;
+            ovenState = State.Empty;
         }
     }
 

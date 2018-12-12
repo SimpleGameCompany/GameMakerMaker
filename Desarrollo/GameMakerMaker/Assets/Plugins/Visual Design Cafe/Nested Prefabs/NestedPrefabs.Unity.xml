@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NestedPrefabs.Unity</name>
+    </assembly>
+    <members>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PackageUninstaller.Uninstall">
+            <summary>
+            Uninstalls the Nested Prefab plugin.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PackageUninstaller.SetInstalledFormat(System.Int32)">
+            <summary>
+            Sets the installed serialization format of Nested Prefabs.
+            </summary>
+            <param name="format">The serialization format. A value of -1 will remove the stored data.</param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PackageUninstaller.DeleteCache">
+            <summary>
+            Deletes the temporary cache for nested prefabs.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PackageUninstaller.DeleteFiles(System.String[])">
+            <summary>
+            Deletes all assets that match the file names in the given list of files.
+            Also deletes any empty directories that are left after deleting the files.
+            </summary>
+            <param name="files">List of files to delete. Any files that partially 
+            match the given filenames will be deleted.</param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PackageUninstaller.RemoveEmptyDirectories(System.Collections.Generic.List{System.String})">
+            <summary>
+            Removes all empty directories in the given list.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PackageUninstaller.IsEmptyDirectory(System.String)">
+            <summary>
+            Is the given directory empty?
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PackageUninstaller.ListContainsFile(System.String[],System.String)">
+            <summary>
+            Does the file list contain the given file?
+            </summary>
+        </member>
+        <member name="F:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.IsProperty">
+            <summary>
+            Is this persistent object reference a reference to the property itself?
+            If false, it is the value of a property
+            </summary>
+        </member>
+        <member name="F:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.IsNull">
+            <summary>
+            Is the object reference null?
+            </summary>
+        </member>
+        <member name="F:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.IsRelative">
+            <summary>
+            Is the object reference a relative reference?
+            </summary>
+        </member>
+        <member name="F:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.PathToObject">
+            <summary>
+            The path to the GameObject
+            </summary>
+        </member>
+        <member name="F:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.ComponentType">
+            <summary>
+            The type of the target component. Null if the target is a GameObject.
+            </summary>
+        </member>
+        <member name="F:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.DuplicateComponentIndex">
+            <summary>
+            The duplicate index of the component if there are multiple 
+            components of the same type on the target GameObject. 0 if not.
+            </summary>
+        </member>
+        <member name="F:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.PropertyPath">
+            <summary>
+            The property path for the property containing the object reference.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.FindComponent(VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference,UnityEngine.Transform)">
+            <summary>
+            Finds the referenced component.
+            </summary>
+            <param name="reference"></param>
+            <param name="transform"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.#ctor(UnityEngine.Transform,UnityEditor.SerializedProperty)">
+            <summary>
+            Creates a new persistent object reference to the serialized property itself.
+            </summary>
+            <param name="root"></param>
+            <param name="property"></param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.#ctor(UnityEngine.Transform,UnityEngine.Object)">
+            <summary>
+            Creates a new persistent object reference to the target object.
+            </summary>
+            <param name="root"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.IsRelativeReference(UnityEngine.Transform,UnityEngine.Object)">
+            <summary>
+            Is the object reference a relative reference to the given root transform.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.PathTo(UnityEngine.Transform,UnityEngine.Transform,System.Boolean)">
+            <summary>
+            Finds the path from the root transform to the child transform.
+            </summary>
+            <param name="root"></param>
+            <param name="child"></param>
+            <param name="includeSelf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference.DuplicateComponentIndexOf(UnityEngine.Component)">
+            <summary>
+            Finds the index of the component if there are multiple components 
+            of the same type on the object.
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.#ctor(UnityEngine.GameObject,System.String)">
+            <summary>
+            Creates a new converter for the given prefab instance.
+            </summary>
+            <param name="prefabInstance"></param>
+            <param name="assetPath"></param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.Convert">
+            <summary>
+            Converts the nested prefabs in the prefab instance.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.Clean">
+            <summary>
+            Removes all internal components from the GameObjects in the given prefab instance.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.CleanPrefabInstance(UnityEngine.GameObject)">
+            <summary>
+            Cleans all GameObjects in the given prefab instance.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.ConvertNestedPrefab(UnityEngine.GameObject,VisualDesignCafe.Editor.Prefabs.Prefab)">
+            <summary>
+            Converts the nested prefab to a Unity nested prefab.
+            </summary>
+            <param name="instanceRoot">The root of the prefab instance</param>
+            <param name="nestedPrefab">The nested prefab to convert in the 
+            asset of the root prefab instance</param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.BackupObjectReferences">
+            <summary>
+            Finds all properties with an object reference and creates a persistent object reference
+            for them.
+            </summary>
+            <param name="prefab">The prefab in which to search for object references</param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.RestoreObjectReferences(System.Collections.Generic.List{VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference})">
+            <summary>
+            Restores the object references in the prefab from the 
+            stored persistent object references.
+            </summary>
+            <param name="prefab">Prefab in which to restore the references</param>
+            <param name="references">Collection of persistent object references to restore</param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.FindObjectReference(VisualDesignCafe.NestedPrefabs.Unity.PersistentObjectReference,UnityEngine.Transform)">
+            <summary>
+            Finds the referenced object for the persistent object reference.
+            </summary>
+            <param name="reference">The persistent object reference for which to find the referenced object.</param>
+            <param name="root">The root of the prefab</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.BackupAddedObjects(VisualDesignCafe.Editor.Prefabs.Prefab)">
+            <summary>
+            Creates a backup of the objects that are added to the nested model.
+            </summary>
+            <param name="nestedPrefabInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.BackupAddedComponents(VisualDesignCafe.Editor.Prefabs.Prefab)">
+            <summary>
+            Creates a backup of the components that are added to the nested model.
+            </summary>
+            <param name="nestedPrefabInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.RestoreAddedComponents(UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+            Restores the components that were added to the model.
+            </summary>
+            <param name="addedComponentsBackup"></param>
+            <param name="connectedInstance"></param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.RestoreAddedObjects(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{UnityEngine.GameObject,System.String}},UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+            Restores the objects that were added to the nested model.
+            </summary>
+            <param name="addedObjects"></param>
+            <param name="connectedInstance"></param>
+            <param name="instanceRoot"></param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.ConvertNestedModel(UnityEngine.GameObject,VisualDesignCafe.Editor.Prefabs.Prefab)">
+            <summary>
+            Converts the nested model to a Unity nested prefab.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.FindFirstNestedPrefabs(UnityEngine.GameObject,System.Collections.Generic.List{VisualDesignCafe.Editor.Prefabs.Prefab})">
+            <summary>
+            Finds all nested prefabs that are a child of the root prefab 
+            and do not have any other nested prefab as parent.
+            </summary>
+            <param name="asset">The asset to search in</param>
+            <param name="result">List of nested prefabs to store the result in</param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.PathTo(UnityEngine.Transform,UnityEngine.Transform,System.Boolean)">
+            <summary>
+            Finds the path from the root transform to the child transform.
+            </summary>
+            <param name="root"></param>
+            <param name="child"></param>
+            <param name="includeSelf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.PrefabConverter.ConnectToOriginalAsset(VisualDesignCafe.Editor.Prefabs.Prefab)">
+            <summary>
+            Connects the nested prefab to its original asset.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.OpenUrl(System.Boolean)">
+            <summary>
+            Subscribes to the MailChimp mailing list and then opens the 
+            'Uninstalled Nested Prefabs' webpage.
+            </summary>
+            <param name="shouldSubscribe">Should the current user be subscribed to 
+            the MailChimp mailing list?</param>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.AutoUpdate">
+            <summary>
+            Automatically displays a dialog at startup to ask the user to conver the project.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.ManualUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.ValidateAutoUpdate">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.OnEditorUpdate">
+            <summary>
+            Called for each frame in the editor.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.ConvertToUnityNestedPrefabs">
+            <summary>
+            Upgrade the project to use Unity's nested prefabs instead of 
+            Visual Design Cafe's nested prefabs. Will convert all prefabs 
+            in the project and then uninstall the Nested Prefabs plugin.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.KillPlugin">
+            <summary>
+            Kills the Nested Prefabs plugin so it does not update or process any prefabs.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.CurrentUnityVersionSupportsNestedPrefabs">
+            <summary>
+            Does the current Unity version support nested prefabs?
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.ConvertProject">
+            <summary>
+            Converts all prefabs and scenes in the project.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.ConvertModelAssets">
+            <summary>
+            Converts all model assets in the project.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.ConvertPrefabAssets">
+            <summary>
+            Converts all prefab assets in the project.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.CleanScenesInProject">
+            <summary>
+            Cleans all prefab instances in all scenes.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.CleanSceneHierarchy(UnityEngine.GameObject)">
+            <summary>
+            Cleans all GameObjects in the given hierarchy.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.FindAllScenesInProject">
+            <summary>
+            Finds the paths to all the scenes in the project.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.ProjectConverter.FindAllPrefabsInProject">
+            <summary>
+            Finds the paths to all the scenes in the project.
+            </summary>
+        </member>
+        <member name="M:VisualDesignCafe.NestedPrefabs.Unity.SerializedObjectWrapper.SaveModifications(UnityEditor.SerializedObject)">
+            <summary>
+            Compatibility method for ApplyModifiedPropertiesWithoutUndo because it is not publicly accessible in Unity 5.0
+            </summary>
+        </member>
+    </members>
+</doc>
