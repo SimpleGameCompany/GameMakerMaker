@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 public class LevelEditorWindow : EditorWindow {
 
 
-
+    Vector2 scrollPosition = Vector2.zero;
     static Level l;
+    static int ID;
     static float velocity;
     static float ratio;
     static int winCount;
     static string levelName = "level";
     static bool Pick = false;
+
     [SerializeField]
     PropBehaviour[] Props;
     static PropBehaviour[] staticProps;
@@ -24,7 +26,7 @@ public class LevelEditorWindow : EditorWindow {
         if (SceneManager.GetActiveScene().name == "LevelEditor")
         {
             LevelEditorWindow window = (LevelEditorWindow)EditorWindow.GetWindow(typeof(LevelEditorWindow));
-            
+            window.name = "Level Editor";
             window.Show();
         }
     }
@@ -33,15 +35,23 @@ public class LevelEditorWindow : EditorWindow {
 
     private void OnGUI()
     {
+
+        
+      
         Props = staticProps;
         GUILayout.Label("Level Editor", EditorStyles.boldLabel);
+        scrollPosition = GUILayout.BeginScrollView(scrollPosition, true, true);
         ScriptableObject e = this;
-        SerializedObject o = new SerializedObject(e);  
+        SerializedObject o = new SerializedObject(e);
+        ID = EditorGUILayout.IntField("ID", ID);
         levelName  = EditorGUILayout.TextField("Level Name",levelName);
         EditorGUILayout.PropertyField(o.FindProperty("Props"), true);
         velocity = EditorGUILayout.FloatField("Velocity", velocity);
         ratio = EditorGUILayout.FloatField("Ratio", ratio);
         winCount = EditorGUILayout.IntField("Props to Win", winCount);
+
+        
+
         o.ApplyModifiedProperties();
         staticProps = Props;
         
@@ -57,6 +67,7 @@ public class LevelEditorWindow : EditorWindow {
         {
             Load();
         }
+        GUILayout.EndScrollView();
         string commandName = Event.current.commandName;
         if (commandName == "ObjectSelectorClosed")
         {
@@ -76,7 +87,8 @@ public class LevelEditorWindow : EditorWindow {
             {
                 DestroyImmediate(GameObject.FindGameObjectWithTag(Constantes.LEVEL_TAG));
                 levelName = l.LevelName;
-                Props = l.Props;
+                staticProps = l.Props;
+                ID = l.levelID;
                 PrefabUtility.InstantiatePrefab(l.Scenario);
                 Pick = false;
                 Repaint();
@@ -102,6 +114,8 @@ public class LevelEditorWindow : EditorWindow {
         level.velocity = velocity;
         level.winCount = winCount;
         level.ratio = ratio;
+        level.levelID = ID;
+        level.Props = Props;
         string path = Constantes.LEVEL_ASSET_PATH +levelName+ ".asset";
         AssetDatabase.CreateAsset(level, path);
         AssetDatabase.SaveAssets();

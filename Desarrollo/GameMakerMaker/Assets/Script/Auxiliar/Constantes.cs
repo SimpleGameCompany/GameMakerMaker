@@ -7,4 +7,5 @@ public static class Constantes
     public const string LEVEL_DATA_PATH = "Assets/Resources/Levels/";
     public const string LEVEL_ASSET_PATH = LEVEL_DATA_PATH + "LevelDataObjects/";
     public const string LEVEL_PREFAB_PATH = LEVEL_DATA_PATH + "Prefabs/";
+    public const string LEVEL_PREDETERMINATE_PATH = LEVEL_DATA_PATH + "Predeterminate/level.prefab";
 }

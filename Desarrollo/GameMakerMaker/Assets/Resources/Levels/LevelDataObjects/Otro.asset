@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07360ff9137617243b10b3241faecdc7, type: 3}
-  m_Name: Level2
+  m_Name: Otro
   m_EditorClassIdentifier: 
-  LevelName: Timmy se va la mierda
-  Scenario: {fileID: 1754527134844202, guid: 9d80e4cac040948498318e8a62f60744, type: 2}
-  OvenList:
+  levelID: 4
+  LevelName: Otro
+  Scenario: {fileID: 1323182491057232, guid: 09a2b826e1b1a59458a1a7f3630e190c, type: 2}
+  velocity: 2
+  ratio: 4
+  Props:
   - {fileID: 0}
   - {fileID: 0}
-  velocity: 0
-  ratio: 0
-  Props: []
-  winCount: 0
+  winCount: 90
