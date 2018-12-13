@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
                     actualTask = inter;
                     StopCoroutine(GoToPoint());
                     if (inter.PreAction(this)) {
-                        if (NavMesh.SamplePosition(hit.point, out navMeshHit, 2, NavMesh.AllAreas))
+                        if (NavMesh.SamplePosition(hit.point, out navMeshHit, 10, NavMesh.AllAreas))
                         {
                             agent.SetDestination(navMeshHit.position);
                             StartCoroutine(GoToPoint());
@@ -44,10 +44,8 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator GoToPoint()
     {
-        
-        while (Vector3.Distance(transform.position,agent.destination)>1)
+        while (Vector3.Distance(transform.position,agent.destination)>=1)
         {
-           
             yield return null;
         }
         actualTask.PostAction(this);
