@@ -6,9 +6,8 @@ using UnityEngine;
 public class Level : ScriptableObject  {
     public string LevelName;
     public GameObject Scenario;
-    public OvenBehaviour[] OvenList;
     public float velocity;
     public float ratio;
-    public GameObject[] Props;
+    public PropBehaviour[] Props;
     public int winCount;
 }
