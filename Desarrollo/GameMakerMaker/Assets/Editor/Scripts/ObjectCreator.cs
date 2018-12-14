@@ -14,8 +14,9 @@ public class ObjectCreator : Editor {
         
     }
 
-    private void OnSceneGUI()
+    private void Update()
     {
+        Debug.Log("Hello");
         string commandName = Event.current.commandName;
         if (commandName == "ObjectSelectorClosed" && Pick)
         {
@@ -24,5 +25,10 @@ public class ObjectCreator : Editor {
             Instantiate(l, Selection.activeTransform);
         }
 
+    }
+
+    private void OnEnable()
+    {
+        EditorApplication.update += Update;
     }
 }

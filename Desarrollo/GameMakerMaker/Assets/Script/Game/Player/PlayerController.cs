@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour {
     {
         while (Vector3.Distance(transform.position,agent.destination)>=1)
         {
+
             yield return null;
         }
         actualTask.PostAction(this);

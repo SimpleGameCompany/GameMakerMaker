@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,17 @@ public class GameManager : MonoBehaviour
         get
         {
             if (_instance == null)
+            {
                 _instance = FindObjectOfType<GameManager>();
+                if(_instance == null)
+                {
+                    
+                    GameObject e = new GameObject();
+                    e.name = "GameManager";
+                    _instance =  e.AddComponent<GameManager>();
+                }
+            }
+            
             return _instance;
         }
 
@@ -22,11 +33,15 @@ public class GameManager : MonoBehaviour
     }
 
     //TODO Posiblemente vendria bien tener la lista de maximos elementos en pantalla, generarlos 
-    List<GameObject> totalProps; 
+    List<GameObject> totalProps;
+
+    [HideInInspector]
+    public Level loadedLevel;
     // Use this for initialization
     void Start()
     {
         totalProps = new List<GameObject>();
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -41,5 +56,11 @@ public class GameManager : MonoBehaviour
         prop.SetActive(false);
         prop.transform.SetParent(gameObject.transform);
         totalProps.Add(prop);
+    }
+
+    public void LoadLevel(Level l)
+    {
+        loadedLevel = l;
+        SceneManager.LoadScene("GameScene");
     }
 }
