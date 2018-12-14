@@ -10,6 +10,7 @@ public class Level : ScriptableObject  {
     public float velocity;
     public float ratio;
     public PropBehaviour[] Props;
+    public int[] MaxProps;
     public int winCount;
     
 }

@@ -15,9 +15,11 @@ public class LevelEditorWindow : EditorWindow {
     static int winCount;
     static string levelName = "level";
     static bool Pick = false;
-
+    static int[] MaxProps;
     [SerializeField]
     PropBehaviour[] Props;
+    [SerializeField]
+    int[] countProps;
     static PropBehaviour[] staticProps;
     [MenuItem("GameMakerMaker/LevelEditor")]
     static void Init()
@@ -39,6 +41,7 @@ public class LevelEditorWindow : EditorWindow {
         
       
         Props = staticProps;
+        countProps = MaxProps;
         GUILayout.Label("Level Editor", EditorStyles.boldLabel);
         scrollPosition = GUILayout.BeginScrollView(scrollPosition, true, true);
         ScriptableObject e = this;
@@ -46,15 +49,13 @@ public class LevelEditorWindow : EditorWindow {
         ID = EditorGUILayout.IntField("ID", ID);
         levelName  = EditorGUILayout.TextField("Level Name",levelName);
         EditorGUILayout.PropertyField(o.FindProperty("Props"), true);
+        EditorGUILayout.PropertyField(o.FindProperty("countProps"), true);
         velocity = EditorGUILayout.FloatField("Velocity", velocity);
         ratio = EditorGUILayout.FloatField("Ratio", ratio);
         winCount = EditorGUILayout.IntField("Props to Win", winCount);
-
-        
-
         o.ApplyModifiedProperties();
         staticProps = Props;
-        
+        MaxProps = countProps;
 
 
 
@@ -89,6 +90,10 @@ public class LevelEditorWindow : EditorWindow {
                 levelName = l.LevelName;
                 staticProps = l.Props;
                 ID = l.levelID;
+                velocity = l.velocity;
+                winCount = l.winCount;
+                ratio = l.winCount;
+                MaxProps = l.MaxProps;
                 PrefabUtility.InstantiatePrefab(l.Scenario);
                 Pick = false;
                 Repaint();
@@ -116,6 +121,7 @@ public class LevelEditorWindow : EditorWindow {
         level.ratio = ratio;
         level.levelID = ID;
         level.Props = Props;
+        level.MaxProps = MaxProps;
         string path = Constantes.LEVEL_ASSET_PATH +levelName+ ".asset";
         AssetDatabase.CreateAsset(level, path);
         AssetDatabase.SaveAssets();
