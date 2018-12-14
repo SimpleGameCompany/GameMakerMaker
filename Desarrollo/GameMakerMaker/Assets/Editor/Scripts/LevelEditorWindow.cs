@@ -21,6 +21,9 @@ public class LevelEditorWindow : EditorWindow {
     [SerializeField]
     int[] countProps;
     static PropBehaviour[] staticProps;
+
+    static LevelGrid g;
+
     [MenuItem("GameMakerMaker/LevelEditor")]
     static void Init()
     {
@@ -33,13 +36,14 @@ public class LevelEditorWindow : EditorWindow {
         }
     }
 
+    private void OnEnable()
+    {
+        g = new LevelGrid();
+    }
 
 
     private void OnGUI()
     {
-
-        
-      
         Props = staticProps;
         countProps = MaxProps;
         GUILayout.Label("Level Editor", EditorStyles.boldLabel);
@@ -57,7 +61,7 @@ public class LevelEditorWindow : EditorWindow {
         staticProps = Props;
         MaxProps = countProps;
 
-
+        g.OnGUI();
 
         if (GUILayout.Button("Save Level"))
         {
@@ -68,6 +72,9 @@ public class LevelEditorWindow : EditorWindow {
         {
             Load();
         }
+
+        
+
         GUILayout.EndScrollView();
         string commandName = Event.current.commandName;
         if (commandName == "ObjectSelectorClosed")
@@ -75,6 +82,7 @@ public class LevelEditorWindow : EditorWindow {
             OnPick();
         }
 
+        
     }
 
 

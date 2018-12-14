@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class GridController : EditorWindow
+public class LevelGrid : MonoBehaviour
 {
     static Vector2 scrollPos;
 
@@ -14,31 +14,14 @@ public class GridController : EditorWindow
     static int oldY = 1;
 
     static Material levelFloor = null;
-    static Editor levelFloorEditor = null;
 
     static List<List<GameObject>> level = new List<List<GameObject>>();
     static List<List<GameObject>> levelObjects = new List<List<GameObject>>();
     static GameObject floor;
     static GameObject floorPref;
 
-    [MenuItem("GameMakerMaker/GridController")]
-    static void Init()
+    public void OnGUI()
     {
-        GridController window = (GridController)EditorWindow.GetWindow(typeof(GridController));
-        window.Show();
-        //GridController windowScroll = (GridController)EditorWindow.GetWindow(typeof(GridController), true);
-        //windowScroll.Show();
-    }
-
-
-    static void ShowWindow()
-    {
-        GetWindow<GridController>("GridController");
-    }
-
-    private void OnGUI()
-    {
-        scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
 
         #region Dimensiones
         GUILayout.Label("Dimensiones", EditorStyles.boldLabel);
@@ -134,7 +117,6 @@ public class GridController : EditorWindow
         }
         #endregion
 
-        EditorGUILayout.EndScrollView();
     }
 
     void ChangeGrid()
