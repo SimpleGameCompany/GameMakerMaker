@@ -11,13 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07360ff9137617243b10b3241faecdc7, type: 3}
   m_Name: OtherLevel
   m_EditorClassIdentifier: 
-  levelID: 0
+  levelID: 1
   LevelName: OtherLevel
-  Scenario: {fileID: 1378634881432654, guid: 74a9617e1e572cb49b52cf67f5aa252f, type: 2}
-  velocity: 0
-  ratio: 0
+  Scenario: {fileID: 1648164395304368, guid: 74a9617e1e572cb49b52cf67f5aa252f, type: 2}
+  velocity: 1
+  ratio: 10
   Props:
-  - {fileID: 0}
-  - {fileID: 0}
-  MaxProps: 
-  winCount: 0
+  - {fileID: 114444812535231418, guid: f2fa216d1d8bc55438a3b9f6ccefad35, type: 2}
+  MaxProps: 01000000
+  winCount: 3

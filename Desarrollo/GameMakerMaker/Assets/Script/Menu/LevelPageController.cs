@@ -35,12 +35,13 @@ public class LevelPageController : MonoBehaviour {
 
     private void Awake()
     {
-       Level [] levels = Resources.LoadAll<Level>(Constantes.LEVEL_GAME_PATH).OrderBy((x)=> { return x.levelID; }).ToArray();
+        Level [] levels = Resources.LoadAll<Level>(Constantes.LEVEL_GAME_PATH).OrderBy(x => x.levelID).ToArray();
         maxPage = (levels.Length / 3) + 1;
         PageList = new GameObject[maxPage];
         for(int i = 0; i < maxPage; i++)
         {
             PageList[i] = Instantiate(pagePrefab, this.transform);
+            PageList[i].SetActive(false);
             for ( int j = 0; j<3; j++)
             {
                 LevelLoaderButton[] b = PageList[i].GetComponentsInChildren<LevelLoaderButton>(true);

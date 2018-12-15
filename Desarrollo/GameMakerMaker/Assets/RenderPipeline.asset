@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   k_AssetVersion: 3
   m_MaxPixelLights: 1
-  m_SupportsVertexLight: 0
+  m_SupportsVertexLight: 1
   m_RequireDepthTexture: 0
   m_RequireSoftParticles: 0
   m_RequireOpaqueTexture: 0
@@ -23,10 +23,10 @@ MonoBehaviour:
   m_RenderScale: 1
   m_SupportsDynamicBatching: 1
   m_DirectionalShadowsSupported: 1
-  m_ShadowAtlasResolution: 512
-  m_ShadowDistance: 8.13
+  m_ShadowAtlasResolution: 1024
+  m_ShadowDistance: 15
   m_ShadowCascades: 0
-  m_Cascade2Split: 0.25
+  m_Cascade2Split: 0.998428
   m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
   m_LocalShadowsSupported: 1
   m_LocalShadowsAtlasResolution: 512

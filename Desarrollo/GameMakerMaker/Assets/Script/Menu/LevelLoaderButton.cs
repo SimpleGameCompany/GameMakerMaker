@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class LevelLoaderButton : MonoBehaviour
 {
-    [HideInInspector]
+   
     public Level level; 
     void Start()
     {
