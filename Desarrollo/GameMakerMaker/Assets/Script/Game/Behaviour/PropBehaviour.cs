@@ -9,11 +9,47 @@ public class PropBehaviour : Interactuable {
         Portal,
         Pacman
     }
+    private int tasksCompleted;
+    private MeshRenderer render;
+
+    public bool Completed { get { return tasksCompleted == recipe.Tasks.Length; } }
+
 
     //Esto realmente no se donde meterlo jajaja
     [SerializeField]
     public PropWorld world;
     public Recipe recipe;
+
+    [SerializeField]
+    Material[] ProcessSkins;
+    public int TasksCompleted
+    {
+        get
+        {
+            return tasksCompleted;
+        }
+
+        set
+        {
+            tasksCompleted = value;
+            if(tasksCompleted > 0)
+            {
+                if(tasksCompleted == recipe.Tasks.Length)
+                {
+                   render.material = ProcessSkins[2];
+                }
+                else
+                {
+                    render.material = ProcessSkins[1];
+                }
+            }
+            else
+            {
+                render.material = ProcessSkins[0];
+            }
+        }
+    }
+
     public override void PostAction(PlayerController player)
     {
         player.PickedObjet = this;
@@ -33,8 +69,14 @@ public class PropBehaviour : Interactuable {
 
 
 
-    private void Start()
+    private void Awake()
     {
         recipe = Instantiate(recipe) as Recipe;
+        render = GetComponent<MeshRenderer>();
+    }
+
+    public void Restart()
+    {
+        TasksCompleted = 0;
     }
 }

@@ -114,6 +114,7 @@ public class OvenBehaviour : Interactuable
                 progress.fillAmount = (time / task.Time);
                 yield return wait;
             }
+            CookingProp.TasksCompleted++;
             textDebug.text = ("Seguro que ha salido amorfo");
             progress.color = new Color(0, 1, 0);
             task.Complete = true;

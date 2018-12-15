@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System.Linq;
 
-public class LevelGrid : MonoBehaviour
+public class LevelGrid 
 {
     static Vector2 scrollPos;
 
@@ -19,6 +20,15 @@ public class LevelGrid : MonoBehaviour
     static List<List<GameObject>> levelObjects = new List<List<GameObject>>();
     static GameObject floor;
     static GameObject floorPref;
+    GameObject layout;
+
+    public LevelGrid()
+    {
+        layout = GameObject.FindGameObjectWithTag(Constantes.TAG_LAYOUT);
+       Debug.Log("Hello");
+    }
+
+
 
     public void OnGUI()
     {
@@ -185,13 +195,13 @@ public class LevelGrid : MonoBehaviour
 
     void AddObject(int posX, int posY, GameObject prefab)
     {
-        DestroyImmediate(levelObjects[posX][posY]);
-        levelObjects[posX][posY] = Instantiate(prefab, new Vector3(posX-(x/2), 1, -1*(posY-(y/2))), prefab.transform.rotation);
+        Object.DestroyImmediate(levelObjects[posX][posY]);
+        levelObjects[posX][posY] = Object.Instantiate(prefab, new Vector3(posX-(x/2), 1, -1*(posY-(y/2))), prefab.transform.rotation,layout.transform);
     }
 
     void RemoveObject(int x, int y)
     {
-        DestroyImmediate(levelObjects[x][y]);
+        Object.DestroyImmediate(levelObjects[x][y]);
     }
 
     void Regenerate(int posX, int posY)
@@ -202,8 +212,8 @@ public class LevelGrid : MonoBehaviour
             {
                 if (level[i][j] != null)
                 {
-                    DestroyImmediate(levelObjects[i][j]);
-                    levelObjects[i][j] = Instantiate(level[i][j], new Vector3(i - (x / 2), 1, -1*(j - (y / 2))), level[i][j].transform.rotation);
+                    Object.DestroyImmediate(levelObjects[i][j]);
+                    levelObjects[i][j] = Object.Instantiate(level[i][j], new Vector3(i - (x / 2), 1, -1*(j - (y / 2))), level[i][j].transform.rotation, layout.transform);
                 }
             }
         }
@@ -232,13 +242,76 @@ public class LevelGrid : MonoBehaviour
 
     void AddFloor(GameObject fp)
     {
-        DestroyImmediate(floor);
-        floor = Instantiate(fp, new Vector3(0,0,0), Quaternion.identity);
+        Object.DestroyImmediate(floor);
+        floor = Object.Instantiate(fp, new Vector3(0,0,0), Quaternion.identity, layout.transform);
         floor.transform.localScale = new Vector3(x, 1, y);
     }
 
     void RemoveFloor()
     {
-        DestroyImmediate(floor);
+        Object.DestroyImmediate(floor);
+    }
+
+    public void Load(Level l)
+    {
+        layout = GameObject.FindGameObjectWithTag(Constantes.TAG_LAYOUT);
+        Object.DestroyImmediate(layout);
+        layout = new GameObject();
+        layout.name = "Layout";
+        layout.tag = Constantes.TAG_LAYOUT;
+        layout.transform.SetParent(GameObject.FindGameObjectWithTag(Constantes.LEVEL_TAG).transform);
+
+        level = (new List<GameObject>[l.Layout.Length]).ToList();
+        x = level.Count;
+        y = l.Layout[0].list.Length;
+        for (int i = 0; i < x; i++)
+        {
+            level[i] = (new GameObject[y]).ToList();
+        }
+
+        
+
+        for (int i = 0; i < x; i++)
+        {
+            for (int j = 0; j < y; j++)
+            {
+                level[i][j] = l.Layout[i].list[j];
+            }
+        }
+
+        
+        oldX = x;
+        oldY = y;
+        floorPref = l.floor;
+        AddFloor(floorPref);
+        levelObjects = (new List<GameObject>[x]).ToList();
+        for(int i = 0; i < x; i++)
+        {
+            levelObjects[i] = (new GameObject[y]).ToList();
+        }
+
+        Regenerate(x, y);
+
+
+
+
+    }
+
+   public Level Save(Level l)
+    {
+        l.floor = floorPref;
+        l.Layout = new MatrixContainer[x];
+        
+
+
+        for(int i = 0; i < x; i++)
+        {
+            l.Layout[i] = new MatrixContainer(y);
+            for(int j =0;j<y;j++)
+            {
+                l.Layout[i].list[j] = level[i][j];
+            }
+        }
+        return l;
     }
 }

@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     public void StoreProp(GameObject prop)
     {
         prop.SetActive(false);
+        prop.GetComponent<PropBehaviour>().Restart();
         prop.transform.SetParent(gameObject.transform);
         totalProps.Add(prop);
     }

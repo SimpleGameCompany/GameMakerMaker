@@ -11,7 +11,7 @@ public class TubeBehaviour : Interactuable {
 
     public override void PostAction(PlayerController player)
     {
-        if(player.PickedObjet.world == world)
+        if(player.PickedObjet.world == world && player.PickedObjet.Completed)
         {
             ScoreController.Instance.Score += player.PickedObjet.recipe.score;
         }

@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 4675379170725650}
   - component: {fileID: 114351959647839854}
   - component: {fileID: 114552953200868520}
+  - component: {fileID: 114290411043077810}
   m_Layer: 0
   m_Name: level
   m_TagString: Level
@@ -282,9 +283,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: aab88c5c-9c4e-4452-ba00-f4272c4f1e49
+--- !u!114 &114290411043077810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789554518909474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.11666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!114 &114351959647839854
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789554518909474}
@@ -303,6 +332,7 @@ MonoBehaviour:
     - {fileID: 1648061133412774}
     - {fileID: 1187641650580026}
     - {fileID: 1610515957464452}
+    - {fileID: 0}
   _assetGuid: 17ebb13ac000887448061c60ca62a538
 --- !u!114 &114467196581932000
 MonoBehaviour:
@@ -318,7 +348,7 @@ MonoBehaviour:
   _guid: a52f7b44-a311-496d-a746-5ba86ea4227a
 --- !u!114 &114552953200868520
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789554518909474}

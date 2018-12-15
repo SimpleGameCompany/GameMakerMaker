@@ -104,6 +104,7 @@ public class LevelEditorWindow : EditorWindow {
                 MaxProps = l.MaxProps;
                 PrefabUtility.InstantiatePrefab(l.Scenario);
                 Pick = false;
+                g.Load(l);
                 Repaint();
             }
         }
@@ -130,6 +131,7 @@ public class LevelEditorWindow : EditorWindow {
         level.levelID = ID;
         level.Props = Props;
         level.MaxProps = MaxProps;
+        level = g.Save(level);
         string path = Constantes.LEVEL_ASSET_PATH +levelName+ ".asset";
         AssetDatabase.CreateAsset(level, path);
         AssetDatabase.SaveAssets();

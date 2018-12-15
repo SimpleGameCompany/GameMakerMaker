@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114444812535231418}
   - component: {fileID: 114287294483403196}
   - component: {fileID: 114442128597786152}
+  - component: {fileID: 54902898296872966}
   m_Layer: 0
   m_Name: ObjetoPrueba (2)
   m_TagString: Untagged
@@ -87,6 +88,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1952244945616566}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54902898296872966
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952244945616566}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114287294483403196
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -129,6 +145,10 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   world: 2
   recipe: {fileID: 11400000, guid: 755f61f93c5b1bd4b87073fb82389506, type: 2}
+  ProcessSkins:
+  - {fileID: 2100000, guid: 7e9e4eb2413b05a4aa9cc865fba6c9ae, type: 2}
+  - {fileID: 2100000, guid: c5c4b84a56faef945b6c1beddcb4548d, type: 2}
+  - {fileID: 2100000, guid: bc627465402cb8240aaf556015efbbb6, type: 2}
 --- !u!135 &135134351030105850
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -136,7 +156,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1952244945616566}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
