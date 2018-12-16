@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 114717148666393436}
   - component: {fileID: 114048120125924640}
   - component: {fileID: 114701312324180936}
+  - component: {fileID: 114593448169589886}
   m_Layer: 0
   m_Name: mesa1(Clone)
   m_TagString: Untagged
@@ -538,6 +539,17 @@ MonoBehaviour:
     _collection:
     - {fileID: 1776251437543208}
   _assetGuid: 4e31aea03bf351149a8fd850d6b72082
+--- !u!114 &114593448169589886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901987196869042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114604028340913328
 MonoBehaviour:
   m_ObjectHideFlags: 1

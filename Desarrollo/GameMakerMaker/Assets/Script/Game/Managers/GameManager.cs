@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Level loadedLevel;
     private bool playing;
+    private Vector3 PositionStart;
     // Use this for initialization
     void Start()
     {
@@ -84,6 +85,9 @@ public class GameManager : MonoBehaviour
                 number--;
             }
         }
+        PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
+        BeltBehaviour[] n = FindObjectsOfType<BeltBehaviour>();
+        foreach(var e in n) { e.speed = loadedLevel.velocity; }
         WaitForSeconds seconds = new WaitForSeconds(loadedLevel.ratio);
         playing = true;
         StartCoroutine(GenerateProp(seconds));
@@ -101,7 +105,7 @@ public class GameManager : MonoBehaviour
             GameObject prop = totalProps[i];
             totalProps.RemoveAt(i);
             prop.SetActive(true);
-            prop.transform.position = Vector3.zero;
+            prop.transform.position = PositionStart;
             yield return waiter;
             
         }

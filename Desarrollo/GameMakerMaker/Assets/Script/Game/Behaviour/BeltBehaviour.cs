@@ -5,7 +5,7 @@ using UnityEngine;
 public class BeltBehaviour : MonoBehaviour {
 
     [SerializeField]
-    float speed;
+    public float speed;
     [SerializeField]
     Vector3 direction;
 
