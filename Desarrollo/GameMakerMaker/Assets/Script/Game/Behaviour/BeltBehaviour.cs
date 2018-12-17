@@ -22,7 +22,6 @@ public class BeltBehaviour : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-
         other.transform.Translate(speed * Time.deltaTime * direction,Space.World);
     }
 }
