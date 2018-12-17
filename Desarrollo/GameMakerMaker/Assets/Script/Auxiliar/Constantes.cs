@@ -11,4 +11,6 @@ public static class Constantes
     public const string LEVEL_GAME_PATH = "Levels/LevelDataObjects/";
     public const string TAG_LAYOUT = "Layout";
     public const string TAG_PROP_START = "PropStart";
+
+    public const string TAG_RECIPIES = "QuitRecetas";
 }

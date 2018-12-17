@@ -44,9 +44,9 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator GoToPoint()
     {
-        while (Vector3.Distance(transform.position,agent.destination)>=1)
+        while (Vector3.Distance(transform.position,agent.destination)>1)
         {
-
+            Debug.Log(Vector3.Distance(transform.position, agent.destination));
             yield return null;
         }
         actualTask.PostAction(this);

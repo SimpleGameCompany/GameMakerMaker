@@ -78,5 +78,9 @@ public class PropBehaviour : Interactuable {
     public void Restart()
     {
         TasksCompleted = 0;
+        foreach(var e in recipe.Tasks)
+        {
+            e.Complete = false;
+        }
     }
 }

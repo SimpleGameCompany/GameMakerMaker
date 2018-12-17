@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.AI;
 using System.Linq;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
     public Level loadedLevel;
     private bool playing;
     private Vector3 PositionStart;
+    private Button Recipies;
+    private GameObject UI;
     // Use this for initialization
     void Start()
     {
@@ -88,10 +91,11 @@ public class GameManager : MonoBehaviour
         PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
         BeltBehaviour[] n = FindObjectsOfType<BeltBehaviour>();
         foreach(var e in n) { e.speed = loadedLevel.velocity; }
-        WaitForSeconds seconds = new WaitForSeconds(loadedLevel.ratio);
-        playing = true;
-        StartCoroutine(GenerateProp(seconds));
-       
+        Button recetas = GameObject.FindGameObjectWithTag(Constantes.TAG_RECIPIES).GetComponent<Button>();
+
+        recetas.onClick.AddListener(delegate { PlayGame(); });
+
+        Recipies = recetas;
     }
 
     IEnumerator GenerateProp(WaitForSeconds waiter)
@@ -109,5 +113,25 @@ public class GameManager : MonoBehaviour
             yield return waiter;
             
         }
+    }
+
+
+    public void PlayGame()
+    {
+        Recipies.transform.parent.parent.gameObject.SetActive(false);
+        WaitForSeconds seconds = new WaitForSeconds(loadedLevel.ratio);
+        playing = true;
+        StartCoroutine(GenerateProp(seconds));
+    }
+
+
+    public void PauseGame(float timeScale)
+    {
+        Time.timeScale = timeScale;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
 }
