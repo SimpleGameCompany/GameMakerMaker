@@ -52,6 +52,14 @@ public class PropBehaviour : Interactuable {
 
     public override void PostAction(PlayerController player)
     {
+        if (this.transform.parent != null)
+        {
+            TableBehaviour table = this.transform.parent.gameObject.GetComponent<TableBehaviour>();
+            if (table != null)
+            {
+                table.Remove();
+            }
+        }
         player.PickedObjet = this;
         gameObject.transform.SetParent(player.transform);
         gameObject.transform.localPosition = Vector3.zero;

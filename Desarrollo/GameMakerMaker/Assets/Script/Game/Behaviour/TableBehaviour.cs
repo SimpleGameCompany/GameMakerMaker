@@ -60,4 +60,10 @@ public class TableBehaviour : Interactuable {
                 break;
         }
     }
+
+    public void Remove()
+    {
+        Prop = null;
+        tableState = State.Empty;
+    }
 }

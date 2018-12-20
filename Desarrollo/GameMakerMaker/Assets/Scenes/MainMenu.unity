@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2819,45 +2819,3 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2068717444}
   m_CullTransparentMesh: 0
---- !u!1001 &2111564387
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.9317069
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.0035429
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.3044319
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962030453534470, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f4c22ade4f66015458a0239ca01da0cf, type: 2}
-  m_IsPrefabAsset: 0
