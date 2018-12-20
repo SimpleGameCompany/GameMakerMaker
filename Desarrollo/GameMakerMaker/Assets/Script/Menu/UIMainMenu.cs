@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Polyglot;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,6 +22,16 @@ public class UIMainMenu : MonoBehaviour {
         {               
             yield return null;
         }
+    }
+
+    public void SelectSpanish()
+    {
+        Localization.Instance.SelectLanguage(Language.Spanish);
+    }
+
+    public void SelectEnglish()
+    {
+        Localization.Instance.SelectLanguage(Language.English);
     }
 
 }

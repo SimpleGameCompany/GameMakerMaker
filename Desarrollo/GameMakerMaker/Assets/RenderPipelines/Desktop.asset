@@ -9,25 +9,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3}
-  m_Name: RenderPipeline
+  m_Name: Desktop
   m_EditorClassIdentifier: 
   k_AssetVersion: 3
-  m_MaxPixelLights: 1
+  m_MaxPixelLights: 2
   m_SupportsVertexLight: 1
   m_RequireDepthTexture: 0
   m_RequireSoftParticles: 0
   m_RequireOpaqueTexture: 0
   m_OpaqueDownsampling: 1
   m_SupportsHDR: 1
-  m_MSAA: 1
+  m_MSAA: 2
   m_RenderScale: 1
   m_SupportsDynamicBatching: 1
   m_DirectionalShadowsSupported: 1
-  m_ShadowAtlasResolution: 1024
-  m_ShadowDistance: 20
+  m_ShadowAtlasResolution: 4096
+  m_ShadowDistance: 60
   m_ShadowCascades: 0
   m_Cascade2Split: 0.998428
-  m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
+  m_Cascade4Split: {x: 0.7289721, y: 0.73118746, z: 0.8492937}
   m_LocalShadowsSupported: 1
   m_LocalShadowsAtlasResolution: 512
   m_SoftShadowsSupported: 1

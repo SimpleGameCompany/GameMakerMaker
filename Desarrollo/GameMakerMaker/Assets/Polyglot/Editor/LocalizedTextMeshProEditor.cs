@@ -16,6 +16,13 @@ namespace Polyglot
     {
         private AnimBool showParameters = new AnimBool(false);
 
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            showParameters = new AnimBool(true);
+            showParameters.valueChanged.AddListener(Repaint);
+        }
+
         public override void OnInspectorGUI()
         {
             OnInspectorGUI("key");
