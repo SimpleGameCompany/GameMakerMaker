@@ -174,7 +174,6 @@ GameObject:
   - component: {fileID: 114885210716234960}
   - component: {fileID: 114497620539528918}
   - component: {fileID: 114157008558484546}
-  - component: {fileID: 114517657760900842}
   m_Layer: 0
   m_Name: HornoMagia
   m_TagString: Untagged
@@ -752,57 +751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 471931fa-48df-49b3-a6cf-c6a9ef41211b
---- !u!114 &114517657760900842
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949688735963580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 637162700, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objects:
-  - _target: {fileID: 1949688735963580}
-    _path: /0
-    _guidPath: 5d51fc12-27f6-447a-92d9-3a00ce733766
-    _isOverridden: 0
-    _components:
-    - _target: {fileID: 114885210716234960}
-      _type: OvenBehaviour
-      _index: 0
-      _isOverridden: 0
-      _properties:
-      - _path: Type
-        _animationCurveValue:
-          serializedVersion: 2
-          m_Curve: []
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        _booleanValue: 0
-        _boundsValue:
-          m_Center: {x: 0, y: 0, z: 0}
-          m_Extent: {x: 0, y: 0, z: 0}
-        _colorValue: {r: 0, g: 0, b: 0, a: 0}
-        _doubleValue: 0
-        _floatValue: 0
-        _intValue: 1
-        _longValue: 0
-        _objectReferenceValue: {fileID: 0}
-        _quaternionValue: {x: 0, y: 0, z: 0, w: 0}
-        _rectValue:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        _stringValue: 
-        _vector2Value: {x: 0, y: 0}
-        _vector3Value: {x: 0, y: 0, z: 0}
-        _vector4Value: {x: 0, y: 0, z: 0, w: 0}
-  _overrideObjects: []
 --- !u!114 &114567498177496228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -994,7 +942,7 @@ MonoBehaviour:
   progress: {fileID: 114814661849913420}
   brokenTime: 3
   textDebug: {fileID: 114624947481182234}
-  Type: 1
+  Type: 0
 --- !u!114 &114954329122684086
 MonoBehaviour:
   m_ObjectHideFlags: 1
