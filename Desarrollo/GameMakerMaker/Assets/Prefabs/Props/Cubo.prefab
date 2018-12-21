@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114452718778043804}
   - component: {fileID: 114808905749219658}
   - component: {fileID: 114676038807484114}
-  - component: {fileID: 54944713770663544}
+  - component: {fileID: 195842641227673474}
   m_Layer: 0
   m_Name: Cubo
   m_TagString: Untagged
@@ -88,21 +88,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719668465441134}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54944713770663544
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1719668465441134}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65434708658247034
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -129,6 +114,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   world: 2
   recipe: {fileID: 11400000, guid: e43fbf1d02d3f7241a8caefc3a55f986, type: 2}
+  agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 7e9e4eb2413b05a4aa9cc865fba6c9ae, type: 2}
   - {fileID: 2100000, guid: 4b3e6c74b284e854283340ec2a47258d, type: 2}
@@ -161,3 +147,24 @@ MonoBehaviour:
     _collection:
     - {fileID: 1719668465441134}
   _assetGuid: f4c22ade4f66015458a0239ca01da0cf
+--- !u!195 &195842641227673474
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719668465441134}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
