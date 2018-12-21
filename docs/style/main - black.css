@@ -22,11 +22,9 @@ canvas {
 .canvasContainer {
     position: relative;
     padding: 0px;
-    /*border:4px solid #292929*/;
-    border:4px solid #838383;
+    border:4px solid #292929;
     box-shadow: 0px 0px 30px 0px rgba(29, 29, 29, 0.88);
-    /*background-color:#383838;*/
-    background-color:#9a9a9a;
+    background-color:#292929;
 }
 
 #gameCanvas {
@@ -130,9 +128,8 @@ canvas {
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    /*background-color:  #494949;*/ /* Set a background color */
-    background-color: #d4d4d4;
-    color: black; /* Text color */
+    background-color:  #494949; /* Set a background color */
+    color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
@@ -141,8 +138,7 @@ canvas {
 }
 
 #back-to-top:hover {
-    /*background-color:  #292929;*/ /* Add a dark-grey background on hover */
-    background-color: #838383;
+    background-color:  #292929; /* Add a dark-grey background on hover */
 }
 
 ::-webkit-scrollbar {
@@ -150,13 +146,11 @@ canvas {
 }
   
 ::-webkit-scrollbar-track {
-    /*background-color:#292929;*/
-    background-color: #838383;
+    background-color:#292929;
 }
    
 ::-webkit-scrollbar-thumb {
-    /*background-color:#494949;*/
-    background-color: #d4d4d4;
+    background-color:#494949;
     border-radius: 5px;
 }
 
@@ -170,12 +164,8 @@ canvas {
 
 .box-team img {
     float: none;
-    margin: 0 auto;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    /*border: 2px solid #292929;*/
-    border: 2px solid#838383;
+    margin:0 auto;
+    padding: 10%;
 }
 
 .teamImage {
@@ -187,29 +177,25 @@ canvas {
 }
 
 .row-top-team {
-    /*background-color:#292929;*/
-    background-color: #838383;
+    background-color:#292929;
     padding-left: 1px;
 }
 
 .row-bottom-team {
     margin-bottom: 2%;
     padding-top: 4%;
-    /*background-color:#383838;*/
-    background-color:#9a9a9a;
+    background-color: #383838;
 }
 
 .row-top-howto {
-    /*background-color:#292929;*/
-    background-color: #838383;
+    background-color:#292929;
     padding-left: 1px;
 }
 
 .row-bottom-howto {
     margin-bottom: 2%;
     padding-top: 4%;
-    /*background-color:#383838;*/
-    background-color:#9a9a9a;
+    background-color:#383838;
 }
 
 .responsive-title {
@@ -224,10 +210,6 @@ canvas {
     text-align: left;
     font-size:3vw;
     padding-top: 1%;
-}
-
-#howto_section {
-    margin-top: 1%;
 }
 
 .title-contact {
@@ -245,15 +227,12 @@ canvas {
 }
 
 .merchandising-color {
-    /*background-color:#383838;*/
-    background-color:#9a9a9a;
+    background-color:#383838;
 }
 
 .futer {
-    /*background-color:#383838;*/
-    background-color:#9a9a9a;
-    /*border-top: 4px solid #292929;*/
-    border-top: 4px solid#838383;
+    background-color:#383838;
+    border-top: 4px solid #292929;
     border-radius: 0px 0px 0px 0px; 
     margin-top: 5%;
     box-shadow: 0px 0px 30px 0px rgba(29, 29, 29, 0.88);
@@ -265,30 +244,23 @@ canvas {
 
 .all-rounded {
     border-radius: 5px 5px 5px 5px;
-    /*border: 4px solid #292929;*/
-    border: 4px solid#838383;
+    border: 4px solid #292929;
     box-shadow: 0px 0px 30px 0px rgba(29, 29, 29, 0.88);
 }
 
 .top-row-rounded {
     border-radius: 5px 5px 0px 0px;
-    /*border-top: 4px solid #292929;*/
-    border-top: 4px solid#838383;
-    /*border-right: 4px solid #292929;*/
-    border-right: 4px solid#838383;
-    /*border-left: 4px solid #292929;*/
-    border-left: 4px solid#838383;
+    border-top: 4px solid #292929;
+    border-right: 4px solid #292929;
+    border-left: 4px solid #292929;
     box-shadow: 0px 0px 30px 0px rgba(29, 29, 29, 0.88);
 }
 
 .bottom-row-rounded {
     border-radius: 0px 0px 5px 5px;
-    /*border-bottom: 4px solid #292929;*/
-    border-bottom: 4px solid#838383;
-    /*border-right: 4px solid #292929;*/
-    border-right: 4px solid#838383;
-    /*border-left: 4px solid #292929;*/
-    border-left: 4px solid#838383;
+    border-bottom: 4px solid #292929;
+    border-right: 4px solid #292929;
+    border-left: 4px solid #292929;
     padding-bottom: 2%;
     box-shadow: 0px 0px 30px 0px rgba(29, 29, 29, 0.88);
 }
@@ -314,15 +286,12 @@ html {
 }
 
 .unitytitle {
-    /*background: #383838;*/
-    background: #b2b2b2;
+    background: #383838;
     border-radius: 5%;
 }
 
 .unitytext {
-    /*color: rgb(170, 170, 170);*/
-    color: black;
-    font-weight: 420;
+    color: rgb(170, 170, 170);
 }
 
 #gametit1 {
@@ -343,9 +312,10 @@ html {
 }
 
 body {
+    /*background-position: center;  Center the image */
     /* background-repeat: no-repeat; Do not repeat the image */
     /*background-attachment: fixed;*/
-    background-position: center;
+
     background-size: cover;
     background-image: url("../assets/img/Web/background.png");
 }
