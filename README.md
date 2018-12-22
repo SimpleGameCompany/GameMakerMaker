@@ -24,16 +24,14 @@
 * 3\. [Interfaz](#interfaz)
   * 3.1\. [Diagrama de Flujo](#DiagramadeFlujo)
   * 3.2\. [Pantalla de Menú principal](#PantalladeMenuPrincipal)
-  * 3.3\. [Pantalla de Puntuaciones](#PantalladePuntuaciones)
-  * 3.4\. [Pantalla de Opciones](#PantalladeOpciones)
-  * 3.5\. [Pantalla de Créditos](#PantalladeCreditos)
-  * 3.6\. [Pantalla de Introducción de nombre](#PantalladeIntroducciondenombre)
-  * 3.7\. [Pantalla de Selección de nivel](#PantalladeSelecciondenivel)
-  * 3.8\. [Pantalla de Nivel (HUD)](#PantalladeNivel)
-  * 3.9\. [Pantalla de Pausa](#PantalladePausa)
-  * 3.10\. [Pantalla de Fin del nivel](#PantalladeFindelnivel)
-  * 3.11\. [Pantalla de Game Over](#PantalladeGameOver)
-  * 3.12\. [Notificaciones](#Notificaciones)
+  * 3.3\. [Pantalla de Opciones](#PantalladeOpciones)
+  * 3.4\. [Pantalla de Créditos](#PantalladeCreditos)
+  * 3.5\. [Pantalla de Selección de nivel](#PantalladeSelecciondenivel)
+  * 3.6\. [Pantalla de Nivel (HUD)](#PantalladeNivel)
+  * 3.7\. [Pantalla de Pausa](#PantalladePausa)
+  * 3.8\. [Pantalla de Fin del nivel](#PantalladeFindelnivel)
+  * 3.9\. [Pantalla de Game Over](#PantalladeGameOver)
+  * 3.10\. [Notificaciones](#Notificaciones)
 
 * 4\. [Arte y Sonido](#arteysonido)
   * 4.1\. [Arte](#Arte)
@@ -596,11 +594,11 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
-![image alt text](assets/GDD/image_3.png)
+![image alt text](assets/GDD/image_33.png)
 
 Al igual que en la práctica anterior, se ha incluido esta pantalla directamente en la página web del videojuego, debido a su estructura y diseño:
 
-![image alt text](assets/GDD/PantalladeCreditos.png)
+![image alt text](assets/GDD/PantalladeCreditos2.png)
 
 
 <div id="PantalladeSelecciondenivel"></ol>
