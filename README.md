@@ -15,7 +15,7 @@
   + 1.7\. [Propósito y público objetivo](#Propositoypublicoobjetivo)
 * 2\. [Mecánicas del juego](#mecanicas)
   * 2.1\. [Jugabilidad](#Jugabilidad)
-  * 2.2\. [Props](#Trampas)
+  * 2.2\. [Props](#Props)
   * 2.3\. [Puntos de interacción](#Puntosdeinteraccion)
   * 2.4\. [Flujo de juego (Game Loop)](#FlujodejuegoGameLoop)
   * 2.5\. [Cámara](#Camara)
@@ -159,8 +159,8 @@ Una descripción detallada se encontrará en la sección **Props**.
 
 Debido a la naturaleza del juego, y su estructura por niveles, se ha decidido tomar el modelo de puntuación de juegos exitosos como *Angry Birds* o *Candy Crush*, basado en estrellas, en lugar de un contador numérico, ya que han demostrado que este sistema funciona mejor para este tipo de juegos.
 
-<div id="Props"></ol>
 
+<div id="Props"></ol>
 
 ## **2.2. Props**
 
@@ -567,10 +567,11 @@ Plantilla: *Nivel - Sagas - (nº de props para finalizar el nivel).*
 ## **3.1. Diagrama de Flujo**
 
 A continuación, se muestra el diagrama de flujo y transición entre pantallas durante el desarrollo del juego:
+
 ![image alt text](assets/GDD/DiagramadeFlujo.png)
 
 
-<div id="DiagramadeFlujo"></ol>
+<div id="PantalladeMenuPrincipal"></ol>
 
 ## **3.2. Pantalla de Menú principal**
 
