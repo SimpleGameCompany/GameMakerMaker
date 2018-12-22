@@ -23,6 +23,8 @@ public class PaperBehaviour : MonoBehaviour
         if(p != null)
         {
             GameManager.Instance.StoreProp(p.gameObject);
+            LifeController.Instance.Lifes--;
         }
+        
     }
 }

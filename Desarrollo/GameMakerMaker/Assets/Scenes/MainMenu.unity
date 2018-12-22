@@ -447,78 +447,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preferenceKey: Polyglot.SelectedLanguage
---- !u!1001 &288275660
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489621728763808, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 65428426239721994, guid: a931ef829caded544873fcc2dfe2c1d1,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 65428426239721994, guid: a931ef829caded544873fcc2dfe2c1d1,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0.13
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1 &288275661 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1379432940817712, guid: a931ef829caded544873fcc2dfe2c1d1,
-    type: 2}
-  m_PrefabInternal: {fileID: 288275660}
---- !u!54 &288275662
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 288275661}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &387614509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +972,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.5
+  m_fontSize: 55.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
