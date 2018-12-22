@@ -598,7 +598,7 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 Al igual que en la práctica anterior, se ha incluido esta pantalla directamente en la página web del videojuego, debido a su estructura y diseño:
 
-![image alt text](assets/GDD/PantalladeCreditos2.png)
+![image alt text](assets/GDD/PantalladeCreditos2.PNG)
 
 
 <div id="PantalladeSelecciondenivel"></ol>
