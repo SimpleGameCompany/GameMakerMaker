@@ -44,11 +44,14 @@ public class GameManager : MonoBehaviour
     private Vector3 PositionStart;
     private Button Recipies;
     private GameObject UI;
+    private WaitForEndOfFrame frame;
+    private Vector3 EndPosition;
     // Use this for initialization
     void Start()
     {
         totalProps = new List<GameObject>();
         DontDestroyOnLoad(gameObject);
+        frame = new WaitForEndOfFrame();
     }
 
     // Update is called once per frame
@@ -71,11 +74,38 @@ public class GameManager : MonoBehaviour
         loadedLevel = l;
         SceneManager.LoadScene("GameScene");
     }
+    public void StartLevelFromCourutine()
+    {
+        StartCoroutine(StartGame());
+    }
 
-     public void StartGame()
+     public IEnumerator StartGame()
     {
         GameObject scenario = Instantiate(loadedLevel.Scenario);
-        scenario.GetComponentInChildren<NavMeshSurface>().BuildNavMesh();
+
+        GameObject Belt = GameObject.FindGameObjectWithTag(Constantes.TAG_BELT);
+
+
+        BeltBehaviour[] Cintas = FindObjectsOfType<BeltBehaviour>();
+        
+
+        foreach(var e in Cintas)
+        {
+            e.transform.SetParent(Belt.transform);
+            yield return frame;
+        }
+
+        NavMeshSurface[] surfaces =  scenario.GetComponentsInChildren<NavMeshSurface>();
+        foreach(var i in surfaces)
+        {
+            i.BuildNavMesh();
+            yield return frame;
+        }
+
+        GameObject papelera = GameObject.FindGameObjectWithTag(Constantes.TAG_PAPER);
+        EndPosition = papelera.transform.position;
+
+
         GameObject[] props = (from x in loadedLevel.Props select x.gameObject).ToArray();
         for(int i = 0; i < props.Length; i++)
         {
@@ -85,7 +115,13 @@ public class GameManager : MonoBehaviour
                 GameObject o = Instantiate(props[i]);
                 o.SetActive(false);
                 totalProps.Add(o);
+                NavMeshAgent agent = o.GetComponent<NavMeshAgent>();
+                agent.enabled = false;
+
+                agent.angularSpeed = 0;
+                agent.speed = loadedLevel.velocity;
                 number--;
+                yield return frame;
             }
         }
         PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
@@ -97,6 +133,9 @@ public class GameManager : MonoBehaviour
 
         Recipies = recetas;
     }
+
+
+
 
     IEnumerator GenerateProp(WaitForSeconds waiter)
     {
@@ -110,6 +149,9 @@ public class GameManager : MonoBehaviour
             totalProps.RemoveAt(i);
             prop.SetActive(true);
             prop.transform.position = PositionStart;
+            NavMeshAgent agent = prop.GetComponent<NavMeshAgent>();
+            agent.enabled = true;
+            agent.SetDestination(EndPosition);
             yield return waiter;
             
         }

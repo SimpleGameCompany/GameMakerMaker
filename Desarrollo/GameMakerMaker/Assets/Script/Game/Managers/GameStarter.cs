@@ -6,7 +6,7 @@ public class GameStarter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameManager.Instance.StartGame();
+        GameManager.Instance.StartLevelFromCourutine();
 	}
 	
 }

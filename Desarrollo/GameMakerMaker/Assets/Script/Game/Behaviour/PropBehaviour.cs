@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PropBehaviour : Interactuable {
     public enum PropWorld
@@ -19,6 +20,8 @@ public class PropBehaviour : Interactuable {
     [SerializeField]
     public PropWorld world;
     public Recipe recipe;
+
+    public NavMeshAgent agent;
 
     [SerializeField]
     Material[] ProcessSkins;
@@ -62,6 +65,7 @@ public class PropBehaviour : Interactuable {
         }
         player.PickedObjet = this;
         gameObject.transform.SetParent(player.transform);
+        agent.enabled = false;
         gameObject.transform.localPosition = Vector3.zero;
     }
 
@@ -81,6 +85,7 @@ public class PropBehaviour : Interactuable {
     {
         recipe = Instantiate(recipe) as Recipe;
         render = GetComponent<MeshRenderer>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     public void Restart()

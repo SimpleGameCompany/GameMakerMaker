@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1990210524591544}
+  m_IsPrefabAsset: 1
+--- !u!1 &1990210524591544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4463512333305514}
+  - component: {fileID: 114615808857895994}
+  - component: {fileID: 114615979197835128}
+  - component: {fileID: 114226609112204148}
+  m_Layer: 0
+  m_Name: MoverCintas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4463512333305514
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1990210524591544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114226609112204148
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1990210524591544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 97486819-7d13-4253-8637-b803b9e3c8b1
+--- !u!114 &114615808857895994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1990210524591544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5aee1a2e339f44999a46a115f2792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cintas:
+  - {fileID: 2100000, guid: 0c1a5f79dfc518c40be87b41a2f30a11, type: 2}
+  - {fileID: 2100000, guid: f25ecdf191791c148966329d624221a9, type: 2}
+  - {fileID: 2100000, guid: a2228bc5ede097b44b493e7abb1fe02a, type: 2}
+  - {fileID: 2100000, guid: b31d4a571f787834cb52114b7fca5895, type: 2}
+  - {fileID: 2100000, guid: 3305a250625016c41bf13124c14409eb, type: 2}
+  - {fileID: 2100000, guid: 4e5ff23292053054786ae092646abdf8, type: 2}
+  velX: 0
+  velY: 0.1
+  setTo0: 0
+--- !u!114 &114615979197835128
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1990210524591544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1990210524591544}
+  _assetGuid: 041c1ad3c1ef34544a1d36e5b99dc1ca
