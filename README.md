@@ -541,14 +541,20 @@ Mario = Pacman < Minecraft = Portal < Pokemon < Zelda
 Plantilla: Nivel - Sagas - (nº de props para finalizar el nivel).
 
 *Nivel 1*: Pacman y Mario (10).
-*Nivel 2*: Mario, Minecraft (15).
-*Nivel 3*: Pacman, Mario y Minecraft (20).
-*Nivel 4*: Pacman, Minecraft y Portal (20).
-*Nivel 5*: Minecraft, Portal, Pokémon (25).
-*Nivel 6*: Mario, Minecraft, Portal, Pokémon (30).
-*Nivel 7*: Pacman, Mario, Pokémon, Zelda (30).
-*Nivel 8*: Mario, Pacman, Minecraft, Portal, Pokemon, Zelda (50).
 
+*Nivel 2*: Mario, Minecraft (15).
+
+*Nivel 3*: Pacman, Mario y Minecraft (20).
+
+*Nivel 4*: Pacman, Minecraft y Portal (20).
+
+*Nivel 5*: Minecraft, Portal, Pokémon (25).
+
+*Nivel 6*: Mario, Minecraft, Portal, Pokémon (30).
+
+*Nivel 7*: Pacman, Mario, Pokémon, Zelda (30).
+
+*Nivel 8*: Mario, Pacman, Minecraft, Portal, Pokemon, Zelda (50).
 
 <div id="inInterfaz"></ol>
 
