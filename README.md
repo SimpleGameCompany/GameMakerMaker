@@ -20,13 +20,22 @@
   * 2.2\. [Props](#Trampas)
   * 2.3\. [Puntos de interacción](#Puntosdeinteraccion)
   * 2.4\. [Flujo de juego (Game Loop)](#FlujodejuegoGameLoop)
-  * 2.5\. [Movimiento](#Movimiento)
-  * 2.6\. [Cámara](#Camara)
-  * 2.7\. [Controles](#Controles)
-  * 2.8\. [Niveles](#Niveles)
+  * 2.5\. [Cámara](#Camara)
+  * 2.6\. [Controles](#Controles)
+  * 2.7\. [Niveles](#Niveles)
 * 3\. [Interfaz](#interfaz)
   * 3.1\. [Diagrama de Flujo](#DiagramadeFlujo)
-  * 3.2\. [Pantalla de Nivel (HUD)](#PantalladeNivel)
+  * 3.2\. [Pantalla de Menú principal](#PantalladeMenuPrincipal)
+  * 3.3\. [Pantalla de Puntuaciones](#PantalladePuntuaciones)
+  * 3.4\. [Pantalla de Opciones](#PantalladeOpciones)
+  * 3.5\. [Pantalla de Créditos](#PantalladeCreditos)
+  * 3.6\. [Pantalla de Introducción de nombre](#PantalladeIntroducciondenombre)
+  * 3.7\. [Pantalla de Selección de nivel](#PantalladeSelecciondenivel)
+  * 3.8\. [Pantalla de Nivel (HUD)](#PantalladeNivel)
+  * 3.9\. [Pantalla de Pausa](#PantalladePausa)
+  * 3.10\. [Pantalla de Fin del nivel](#PantalladeFindelnivel)
+  * 3.11\. [Pantalla de Game Over](#PantalladeGameOver)
+  * 3.12\. [Notificaciones](#Notificaciones)
 
 * 4\. [Arte y Sonido](#arteysonido)
   * 4.1\. [Arte](#Arte)
@@ -165,62 +174,62 @@ A continuación se detallan los props utilizados en el videojuego, con los datos
   <tr>
     <td>Champiñón rojo</td>
     <td>Super Mario Bros</td>
-    <td>1</td>
+    <td>1, 2, 3, 6, 7, 8</td>
   </tr>
   <tr>
     <td>Caparazón verde</td>
     <td>Super Mario Bros</td>
-    <td>1</td>
+    <td>1, 2, 3, 6, 7, 8</td>
   </tr>
   <tr>
     <td>Cereza</td>
     <td>Pac-Man</td>
-    <td>1</td>
+    <td>1, 3, 4, 7, 8</td>
   </tr>
   <tr>
     <td>Manta de fantasma</td>
     <td>Pac-Man</td>
-    <td>1</td>
+    <td>1, 3, 4, 7, 8</td>
   </tr>
   <tr>
     <td>Cubo de compañía</td>
     <td>Portal</td>
-    <td>2</td>
+    <td>4, 5, 6, 8</td>
   </tr>
   <tr>
     <td>Torreta</td>
     <td>Portal</td>
-    <td>2</td>
+    <td>4, 5, 6, 8</td>
   </tr>
   <tr>
     <td>Pokeball</td>
     <td>Pokémon</td>
-    <td>2</td>
+    <td>5, 6, 7, 8</td>
   </tr>
   <tr>
     <td>Gorra de entrenador</td>
     <td>Pokémon</td>
-    <td>2</td>
+    <td>5, 6, 7, 8</td>
   </tr>
   <tr>
     <td>Tri-Fuerza</td>
     <td>The Legend of Zelda</td>
-    <td>2</td>
+    <td>7,8</td>
   </tr>
   <tr>
     <td>Máscara de Majora</td>
     <td>The Legend of Zelda</td>
-    <td>2</td>
+    <td>7,8</td>
   </tr>
   <tr>
     <td>Pico</td>
     <td>Minecraft</td>
-    <td>2</td>
+    <td>2, 3, 4, 5, 6, 8</td>
   </tr>
   <tr>
     <td>Diamante</td>
     <td>Minecraft</td>
-    <td>2</td>
+    <td>2, 3, 4, 5, 6, 8</td>
   </tr>
 </table>
 
@@ -237,6 +246,89 @@ A continuación se concretan los diferentes puntos de elaboración de props:
 
 * **Caldero mágico:** utilizado para crear objetos mágicos o especiales.
 
+En la siguiente tabla podemos ver qué procesos o recetas requiere cada objeto, en relación a los diferentes puntos de elaboración:
+
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td>Texturizador</td>
+    <td>Metales</td>
+    <td>Magia</td>
+  </tr>
+  <tr>
+    <td>Champiñón rojo</td>
+    <td>x</td>
+    <td>-</td>
+    <td>x</td>
+  </tr>
+  <tr>
+    <td>Caparazón verde</td>
+    <td>x</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Cereza</td>
+    <td>x</td>
+    <td>-</td>
+    <td>x</td>
+  </tr>
+  <tr>
+    <td>Manta de fantasma</td>
+    <td>x</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Cubo de compañía</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Torreta</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Pokeball</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+  </tr>
+  <tr>
+    <td>Gorra de entrenador</td>
+    <td>x</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Tri-Fuerza</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+  </tr>
+  <tr>
+    <td>Máscara de Majora</td>
+    <td>x</td>
+    <td>-</td>
+    <td>x</td>
+  </tr>
+  <tr>
+    <td>Pico</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Diamante</td>
+    <td>x</td>
+    <td>x</td>
+    <td>-</td>
+  </tr>
+</table>
+
 Por otro lado, podemos apreciar los diferentes puntos de entrega para cada saga:
 
 * **_Super Mario Bros:_** una tubería verde, típica de este videojuego.
@@ -250,6 +342,40 @@ Por otro lado, podemos apreciar los diferentes puntos de entrega para cada saga:
 * **_The Legend of Zelda:_** *el típico cofre visto en la saga.* 
 
 * **_Minecraft:_** una mesa de crafting.
+
+En la siguiente tabla podemos ver qué puntos de entrega corresponden a cada objeto:
+
+<table>
+  <tr>
+    <td>Punto de entrega</td>
+    <td>Objetos entregables</td>
+  </tr>
+  <tr>
+    <td>Tubería verde (Super Mario Bros)</td>
+    <td>Champiñón rojo, caparazón verde</td>
+  </tr>
+  <tr>
+    <td>Comecocos (Pac-Man)</td>
+    <td>Cereza, manta de fantasma</td>
+  </tr>
+  <tr>
+    <td>Portal naranja (Portal)</td>
+    <td>Cubo de compañía, torreta</td>
+  </tr>
+  <tr>
+    <td>PC de Bill (Pokémon)</td>
+    <td>Pokeball, gorra de entrenador</td>
+  </tr>
+  <tr>
+    <td>Cofre (The Legend of Zelda)</td>
+    <td>Tri-Fuerza, máscara de Majora</td>
+  </tr>
+  <tr>
+    <td>Mesa de crafteo (Minecraft)</td>
+    <td>Pico, diamante</td>
+  </tr>
+</table>
+
 
 <div id="FlujodejuegoGameLoop"></ol>
 
@@ -310,9 +436,86 @@ La cámara del juego será **fija o estática, con una perspectiva aérea,** cas
 
 ## **2.6. Controles**
 
-Los controles consistirán únicamente del **click o pulsación sobre la región de la pantalla, propios del tipo "Point & Click".** Por lo tanto, pulsar sobre un lugar, el personaje se desplazará hacia dicho punto. Si pulsamos sobre un objeto, el personaje se desplazará hasta él, y posteriormente lo recogerá o realizará la acción correspondiente. Para mostrar visualmente qué es lo que va a hacer el personaje, **se mostrará un pequeño indicador visual sobre el punto** del mapa o el objeto determinado.
+Los controles consistirán únicamente del **click o pulsación sobre la región de la pantalla, propios del tipo "Point & Click".** Por lo tanto, pulsar sobre un lugar, el personaje se desplazará hacia dicho punto. Si pulsamos sobre un objeto, el personaje se desplazará hasta él, y posteriormente lo recogerá o realizará la acción correspondiente. Para mostrar visualmente qué es lo que va a hacer el personaje, **se mostrará un pequeño indicador visual sobre el punto** del mapa o el objeto determinado.También se dará un **feedback auditivo** de que se ha realizado una petición (click). 
 
 Cabe mencionar que, si mientras se está desplazando o realizando una acción, recibe otra orden (hacemos click en otro punto de la pantalla), **se anulará la acción anterior, dando prioridad a la nueva.**
+
+Al **pulsar** en un lugar donde **no hay una acción** (por ejemplo, una mesa vacía cuando no tenemos objetos equipados, o fuera del escenario) **el personaje no hará nada**, es decir, cancelará su acción actual pero no hará nada más, quedándose en su sitio hasta que se le indique una acción válida. Se **reproducirá un sonido** que indica que es un movimiento prohibido o sin valor, además de **un pequeño indicador visual** sobre el punto.
+
+A continuación se incluye una tabla que explica cada interacción posible durante el juego:
+
+<table>
+  <tr>
+    <td>Prop</td>
+    <td>Con objeto equipado</td>
+    <td>Sin objeto equipado</td>
+  </tr>
+  <tr>
+    <td>Horno vacío</td>
+    <td>El personaje se mueve al horno e inserta el objeto dentro.</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica</td>
+  </tr>
+  <tr>
+    <td>Horno lleno completado</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+    <td>El personaje se desplaza al horno y recoge el objeto cocinado de su interior.</td>
+  </tr>
+  <tr>
+    <td>Horno lleno no completado</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+    <td>El personaje se desplaza al horno y recoge el objeto sin cocinar de su interior.</td>
+  </tr>
+  <tr>
+    <td>Horno roto</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica</td>
+  </tr>
+  <tr>
+    <td>Lugar de la cinta con objeto</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+    <td>El personaje se desplaza hasta el objeto y lo recoge.</td>
+  </tr>
+  <tr>
+    <td>Lugar de la cinta sin objeto</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+  </tr>
+  <tr>
+    <td>Libro</td>
+    <td>El personaje se desplaza al libro e interactúa con el.</td>
+    <td>El personaje se desplaza al libro e interactúa con el.</td>
+  </tr>
+  <tr>
+    <td>Tubería</td>
+    <td>El personaje deposita el objeto en la tubería</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+  </tr>
+  <tr>
+    <td>Tubería rota</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+  </tr>
+    <tr>
+    <td>Sobre algo no interactivo</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica.</td>
+  </tr>
+  <tr>
+    <td>Movimiento (lugar del escenario dentro del NavMesh)</td>
+    <td>El personaje se desplaza hasta el punto marcado.</td>
+    <td>El personaje se desplaza hasta el punto marcado.</td>
+  </tr>
+  <tr>
+    <td>Mesa vacía</td>
+    <td>El personaje se desplaza hasta la mesa y deposita el objeto en la mesa.</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica</td>
+  </tr>
+  <tr>
+    <td>Mesa llena</td>
+    <td>Acción no válida. El personaje se mantiene en el lugar y se notifica</td>
+    <td>El personaje se desplaza hasta la mesa y recoge el objeto de la mesa a sus manos.</td>
+  </tr>
+</table>
 
 <div id="Niveles"></ol>
 
@@ -331,21 +534,86 @@ El jugador podrá llevar los props que **salgan de la cinta transportadora a una
 
 En todo momento podrá consultar el **libro de recetas o combinaciones,** colocado en un lugar generalmente alejado de la acción.
 
+**Lista de niveles:**
+Dificultad de las sagas: Mario = Pacman < Minecraft = Portal < Pokemon < Zelda
+
+Plantilla: Nivel - Sagas - (nº de props para finalizar el nivel)
+
+*Nivel 1*: Pacman y Mario (10)
+*Nivel 2*: Mario, Minecraft (15)
+*Nivel 3*: Pacman, Mario y Minecraft (20)
+*Nivel 4*: Pacman, Minecraft y Portal (20)
+*Nivel 5*: Minecraft, Portal, Pokémon (25)
+*Nivel 6*: Mario, Minecraft, Portal, Pokémon (30) 
+*Nivel 7*: Pacman, Mario, Pokémon, Zelda (30)
+*Nivel 8*: Mario, Pacman, Minecraft, Portal, Pokemon, Zelda (50)    
+
+
 <div id="inInterfaz"></ol>
 
 # **3. Interfaz**
 
-<div id="DiagramadeFlujo"></ol>
 
+<div id="DiagramadeFlujo"></ol>
 
 ## **3.1. Diagrama de Flujo**
 
 A continuación, se muestra el diagrama de flujo y transición entre pantallas durante el desarrollo del juego:
+![image alt text](assets/GDD/DiagramadeFlujo.png)
+
+
+<div id="PantalladeMenuPrincipal"></ol>
+
+## **3.2. Pantalla de Menú principal**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+![image alt text](assets/GDD/PantalladeMenuPrincipal.png)
+
+
+<div id="PantalladePuntuaciones"></ol>
+
+## **3.3. Pantalla de Puntuaciones**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+![image alt text](assets/GDD/PantalladePuntuaciones.png)
+
+
+<div id="PantalladeOpciones"></ol>
+
+## **3.4. Pantalla de Opciones**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+![image alt text](assets/GDD/PantalladeOpciones.png)
+
+
+<div id="PantalladeCreditos"></ol>
+
+## **3.5. Pantalla de Créditos**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+![image alt text](assets/GDD/PantalladeCreditos.png)
+
+
+<div id="PantalladeIntroducciondenombre"></ol>
+
+## **3.6. Pantalla de Introducción de nombre**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+![image alt text](assets/GDD/PantalladeIntroducciondenombre.png)
+
+
+<div id="PantalladeSelecciondenivel"></ol>
+
+## **3.7. Pantalla de Selección de nivel**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+
+ ![image alt text](assets/GDD/PantalladeSelecciondenivel.png)
+
 
 <div id="PantalladeNivel"></ol>
 
-
-## **3.2. Pantalla de Nivel (HUD)**
+## **3.8. Pantalla de Nivel (HUD)**
 
 En las siguientes imágenes vemos un esbozo inicial y esquemático de los elementos que constituyen el HUD del juego (su distribución, forma y color pueden no coincidir necesariamente con los de la versión final, se trata simplemente de una aproximación al concepto):
 
@@ -355,6 +623,57 @@ Como vemos, se visualiza el progreso en el nivel (los props entregados sobre el 
 
 La idea fundamental detrás del diseño de interfaces del juego es minimizar el número de elementos y menús, para que sea lo más usable posible en pantallas de dispositivos móviles.
 
+
+<div id="PantalladePausa"></ol>
+
+## **3.9. Pantalla de Pausa**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+
+ ![image alt text](assets/GDD/PantalladePausa.png)
+
+
+<div id="PantalladeFindelnivel"></ol>
+
+## **3.10. Pantalla de Fin del nivel**
+
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+
+ ![image alt text](assets/GDD/PantalladeFindelnivel.png)
+
+
+<div id="PantalladeGameOver"></ol>
+
+## **3.11. Pantalla de Game Over**
+El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+
+ ![image alt text](assets/GDD/PantalladeGameOver.png)
+
+
+<div id="Notificaciones"></ol>
+
+## **3.12. Notificaciones**
+El juego ofrecerá una serie de notificaciones visuales y sonoras cada vez que el jugador realice una acción. Esto se realizará para que el jugador tenga un feedback de que puede y no puede hacer.
+ 
+Las notificaciones serán las siguientes:
+
+**Movimiento**: un icono en la casilla elegida para moverse, similar a la usada en juegos de estrategia.
+
+**Selección de objeto**: Se señalan los rebordes de la casilla que contiene al objetivo. Esta selección se dibujará cada vez que el jugador interactúe con un objeto usable, véase: hornos, mesas, objetos, tuberías, libro. En caso de moverse el objeto (cinta) la señal de selección se moverá con el objeto.
+
+**Acción errónea**: Un icono como de prohibido cuando el jugador realice una acción errónea, como hacer click fuera del escenario. Marcarán que la acción es errónea y no hará nada. Habrá un sonido de negación también.
+
+**Horno**: 
+- Cuando el horno está cocinando algo, aparecerá un icono circular que mostrará el tiempo restante para cocinar o trabajar el objeto en su interior. Avanzará de forma horaria hasta completarse.
+- Cuando el horno se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
+
+**Tubería**:
+Cuando la tubería se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
+
+
+
+
+
 <div id="arteysonido"></ol>
 
 # **4. Arte y Sonido**
@@ -363,17 +682,21 @@ La idea fundamental detrás del diseño de interfaces del juego es minimizar el 
 
 ## **4.1. Arte**
 
-El apartado artístico del videojuego será colorido y alegre, animaciones algo exageradas y, en general, una estética de 3D *cartoon*.
+El apartado artístico del videojuego será colorido y alegre, animaciones algo exageradas y, en general, una estética de 3D cartoon.
 
 El arte final se irá incorporando conforme se tengan los recursos necesarios.
+
 
 <div id="Sonido"></ol>
 
 ## **4.2. Sonido**
 
-Los sonidos del juego deberán acompañar a su estilo visual, de forma que deberán tener un toque alegre, divertido y amigable.
+Los sonidos del juego deberán acompañar a su estilo visual y a su concepto. Este concepto será el de un juego de crear juegos. 
+
+Por tanto, se ha decidido realizar un concepto metajuego, es decir, son cosas “placeholder”, temporales o inacabadas (sin detalle, colores, etc) las que realizan estas acciones, pues no tendría sentido que los creadores de props tuvieran un grandísimo detalle. EL sonido y la música por lo tanto deben adaptarse a este concepto para ser simples, pero efectivos. Que parezcan placeholders pero realicen bien su acción. 
 
 El sonido se irá incorporando conforme se tengan los recursos necesarios.
+
 
 <div id="roles"></ol>
 
@@ -393,4 +716,7 @@ Para la realización del trabajo tendremos un equipo de 6 personas, siguiendo lo
 * *Pablo Rodriguez Vicente:* Programador.
 
 * *Raquel Gastón Vicente: *Artista 2D y Modeladora 3D.
+
+
+
 
