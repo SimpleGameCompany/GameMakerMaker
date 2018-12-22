@@ -535,18 +535,19 @@ El jugador podrá llevar los props que **salgan de la cinta transportadora a una
 En todo momento podrá consultar el **libro de recetas o combinaciones,** colocado en un lugar generalmente alejado de la acción.
 
 **Lista de niveles:**
-Dificultad de las sagas: Mario = Pacman < Minecraft = Portal < Pokemon < Zelda
+Dificultad de las sagas: 
+Mario = Pacman < Minecraft = Portal < Pokemon < Zelda
 
-Plantilla: Nivel - Sagas - (nº de props para finalizar el nivel)
+Plantilla: Nivel - Sagas - (nº de props para finalizar el nivel).
 
-*Nivel 1*: Pacman y Mario (10)
-*Nivel 2*: Mario, Minecraft (15)
-*Nivel 3*: Pacman, Mario y Minecraft (20)
-*Nivel 4*: Pacman, Minecraft y Portal (20)
-*Nivel 5*: Minecraft, Portal, Pokémon (25)
-*Nivel 6*: Mario, Minecraft, Portal, Pokémon (30) 
-*Nivel 7*: Pacman, Mario, Pokémon, Zelda (30)
-*Nivel 8*: Mario, Pacman, Minecraft, Portal, Pokemon, Zelda (50)    
+*Nivel 1*: Pacman y Mario (10).
+*Nivel 2*: Mario, Minecraft (15).
+*Nivel 3*: Pacman, Mario y Minecraft (20).
+*Nivel 4*: Pacman, Minecraft y Portal (20).
+*Nivel 5*: Minecraft, Portal, Pokémon (25).
+*Nivel 6*: Mario, Minecraft, Portal, Pokémon (30).
+*Nivel 7*: Pacman, Mario, Pokémon, Zelda (30).
+*Nivel 8*: Mario, Pacman, Minecraft, Portal, Pokemon, Zelda (50).
 
 
 <div id="inInterfaz"></ol>
@@ -715,7 +716,7 @@ Para la realización del trabajo tendremos un equipo de 6 personas, siguiendo lo
 
 * *Pablo Rodriguez Vicente:* Programador.
 
-* *Raquel Gastón Vicente: *Artista 2D y Modeladora 3D.
+* *Raquel Gastón Vicente:* Artista 2D y Modeladora 3D.
 
 
 
