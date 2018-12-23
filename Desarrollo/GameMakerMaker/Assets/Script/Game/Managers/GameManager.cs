@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     //TODO Posiblemente vendria bien tener la lista de maximos elementos en pantalla, generarlos 
     List<GameObject> totalProps;
 
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
     private GameObject UI;
     private WaitForEndOfFrame frame;
     private Vector3 EndPosition;
+    private GameObject EndGameUI;
     // Use this for initialization
     void Start()
     {
@@ -54,18 +56,11 @@ public class GameManager : MonoBehaviour
         frame = new WaitForEndOfFrame();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
     public void StoreProp(GameObject prop)
     {
         prop.SetActive(false);
         prop.GetComponent<PropBehaviour>().Restart();
-        prop.transform.SetParent(gameObject.transform);
+        prop.transform.SetParent(null);
         totalProps.Add(prop);
     }
 
@@ -81,6 +76,8 @@ public class GameManager : MonoBehaviour
 
      public IEnumerator StartGame()
     {
+        EndGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_END);
+        EndGameUI.SetActive(false);
         GameObject scenario = Instantiate(loadedLevel.Scenario);
 
         GameObject Belt = GameObject.FindGameObjectWithTag(Constantes.TAG_BELT);
@@ -176,4 +173,29 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
+    //TODO
+    public void EndGame()
+    {
+        StopAllCoroutines();
+        PauseGame(0);
+        EndGameUI.SetActive(true);
+
+    }
+
+
+    public void ReStart()
+    {
+
+        Clear();
+        SceneManager.LoadScene(Constantes.SCENE_GAME);
+
+    }
+
+    public void Clear()
+    {
+        StopAllCoroutines();
+        totalProps.Clear();
+    }
+
 }

@@ -1,7 +1,5 @@
 ![image alt text](assets/GDD/Title.png)
 
-# Game Maker Maker
-
 ## Game Design Document
 
 
@@ -17,7 +15,7 @@
   + 1.7\. [Propósito y público objetivo](#Propositoypublicoobjetivo)
 * 2\. [Mecánicas del juego](#mecanicas)
   * 2.1\. [Jugabilidad](#Jugabilidad)
-  * 2.2\. [Props](#Trampas)
+  * 2.2\. [Props](#Props)
   * 2.3\. [Puntos de interacción](#Puntosdeinteraccion)
   * 2.4\. [Flujo de juego (Game Loop)](#FlujodejuegoGameLoop)
   * 2.5\. [Cámara](#Camara)
@@ -26,16 +24,14 @@
 * 3\. [Interfaz](#interfaz)
   * 3.1\. [Diagrama de Flujo](#DiagramadeFlujo)
   * 3.2\. [Pantalla de Menú principal](#PantalladeMenuPrincipal)
-  * 3.3\. [Pantalla de Puntuaciones](#PantalladePuntuaciones)
-  * 3.4\. [Pantalla de Opciones](#PantalladeOpciones)
-  * 3.5\. [Pantalla de Créditos](#PantalladeCreditos)
-  * 3.6\. [Pantalla de Introducción de nombre](#PantalladeIntroducciondenombre)
-  * 3.7\. [Pantalla de Selección de nivel](#PantalladeSelecciondenivel)
-  * 3.8\. [Pantalla de Nivel (HUD)](#PantalladeNivel)
-  * 3.9\. [Pantalla de Pausa](#PantalladePausa)
-  * 3.10\. [Pantalla de Fin del nivel](#PantalladeFindelnivel)
-  * 3.11\. [Pantalla de Game Over](#PantalladeGameOver)
-  * 3.12\. [Notificaciones](#Notificaciones)
+  * 3.3\. [Pantalla de Opciones](#PantalladeOpciones)
+  * 3.4\. [Pantalla de Créditos](#PantalladeCreditos)
+  * 3.5\. [Pantalla de Selección de nivel](#PantalladeSelecciondenivel)
+  * 3.6\. [Pantalla de Nivel (HUD)](#PantalladeNivel)
+  * 3.7\. [Pantalla de Pausa](#PantalladePausa)
+  * 3.8\. [Pantalla de Fin del nivel](#PantalladeFindelnivel)
+  * 3.9\. [Pantalla de Game Over](#PantalladeGameOver)
+  * 3.10\. [Notificaciones](#Notificaciones)
 
 * 4\. [Arte y Sonido](#arteysonido)
   * 4.1\. [Arte](#Arte)
@@ -111,7 +107,7 @@ Los niveles serán realizados de forma progresiva y tendrán distintos niveles d
 
 * **Dificultad incremental:** los niveles avanzados presentarán un reto mayor, debido a un número incrementado de elementos que gestionar, y al propio diseño del nivel.
 
-* **Diferentes props:** Cada nivel dispondrá de un número de props diferente. De esta manera, por ejemplo, el primer nivel tendrá 4 props, de 2 juegos diferentes, y el segundo, 8 props, de 4 juegos diferentes.
+* **Diferentes props:** Cada nivel dispondrá de un número de props diferente. De esta manera, por ejemplo, el primer nivel tendrá 4 props, de 2 juegos diferentes.
 
 * **Controles "Point & Click":** los controles, como se ha mencionado anteriormente, junto a la cámara aérea, permitirán visualizar y manipular el nivel en su completitud, posibilitando al usuario gestionar todos los props, puntos de interacción y demás elementos del escenario.
 
@@ -140,6 +136,9 @@ En esta sección, trataremos todas las cuestiones referentes al funcionamiento b
 
 * **Niveles:** los niveles del juego consistirán en una planta de montaje de la fábrica de props, con cintas transportadoras, elementos de almacenaje y elaboración, etc. En cada nivel, dispondremos de un **número determinado de props que deberemos completar para superarlo, con un número específico de vidas.** Si un prop no es recogido de la cinta transportadora (caerá a la papelera situada al final de la misma), se perderá una vida.
 
+Una descripción detallada se encontrará en la sección **Niveles**.
+
+
 * **Dificultad:** la dificultad irá aumentando con cada nivel, de forma que un nivel más avanzado tendrá una distribución más compleja y complicada de navegar, un mayor número de props y sagas a las que pertenecen, y más complejidad en las "recetas" de éstos.
 
 * **Puntos de interacción:** los niveles tendrán diferentes puntos de preparado y entrega de props. 
@@ -148,18 +147,20 @@ Cuando un prop es introducido en un **punto de preparado,** se comienza a tratar
 
 Una vez preparado, cuando haya pasado por todos los puntos necesarios según su "receta", deberemos llevar el resultado a un **punto de entrega**, y depositarlo en el que corresponda, en función de su saga. Si se deposita en el punto de entrega equivocado, dicho punto quedará inutilizado unos instantes, y perderemos el prop.
 
-Una descripción detallada se encontrará en la sección *2.3. Puntos de interacción*.
+Una descripción detallada se encontrará en la sección **Puntos de interacción**.
 
 * **Props:** los niveles tendrán diferentes props, de sagas conocidas, a modo de guiño gracioso y atractivo para el usuario, que deberá recogerlos de la cinta transportadora, y llevarlos a los puntos de preparación correspondientes, para posteriormente recogerlos de éstas y depositarlos en las de entrega que encajen con el juego al que pertenece. 
 
 Si el usuario tiene sobrecarga de props, y necesita recoger alguno de la cinta para no perderlo, puede depositarlos en diferentes "mesas" dispuestas por el nivel (abundantes, pero limitadas).
 
-Una descripción detallada se encontrará en la sección *2.2. Props*.
+Una descripción detallada se encontrará en la sección **Props**.
 
 * **Progresión del jugador:** para incentivar la rejugabilidad y búsqueda de un reto por parte del jugador, se incorporará un sistema de puntuación, animandole a jugar a otra partida para superar su puntuación o la de sus amigos. Este sistema tendrá en cuenta diversos factores: el tiempo que se ha tardado en completar el nivel, número de props entregados en la saga correcta, número de puntos de preparado sobrecargados, etc.
 
-<div id="Props"></ol>
+Debido a la naturaleza del juego, y su estructura por niveles, se ha decidido tomar el modelo de puntuación de juegos exitosos como *Angry Birds* o *Candy Crush*, basado en estrellas, en lugar de un contador numérico, ya que han demostrado que este sistema funciona mejor para este tipo de juegos.
 
+
+<div id="Props"></ol>
 
 ## **2.2. Props**
 
@@ -522,7 +523,7 @@ A continuación se incluye una tabla que explica cada interacción posible duran
 
 ## **2.7. Niveles**
 
-En el juego final, podremos diferenciar **dos niveles completos distintos,** con props y distribución espacial diferentes.
+En la idea inicial, se podían diferenciar **dos niveles completos distintos,** con props y distribución espacial diferentes. Posteriormente, se ha planteado ampliar la lista de niveles del juego, debido a la gran escalabilidad del sistema.
 
 Un ejemplo de diseño de nivel esquemático sería el siguiente:
 
@@ -535,10 +536,10 @@ El jugador podrá llevar los props que **salgan de la cinta transportadora a una
 En todo momento podrá consultar el **libro de recetas o combinaciones,** colocado en un lugar generalmente alejado de la acción.
 
 **Lista de niveles:**
-Dificultad de las sagas: 
-Mario = Pacman < Minecraft = Portal < Pokemon < Zelda
+Dificultad de las sagas:
 
-Plantilla: Nivel - Sagas - (nº de props para finalizar el nivel).
+*Mario = Pacman < Minecraft = Portal < Pokemon < Zelda*
+Plantilla: *Nivel - Sagas - (nº de props para finalizar el nivel).*
 
 *Nivel 1*: Pacman y Mario (10).
 
@@ -566,6 +567,7 @@ Plantilla: Nivel - Sagas - (nº de props para finalizar el nivel).
 ## **3.1. Diagrama de Flujo**
 
 A continuación, se muestra el diagrama de flujo y transición entre pantallas durante el desarrollo del juego:
+
 ![image alt text](assets/GDD/DiagramadeFlujo.png)
 
 
@@ -574,53 +576,46 @@ A continuación, se muestra el diagrama de flujo y transición entre pantallas d
 ## **3.2. Pantalla de Menú principal**
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+
 ![image alt text](assets/GDD/PantalladeMenuPrincipal.png)
-
-
-<div id="PantalladePuntuaciones"></ol>
-
-## **3.3. Pantalla de Puntuaciones**
-
-El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
-![image alt text](assets/GDD/PantalladePuntuaciones.png)
 
 
 <div id="PantalladeOpciones"></ol>
 
-## **3.4. Pantalla de Opciones**
+## **3.3. Pantalla de Opciones**
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+
 ![image alt text](assets/GDD/PantalladeOpciones.png)
 
 
 <div id="PantalladeCreditos"></ol>
 
-## **3.5. Pantalla de Créditos**
+## **3.4. Pantalla de Créditos**
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
-![image alt text](assets/GDD/PantalladeCreditos.png)
 
+![image alt text](assets/GDD/image_33.png)
 
-<div id="PantalladeIntroducciondenombre"></ol>
+Al igual que en la práctica anterior, se ha incluido esta pantalla directamente en la página web del videojuego, debido a su estructura y diseño:
 
-## **3.6. Pantalla de Introducción de nombre**
-
-El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
-![image alt text](assets/GDD/PantalladeIntroducciondenombre.png)
+![image alt text](assets/GDD/PantalladeCreditos2.PNG)
 
 
 <div id="PantalladeSelecciondenivel"></ol>
 
-## **3.7. Pantalla de Selección de nivel**
+## **3.5. Pantalla de Selección de nivel**
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
  ![image alt text](assets/GDD/PantalladeSelecciondenivel.png)
+ 
+ ![image alt text](assets/GDD/PantalladeSelecciondenivel2.png)
 
 
 <div id="PantalladeNivel"></ol>
 
-## **3.8. Pantalla de Nivel (HUD)**
+## **3.6. Pantalla de Nivel (HUD)**
 
 En las siguientes imágenes vemos un esbozo inicial y esquemático de los elementos que constituyen el HUD del juego (su distribución, forma y color pueden no coincidir necesariamente con los de la versión final, se trata simplemente de una aproximación al concepto):
 
@@ -633,7 +628,7 @@ La idea fundamental detrás del diseño de interfaces del juego es minimizar el 
 
 <div id="PantalladePausa"></ol>
 
-## **3.9. Pantalla de Pausa**
+## **3.7. Pantalla de Pausa**
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
@@ -642,7 +637,7 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 <div id="PantalladeFindelnivel"></ol>
 
-## **3.10. Pantalla de Fin del nivel**
+## **3.8. Pantalla de Fin del nivel**
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
@@ -651,7 +646,7 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 <div id="PantalladeGameOver"></ol>
 
-## **3.11. Pantalla de Game Over**
+## **3.9. Pantalla de Game Over**
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
  ![image alt text](assets/GDD/PantalladeGameOver.png)
@@ -659,7 +654,7 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 <div id="Notificaciones"></ol>
 
-## **3.12. Notificaciones**
+## **3.10. Notificaciones**
 El juego ofrecerá una serie de notificaciones visuales y sonoras cada vez que el jugador realice una acción. Esto se realizará para que el jugador tenga un feedback de que puede y no puede hacer.
  
 Las notificaciones serán las siguientes:
@@ -712,15 +707,15 @@ El sonido se irá incorporando conforme se tengan los recursos necesarios.
 
 Para la realización del trabajo tendremos un equipo de 6 personas, siguiendo los siguientes roles:
 
-* *Alejandro Camuñas Casas*: Game Designer, Rigger y Animador 3D.
+* *Alejandro Camuñas Casas*: Game Designer, Rigger/Animador 3D y Marketing.
 
 * *Andrés Felipe García:* Modelador 3D y Desarrollador Web.
 
 * *Guillermo Amigó Urda:* Game Designer y Sound Designer.
 
-* *Jose Daniel Campos Galán:* Programador.
+* *Jose Daniel Campos Galán:* Programador de juego.
 
-* *Pablo Rodriguez Vicente:* Programador.
+* *Pablo Rodriguez Vicente:* Programador de juego.
 
 * *Raquel Gastón Vicente:* Artista 2D y Modeladora 3D.
 

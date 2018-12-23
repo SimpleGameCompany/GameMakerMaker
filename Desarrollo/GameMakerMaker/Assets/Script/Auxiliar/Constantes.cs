@@ -17,4 +17,12 @@ public static class Constantes
     public const string TAG_BELT = "Cinta";
 
     public const string TAG_PAPER = "Papelera";
+
+    public const string TAG_LIFES = "Lifes";
+
+    public const string SCENE_MENU = "MainMenu";
+
+    public const string SCENE_GAME = "GameScene";
+
+    public const string TAG_END = "EndGameUI";
 }
