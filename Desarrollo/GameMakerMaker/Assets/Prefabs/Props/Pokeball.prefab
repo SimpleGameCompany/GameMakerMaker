@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 95620880953556516}
   - component: {fileID: 195321854591682972}
   - component: {fileID: 114828982293787114}
+  - component: {fileID: 135204267869442680}
   m_Layer: 0
   m_Name: Pokeball
   m_TagString: Untagged
@@ -108,7 +109,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114368445751135734
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361751414797168}
@@ -124,7 +125,7 @@ MonoBehaviour:
   _assetGuid: 7358d9863111d4d48ae239cad5e72514
 --- !u!114 &114714254997707122
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361751414797168}
@@ -152,6 +153,18 @@ MonoBehaviour:
   ProcessSkins:
   - {fileID: 2100000, guid: cbf62ffab8c0b794db89d2d5ae098dce, type: 2}
   - {fileID: 2100000, guid: 0677522c53b2d954897b39d8e3dbfc35, type: 2}
+--- !u!135 &135204267869442680
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361751414797168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25000006
+  m_Center: {x: 0, y: 0.000064924374, z: 0.25000006}
 --- !u!195 &195321854591682972
 NavMeshAgent:
   m_ObjectHideFlags: 1
