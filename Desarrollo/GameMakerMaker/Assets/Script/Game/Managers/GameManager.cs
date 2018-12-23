@@ -67,8 +67,9 @@ public class GameManager : MonoBehaviour
     public void LoadLevel(Level l)
     {
         loadedLevel = l;
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(Constantes.SCENE_GAME);
     }
+
     public void StartLevelFromCourutine()
     {
         StartCoroutine(StartGame());
@@ -80,34 +81,53 @@ public class GameManager : MonoBehaviour
         EndGameUI.SetActive(false);
         GameObject scenario = Instantiate(loadedLevel.Scenario);
 
+        yield return StartCoroutine(CreateNavMesh(scenario));
+        yield return StartCoroutine(CreateProps());
+       
+        PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
+        GameObject papelera = GameObject.FindGameObjectWithTag(Constantes.TAG_PAPER);
+        EndPosition = papelera.transform.position;
+
+
+        RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
+        RenderSettings.ambientLight = loadedLevel.ambientColor;
+
+        Button recetas = GameObject.FindGameObjectWithTag(Constantes.TAG_RECIPIES).GetComponent<Button>();
+        recetas.onClick.AddListener(delegate { PlayGame(); });
+        Recipies = recetas;
+
+
+    }
+
+
+    IEnumerator CreateNavMesh(GameObject scenario) {
         GameObject Belt = GameObject.FindGameObjectWithTag(Constantes.TAG_BELT);
 
 
         BeltBehaviour[] Cintas = FindObjectsOfType<BeltBehaviour>();
-        
 
-        foreach(var e in Cintas)
+
+        foreach (var e in Cintas)
         {
             e.transform.SetParent(Belt.transform);
             yield return frame;
         }
 
-        NavMeshSurface[] surfaces =  scenario.GetComponentsInChildren<NavMeshSurface>();
-        foreach(var i in surfaces)
+        NavMeshSurface[] surfaces = scenario.GetComponentsInChildren<NavMeshSurface>();
+        foreach (var i in surfaces)
         {
             i.BuildNavMesh();
             yield return frame;
         }
+    }
 
-        GameObject papelera = GameObject.FindGameObjectWithTag(Constantes.TAG_PAPER);
-        EndPosition = papelera.transform.position;
-
-
+    IEnumerator CreateProps()
+    {
         GameObject[] props = (from x in loadedLevel.Props select x.gameObject).ToArray();
-        for(int i = 0; i < props.Length; i++)
+        for (int i = 0; i < props.Length; i++)
         {
             int number = loadedLevel.MaxProps[i];
-            while(number > 0)
+            while (number > 0)
             {
                 GameObject o = Instantiate(props[i]);
                 o.SetActive(false);
@@ -121,18 +141,7 @@ public class GameManager : MonoBehaviour
                 yield return frame;
             }
         }
-        PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
-        BeltBehaviour[] n = FindObjectsOfType<BeltBehaviour>();
-        foreach(var e in n) { e.speed = loadedLevel.velocity; }
-        Button recetas = GameObject.FindGameObjectWithTag(Constantes.TAG_RECIPIES).GetComponent<Button>();
-
-        recetas.onClick.AddListener(delegate { PlayGame(); });
-
-        Recipies = recetas;
     }
-
-
-
 
     IEnumerator GenerateProp(WaitForSeconds waiter)
     {

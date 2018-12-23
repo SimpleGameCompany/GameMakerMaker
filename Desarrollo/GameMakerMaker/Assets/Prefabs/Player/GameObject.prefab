@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114140539664657470}
   - component: {fileID: 114020170657255970}
   - component: {fileID: 114132384519535664}
+  - component: {fileID: 95331660946445366}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -88,6 +89,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1213213937952926}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &95331660946445366
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213213937952926}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d529dd391f8f34d4bac776bef338db81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114020170657255970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickedObjet: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!136 &136283984199346390
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -25,4 +25,13 @@ public static class Constantes
     public const string SCENE_GAME = "GameScene";
 
     public const string TAG_END = "EndGameUI";
+
+     public const string ANIMATION_PLAYER_DROP_OBJECT = "DropObject";
+     public const string ANIMATION_PLAYER_IDLE_POSE = "IdlePose";
+     public const string ANIMATION_PLAYER_SPEED = "Speed";
+     public const string ANIMATION_PLAYER_LOSE = "Lose";
+     public const string ANIMATION_PLAYER_WIN = "Win";
+     public const string ANIMATION_PLAYER_PICK = "Pick";
+    
+
 }

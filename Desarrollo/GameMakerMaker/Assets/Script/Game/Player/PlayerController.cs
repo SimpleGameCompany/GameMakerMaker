@@ -12,38 +12,18 @@ public class PlayerController : MonoBehaviour {
     public  PropBehaviour PickedObjet;
     private NavMeshHit navMeshHit;
     private Coroutine actionInProcess;
+    [HideInInspector]
+    public Animator anim;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
-            {
-                Interactuable inter = hit.collider.gameObject.GetComponent<Interactuable>();
-                
-                if (inter != null)
-                {
-                    actualTask = inter;
-                    if (actionInProcess != null)
-                    {
-                        StopCoroutine(actionInProcess);
-                        actionInProcess = null;
-                    }
-                    if (inter.PreAction(this)) {
-                        if (NavMesh.SamplePosition(hit.point, out navMeshHit, 10, NavMesh.AllAreas))
-                        {
-                            agent.SetDestination(navMeshHit.position);
-                            actionInProcess = StartCoroutine(GoToPoint());
-                        }
-                    }
-                }
-            }
-        }
+        Move();
+        anim.SetFloat(Constantes.ANIMATION_PLAYER_SPEED, agent.velocity.magnitude);
     }
 
 
@@ -55,5 +35,36 @@ public class PlayerController : MonoBehaviour {
             yield return null;
         }
         actualTask.PostAction(this);
+    }
+
+    void Move()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            {
+                Interactuable inter = hit.collider.gameObject.GetComponent<Interactuable>();
+
+                if (inter != null)
+                {
+                    actualTask = inter;
+                    if (actionInProcess != null)
+                    {
+                        StopCoroutine(actionInProcess);
+                        actionInProcess = null;
+                    }
+                    if (inter.PreAction(this))
+                    {
+                        if (NavMesh.SamplePosition(hit.point, out navMeshHit, 10, NavMesh.AllAreas))
+                        {
+                            agent.SetDestination(navMeshHit.position);
+                            actionInProcess = StartCoroutine(GoToPoint());
+                        }
+                    }
+                }
+            }
+        }
     }
 }

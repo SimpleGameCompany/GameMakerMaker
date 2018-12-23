@@ -67,6 +67,7 @@ public class PropBehaviour : Interactuable {
         gameObject.transform.SetParent(player.transform);
         agent.enabled = false;
         gameObject.transform.localPosition = Vector3.zero;
+        player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
     }
 
     public override bool PreAction(PlayerController player)

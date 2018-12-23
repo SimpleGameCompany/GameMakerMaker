@@ -16,6 +16,7 @@ public class LevelEditorWindow : EditorWindow {
     static string levelName = "level";
     static bool Pick = false;
     static int[] MaxProps;
+    static Color AmbientColor;
     [SerializeField]
     PropBehaviour[] Props;
     [SerializeField]
@@ -56,7 +57,11 @@ public class LevelEditorWindow : EditorWindow {
         EditorGUILayout.PropertyField(o.FindProperty("countProps"), true);
         velocity = EditorGUILayout.FloatField("Velocity", velocity);
         ratio = EditorGUILayout.FloatField("Ratio", ratio);
+
         winCount = EditorGUILayout.IntField("Props to Win", winCount);
+        GUIContent n = new GUIContent("AmbienColor");
+        AmbientColor =  EditorGUILayout.ColorField(n, AmbientColor,true,false,true);
+        RenderSettings.ambientLight = AmbientColor;
         o.ApplyModifiedProperties();
         staticProps = Props;
         MaxProps = countProps;
@@ -102,6 +107,7 @@ public class LevelEditorWindow : EditorWindow {
                 winCount = l.winCount;
                 ratio = l.winCount;
                 MaxProps = l.MaxProps;
+                AmbientColor = l.ambientColor;
                 PrefabUtility.InstantiatePrefab(l.Scenario);
                 Pick = false;
                 g.Load(l);
@@ -131,6 +137,7 @@ public class LevelEditorWindow : EditorWindow {
         level.levelID = ID;
         level.Props = Props;
         level.MaxProps = MaxProps;
+        level.ambientColor = AmbientColor;
         level = g.Save(level);
         string path = Constantes.LEVEL_ASSET_PATH +levelName+ ".asset";
         AssetDatabase.CreateAsset(level, path);

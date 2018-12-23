@@ -22,7 +22,6 @@ public class GameStarter : MonoBehaviour {
     {
         GameManager.Instance.ResumeGame();
         GameManager.Instance.ReStart();
-        SceneManager.LoadScene(Constantes.SCENE_GAME);
     }
 
     public void StoreAndBack()

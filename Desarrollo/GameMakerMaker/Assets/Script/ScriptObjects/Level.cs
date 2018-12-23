@@ -17,5 +17,8 @@ public class Level : ScriptableObject  {
     public MatrixContainer[] Layout;
     
     public GameObject floor;
+
+    [SerializeField]
+    public Color ambientColor;
     
 }
