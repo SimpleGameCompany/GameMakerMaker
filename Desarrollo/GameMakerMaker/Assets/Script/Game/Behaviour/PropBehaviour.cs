@@ -11,7 +11,8 @@ public class PropBehaviour : Interactuable {
         Mario,
         Portal,
         Pacman,
-        Pokemon
+        Pokemon,
+        Zelda
     }
     private int tasksCompleted =0;
     private MeshRenderer render;
@@ -75,9 +76,10 @@ public class PropBehaviour : Interactuable {
     private void Awake()
     {
         recipe = Instantiate(recipe) as Recipe;
-        
-        render = GetComponent<MeshRenderer>();
+
+        render = GetComponentInChildren<MeshRenderer>();
         agent = GetComponent<NavMeshAgent>();
+        TasksCompleted = 0;
     }
 
     public void Restart()

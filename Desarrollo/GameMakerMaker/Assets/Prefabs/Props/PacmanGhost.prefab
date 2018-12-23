@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 33186845939567650}
   - component: {fileID: 23676622272748166}
   - component: {fileID: 114368704636091120}
+  - component: {fileID: 65163376269599702}
   m_Layer: 0
   m_Name: PacmanGhost
   m_TagString: Untagged
@@ -56,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1041096159131040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5100768, y: -2.4419146, z: -5.67192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4855110236662134}
@@ -118,6 +119,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1343357373103056}
   m_Mesh: {fileID: 4300000, guid: fcb7881f30da35340b6c9b3380db26d4, type: 3}
+--- !u!65 &65163376269599702
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1343357373103056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35, y: 0.35000008, z: 0.033249747}
+  m_Center: {x: 0, y: 0, z: -0.016624874}
 --- !u!95 &95676735716136466
 Animator:
   serializedVersion: 3

@@ -20,6 +20,13 @@ public class PaperBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PropBehaviour p = other.GetComponent<PropBehaviour>();
+
+        if(p == null)
+        {
+            p = other.transform.GetComponentInParent<PropBehaviour>();
+        }
+
+
         if(p != null)
         {
             GameManager.Instance.StoreProp(p.gameObject);

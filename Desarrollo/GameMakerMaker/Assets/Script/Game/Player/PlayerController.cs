@@ -47,6 +47,11 @@ public class PlayerController : MonoBehaviour {
             {
                 Interactuable inter = hit.collider.gameObject.GetComponent<Interactuable>();
 
+                if(inter == null)
+                {
+                    inter = hit.transform.parent.GetComponent<Interactuable>();
+                }
+
                 if (inter != null)
                 {
                     actualTask = inter;
