@@ -7,13 +7,20 @@ using TMPro;
 public class OvenBehaviour : Interactuable
 {
     public Image progress;
+    public Image danger;
     // Use this for initialization
 
     PropBehaviour CookingProp;
     WaitForEndOfFrame wait;
     float time = 0;
+
     public float brokenTime;
     float currentBrokenTime = 0;
+
+    public float explosionTime;
+    float currentExplosionTime = 0;
+    Coroutine explosion;
+
     public TextMeshProUGUI textDebug;
 
     public enum OvenType
@@ -91,7 +98,9 @@ public class OvenBehaviour : Interactuable
                 time = 0;
                 textDebug.text = "";
                 ovenState = State.Empty;
-                StopCoroutine(Cooking());              
+                StopCoroutine(explosion);
+                danger.gameObject.SetActive(false);
+                currentExplosionTime = 0;
                 break;
             case State.Wasted:
                 break;
@@ -118,7 +127,9 @@ public class OvenBehaviour : Interactuable
             textDebug.text = ("Seguro que ha salido amorfo");
             progress.color = new Color(0, 1, 0);
             task.Complete = true;
+            time = 0;
             ovenState = State.Prepare;
+            explosion = StartCoroutine(Explosion());
         }
         else
         {
@@ -139,5 +150,38 @@ public class OvenBehaviour : Interactuable
         }
     }
 
+    IEnumerator Explosion()
+    {
+        while (currentExplosionTime/explosionTime < 0.25f)
+        {
+            currentExplosionTime += Time.deltaTime;
+            yield return wait;
+        }
+        textDebug.text = ("Corre Gilipollas");
+        progress.fillAmount = 0;
+        progress.color = new Color(1, 1, 1);
+        danger.gameObject.SetActive(true);
+        while (currentExplosionTime / explosionTime < 1.1f)
+        {
+            currentExplosionTime += Time.deltaTime;
+            yield return wait;
+        }
+        currentExplosionTime = 0;
+        ovenState = State.Broken;
+        danger.gameObject.SetActive(false);
+        textDebug.text = ("Se te ha quemado tonto");
+        progress.color = new Color(1, 0, 0);
+        while (currentBrokenTime < brokenTime)
+        {
+            currentBrokenTime += Time.deltaTime;
+            progress.fillAmount = (currentBrokenTime / brokenTime);
+            yield return wait;
+        }
+        textDebug.text = ("Todo te sale mal");
+        progress.fillAmount = 0;
+        progress.color = new Color(1, 1, 1);
+        currentBrokenTime = 0;
+        ovenState = State.Empty;
+    }
 
 }
