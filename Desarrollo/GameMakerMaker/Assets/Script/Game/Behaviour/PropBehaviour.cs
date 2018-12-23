@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Animator))]
 public class PropBehaviour : Interactuable {
     public enum PropWorld
     {
         Mario,
         Portal,
-        Pacman
+        Pacman,
+        Pokemon
     }
-    private int tasksCompleted;
+    private int tasksCompleted =0;
     private MeshRenderer render;
 
     public bool Completed { get { return tasksCompleted == recipe.Tasks.Length; } }
@@ -21,6 +24,7 @@ public class PropBehaviour : Interactuable {
     public PropWorld world;
     public Recipe recipe;
 
+    [HideInInspector]
     public NavMeshAgent agent;
 
     [SerializeField]
@@ -35,21 +39,7 @@ public class PropBehaviour : Interactuable {
         set
         {
             tasksCompleted = value;
-            if(tasksCompleted > 0)
-            {
-                if(tasksCompleted == recipe.Tasks.Length)
-                {
-                   render.material = ProcessSkins[2];
-                }
-                else
-                {
-                    render.material = ProcessSkins[1];
-                }
-            }
-            else
-            {
-                render.material = ProcessSkins[0];
-            }
+            render.material = ProcessSkins[tasksCompleted];
         }
     }
 
@@ -85,6 +75,7 @@ public class PropBehaviour : Interactuable {
     private void Awake()
     {
         recipe = Instantiate(recipe) as Recipe;
+        
         render = GetComponent<MeshRenderer>();
         agent = GetComponent<NavMeshAgent>();
     }

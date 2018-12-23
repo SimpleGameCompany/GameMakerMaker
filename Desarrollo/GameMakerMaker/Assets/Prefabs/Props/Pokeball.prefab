@@ -23,6 +23,9 @@ GameObject:
   - component: {fileID: 23674496027600660}
   - component: {fileID: 114368445751135734}
   - component: {fileID: 114714254997707122}
+  - component: {fileID: 95620880953556516}
+  - component: {fileID: 195321854591682972}
+  - component: {fileID: 114828982293787114}
   m_Layer: 0
   m_Name: Pokeball
   m_TagString: Untagged
@@ -58,7 +61,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0677522c53b2d954897b39d8e3dbfc35, type: 2}
+  - {fileID: 2100000, guid: cbf62ffab8c0b794db89d2d5ae098dce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,9 +88,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361751414797168}
   m_Mesh: {fileID: 4300000, guid: c366d8e6bc47ec3498c495cae0d4d33a, type: 3}
+--- !u!95 &95620880953556516
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361751414797168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ad5840c0ab93e0478ea892d65a7dbf4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114368445751135734
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361751414797168}
@@ -103,7 +124,7 @@ MonoBehaviour:
   _assetGuid: 7358d9863111d4d48ae239cad5e72514
 --- !u!114 &114714254997707122
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1361751414797168}
@@ -113,3 +134,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 32171c74-3ad7-4cf1-91c4-7de74ec5611a
+--- !u!114 &114828982293787114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361751414797168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e1bdecfb7e05c49807244ad5ad2e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionIcon: {fileID: 0}
+  world: 3
+  recipe: {fileID: 11400000, guid: 69039f5675ae2984383bd544c430db3d, type: 2}
+  agent: {fileID: 0}
+  ProcessSkins:
+  - {fileID: 2100000, guid: cbf62ffab8c0b794db89d2d5ae098dce, type: 2}
+  - {fileID: 2100000, guid: 0677522c53b2d954897b39d8e3dbfc35, type: 2}
+--- !u!195 &195321854591682972
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1361751414797168}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5000001
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.49591017
+  m_BaseOffset: 0.24795508
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
