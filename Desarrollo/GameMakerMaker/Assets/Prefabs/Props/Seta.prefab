@@ -166,7 +166,7 @@ MonoBehaviour:
   _guid: 2902335559
 --- !u!114 &114062785764481554
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
@@ -204,7 +204,10 @@ MonoBehaviour:
   world: 0
   recipe: {fileID: 0}
   agent: {fileID: 0}
-  ProcessSkins: []
+  ProcessSkins:
+  - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
+  - {fileID: 0}
+  - {fileID: 2100000, guid: 5bfbca376b621034aa8c457f4f742891, type: 2}
   anim: {fileID: 0}
 --- !u!114 &114481720613372896
 MonoBehaviour:
@@ -235,7 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114820404839777552
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
