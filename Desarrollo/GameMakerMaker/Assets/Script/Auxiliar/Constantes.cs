@@ -33,6 +33,7 @@ public static class Constantes
      public const string ANIMATION_PLAYER_WIN = "Win";
      public const string ANIMATION_PLAYER_PICK = "Pick";
      public const string ANIMATION_PLAYER_ANGULARSPEED = "AngularSpeed";
+     public const string ANIMATION_PLAYER_ROTATE = "Rotate";
 
     public const string ANIMATION_OVEN_DROP_OBJECT = "DropObject";
     public const string ANIMATION_OVEN_GET_OBJECT = "GetObject";

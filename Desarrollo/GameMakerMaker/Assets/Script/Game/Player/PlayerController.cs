@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
     private Coroutine actionInProcess;
     [HideInInspector]
     public Animator anim;
-
+    public float rotateSpeed = 135;
     Vector3 lastFacing;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
@@ -40,6 +40,31 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator GoToPoint()
     {
+
+
+        agent.CalculatePath(agent.destination, agent.path);
+        yield return new WaitUntil(() => { return !agent.pathPending; });
+        Vector3 PointDir = agent.path.corners[1] - transform.position;
+        Vector3 preforward = transform.forward;
+        agent.isStopped = true;
+        float t = Mathf.Abs(Vector3.Angle(PointDir, transform.forward));
+        anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, true);
+
+        while (t > 5)
+        {
+
+            transform.forward = Vector3.RotateTowards(transform.forward, PointDir, Mathf.Deg2Rad * rotateSpeed * Time.deltaTime, 0.0f);
+            t = Mathf.Abs(Vector3.Angle(PointDir,transform.forward));
+            yield return null;
+
+        }
+
+
+
+        anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, false);
+        agent.isStopped = false;
+        
+
         while (Vector3.Distance(transform.position,agent.destination)>1)
         {
             if (actualTask.UpdatePosition(this))
