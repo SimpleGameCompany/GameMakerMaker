@@ -5,8 +5,6 @@ using System.Collections;
 public class OvenInstruction
 {
     [SerializeField]
-    public float Time;
-    [SerializeField]
     public OvenBehaviour.OvenType Type;
     
     public bool Complete = false;

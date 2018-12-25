@@ -4,18 +4,6 @@ using System.Collections;
 public class PaperBehaviour : MonoBehaviour
 {
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,8 +17,8 @@ public class PaperBehaviour : MonoBehaviour
 
         if(p != null)
         {
-            GameManager.Instance.StoreProp(p.gameObject);
-            LifeController.Instance.Lifes--;
+
+            p.anim.SetTrigger(Constantes.ANIMATION_PROP_DESTROY);
         }
         
     }

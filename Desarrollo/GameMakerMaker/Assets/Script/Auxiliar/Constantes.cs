@@ -32,6 +32,17 @@ public static class Constantes
      public const string ANIMATION_PLAYER_LOSE = "Lose";
      public const string ANIMATION_PLAYER_WIN = "Win";
      public const string ANIMATION_PLAYER_PICK = "Pick";
-    
+
+    public const string ANIMATION_OVEN_DROP_OBJECT = "DropObject";
+    public const string ANIMATION_OVEN_GET_OBJECT = "GetObject";
+    public const string ANIMATION_OVEN_BREAK = "Break";
+    public const string ANIMATION_OVEN_FIXED = "Fixed";
+
+    public const string ANIMATION_PROP_SPAWN = "Spawn";
+    public const string ANIMATION_PROP_DESTROY = "Destroy";
+   
+
+
+
 
 }

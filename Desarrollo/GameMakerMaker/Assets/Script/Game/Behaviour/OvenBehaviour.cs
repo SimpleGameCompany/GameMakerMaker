@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
-
+[RequireComponent(typeof(Animator))]
 public class OvenBehaviour : Interactuable
 {
     public Image progress;
@@ -21,7 +21,11 @@ public class OvenBehaviour : Interactuable
     float currentExplosionTime = 0;
     Coroutine explosion;
 
+    [HideInInspector]
+    public Animator anim;
     public TextMeshProUGUI textDebug;
+
+    public float TimeToCook;
 
     public enum OvenType
     {
@@ -46,6 +50,7 @@ public class OvenBehaviour : Interactuable
     {
         wait = new WaitForEndOfFrame();
         ovenState = State.Empty;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -84,6 +89,7 @@ public class OvenBehaviour : Interactuable
                 player.PickedObjet = null;
                 CookingProp.transform.SetParent(transform);
                 CookingProp.transform.localPosition = Vector3.zero;
+                anim.SetTrigger(Constantes.ANIMATION_OVEN_GET_OBJECT);
                 StartCoroutine(Cooking());
                 break;
             case State.Coocking:
@@ -96,11 +102,11 @@ public class OvenBehaviour : Interactuable
                 progress.fillAmount = 0;
                 progress.color = new Color(1, 1, 1);
                 time = 0;
-                textDebug.text = "";
                 ovenState = State.Empty;
                 StopCoroutine(explosion);
                 danger.gameObject.SetActive(false);
                 currentExplosionTime = 0;
+                anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
                 break;
             case State.Wasted:
                 break;
@@ -117,10 +123,10 @@ public class OvenBehaviour : Interactuable
         if (task != null) {
             ovenState = State.Coocking;
             textDebug.text = ("Por fin haces algo bien");
-            while (time < task.Time)
+            while (time < TimeToCook)
             {
                 time += Time.deltaTime;
-                progress.fillAmount = (time / task.Time);
+                progress.fillAmount = (time / TimeToCook);
                 yield return wait;
             }
             CookingProp.TasksCompleted++;
@@ -130,9 +136,11 @@ public class OvenBehaviour : Interactuable
             time = 0;
             ovenState = State.Prepare;
             explosion = StartCoroutine(Explosion());
+            yield return explosion;
         }
         else
         {
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
             ovenState = State.Broken;
             textDebug.text = ("Ya la has cagado");
             progress.color = new Color(1, 0, 0);
@@ -146,6 +154,7 @@ public class OvenBehaviour : Interactuable
             progress.fillAmount = 0;
             progress.color = new Color(1, 1, 1);
             currentBrokenTime = 0;
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_FIXED);
             ovenState = State.Empty;
         }
     }
@@ -166,6 +175,7 @@ public class OvenBehaviour : Interactuable
             currentExplosionTime += Time.deltaTime;
             yield return wait;
         }
+        anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
         currentExplosionTime = 0;
         ovenState = State.Broken;
         danger.gameObject.SetActive(false);
@@ -181,6 +191,7 @@ public class OvenBehaviour : Interactuable
         progress.fillAmount = 0;
         progress.color = new Color(1, 1, 1);
         currentBrokenTime = 0;
+        anim.SetTrigger(Constantes.ANIMATION_OVEN_FIXED);
         ovenState = State.Empty;
     }
 

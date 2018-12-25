@@ -82,7 +82,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23509585729868272
 MeshRenderer:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 9
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052604254070358}
@@ -117,7 +117,7 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!33 &33483280392493940
 MeshFilter:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 9
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052604254070358}
@@ -129,7 +129,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052604254070358}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.63, z: 0.12820077}
@@ -143,7 +143,7 @@ Animator:
   m_GameObject: {fileID: 1571062210199128}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ad5840c0ab93e0478ea892d65a7dbf4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -154,7 +154,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114081495835286410
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052604254070358}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114098006490752078
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052604254070358}
@@ -177,7 +177,7 @@ MonoBehaviour:
   _guid: 2264154221
 --- !u!114 &114380660094908326
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571062210199128}
@@ -204,16 +204,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
-  world: 0
+  world: 4
   recipe: {fileID: 0}
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
   - {fileID: 2100000, guid: 6a5fb2a70f75010489f0785ebb75df69, type: 2}
   - {fileID: 2100000, guid: 03b2725c568cbd649bb638f49d041b20, type: 2}
+  anim: {fileID: 0}
 --- !u!114 &114634564902642384
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052604254070358}
@@ -229,7 +230,7 @@ MonoBehaviour:
   _assetGuid: 2dfebb6c73f1c8b43b71f45aa1f64777
 --- !u!114 &114656151204586994
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052604254070358}
@@ -242,7 +243,7 @@ MonoBehaviour:
   - {fileID: 65696695091153520}
 --- !u!114 &114745294171295440
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571062210199128}

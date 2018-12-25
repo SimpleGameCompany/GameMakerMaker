@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     private Button Recipies;
     private GameObject UI;
     private WaitForEndOfFrame frame;
-    private Vector3 EndPosition;
+    public Vector3 EndPosition;
     private GameObject EndGameUI;
     // Use this for initialization
     void Start()

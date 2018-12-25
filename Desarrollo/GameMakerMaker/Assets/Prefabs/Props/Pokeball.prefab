@@ -128,7 +128,7 @@ Animator:
   m_GameObject: {fileID: 1564237980337560}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ad5840c0ab93e0478ea892d65a7dbf4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: dc689ebe11701ad41b600246cfae1ff5, type: 2}
   - {fileID: 2100000, guid: cbf62ffab8c0b794db89d2d5ae098dce, type: 2}
   - {fileID: 2100000, guid: 0677522c53b2d954897b39d8e3dbfc35, type: 2}
+  anim: {fileID: 0}
 --- !u!114 &114852816893166254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,5 +230,5 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4

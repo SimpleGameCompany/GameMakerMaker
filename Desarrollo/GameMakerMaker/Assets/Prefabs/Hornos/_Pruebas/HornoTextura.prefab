@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 114924268219743366}
   - component: {fileID: 114430988426003810}
   - component: {fileID: 114441291592269988}
+  - component: {fileID: 95133953773422342}
   m_Layer: 0
   m_Name: HornoTextura
   m_TagString: Untagged
@@ -543,6 +544,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95133953773422342
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872461456657980}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cd02ef6de7e1ab4b97d158d07fe9c9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95452985644085928
 Animator:
   serializedVersion: 3
@@ -725,7 +744,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 114216214975954364}
-    characterCount: 7
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1117,7 +1136,9 @@ MonoBehaviour:
   danger: {fileID: 114534713602095780}
   brokenTime: 3
   explosionTime: 5
+  anim: {fileID: 0}
   textDebug: {fileID: 114216214975954364}
+  TimeToCook: 10
   Type: 2
 --- !u!222 &222175718750984206
 CanvasRenderer:

@@ -14,7 +14,7 @@ public class PropBehaviour : Interactuable {
         Pokemon,
         Zelda
     }
-    private int tasksCompleted =0;
+    private int tasksCompleted = 0;
     private MeshRenderer render;
 
     public bool Completed { get { return tasksCompleted == recipe.Tasks.Length; } }
@@ -30,6 +30,9 @@ public class PropBehaviour : Interactuable {
 
     [SerializeField]
     Material[] ProcessSkins;
+
+    [HideInInspector]
+    public Animator anim;
     public int TasksCompleted
     {
         get
@@ -79,15 +82,28 @@ public class PropBehaviour : Interactuable {
 
         render = GetComponentInChildren<MeshRenderer>();
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         TasksCompleted = 0;
     }
 
     public void Restart()
     {
         TasksCompleted = 0;
-        foreach(var e in recipe.Tasks)
+        foreach (var e in recipe.Tasks)
         {
             e.Complete = false;
         }
+    }
+
+    public void Eliminate()
+    {
+        GameManager.Instance.StoreProp(gameObject);
+        LifeController.Instance.Lifes--;
+    }
+
+
+    public void SetNavMeshDestination()
+    {
+       bool prueba =  agent.SetDestination(GameManager.Instance.EndPosition);
     }
 }

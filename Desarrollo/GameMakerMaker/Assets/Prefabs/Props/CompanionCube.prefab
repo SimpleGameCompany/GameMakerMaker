@@ -140,7 +140,7 @@ Animator:
   m_GameObject: {fileID: 1997283801702512}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ad5840c0ab93e0478ea892d65a7dbf4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -151,7 +151,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114393752591109784
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997283801702512}
@@ -182,6 +182,7 @@ MonoBehaviour:
   recipe: {fileID: 0}
   agent: {fileID: 0}
   ProcessSkins: []
+  anim: {fileID: 0}
 --- !u!114 &114469195326929482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +197,7 @@ MonoBehaviour:
   _guid: cc6485e2-81af-4e65-955f-e7b612638353
 --- !u!114 &114496392617853738
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997283801702512}
