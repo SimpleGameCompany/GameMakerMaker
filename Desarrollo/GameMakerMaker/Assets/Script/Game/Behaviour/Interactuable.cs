@@ -10,6 +10,9 @@ public abstract class Interactuable : MonoBehaviour {
 
     public abstract bool PreAction(PlayerController player);
     public abstract void PostAction(PlayerController player);
-
+    public virtual bool UpdatePosition(PlayerController player)
+    {
+        return true;
+    }
 
 }

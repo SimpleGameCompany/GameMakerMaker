@@ -14,7 +14,7 @@ Properties {
     [PowerSlider(5.0)] _Shininess ("Shininess", Range (0.03, 1)) = 0.078125
     _MainTex ("Base (RGB) Gloss (A)", 2D) = "white" {}
 	_Illum("Illumin (A)", 2D) = "white" {}
-	_EmisionMultiplier("Emision Multiplier",Range(0,1)) = 1
+	_EmisionMultiplier("Emision Multiplier",Range(0,2)) = 1
     [NoScaleOffset] _BumpMap ("Normalmap", 2D) = "bump" {}
 }
 SubShader {

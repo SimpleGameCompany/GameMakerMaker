@@ -31,9 +31,17 @@ public class PlayerController : MonoBehaviour {
     {
         while (Vector3.Distance(transform.position,agent.destination)>1)
         {
-            //Debug.Log(Vector3.Distance(transform.position, agent.destination));
-            yield return null;
+            if (actualTask.UpdatePosition(this))
+            {
+                yield return null;
+            }
+            else
+            {
+                StopCoroutine(actionInProcess);
+                actionInProcess = null;
+            }
         }
+
         actualTask.PostAction(this);
     }
 
@@ -62,14 +70,22 @@ public class PlayerController : MonoBehaviour {
                     }
                     if (inter.PreAction(this))
                     {
-                        if (NavMesh.SamplePosition(hit.point, out navMeshHit, 10, NavMesh.AllAreas))
-                        {
-                            agent.SetDestination(navMeshHit.position);
+                        if (SetDestination(hit.point))
                             actionInProcess = StartCoroutine(GoToPoint());
-                        }
+                        
                     }
                 }
             }
         }
+    }
+
+    public bool SetDestination(Vector3 point)
+    {
+        if (NavMesh.SamplePosition(point, out navMeshHit, 10, NavMesh.AllAreas))
+        {
+            agent.SetDestination(navMeshHit.position);
+            return true;
+        }
+        return false;
     }
 }

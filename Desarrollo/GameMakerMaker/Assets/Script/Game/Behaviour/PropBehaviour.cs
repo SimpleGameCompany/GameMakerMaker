@@ -106,4 +106,13 @@ public class PropBehaviour : Interactuable {
     {
        bool prueba =  agent.SetDestination(GameManager.Instance.EndPosition);
     }
+
+
+    public override bool UpdatePosition(PlayerController player)
+    {
+
+            return gameObject.activeSelf &&  player.SetDestination(transform.position);
+        
+
+    }
 }
