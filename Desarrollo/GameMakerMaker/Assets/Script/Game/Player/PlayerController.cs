@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Move();
+        Vector3 s = agent.transform.InverseTransformDirection(agent.velocity).normalized;
+        float speed = s.z;
+        float turn = s.x;
+        anim.SetFloat(Constantes.ANIMATION_PLAYER_ANGULARSPEED, turn/2);
         anim.SetFloat(Constantes.ANIMATION_PLAYER_SPEED, agent.velocity.magnitude);
     }
 
