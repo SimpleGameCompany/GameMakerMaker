@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour {
     private Coroutine actionInProcess;
     [HideInInspector]
     public Animator anim;
+
+    Vector3 lastFacing;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
@@ -26,7 +28,12 @@ public class PlayerController : MonoBehaviour {
         Vector3 s = agent.transform.InverseTransformDirection(agent.velocity).normalized;
         float speed = s.z;
         float turn = s.x;
-        anim.SetFloat(Constantes.ANIMATION_PLAYER_ANGULARSPEED, turn/2);
+
+        Vector3 currentFacing = transform.forward;
+        float currentAngularVelocity = Vector3.Angle(currentFacing, lastFacing) / Time.deltaTime; //degrees per second
+        lastFacing = currentFacing;
+
+        anim.SetFloat(Constantes.ANIMATION_PLAYER_ANGULARSPEED, currentAngularVelocity);
         anim.SetFloat(Constantes.ANIMATION_PLAYER_SPEED, agent.velocity.magnitude);
     }
 
