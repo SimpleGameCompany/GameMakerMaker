@@ -26,6 +26,7 @@ public class TubeBehaviour : Interactuable {
             Debug.Log("roto");
             StartCoroutine(Reparing());
         }
+        player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
         GameManager.Instance.StoreProp(player.PickedObjet.gameObject);
         player.PickedObjet = null;
 

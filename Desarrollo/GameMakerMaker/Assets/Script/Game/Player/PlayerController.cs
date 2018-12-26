@@ -15,8 +15,9 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public Animator anim;
     public float rotateSpeed = 135;
-    public Transform grabPoint;
     Vector3 lastFacing;
+
+    public Transform ObjectPosition;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
@@ -45,31 +46,17 @@ public class PlayerController : MonoBehaviour {
 
         agent.CalculatePath(agent.destination, agent.path);
         yield return new WaitUntil(() => { return !agent.pathPending; });
-        Vector3 PointDir = agent.path.corners[1] - transform.position;
-        Vector3 preforward = transform.forward;
         agent.isStopped = true;
-        float t = Mathf.Abs(Vector3.Angle(PointDir, transform.forward));
-        anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, true);
-
-        while (t > 5)
-        {
-
-            transform.forward = Vector3.RotateTowards(transform.forward, PointDir, Mathf.Deg2Rad * rotateSpeed * Time.deltaTime, 0.0f);
-            t = Mathf.Abs(Vector3.Angle(PointDir,transform.forward));
-            yield return null;
-
-        }
-
-
-
-        anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, false);
+        yield return StartCoroutine(RotateTo(agent.path.corners[1]));
+       
         agent.isStopped = false;
         
 
-        while (agent.remainingDistance>agent.stoppingDistance)
+        while (Vector3.Distance(transform.position,agent.destination)>0.1)
         {
             if (actualTask.UpdatePosition(this))
             {
+                Debug.DrawRay(transform.position + Vector3.up, agent.destination - transform.position, Color.black);
                 yield return null;
             }
             else
@@ -79,12 +66,14 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+        agent.isStopped = true;
+        if (actualTask.HasToStare())
+        {
+            yield return StartCoroutine(RotateTo(actualTask.transform.position));
+        }
+       
         actualTask.PostAction(this);
-    }
-
-    public void ActionAnim()
-    {
-        actualTask.PostActionAnim(this);
+        
     }
 
     void Move()
@@ -112,6 +101,7 @@ public class PlayerController : MonoBehaviour {
                     }
                     if (inter.PreAction(this))
                     {
+                        
                         if (SetDestination(hit.point))
                             actionInProcess = StartCoroutine(GoToPoint());
                         
@@ -125,9 +115,42 @@ public class PlayerController : MonoBehaviour {
     {
         if (NavMesh.SamplePosition(point, out navMeshHit, 10, NavMesh.AllAreas))
         {
+            agent.isStopped = false;
             agent.SetDestination(navMeshHit.position);
             return true;
         }
         return false;
+    }
+
+    public void PickUpObject()
+    {
+        PickedObjet.transform.SetParent(ObjectPosition);
+
+        PickedObjet.transform.localPosition = Vector3.zero;
+    }
+
+    IEnumerator RotateTo(Vector3 Point)
+    {
+       
+        Vector3 PointDir = Point - transform.position;
+        PointDir = Vector3.ProjectOnPlane(PointDir, Vector3.up);
+        Vector3 preforward = transform.forward;  
+        float t = Mathf.Abs(Vector3.Angle(PointDir, transform.forward));
+        anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, true);
+        Debug.DrawRay(transform.position+Vector3.up, PointDir,Color.red);
+        while (t > 5)
+        {
+
+            transform.forward = Vector3.RotateTowards(transform.forward, PointDir, Mathf.Deg2Rad * rotateSpeed * Time.deltaTime, 0.0f);
+            t = Mathf.Abs(Vector3.Angle(PointDir, transform.forward));
+            Debug.DrawRay(transform.position + Vector3.up, PointDir, Color.red);
+            yield return null;
+
+        }
+
+
+
+        anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, false);
+        
     }
 }

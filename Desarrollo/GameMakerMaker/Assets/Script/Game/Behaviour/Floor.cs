@@ -18,5 +18,9 @@ public class Floor : Interactuable
         return true;
     }
 
-   
+    public override bool HasToStare()
+    {
+        return false;
+    }
+
 }
