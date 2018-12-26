@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     public  PropBehaviour PickedObjet;
     private NavMeshHit navMeshHit;
     private Coroutine actionInProcess;
+    private Coroutine rotationInProcess;
     [HideInInspector]
     public Animator anim;
     [HideInInspector]
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour {
     Vector3 lastFacing;
 
     [HideInInspector]
-    public Transform IK1, IK2;
+    public float ikvalue;
 
     void Start () {
         agent = GetComponent<NavMeshAgent>();
@@ -57,7 +58,7 @@ public class PlayerController : MonoBehaviour {
         agent.isStopped = false;
         
 
-        while (Vector3.Distance(transform.position,agent.destination)>0.1)
+        while (agent.remainingDistance>agent.stoppingDistance)
         {
             if (actualTask.UpdatePosition(this))
             {
@@ -120,7 +121,8 @@ public class PlayerController : MonoBehaviour {
                     actualTask = inter;
                     if (actionInProcess != null)
                     {
-                        StopCoroutine(actionInProcess);
+                        //StopCoroutine(actionInProcess);
+                        StopAllCoroutines();
                         actionInProcess = null;
                     }
                     if (inter.PreAction(this))
@@ -131,9 +133,13 @@ public class PlayerController : MonoBehaviour {
                         
                     }
                 }
-                else
+                else if(agent.velocity.magnitude < 0.1f && !interacting)
                 {
                     anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICK);
+                }
+                else if (!interacting)
+                {
+                    anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICKMOV);
                 }
             }
         }
@@ -177,18 +183,24 @@ public class PlayerController : MonoBehaviour {
 
     private void OnAnimatorIK(int layerIndex)
     {
-        if(IK1 != null)
-        {
-            anim.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
-            anim.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
-            anim.SetIKPosition(AvatarIKGoal.RightHand, IK1.position);
-        }
+        //if(IK1 != null)
+        //{
+        //    anim.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
+        //    anim.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
+        //    anim.SetIKPosition(AvatarIKGoal.RightHand, IK1.position);
+        //}
 
-        if (IK2 != null)
+        //if (IK2 != null)
+        //{
+        //    anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
+        //    anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
+        //    anim.SetIKPosition(AvatarIKGoal.LeftHand, IK2.position);
+        //}
+
+        if(ikvalue > 0)
         {
-            anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
-            anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
-            anim.SetIKPosition(AvatarIKGoal.LeftHand, IK2.position);
+            anim.SetLookAtPosition(Camera.current.transform.position);
+            anim.SetLookAtWeight(ikvalue);
         }
     }
 }
