@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 114715839892359684}
   - component: {fileID: 195127138518098292}
   - component: {fileID: 114839676120464168}
+  - component: {fileID: 136012242256676098}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -814,7 +815,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1556089469074420}
   m_LocalRotation: {x: 0.14555451, y: 0.62654287, z: -0.3528297, w: -0.6795359}
-  m_LocalPosition: {x: -0.09597338, y: -0.22854216, z: -0.22575603}
+  m_LocalPosition: {x: -0.072, y: -0.3, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4803441406546828}
@@ -1188,7 +1189,7 @@ MonoBehaviour:
   _guid: 916ad961-e52c-4ba6-a97a-f2521bc1c0e0
 --- !u!114 &114715839892359684
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721671137663750}
@@ -1247,8 +1248,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickedObjet: {fileID: 0}
   anim: {fileID: 0}
+  interacting: 0
   rotateSpeed: 360
   grabPoint: {fileID: 4702549792051638}
+  IK1: {fileID: 0}
+  IK2: {fileID: 0}
 --- !u!114 &114847332880099022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1287,7 +1291,7 @@ MonoBehaviour:
   _guid: f7d7c839-ed06-42f2-be5c-8941a16e516d
 --- !u!114 &114948505435937048
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721671137663750}
@@ -1354,6 +1358,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 674f51e8-854a-408f-a4b3-0423a9001322
+--- !u!136 &136012242256676098
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1721671137663750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &137573294047659958
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1487,7 +1504,7 @@ NavMeshAgent:
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 360
-  m_StoppingDistance: 0.2
+  m_StoppingDistance: 0.4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

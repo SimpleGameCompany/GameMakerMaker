@@ -86,6 +86,20 @@ public class PlayerController : MonoBehaviour {
         actualTask.PostActionAnim(this);
     }
 
+    public IEnumerator EndAnim(bool win)
+    {
+        yield return StartCoroutine(RotateTo(Camera.current.transform.position));
+        if (win)
+            anim.SetTrigger(Constantes.ANIMATION_PLAYER_WIN);
+        else
+            anim.SetTrigger(Constantes.ANIMATION_PLAYER_LOSE);
+    }
+
+    public void EndGame()
+    {
+        GameManager.Instance.EndGame();
+    }
+
     void Move()
     {
         if (Input.GetMouseButtonDown(0) && !interacting)
@@ -116,6 +130,10 @@ public class PlayerController : MonoBehaviour {
                             actionInProcess = StartCoroutine(GoToPoint());
                         
                     }
+                }
+                else
+                {
+                    anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICK);
                 }
             }
         }

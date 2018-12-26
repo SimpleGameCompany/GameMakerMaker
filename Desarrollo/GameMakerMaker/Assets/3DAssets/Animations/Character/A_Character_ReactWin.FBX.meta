@@ -57,7 +57,7 @@ ModelImporter:
     400048: spine5
     400050: toe_l
     400052: toe_r
-    7400000: Take 001
+    7400000: Win
     9500000: //RootNode
     11400000: //RootNode
     11400002: //RootNode
@@ -123,7 +123,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Win
       takeName: Take 001
       firstFrame: 0
       lastFrame: 150
@@ -145,7 +145,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 1
+        functionName: EndGame
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -20,21 +20,16 @@ public class LifeController : MonoBehaviour {
         set
         {
             lifes = value;
-            if(lifes == 0)
+
+            for (int i = 0; i < 3; i++)
             {
-                GameManager.Instance.EndGame();
-            }
-            else
-            {
-
-                for (int i = 0; i<3; i++)
-                {                                  
-                    Sprites[i].SetActive(i < lifes);                                         
-                }
-
-
+                Sprites[i].SetActive(i < lifes);
             }
 
+            if (lifes == 0)
+            {
+                GameManager.Instance.LoseGame();
+            }
         }
     }
 

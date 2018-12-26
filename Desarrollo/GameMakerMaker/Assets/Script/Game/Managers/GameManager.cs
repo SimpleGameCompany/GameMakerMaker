@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     private WaitForEndOfFrame frame;
     public Vector3 EndPosition;
     private GameObject EndGameUI;
+    private PlayerController player;
     // Use this for initialization
     void Start()
     {
@@ -96,7 +97,7 @@ public class GameManager : MonoBehaviour
         recetas.onClick.AddListener(delegate { PlayGame(); });
         Recipies = recetas;
 
-
+        player = FindObjectOfType<PlayerController>();
     }
 
 
@@ -185,14 +186,22 @@ public class GameManager : MonoBehaviour
     }
 
     //TODO
-    public void EndGame()
+    public void LoseGame()
     {
         StopAllCoroutines();
+
+        player.StartCoroutine(player.EndAnim(true));
+
+    }
+
+    public void EndGame()
+    {
+
+
         PauseGame(0);
         EndGameUI.SetActive(true);
 
     }
-
 
     public void ReStart()
     {

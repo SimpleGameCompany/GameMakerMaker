@@ -86,29 +86,19 @@ public class OvenBehaviour : Interactuable
         {
             case State.Empty:
                 player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
-                CookingProp = player.PickedObjet;
-                player.PickedObjet = null;
-                CookingProp.transform.SetParent(transform);
-                CookingProp.transform.localPosition = Vector3.zero;
                 anim.SetTrigger(Constantes.ANIMATION_OVEN_GET_OBJECT);
-                StartCoroutine(Cooking());
                 break;
             case State.Coocking:
                 break;
             case State.Prepare:
-                player.PickedObjet = CookingProp;
-                CookingProp.transform.SetParent(player.transform);
-                CookingProp = null;
-                player.PickedObjet.transform.localPosition = Vector3.zero;
+                anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
+                player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
                 progress.fillAmount = 0;
                 progress.color = new Color(1, 1, 1);
                 time = 0;
-                ovenState = State.Empty;
                 StopCoroutine(explosion);
                 danger.gameObject.SetActive(false);
                 currentExplosionTime = 0;
-                anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
-                player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
                 break;
             case State.Wasted:
                 break;
@@ -199,6 +189,24 @@ public class OvenBehaviour : Interactuable
 
     public override void PostActionAnim(PlayerController player)
     {
-        throw new System.NotImplementedException();
+        switch (ovenState)
+        {
+            case State.Empty:
+                CookingProp = player.PickedObjet;
+                CookingProp.GetComponentInChildren<Collider>().enabled = false;
+                player.PickedObjet = null;
+                CookingProp.transform.SetParent(transform);
+                CookingProp.transform.localPosition = Vector3.zero;
+                StartCoroutine(Cooking());
+                break;
+            case State.Prepare:
+                player.PickedObjet = CookingProp;
+                CookingProp.GetComponentInChildren<Collider>().enabled = true;
+                CookingProp.transform.SetParent(player.grabPoint);
+                CookingProp = null;
+                player.PickedObjet.transform.localPosition = Vector3.zero;
+                ovenState = State.Empty;
+                break;
+        }
     }
 }
