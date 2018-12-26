@@ -12,7 +12,8 @@ public class PropBehaviour : Interactuable {
         Portal,
         Pacman,
         Pokemon,
-        Zelda
+        Zelda,
+        Minecraft
     }
     private int tasksCompleted = 0;
     private MeshRenderer render;
@@ -66,6 +67,7 @@ public class PropBehaviour : Interactuable {
             player.interacting = true;
             player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
             agent.enabled = false;
+            
         }
     }
 
@@ -75,6 +77,7 @@ public class PropBehaviour : Interactuable {
         gameObject.transform.SetParent(player.grabPoint);
         gameObject.transform.localPosition = Vector3.zero;
         gameObject.transform.rotation = Quaternion.Euler(0,0,0);
+        anim.SetBool(Constantes.ANIMATION_PROP_GRAB, true);
         player.interacting = false;
     }
 
@@ -118,15 +121,12 @@ public class PropBehaviour : Interactuable {
 
     public void SetNavMeshDestination()
     {
-       bool prueba =  agent.SetDestination(GameManager.Instance.EndPosition);
+       bool prueba = agent.SetDestination(GameManager.Instance.EndPosition);
     }
 
 
     public override bool UpdatePosition(PlayerController player)
     {
-
-            return gameObject.activeSelf &&  player.SetDestination(transform.position);
-        
-
+        return gameObject.activeSelf &&  player.SetDestination(transform.position);
     }
 }

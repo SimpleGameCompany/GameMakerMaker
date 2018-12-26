@@ -134,6 +134,7 @@ public class OvenBehaviour : Interactuable
         {
             anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
             ovenState = State.Broken;
+            
             textDebug.text = ("Ya la has cagado");
             progress.color = new Color(1, 0, 0);
             while (currentBrokenTime < brokenTime)
@@ -147,6 +148,7 @@ public class OvenBehaviour : Interactuable
             progress.color = new Color(1, 1, 1);
             currentBrokenTime = 0;
             anim.SetTrigger(Constantes.ANIMATION_OVEN_FIXED);
+            GameManager.Instance.StoreProp(CookingProp.gameObject);
             ovenState = State.Empty;
         }
     }
@@ -197,6 +199,7 @@ public class OvenBehaviour : Interactuable
                 player.PickedObjet = null;
                 CookingProp.transform.SetParent(transform);
                 CookingProp.transform.localPosition = Vector3.zero;
+                CookingProp.anim.SetTrigger(Constantes.ANIMATION_PROP_SCALEDOWN);
                 StartCoroutine(Cooking());
                 break;
             case State.Prepare:
@@ -205,6 +208,7 @@ public class OvenBehaviour : Interactuable
                 CookingProp.transform.SetParent(player.grabPoint);
                 CookingProp = null;
                 player.PickedObjet.transform.localPosition = Vector3.zero;
+                player.PickedObjet.anim.SetTrigger(Constantes.ANIMATION_PROP_SCALEUP);
                 ovenState = State.Empty;
                 break;
         }

@@ -154,12 +154,15 @@ public class GameManager : MonoBehaviour
             int i = r.Next(0, totalProps.Count);
             GameObject prop = totalProps[i];
             totalProps.RemoveAt(i);
+            //prop.transform.rotation = Quaternion.Euler(0, 0, 0);
             prop.SetActive(true);
             prop.GetComponent<PropBehaviour>().grab = true;
+            prop.GetComponentInChildren<Collider>().enabled = true;
+            prop.GetComponent<Animator>().SetBool(Constantes.ANIMATION_PROP_GRAB,false);
             prop.transform.position = PositionStart;
             NavMeshAgent agent = prop.GetComponent<NavMeshAgent>();
             agent.enabled = true;
-            agent.SetDestination(EndPosition);
+            //agent.SetDestination(EndPosition);
             yield return waiter;
             
         }

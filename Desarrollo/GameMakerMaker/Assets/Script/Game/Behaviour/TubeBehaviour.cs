@@ -27,9 +27,6 @@ public class TubeBehaviour : Interactuable {
             StartCoroutine(Reparing());
         }
         player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
-        GameManager.Instance.StoreProp(player.PickedObjet.gameObject);
-        player.PickedObjet = null;
-
     }
 
     public override bool PreAction(PlayerController player)
@@ -60,6 +57,7 @@ public class TubeBehaviour : Interactuable {
 
     public override void PostActionAnim(PlayerController player)
     {
-        throw new System.NotImplementedException();
+        GameManager.Instance.StoreProp(player.PickedObjet.gameObject);
+        player.PickedObjet = null;
     }
 }

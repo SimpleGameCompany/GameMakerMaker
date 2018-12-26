@@ -44,7 +44,10 @@ public static class Constantes
 
     public const string ANIMATION_PROP_SPAWN = "Spawn";
     public const string ANIMATION_PROP_DESTROY = "Destroy";
-   
+    public const string ANIMATION_PROP_GRAB = "Grabed";
+    public const string ANIMATION_PROP_SCALEUP = "ScaleUp";
+    public const string ANIMATION_PROP_SCALEDOWN = "ScaleDown";
+
 
 
 
