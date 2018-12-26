@@ -154,6 +154,7 @@ public class GameManager : MonoBehaviour
             GameObject prop = totalProps[i];
             totalProps.RemoveAt(i);
             prop.SetActive(true);
+            prop.GetComponent<PropBehaviour>().grab = true;
             prop.transform.position = PositionStart;
             NavMeshAgent agent = prop.GetComponent<NavMeshAgent>();
             agent.enabled = true;
@@ -206,5 +207,7 @@ public class GameManager : MonoBehaviour
         StopAllCoroutines();
         totalProps.Clear();
     }
+
+
 
 }

@@ -17,7 +17,7 @@ public class PaperBehaviour : MonoBehaviour
 
         if(p != null)
         {
-
+            p.grab = false;
             p.anim.SetTrigger(Constantes.ANIMATION_PROP_DESTROY);
         }
         

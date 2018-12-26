@@ -14,11 +14,16 @@ public class PlayerController : MonoBehaviour {
     private Coroutine actionInProcess;
     [HideInInspector]
     public Animator anim;
+    [HideInInspector]
+    public bool interacting;
     public float rotateSpeed = 135;
+    public Transform grabPoint;
     Vector3 lastFacing;
 
-    public Transform ObjectPosition;
-	void Start () {
+    [HideInInspector]
+    public Transform IK1, IK2;
+
+    void Start () {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
@@ -76,9 +81,14 @@ public class PlayerController : MonoBehaviour {
         
     }
 
+    public void ActionAnim()
+    {
+        actualTask.PostActionAnim(this);
+    }
+
     void Move()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !interacting)
         {
             RaycastHit hit;
 
@@ -122,13 +132,6 @@ public class PlayerController : MonoBehaviour {
         return false;
     }
 
-    public void PickUpObject()
-    {
-        PickedObjet.transform.SetParent(ObjectPosition);
-
-        PickedObjet.transform.localPosition = Vector3.zero;
-    }
-
     IEnumerator RotateTo(Vector3 Point)
     {
        
@@ -152,5 +155,22 @@ public class PlayerController : MonoBehaviour {
 
         anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, false);
         
+    }
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        if(IK1 != null)
+        {
+            anim.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
+            anim.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
+            anim.SetIKPosition(AvatarIKGoal.RightHand, IK1.position);
+        }
+
+        if (IK2 != null)
+        {
+            anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
+            anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
+            anim.SetIKPosition(AvatarIKGoal.LeftHand, IK2.position);
+        }
     }
 }

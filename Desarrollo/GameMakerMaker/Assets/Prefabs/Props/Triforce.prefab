@@ -161,8 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
-  world: 0
-  recipe: {fileID: 0}
+  world: 4
+  recipe: {fileID: 11400000, guid: 8dd20518b0170104ba11f2fd727ca7e6, type: 2}
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
@@ -170,6 +170,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 31b55f2aa3238294b8e9401c34698e28, type: 2}
   - {fileID: 2100000, guid: 2ed8714ea6d30af46b68521815a2a4e7, type: 2}
   anim: {fileID: 0}
+  grab: 0
 --- !u!114 &114204175023679802
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -201,7 +202,7 @@ MonoBehaviour:
   _assetGuid: ab9f055f5baaf12478f3796602f261f1
 --- !u!114 &114437054528657064
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932284125510876}
@@ -220,7 +221,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -231,4 +232,4 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0

@@ -45,10 +45,12 @@ public class TableBehaviour : Interactuable {
             case State.Empty:
                 player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
                 tableState = State.Full;
+                player.interacting = true;
                 break;
             case State.Full:
                 player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
                 tableState = State.Empty;
+                player.interacting = true;
                 break;
             default:
                 break;
@@ -70,12 +72,14 @@ public class TableBehaviour : Interactuable {
                 player.PickedObjet = null;
                 Prop.transform.SetParent(transform);
                 Prop.transform.localPosition = Vector3.zero;
+                player.interacting = false;
                 break;
             case State.Empty:
                 player.PickedObjet = Prop;
                 Prop.transform.SetParent(player.grabPoint);
                 Prop = null;
                 player.PickedObjet.transform.localPosition = Vector3.zero;
+                player.interacting = false;
                 break;
             default:
                 break;

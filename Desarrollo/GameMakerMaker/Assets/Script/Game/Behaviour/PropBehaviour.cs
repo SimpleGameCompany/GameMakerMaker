@@ -33,6 +33,10 @@ public class PropBehaviour : Interactuable {
 
     [HideInInspector]
     public Animator anim;
+
+    [HideInInspector]
+    public bool grab;
+
     public int TasksCompleted
     {
         get
@@ -49,26 +53,29 @@ public class PropBehaviour : Interactuable {
 
     public override void PostAction(PlayerController player)
     {
-        if (this.transform.parent != null)
+        if (grab)
         {
-            TableBehaviour table = this.transform.parent.gameObject.GetComponent<TableBehaviour>();
-            if (table != null)
+            if (this.transform.parent != null)
             {
-                table.Remove();
+                TableBehaviour table = this.transform.parent.gameObject.GetComponent<TableBehaviour>();
+                if (table != null)
+                {
+                    table.Remove();
+                }
             }
+            player.interacting = true;
+            player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
+            agent.enabled = false;
         }
-        player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
-        player.PickedObjet = this;
-        agent.enabled = false;
-        
-        
     }
 
     public override void PostActionAnim(PlayerController player)
     {
+        player.PickedObjet = this;
         gameObject.transform.SetParent(player.grabPoint);
         gameObject.transform.localPosition = Vector3.zero;
         gameObject.transform.rotation = Quaternion.Euler(0,0,0);
+        player.interacting = false;
     }
 
     public override bool PreAction(PlayerController player)

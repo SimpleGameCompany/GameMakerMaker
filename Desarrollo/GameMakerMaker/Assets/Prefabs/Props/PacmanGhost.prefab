@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4189059098471582}
-  - component: {fileID: 114899188864112308}
   - component: {fileID: 114143615621057348}
   - component: {fileID: 114324426521721096}
   - component: {fileID: 95676735716136466}
   - component: {fileID: 195591774180243134}
+  - component: {fileID: 114899188864112308}
   m_Layer: 0
   m_Name: PacmanGhost
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1041096159131040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0.178}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4855110236662134}
@@ -203,12 +203,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
   world: 2
-  recipe: {fileID: 11400000, guid: 69039f5675ae2984383bd544c430db3d, type: 2}
+  recipe: {fileID: 11400000, guid: 80ef27f8144365c48a272f1d78abcebc, type: 2}
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
   - {fileID: 2100000, guid: dafaad0182a56c945b564992ded656cc, type: 2}
   anim: {fileID: 0}
+  grab: 0
 --- !u!195 &195591774180243134
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -218,7 +219,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.44
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -229,4 +230,4 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0

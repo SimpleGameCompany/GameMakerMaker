@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 114250864795730754}
   - component: {fileID: 114690915601201708}
   - component: {fileID: 114306580042065916}
+  - component: {fileID: 114937753827420750}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -479,7 +480,7 @@ MonoBehaviour:
   brokenTime: 10
   explosionTime: 10
   anim: {fileID: 0}
-  textDebug: {fileID: 114860212046800354}
+  textDebug: {fileID: 114159479807837558}
   TimeToCook: 5
   Type: 1
 --- !u!114 &114360890467430966
@@ -750,6 +751,57 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114937753827420750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581463857126036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 637162700, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - _target: {fileID: 1935298303116584}
+    _path: TextMeshPro Text/0
+    _guidPath: fc289a42-3bf4-400b-8590-2494ff98509f
+    _isOverridden: 0
+    _components:
+    - _target: {fileID: 114860212046800354}
+      _type: TextMeshProUGUI
+      _index: 0
+      _isOverridden: 0
+      _properties:
+      - _path: m_text
+        _animationCurveValue:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        _booleanValue: 0
+        _boundsValue:
+          m_Center: {x: 0, y: 0, z: 0}
+          m_Extent: {x: 0, y: 0, z: 0}
+        _colorValue: {r: 0, g: 0, b: 0, a: 0}
+        _doubleValue: 0
+        _floatValue: 0
+        _intValue: 0
+        _longValue: 0
+        _objectReferenceValue: {fileID: 0}
+        _quaternionValue: {x: 0, y: 0, z: 0, w: 0}
+        _rectValue:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        _stringValue: HIERRO
+        _vector2Value: {x: 0, y: 0}
+        _vector3Value: {x: 0, y: 0, z: 0}
+        _vector4Value: {x: 0, y: 0, z: 0, w: 0}
+  _overrideObjects: []
 --- !u!114 &114964878964761760
 MonoBehaviour:
   m_ObjectHideFlags: 1

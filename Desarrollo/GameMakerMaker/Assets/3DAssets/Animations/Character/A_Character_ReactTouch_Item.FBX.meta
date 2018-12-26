@@ -101,9 +101,9 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
-      rotation in copied configuration does not match rotation in animation file:\n\t'spine1'
-      : rotation error = 0.213652 deg\n\t'spine4' : rotation error = 2.632748 deg\n\t'spine5'
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'spine1' : rotation
+      error = 0.213652 deg\n\t'spine4' : rotation error = 2.632748 deg\n\t'spine5'
       : rotation error = 1.791872 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
@@ -155,7 +155,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human:
@@ -500,7 +500,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2f97a4bcf9b40c74e8779c2ed49c846c,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0

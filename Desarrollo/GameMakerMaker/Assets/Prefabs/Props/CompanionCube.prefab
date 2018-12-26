@@ -70,7 +70,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481991356062430}
-  m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.00000009976814, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
@@ -179,13 +179,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
   world: 1
-  recipe: {fileID: 0}
+  recipe: {fileID: 11400000, guid: ca822820223ccda46acd5ff288536390, type: 2}
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
   - {fileID: 2100000, guid: 877be85c4e063ca4eb08bebcbe909132, type: 2}
   - {fileID: 2100000, guid: 5af3b331a59a0be4bb725878d7f9c757, type: 2}
   anim: {fileID: 0}
+  grab: 0
 --- !u!114 &114469195326929482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,7 +220,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -230,4 +231,4 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
