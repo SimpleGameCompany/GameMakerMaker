@@ -195,4 +195,8 @@ public class OvenBehaviour : Interactuable
         ovenState = State.Empty;
     }
 
+    public override void PostActionAnim(PlayerController player)
+    {
+        throw new System.NotImplementedException();
+    }
 }

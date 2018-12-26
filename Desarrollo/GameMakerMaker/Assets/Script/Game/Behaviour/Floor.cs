@@ -8,6 +8,11 @@ public class Floor : Interactuable
         
     }
 
+    public override void PostActionAnim(PlayerController player)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override bool PreAction(PlayerController player)
     {
         return true;

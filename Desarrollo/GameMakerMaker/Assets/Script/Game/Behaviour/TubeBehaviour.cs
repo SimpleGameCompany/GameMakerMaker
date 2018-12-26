@@ -56,5 +56,9 @@ public class TubeBehaviour : Interactuable {
     void Start () {
         broken = false;
 	}
-	
+
+    public override void PostActionAnim(PlayerController player)
+    {
+        throw new System.NotImplementedException();
+    }
 }

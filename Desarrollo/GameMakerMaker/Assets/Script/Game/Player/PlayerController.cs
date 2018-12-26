@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public Animator anim;
     public float rotateSpeed = 135;
+    public Transform grabPoint;
     Vector3 lastFacing;
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
@@ -65,7 +66,7 @@ public class PlayerController : MonoBehaviour {
         agent.isStopped = false;
         
 
-        while (Vector3.Distance(transform.position,agent.destination)>1)
+        while (agent.remainingDistance>agent.stoppingDistance)
         {
             if (actualTask.UpdatePosition(this))
             {
@@ -79,6 +80,11 @@ public class PlayerController : MonoBehaviour {
         }
 
         actualTask.PostAction(this);
+    }
+
+    public void ActionAnim()
+    {
+        actualTask.PostActionAnim(this);
     }
 
     void Move()

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f955caf001a5b947a82d05717622cc0
+guid: b9ae33a55bb3d9c4ea0294ef091c6d38
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -57,7 +57,7 @@ ModelImporter:
     400048: spine5
     400050: toe_l
     400052: toe_r
-    7400000: Idle2
+    7400000: Take 001
     9500000: //RootNode
     11400000: //RootNode
     11400002: //RootNode
@@ -108,12 +108,13 @@ ModelImporter:
       improve retargeting quality.\n\t'spine1' is inbetween humanoid transforms and
       has rotation animation that will be discarded.\n\t'spine4' is inbetween humanoid
       transforms and has rotation animation that will be discarded.\n\t'spine5' is
-      inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'head'
+      has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
-    animationCompression: 1
+    importConstraints: 0
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -122,21 +123,21 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle2
+      name: Take 001
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 99
+      lastFrame: 150
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0

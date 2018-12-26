@@ -57,11 +57,18 @@ public class PropBehaviour : Interactuable {
                 table.Remove();
             }
         }
-        player.PickedObjet = this;
-        gameObject.transform.SetParent(player.transform);
-        agent.enabled = false;
-        gameObject.transform.localPosition = Vector3.zero;
         player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
+        player.PickedObjet = this;
+        agent.enabled = false;
+        
+        
+    }
+
+    public override void PostActionAnim(PlayerController player)
+    {
+        gameObject.transform.SetParent(player.grabPoint);
+        gameObject.transform.localPosition = Vector3.zero;
+        gameObject.transform.rotation = Quaternion.Euler(0,0,0);
     }
 
     public override bool PreAction(PlayerController player)
