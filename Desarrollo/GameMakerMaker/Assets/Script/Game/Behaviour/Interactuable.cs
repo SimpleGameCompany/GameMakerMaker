@@ -15,4 +15,9 @@ public abstract class Interactuable : MonoBehaviour {
         return true;
     }
 
+    public virtual bool HasToStare()
+    {
+        return true;
+    }
+
 }

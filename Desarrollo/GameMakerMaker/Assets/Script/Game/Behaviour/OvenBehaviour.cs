@@ -85,6 +85,7 @@ public class OvenBehaviour : Interactuable
         switch (ovenState)
         {
             case State.Empty:
+                player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
                 CookingProp = player.PickedObjet;
                 player.PickedObjet = null;
                 CookingProp.transform.SetParent(transform);
@@ -107,6 +108,7 @@ public class OvenBehaviour : Interactuable
                 danger.gameObject.SetActive(false);
                 currentExplosionTime = 0;
                 anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
+                player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
                 break;
             case State.Wasted:
                 break;

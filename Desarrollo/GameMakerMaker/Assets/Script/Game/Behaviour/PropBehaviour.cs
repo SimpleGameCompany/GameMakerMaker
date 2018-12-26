@@ -57,11 +57,10 @@ public class PropBehaviour : Interactuable {
                 table.Remove();
             }
         }
-        player.PickedObjet = this;
-        gameObject.transform.SetParent(player.transform);
-        agent.enabled = false;
-        gameObject.transform.localPosition = Vector3.zero;
         player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
+        player.PickedObjet = this;       
+        agent.enabled = false;
+        
     }
 
     public override bool PreAction(PlayerController player)
@@ -114,5 +113,11 @@ public class PropBehaviour : Interactuable {
             return gameObject.activeSelf &&  player.SetDestination(transform.position);
         
 
+    }
+
+    public override bool HasToStare()
+    {
+        agent.isStopped = true;
+        return base.HasToStare();
     }
 }

@@ -43,6 +43,7 @@ public class TableBehaviour : Interactuable {
         switch (tableState)
         {
             case State.Empty:
+                player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
                 Prop = player.PickedObjet;
                 player.PickedObjet = null;
                 Prop.transform.SetParent(transform);
