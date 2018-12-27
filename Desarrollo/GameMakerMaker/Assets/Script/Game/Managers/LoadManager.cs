@@ -91,42 +91,48 @@ public class LoadManager : MonoBehaviour
             switch (type)
             {
                 case LoadingType.GameManager:
-                    SetProgress(currentLoadingOperation.progress);
-                    // If the loading is complete and the fade out animation has not been triggered yet, trigger it:
-                    if (currentLoadingOperation.isDone && !didTriggerFadeOutAnimation && timePassed)
+                    if (isLoading)
                     {
-                        animator.SetTrigger("Hide");
-                       
-                        didTriggerFadeOutAnimation = true;
-                    }
-                    else
-                    {
-                        timeElapsed += Time.deltaTime;
-                        if (timeElapsed >= MIN_TIME_TO_SHOW)
+                        SetProgress(currentLoadingOperation.progress);
+                        // If the loading is complete and the fade out animation has not been triggered yet, trigger it:
+                        if (currentLoadingOperation.isDone && !didTriggerFadeOutAnimation)
                         {
-                            // The loading screen has been showing for the minimum time required.
-                            // Allow the loading operation to formally finish:
-                            timePassed = true;
+                            animator.SetTrigger("Hide");
+
+                            didTriggerFadeOutAnimation = true;
+                        }
+                        else
+                        {
+                            timeElapsed += Time.deltaTime;
+                            if (timeElapsed >= MIN_TIME_TO_SHOW)
+                            {
+                                // The loading screen has been showing for the minimum time required.
+                                // Allow the loading operation to formally finish:
+                                currentAsync.allowSceneActivation = true;
+                            }
                         }
                     }
                     break;
                 case LoadingType.Async:
-                    SetProgress(currentAsync.progress);
-                    // If the loading is complete and the fade out animation has not been triggered yet, trigger it:
-                    if (currentAsync.isDone && !didTriggerFadeOutAnimation)
+                    if (isLoading)
                     {
-                        animator.SetTrigger("Hide");
-                        
-                        didTriggerFadeOutAnimation = true;
-                    }
-                    else
-                    {
-                        timeElapsed += Time.deltaTime;
-                        if (timeElapsed >= MIN_TIME_TO_SHOW)
+                        SetProgress(currentAsync.progress);
+                        // If the loading is complete and the fade out animation has not been triggered yet, trigger it:
+                        if (currentAsync.isDone && !didTriggerFadeOutAnimation)
                         {
-                            // The loading screen has been showing for the minimum time required.
-                            // Allow the loading operation to formally finish:
-                            currentAsync.allowSceneActivation = true;
+                            animator.SetTrigger("Hide");
+
+                            didTriggerFadeOutAnimation = true;
+                        }
+                        else
+                        {
+                            timeElapsed += Time.deltaTime;
+                            if (timeElapsed >= MIN_TIME_TO_SHOW)
+                            {
+                                // The loading screen has been showing for the minimum time required.
+                                // Allow the loading operation to formally finish:
+                                currentAsync.allowSceneActivation = true;
+                            }
                         }
                     }
                     break;
@@ -148,14 +154,15 @@ public class LoadManager : MonoBehaviour
     }
     // Call this to show the loading screen.
     // We can determine the loading's progress when needed from the AsyncOperation param:
-    public void Show(GameManager loadingOperation)
+    public void Show(GameManager loadingOperation, AsyncOperation loadingOperationAsync)
     {
         // Enable the loading screen:
         gameObject.SetActive(true);
         // Store the reference:
         currentLoadingOperation = loadingOperation;
+        currentAsync = loadingOperationAsync;
         // Stop the loading operation from finishing, even if it technically did:
-        timePassed = false;
+        currentAsync.allowSceneActivation = false;
         // Reset the UI:
         SetProgress(0f);
         // Reset the time elapsed:

@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         loadedLevel = l;
         AsyncOperation load = SceneManager.LoadSceneAsync(Constantes.SCENE_GAME);
         ClearLoad();
-        LoadManager.Instance.Show(this);
+        LoadManager.Instance.Show(this,load);
     }
 
     public void StartLevelFromCourutine()
@@ -225,7 +225,7 @@ public class GameManager : MonoBehaviour
     {
         Clear();
         AsyncOperation load = SceneManager.LoadSceneAsync(Constantes.SCENE_GAME);
-        LoadManager.Instance.Show(this);
+        LoadManager.Instance.Show(this,load);
     }
 
     public void Clear()
