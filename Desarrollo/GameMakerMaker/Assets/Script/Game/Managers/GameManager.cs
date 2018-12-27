@@ -42,13 +42,16 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Level loadedLevel;
     private bool playing;
-    private Vector3 PositionStart;
-    private Button Recipies;
+    internal Vector3 PositionStart;
+    internal Button Recipies;
     private GameObject UI;
     private WaitForEndOfFrame frame;
     public Vector3 EndPosition;
-    private GameObject EndGameUI;
-    private PlayerController player;
+    internal GameObject EndGameUI;
+    internal PlayerController player;
+
+    public float progress = 0;
+    public bool isDone = false;
     // Use this for initialization
     void Start()
     {
@@ -69,12 +72,14 @@ public class GameManager : MonoBehaviour
     {
         loadedLevel = l;
         AsyncOperation load = SceneManager.LoadSceneAsync(Constantes.SCENE_GAME);
-        LoadManager.Instance.Show(load);
+        ClearLoad();
+        LoadManager.Instance.Show(this);
     }
 
     public void StartLevelFromCourutine()
     {
         StartCoroutine(StartGame());
+        
     }
 
      public IEnumerator StartGame()
@@ -82,10 +87,11 @@ public class GameManager : MonoBehaviour
         EndGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_END);
         EndGameUI.SetActive(false);
         GameObject scenario = Instantiate(loadedLevel.Scenario);
-
+        progress = 0.4f;
         yield return StartCoroutine(CreateNavMesh(scenario));
+        progress = 0.6f;
         yield return StartCoroutine(CreateProps());
-       
+        progress = 0.8f;
         PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
         GameObject papelera = GameObject.FindGameObjectWithTag(Constantes.TAG_PAPER);
         EndPosition = papelera.transform.position;
@@ -99,10 +105,12 @@ public class GameManager : MonoBehaviour
         Recipies = recetas;
 
         player = FindObjectOfType<PlayerController>();
+        progress = 1f;
+        isDone = true;
     }
 
 
-    IEnumerator CreateNavMesh(GameObject scenario) {
+    internal IEnumerator CreateNavMesh(GameObject scenario) {
         GameObject Belt = GameObject.FindGameObjectWithTag(Constantes.TAG_BELT);
 
 
@@ -123,12 +131,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator CreateProps()
+    internal IEnumerator CreateProps()
     {
         GameObject[] props = (from x in loadedLevel.Props select x.gameObject).ToArray();
+        
         for (int i = 0; i < props.Length; i++)
         {
             int number = loadedLevel.MaxProps[i];
+            float p = 0.1f / number;
+
+
+
             while (number > 0)
             {
                 GameObject o = Instantiate(props[i]);
@@ -140,6 +153,7 @@ public class GameManager : MonoBehaviour
                 agent.angularSpeed = 0;
                 agent.speed = loadedLevel.velocity;
                 number--;
+                progress += p;
                 yield return frame;
             }
         }
@@ -211,12 +225,20 @@ public class GameManager : MonoBehaviour
     {
         Clear();
         AsyncOperation load = SceneManager.LoadSceneAsync(Constantes.SCENE_GAME);
-        LoadManager.Instance.Show(load);
+        LoadManager.Instance.Show(this);
     }
 
     public void Clear()
     {
         StopAllCoroutines();
         totalProps.Clear();
+        ClearLoad();
+    }
+
+
+    private void ClearLoad()
+    {
+        isDone = false;
+        progress = 0;
     }
 }

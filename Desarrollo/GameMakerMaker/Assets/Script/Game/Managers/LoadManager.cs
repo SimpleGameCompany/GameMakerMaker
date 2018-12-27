@@ -10,14 +10,23 @@ using Polyglot;
 public class LoadManager : MonoBehaviour
 {
 
+    private enum LoadingType
+    {
+        GameManager,
+        Async,
+        None
+    }
+
     #region LoadVariables
     public static LoadManager Instance;
     // Make sure the loading screen shows for at least 1 second:
     private const float MIN_TIME_TO_SHOW = 1f;
     // The reference to the current loading operation running in the background:
-    private AsyncOperation currentLoadingOperation;
+    private GameManager currentLoadingOperation;
+    private AsyncOperation currentAsync;
     // A flag to tell whether a scene is being loaded or not:
     private bool isLoading;
+    private bool timePassed;
     // The rect transform of the bar fill game object:
     [SerializeField]
     private RectTransform barFillRectTransform;
@@ -38,6 +47,9 @@ public class LoadManager : MonoBehaviour
     private Animator animator;
     // Flag whether the fade out animation was triggered.
     private bool didTriggerFadeOutAnimation;
+
+
+    private LoadingType type = LoadingType.None;
     #endregion
 
     private void Awake()
@@ -76,24 +88,52 @@ public class LoadManager : MonoBehaviour
     {
         if (isLoading)
         {
-            // Get the progress and update the UI. Goes from 0 (start) to 1 (end):
-            SetProgress(currentLoadingOperation.progress);
-            // If the loading is complete and the fade out animation has not been triggered yet, trigger it:
-            if (currentLoadingOperation.isDone && !didTriggerFadeOutAnimation)
+            switch (type)
             {
-                animator.SetTrigger("Hide");
-                didTriggerFadeOutAnimation = true;
-            }
-            else
-            {
-                timeElapsed += Time.deltaTime;
-                if (timeElapsed >= MIN_TIME_TO_SHOW)
-                {
-                    // The loading screen has been showing for the minimum time required.
-                    // Allow the loading operation to formally finish:
-                    currentLoadingOperation.allowSceneActivation = true;
-                }
-            }
+                case LoadingType.GameManager:
+                    SetProgress(currentLoadingOperation.progress);
+                    // If the loading is complete and the fade out animation has not been triggered yet, trigger it:
+                    if (currentLoadingOperation.isDone && !didTriggerFadeOutAnimation && timePassed)
+                    {
+                        animator.SetTrigger("Hide");
+                       
+                        didTriggerFadeOutAnimation = true;
+                    }
+                    else
+                    {
+                        timeElapsed += Time.deltaTime;
+                        if (timeElapsed >= MIN_TIME_TO_SHOW)
+                        {
+                            // The loading screen has been showing for the minimum time required.
+                            // Allow the loading operation to formally finish:
+                            timePassed = true;
+                        }
+                    }
+                    break;
+                case LoadingType.Async:
+                    SetProgress(currentAsync.progress);
+                    // If the loading is complete and the fade out animation has not been triggered yet, trigger it:
+                    if (currentAsync.isDone && !didTriggerFadeOutAnimation)
+                    {
+                        animator.SetTrigger("Hide");
+                        
+                        didTriggerFadeOutAnimation = true;
+                    }
+                    else
+                    {
+                        timeElapsed += Time.deltaTime;
+                        if (timeElapsed >= MIN_TIME_TO_SHOW)
+                        {
+                            // The loading screen has been showing for the minimum time required.
+                            // Allow the loading operation to formally finish:
+                            currentAsync.allowSceneActivation = true;
+                        }
+                    }
+                    break;
+                case LoadingType.None:
+                    break;
+            }            // Get the progress and update the UI. Goes from 0 (start) to 1 (end):
+            
         }
     }
     // Updates the UI based on the progress:
@@ -108,14 +148,34 @@ public class LoadManager : MonoBehaviour
     }
     // Call this to show the loading screen.
     // We can determine the loading's progress when needed from the AsyncOperation param:
-    public void Show(AsyncOperation loadingOperation)
+    public void Show(GameManager loadingOperation)
     {
         // Enable the loading screen:
         gameObject.SetActive(true);
         // Store the reference:
         currentLoadingOperation = loadingOperation;
         // Stop the loading operation from finishing, even if it technically did:
-        currentLoadingOperation.allowSceneActivation = false;
+        timePassed = false;
+        // Reset the UI:
+        SetProgress(0f);
+        // Reset the time elapsed:
+        timeElapsed = 0f;
+        // Play the fade in animation:
+        //animator.SetTrigger("Show");
+        // Reset the fade out animation flag:
+        type = LoadingType.GameManager;
+        didTriggerFadeOutAnimation = false;
+        isLoading = true;
+    }
+
+    public void Show (AsyncOperation loadingOperation)
+    {
+        // Enable the loading screen:
+        gameObject.SetActive(true);
+        // Store the reference:
+        currentAsync = loadingOperation;
+        // Stop the loading operation from finishing, even if it technically did:
+        currentAsync.allowSceneActivation = false;
         // Reset the UI:
         SetProgress(0f);
         // Reset the time elapsed:
@@ -124,6 +184,7 @@ public class LoadManager : MonoBehaviour
         //animator.SetTrigger("Show");
         // Reset the fade out animation flag:
         didTriggerFadeOutAnimation = false;
+        type = LoadingType.Async;
         isLoading = true;
     }
     // Call this to hide it:
@@ -132,6 +193,8 @@ public class LoadManager : MonoBehaviour
         // Disable the loading screen:
         gameObject.SetActive(false);
         currentLoadingOperation = null;
+        currentAsync = null;
+        type = LoadingType.None;
         isLoading = false;
     }
     #endregion
