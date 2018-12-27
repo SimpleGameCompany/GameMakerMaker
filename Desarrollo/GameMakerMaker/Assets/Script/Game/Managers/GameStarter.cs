@@ -25,12 +25,6 @@ public class GameStarter : MonoBehaviour {
         GameManager.Instance.ReStart();
     }
 
-    public void StoreAndBack()
-    {
-        GameManager.Instance.ResumeGame();
-        BackToMenu();
-    }
-
     public void Continue()
     {
         GameManager.Instance.ResumeGame();

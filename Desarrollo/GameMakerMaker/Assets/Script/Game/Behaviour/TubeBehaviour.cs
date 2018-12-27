@@ -18,7 +18,8 @@ public class TubeBehaviour : Interactuable {
     {
         if(player.PickedObjet.world == world && player.PickedObjet.Completed)
         {
-            ScoreController.Instance.Score += player.PickedObjet.recipe.score;
+            //ScoreController.Instance.Score += player.PickedObjet.recipe.score;
+            ScoreController.Instance.Score += 1;
         }
         else
         {

@@ -34,4 +34,9 @@ public class UIMainMenu : MonoBehaviour {
         Localization.Instance.SelectLanguage(Language.English);
     }
 
+    public void ClearData()
+    {
+        PlayerPrefs.DeleteKey("maxlevel");
+        GameManager.Instance.maxlevel = 0;
+    }
 }

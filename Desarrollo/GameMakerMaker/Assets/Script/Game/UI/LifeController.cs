@@ -28,7 +28,7 @@ public class LifeController : MonoBehaviour {
 
             if (lifes == 0)
             {
-                GameManager.Instance.LoseGame();
+                GameManager.Instance.EndGame(false);
             }
         }
     }

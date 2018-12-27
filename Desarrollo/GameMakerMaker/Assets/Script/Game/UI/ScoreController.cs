@@ -30,7 +30,11 @@ public class ScoreController : MonoBehaviour {
     public float Score { get { return score; }
         set {
             score = value;
-            textComponent.text = text + " : " + score;
+            textComponent.text = text + " : " + score+"/"+GameManager.Instance.loadedLevel.winCount;
+            if (score == GameManager.Instance.loadedLevel.winCount)
+            {
+                GameManager.Instance.EndGame(true);
+            }
                               } }
 
    

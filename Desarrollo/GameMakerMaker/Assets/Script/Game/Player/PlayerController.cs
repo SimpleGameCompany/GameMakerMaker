@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public float ikvalue;
 
+    bool win;
+
     void Start () {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
@@ -89,7 +91,10 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator EndAnim(bool win)
     {
-        yield return StartCoroutine(RotateTo(Camera.current.transform.position));
+        yield return StartCoroutine(RotateTo(Camera.main.transform.position));
+
+        this.win = win;
+
         if (win)
             anim.SetTrigger(Constantes.ANIMATION_PLAYER_WIN);
         else
@@ -98,7 +103,14 @@ public class PlayerController : MonoBehaviour {
 
     public void EndGame()
     {
-        GameManager.Instance.EndGame();
+        if (win)
+        {
+            GameManager.Instance.WinGame();
+        }
+        else
+        {
+            GameManager.Instance.LoseGame();
+        }
     }
 
     void Move()
@@ -175,8 +187,6 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-
-
         anim.SetBool(Constantes.ANIMATION_PLAYER_ROTATE, false);
         
     }
@@ -199,7 +209,7 @@ public class PlayerController : MonoBehaviour {
 
         if(ikvalue > 0)
         {
-            anim.SetLookAtPosition(Camera.current.transform.position);
+            anim.SetLookAtPosition(Camera.main.transform.position);
             anim.SetLookAtWeight(ikvalue);
         }
     }

@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     public Vector3 EndPosition;
     internal GameObject EndGameUI;
     internal PlayerController player;
+    public int maxlevel;
 
     public float progress = 0;
     public bool isDone = false;
@@ -58,6 +59,13 @@ public class GameManager : MonoBehaviour
         totalProps = new List<GameObject>();
         DontDestroyOnLoad(gameObject);
         frame = new WaitForEndOfFrame();
+        if (PlayerPrefs.HasKey("maxlevel"))
+        {
+            maxlevel = PlayerPrefs.GetInt("maxlevel");
+        }else
+        {
+            maxlevel = 0;
+        }
     }
 
     public void StoreProp(GameObject prop)
@@ -79,7 +87,6 @@ public class GameManager : MonoBehaviour
     public void StartLevelFromCourutine()
     {
         StartCoroutine(StartGame());
-        
     }
 
      public IEnumerator StartGame()
@@ -87,11 +94,11 @@ public class GameManager : MonoBehaviour
         EndGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_END);
         EndGameUI.SetActive(false);
         GameObject scenario = Instantiate(loadedLevel.Scenario);
-        progress = 0.4f;
+        progress = 0.1f;
         yield return StartCoroutine(CreateNavMesh(scenario));
-        progress = 0.6f;
+        progress = 0.2f;
         yield return StartCoroutine(CreateProps());
-        progress = 0.8f;
+        progress = 0.9f;
         PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
         GameObject papelera = GameObject.FindGameObjectWithTag(Constantes.TAG_PAPER);
         EndPosition = papelera.transform.position;
@@ -204,21 +211,24 @@ public class GameManager : MonoBehaviour
     }
 
     //TODO
-    public void LoseGame()
+    public void EndGame(bool winlose)
     {
         StopAllCoroutines();
-
-        player.StartCoroutine(player.EndAnim(true));
-
+        player.StartCoroutine(player.EndAnim(winlose));
     }
 
-    public void EndGame()
+    public void LoseGame()
     {
-
-
         PauseGame(0);
         EndGameUI.SetActive(true);
+    }
 
+    public void WinGame()
+    {
+        PauseGame(0);
+        maxlevel++;
+        PlayerPrefs.SetInt("maxlevel",maxlevel);
+        EndGameUI.SetActive(true);
     }
 
     public void ReStart()
