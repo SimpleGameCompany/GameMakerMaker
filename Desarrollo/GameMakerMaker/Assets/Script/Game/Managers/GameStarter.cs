@@ -15,7 +15,8 @@ public class GameStarter : MonoBehaviour {
     {
         GameManager.Instance.ResumeGame();
         GameManager.Instance.Clear();
-        SceneManager.LoadScene(Constantes.SCENE_MENU);
+        AsyncOperation load = SceneManager.LoadSceneAsync(Constantes.SCENE_MENU);
+        LoadManager.Instance.Show(load);
     }
 
     public void ReStart()
