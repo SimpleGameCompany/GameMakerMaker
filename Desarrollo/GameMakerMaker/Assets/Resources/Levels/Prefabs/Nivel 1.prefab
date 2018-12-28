@@ -2224,13 +2224,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4091868489272556}
+  - component: {fileID: 114830372393433440}
   - component: {fileID: 212921872345393352}
   - component: {fileID: 95115639700928240}
   - component: {fileID: 114116882170117016}
   - component: {fileID: 114377736119013638}
-  - component: {fileID: 114681393283306488}
   - component: {fileID: 65042592108560578}
-  - component: {fileID: 114830372393433440}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -9800,8 +9799,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1000001, y: 1.0052147, z: 0.84645903}
-  m_Center: {x: 0.000000029802322, y: 0.0026071966, z: 0}
+  m_Size: {x: 1.1000001, y: 2.005215, z: 1.12}
+  m_Center: {x: 0.000000029802322, y: -0.4973928, z: 0}
 --- !u!65 &65785486980073908
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -16224,21 +16223,6 @@ MonoBehaviour:
     - {fileID: 1334108773364420}
     - {fileID: 1938239251788650}
   _assetGuid: 8ca80774da168dd448c47a216cf8953f
---- !u!114 &114681393283306488
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1556049308284758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionIcon: {fileID: 0}
-  progress: {fileID: 0}
-  world: 1
-  brokenTime: 10
 --- !u!114 &114688818636379752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16891,7 +16875,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   progress: {fileID: 114009635046736946}
   world: 1
-  brokenTime: 0
+  brokenTime: 10
 --- !u!114 &114741962665231382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19121,7 +19105,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826928687373140}
-  m_LocalRotation: {x: -0.42261827, y: 0.000001296401, z: -0.0000005811453, w: -0.9063079}
+  m_LocalRotation: {x: 0, y: 0.9063079, z: -0.42261827, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19130,7 +19114,7 @@ RectTransform:
   - {fileID: 224629635630120330}
   m_Father: {fileID: 4508688030879270}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: 90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 50.000004, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.928}
