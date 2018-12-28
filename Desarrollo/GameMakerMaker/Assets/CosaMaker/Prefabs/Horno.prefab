@@ -703,11 +703,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -774,8 +774,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
   progress: {fileID: 114224167411653634}
+  danger: {fileID: 0}
   brokenTime: 3
+  explosionTime: 0
+  anim: {fileID: 0}
   textDebug: {fileID: 114808549608555356}
+  TimeToCook: 0
   Type: 0
 --- !u!114 &114692586865794220
 MonoBehaviour:
@@ -908,11 +912,11 @@ MonoBehaviour:
     lineCount: 0
     pageCount: 0
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
