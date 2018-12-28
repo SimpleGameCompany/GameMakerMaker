@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class LevelLoaderButton : MonoBehaviour
 {
    
-    public Level level; 
+    public Level level;
+    public GameObject Stars;
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(startScene);

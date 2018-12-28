@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class LevelPageController : MonoBehaviour {
     private GameObject next;
     [SerializeField]
     private GameObject previous;
+    public Sprite fillStar;
     private int page;
     private int maxPage;
     public int ActualPage { get { return page; }
@@ -26,9 +28,35 @@ public class LevelPageController : MonoBehaviour {
             
 
         } }
-	void Start () {
+    void OnEnable()
+    {
         ActualPage = 0;
-	}
+
+
+
+        for (int i = 0; i < maxPage; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                LevelLoaderButton[] b = PageList[i].GetComponentsInChildren<LevelLoaderButton>(true);
+                int index = (3 * i) + j;
+                if (index < GameManager.Instance.levels.Length)
+                {
+                    LevelLoaderButton b1 = b[j];
+                    b1.GetComponent<Button>().interactable = false;
+                    if (index <= GameManager.Instance.maxlevel)
+                    {
+                        b1.GetComponent<Button>().interactable = true;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+    }
+
 
     private void Awake()
     {
@@ -37,8 +65,19 @@ public class LevelPageController : MonoBehaviour {
         {
             maxlevel = PlayerPrefs.GetInt("maxlevel");
         }
+        List<LevelScore> levelScore = new List<LevelScore>();
+        if (PlayerPrefs.HasKey(Constantes.PREFERENCES_LEVEL_SCORE))
+        {
+            string t = PlayerPrefs.GetString(Constantes.PREFERENCES_LEVEL_SCORE);
+            levelScore = JsonConvert.DeserializeObject<List<LevelScore>>(t);
+        }
+
+
+
 
         Level [] levels = Resources.LoadAll<Level>(Constantes.LEVEL_GAME_PATH).OrderBy(x => x.levelID).ToArray();
+        GameManager.Instance.levels = levels;
+
         maxPage = (levels.Length / 3) + 1;
         PageList = new GameObject[maxPage];
         for(int i = 0; i < maxPage; i++)
@@ -52,6 +91,16 @@ public class LevelPageController : MonoBehaviour {
                 if (index <levels.Length)
                 {
                     LevelLoaderButton b1 = b[j];
+                    LevelScore l = (from x in levelScore where x.levelID == index select x).FirstOrDefault();
+                    if (l != null)
+                    {
+                        Image[] stars = b1.Stars.GetComponentsInChildren<Image>();
+                        for (int v = 0; v<l.score; v++)
+                        {
+                            stars[v].sprite = fillStar;
+                        }
+                    }
+                    
                     
                     b1.level = levels[index];
                     b1.gameObject.SetActive(true);

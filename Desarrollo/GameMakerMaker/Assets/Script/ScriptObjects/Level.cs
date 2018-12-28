@@ -12,7 +12,7 @@ public class Level : ScriptableObject  {
     public PropBehaviour[] Props;
     public int[] MaxProps;
     public int winCount;
-
+    public float MaxScore;
     [SerializeField]
     public MatrixContainer[] Layout;
     
@@ -20,5 +20,7 @@ public class Level : ScriptableObject  {
 
     [SerializeField]
     public Color ambientColor;
+
+
     
 }

@@ -30,4 +30,9 @@ public class GameStarter : MonoBehaviour {
         GameManager.Instance.ResumeGame();
     }
 
+    public void NextLevel() {
+        GameManager.Instance.ResumeGame();
+        GameManager.Instance.NextLevel();
+    }
+
 }

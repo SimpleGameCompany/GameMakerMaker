@@ -6,6 +6,7 @@ using System;
 using UnityEngine.AI;
 using System.Linq;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
     }
 
 
+
     //TODO Posiblemente vendria bien tener la lista de maximos elementos en pantalla, generarlos 
     List<GameObject> totalProps;
 
@@ -48,9 +50,13 @@ public class GameManager : MonoBehaviour
     private WaitForEndOfFrame frame;
     public Vector3 EndPosition;
     internal GameObject EndGameUI;
+    public GameObject WinGameUI;
     internal PlayerController player;
     public int maxlevel;
-
+    [HideInInspector]
+    public Level[] levels;
+    [HideInInspector]
+    public List<LevelScore> levelScore;
     public float progress = 0;
     public bool isDone = false;
     // Use this for initialization
@@ -65,6 +71,15 @@ public class GameManager : MonoBehaviour
         }else
         {
             maxlevel = 0;
+        }
+        if (PlayerPrefs.HasKey(Constantes.PREFERENCES_LEVEL_SCORE))
+        {
+            string t = PlayerPrefs.GetString(Constantes.PREFERENCES_LEVEL_SCORE);
+            levelScore = JsonConvert.DeserializeObject<List<LevelScore>>(t);
+        }
+        else
+        {
+            levelScore = new List<LevelScore>();
         }
     }
 
@@ -92,6 +107,8 @@ public class GameManager : MonoBehaviour
      public IEnumerator StartGame()
     {
         EndGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_END);
+        WinGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_WIN);
+        WinGameUI.SetActive(false);
         EndGameUI.SetActive(false);
         GameObject scenario = Instantiate(loadedLevel.Scenario);
         progress = 0.1f;
@@ -225,10 +242,34 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-        PauseGame(0);
+        
         maxlevel++;
         PlayerPrefs.SetInt("maxlevel",maxlevel);
-        EndGameUI.SetActive(true);
+        WinGameUI.SetActive(true);
+        StarFiller a = GameObject.FindGameObjectWithTag(Constantes.TAG_STARS).GetComponent<StarFiller>();
+        a.StartCoroutine(a.FillStars(ScoreController.Instance.scoreNumber,loadedLevel.MaxScore));
+        LevelScore l = new LevelScore()
+        {
+            levelID = loadedLevel.levelID,
+            score = Mathf.FloorToInt(((ScoreController.Instance.scoreNumber / loadedLevel.MaxScore) * 3))
+        };
+
+        LevelScore previous = (from x in levelScore where x.levelID == l.levelID select x).FirstOrDefault();
+        
+        if (previous != null)
+        {
+            levelScore.Remove(previous);
+            if (previous.score > l.score)
+            {           
+                l = previous;
+            }
+        }
+
+        levelScore.Add(l);
+
+        string t = JsonConvert.SerializeObject(levelScore);
+        PlayerPrefs.SetString(Constantes.PREFERENCES_LEVEL_SCORE, t);
+
     }
 
     public void ReStart()
@@ -245,6 +286,11 @@ public class GameManager : MonoBehaviour
         ClearLoad();
     }
 
+
+    public void NextLevel()
+    {
+        LoadLevel(levels[loadedLevel.levelID + 1]);
+    }
 
     private void ClearLoad()
     {

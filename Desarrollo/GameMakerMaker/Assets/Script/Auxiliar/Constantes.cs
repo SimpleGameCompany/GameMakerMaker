@@ -3,29 +3,32 @@ using System.Collections;
 
 public static class Constantes
 {
+    #region Assets
     public const string LEVEL_TAG = "Level";
     public const string LEVEL_DATA_PATH = "Assets/Resources/Levels/";
     public const string LEVEL_ASSET_PATH = LEVEL_DATA_PATH + "LevelDataObjects/";
     public const string LEVEL_PREFAB_PATH = LEVEL_DATA_PATH + "Prefabs/";
     public const string LEVEL_PREDETERMINATE_PATH = LEVEL_DATA_PATH + "Predeterminate/level.prefab";
     public const string LEVEL_GAME_PATH = "Levels/LevelDataObjects/";
+    #endregion
+    #region Tags
     public const string TAG_LAYOUT = "Layout";
     public const string TAG_PROP_START = "PropStart";
-
     public const string TAG_RECIPIES = "QuitRecetas";
-
     public const string TAG_BELT = "Cinta";
-
     public const string TAG_PAPER = "Papelera";
-
     public const string TAG_LIFES = "Lifes";
-
-    public const string SCENE_MENU = "MainMenu";
-
-    public const string SCENE_GAME = "GameScene";
-
+    public const string TAG_WIN_BUTTONS = "WinButtons";
     public const string TAG_END = "EndGameUI";
+    public const string TAG_WIN = "WinMenu";
+    public const string TAG_STARS = "Stars";
+    #endregion
+    #region Scenes
+    public const string SCENE_MENU = "MainMenu";
+    public const string SCENE_GAME = "GameScene";
+    #endregion
 
+    #region Animations
     public const string ANIMATION_PLAYER_DROP_OBJECT = "DropObject";
     public const string ANIMATION_PLAYER_IDLE_POSE = "IdlePose";
     public const string ANIMATION_PLAYER_SPEED = "Speed";
@@ -49,7 +52,10 @@ public static class Constantes
     public const string ANIMATION_PROP_SCALEDOWN = "ScaleDown";
 
 
+    #endregion
 
-
-
+    #region PlayerPreferences
+    public const string PREFERENCES_MAX_SCORE = "maxscore";
+    public const string PREFERENCES_LEVEL_SCORE = "levelScore";
+    #endregion
 }

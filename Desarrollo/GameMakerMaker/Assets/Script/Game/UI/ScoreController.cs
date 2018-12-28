@@ -41,11 +41,14 @@ public class ScoreController : MonoBehaviour {
 
     private string text;
     private TextMeshProUGUI textComponent;
-	void Start () {      
+    public float scoreNumber;
+
+    void Start () {      
         textComponent = GetComponent<TextMeshProUGUI>();
        
         text = textComponent.text;
         Score = 0;
+        scoreNumber = 0;
     }
 
 
