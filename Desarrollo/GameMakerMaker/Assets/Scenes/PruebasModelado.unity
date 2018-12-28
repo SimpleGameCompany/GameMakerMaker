@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,6 +158,58 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &85256668
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737121657346688, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813967867031686, guid: fe9d6e8666fdb23468713bf932f21d16,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813967867031686, guid: fe9d6e8666fdb23468713bf932f21d16,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe9d6e8666fdb23468713bf932f21d16, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &138136776
 Prefab:
@@ -1036,17 +1088,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4861319891576474, guid: 39c6cd517650f4f4092ab1697183fe97, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114907663755524168, guid: 39c6cd517650f4f4092ab1697183fe97,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114907663755524168, guid: 39c6cd517650f4f4092ab1697183fe97,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39c6cd517650f4f4092ab1697183fe97, type: 2}
@@ -1921,7 +1973,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4370922535732416, guid: f676974f31b08974dbbe29e642e7d07d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4370922535732416, guid: f676974f31b08974dbbe29e642e7d07d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1954,12 +2006,12 @@ Prefab:
     - target: {fileID: 114197559654322266, guid: f676974f31b08974dbbe29e642e7d07d,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114197559654322266, guid: f676974f31b08974dbbe29e642e7d07d,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f676974f31b08974dbbe29e642e7d07d, type: 2}
