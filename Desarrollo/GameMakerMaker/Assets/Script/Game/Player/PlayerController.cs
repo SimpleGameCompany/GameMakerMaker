@@ -213,4 +213,9 @@ public class PlayerController : MonoBehaviour {
             anim.SetLookAtWeight(ikvalue);
         }
     }
+
+    public void EndInteraction()
+    {
+        interacting = false;
+    }
 }

@@ -16,18 +16,8 @@ public class TubeBehaviour : Interactuable {
 
     public override void PostAction(PlayerController player)
     {
-        if(player.PickedObjet.world == world && player.PickedObjet.Completed)
-        {
-            //ScoreController.Instance.Score += player.PickedObjet.recipe.score;
-            ScoreController.Instance.Score += 1;
-        }
-        else
-        {
-            broken = true;
-            Debug.Log("roto");
-            StartCoroutine(Reparing());
-        }
         player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
+        player.interacting = true;
     }
 
     public override bool PreAction(PlayerController player)
@@ -58,7 +48,20 @@ public class TubeBehaviour : Interactuable {
 
     public override void PostActionAnim(PlayerController player)
     {
+        if (player.PickedObjet.world == world && player.PickedObjet.Completed)
+        {
+            //ScoreController.Instance.Score += player.PickedObjet.recipe.score;
+            ScoreController.Instance.Score += 1; 
+        }
+        else
+        {
+            broken = true;
+            Debug.Log("roto");
+            StartCoroutine(Reparing());
+        }
+
         GameManager.Instance.StoreProp(player.PickedObjet.gameObject);
         player.PickedObjet = null;
+        player.interacting = false;
     }
 }

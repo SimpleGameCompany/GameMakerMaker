@@ -85,12 +85,14 @@ public class OvenBehaviour : Interactuable
         switch (ovenState)
         {
             case State.Empty:
+                player.interacting = true;
                 player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_DROP_OBJECT);
                 anim.SetTrigger(Constantes.ANIMATION_OVEN_GET_OBJECT);
                 break;
             case State.Coocking:
                 break;
             case State.Prepare:
+                player.interacting = true;
                 anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
                 player.anim.SetTrigger(Constantes.ANIMATION_PLAYER_PICK);
                 progress.fillAmount = 0;
@@ -201,6 +203,7 @@ public class OvenBehaviour : Interactuable
                 CookingProp.transform.localPosition = Vector3.zero;
                 CookingProp.anim.SetTrigger(Constantes.ANIMATION_PROP_SCALEDOWN);
                 StartCoroutine(Cooking());
+                player.interacting = false;
                 break;
             case State.Prepare:
                 player.PickedObjet = CookingProp;
@@ -210,6 +213,7 @@ public class OvenBehaviour : Interactuable
                 player.PickedObjet.transform.localPosition = Vector3.zero;
                 player.PickedObjet.anim.SetTrigger(Constantes.ANIMATION_PROP_SCALEUP);
                 ovenState = State.Empty;
+                player.interacting = false;
                 break;
         }
     }
