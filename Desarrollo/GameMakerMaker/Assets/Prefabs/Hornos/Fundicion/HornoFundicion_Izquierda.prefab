@@ -156,9 +156,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492096192595116}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -0.009, y: 0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1.2780528, z: 1}
   m_Children: []
   m_Father: {fileID: 4431828124076998}
   m_RootOrder: 2
@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1921403665430978}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.7673845, y: 4.42, z: -2.8510475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4754299921219854}
@@ -577,10 +577,10 @@ MonoBehaviour:
   progress: {fileID: 114652225471803918}
   danger: {fileID: 114452600263145168}
   brokenTime: 10
-  explosionTime: 10
+  explosionTime: 14
   anim: {fileID: 0}
   textDebug: {fileID: 114159479807837558}
-  TimeToCook: 5
+  TimeToCook: 4
   Indicator: {fileID: 0}
   Type: 1
 --- !u!114 &114360890467430966
