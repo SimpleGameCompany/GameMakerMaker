@@ -22,6 +22,7 @@ public static class Constantes
     public const string TAG_END = "EndGameUI";
     public const string TAG_WIN = "WinMenu";
     public const string TAG_STARS = "Stars";
+    public const string TAG_INDICATOR = "Indicator";
     #endregion
     #region Scenes
     public const string SCENE_MENU = "MainMenu";

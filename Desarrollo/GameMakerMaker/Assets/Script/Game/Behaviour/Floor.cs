@@ -5,7 +5,7 @@ public class Floor : Interactuable
 {
     public override void PostAction(PlayerController player)
     {
-        
+        base.PostAction(player);
     }
 
     public override void PostActionAnim(PlayerController player)
@@ -15,6 +15,8 @@ public class Floor : Interactuable
 
     public override bool PreAction(PlayerController player)
     {
+        base.PreAction(player);
+        player.MarkObject.transform.position = player.hit.point;
         return true;
     }
 

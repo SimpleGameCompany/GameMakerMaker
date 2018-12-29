@@ -22,7 +22,12 @@ public class TubeBehaviour : Interactuable {
 
     public override bool PreAction(PlayerController player)
     {
-        return (player.PickedObjet != null && !broken);      
+        if((player.PickedObjet != null && !broken))
+        {
+            return base.PreAction(player);
+            
+        }
+        return false;  
     }
 
     IEnumerator Reparing()
@@ -48,6 +53,7 @@ public class TubeBehaviour : Interactuable {
 
     public override void PostActionAnim(PlayerController player)
     {
+        base.PostAction(player);
         if (player.PickedObjet.world == world && player.PickedObjet.Completed)
         {
             ScoreController.Instance.scoreNumber += player.PickedObjet.recipe.score;

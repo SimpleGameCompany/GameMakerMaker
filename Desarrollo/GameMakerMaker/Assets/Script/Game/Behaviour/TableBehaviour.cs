@@ -30,9 +30,9 @@ public class TableBehaviour : Interactuable {
         switch (tableState)
         {
             case State.Empty:
-                return player.PickedObjet != null;
+                return player.PickedObjet != null && base.PreAction(player);
             case State.Full:
-                return player.PickedObjet == null;
+                return player.PickedObjet == null && base.PreAction(player);
             default:
                 return false;
         }
@@ -40,6 +40,7 @@ public class TableBehaviour : Interactuable {
 
     public override void PostAction(PlayerController player)
     {
+        base.PostAction(player);
         switch (tableState)
         {
             case State.Empty:

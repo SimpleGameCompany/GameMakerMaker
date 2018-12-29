@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
     public List<LevelScore> levelScore;
     public float progress = 0;
     public bool isDone = false;
+    [HideInInspector]
+    public List<OvenBehaviour> ovens;
     // Use this for initialization
     void Start()
     {
@@ -119,6 +121,10 @@ public class GameManager : MonoBehaviour
         PositionStart = GameObject.FindGameObjectWithTag(Constantes.TAG_PROP_START).transform.position;
         GameObject papelera = GameObject.FindGameObjectWithTag(Constantes.TAG_PAPER);
         EndPosition = papelera.transform.position;
+
+
+        ovens = FindObjectsOfType<OvenBehaviour>().ToList();
+
 
 
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
@@ -290,6 +296,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        totalProps.Clear();
         LoadLevel(levels[loadedLevel.levelID + 1]);
     }
 

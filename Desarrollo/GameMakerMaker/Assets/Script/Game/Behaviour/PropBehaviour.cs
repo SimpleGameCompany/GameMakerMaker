@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,6 +21,8 @@ public class PropBehaviour : Interactuable {
     private MeshRenderer render;
 
     public bool Completed { get { return tasksCompleted == recipe.Tasks.Length; } }
+
+
 
 
     //Esto realmente no se donde meterlo jajaja
@@ -73,6 +77,7 @@ public class PropBehaviour : Interactuable {
 
     public override void PostActionAnim(PlayerController player)
     {
+        base.PostAction(player);
         player.PickedObjet = this;
         gameObject.transform.SetParent(player.grabPoint);
         gameObject.transform.localPosition = Vector3.zero;
@@ -83,8 +88,10 @@ public class PropBehaviour : Interactuable {
 
     public override bool PreAction(PlayerController player)
     {
+        
         if (player.PickedObjet == null)
         {
+            base.PreAction(player);
             return true;
         }
         else
@@ -128,5 +135,30 @@ public class PropBehaviour : Interactuable {
     public override bool UpdatePosition(PlayerController player)
     {
         return gameObject.activeSelf &&  player.SetDestination(transform.position);
+    }
+
+    internal void DesactiveBehaviour()
+    {
+        foreach(var e in GameManager.Instance.ovens)
+        {
+            if (e.Indicator.activeSelf)
+            {
+                e.Indicator.SetActive(false);
+            }
+        }
+    }
+
+
+    public void Activate()
+    {
+        OvenBehaviour.OvenType[] completedTypes = (from x in recipe.Tasks where x.Complete select x.Type).ToArray();
+        OvenBehaviour[] toactivate = (from x in GameManager.Instance.ovens where completedTypes.Contains(x.Type) select x).ToArray();
+
+        foreach(var e in toactivate)
+        {
+            e.Indicator.SetActive(true);
+        }
+
+
     }
 }

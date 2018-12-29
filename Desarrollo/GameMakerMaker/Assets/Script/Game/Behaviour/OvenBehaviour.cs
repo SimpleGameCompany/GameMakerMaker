@@ -27,6 +27,8 @@ public class OvenBehaviour : Interactuable
 
     public float TimeToCook;
 
+    public GameObject Indicator;
+
     public enum OvenType
     {
         Magic,
@@ -51,24 +53,22 @@ public class OvenBehaviour : Interactuable
         wait = new WaitForEndOfFrame();
         ovenState = State.Empty;
         anim = GetComponent<Animator>();
+        Indicator = (from x in GetComponentsInChildren<Transform>() where x.CompareTag(Constantes.TAG_INDICATOR) select x.gameObject).FirstOrDefault();
+        Indicator.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 
     public override bool PreAction(PlayerController player)
     {
         switch (ovenState)
         {
             case State.Empty:
-                return player.PickedObjet != null;
+                return player.PickedObjet != null && base.PreAction(player);
             case State.Coocking:
                 return false;
-            case State.Prepare:
-                return true;
+            case State.Prepare:          
+                return base.PreAction(player);
             case State.Wasted:
                 return false;
             case State.Broken:
@@ -82,6 +82,7 @@ public class OvenBehaviour : Interactuable
 
     public override void PostAction(PlayerController player)
     {
+        base.PostAction(player);
         switch (ovenState)
         {
             case State.Empty:

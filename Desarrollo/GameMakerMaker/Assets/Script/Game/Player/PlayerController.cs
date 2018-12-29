@@ -6,10 +6,25 @@ using UnityEngine.AI;
 [RequireComponent (typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour {
 
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
     Interactuable actualTask;
+
+    public GameObject MarkObject;
+    private PropBehaviour prop;
     [HideInInspector]
-    public  PropBehaviour PickedObjet;
+    public PropBehaviour PickedObjet { get { return prop; } set
+        {
+           if(prop != null)
+            {
+                prop.DesactiveBehaviour();
+            }
+            prop = value;
+            if(prop != null)
+            {
+                prop.Activate();
+            }
+        }
+    }
     private NavMeshHit navMeshHit;
     private Coroutine actionInProcess;
     private Coroutine rotationInProcess;
@@ -20,7 +35,7 @@ public class PlayerController : MonoBehaviour {
     public float rotateSpeed = 135;
     public Transform grabPoint;
     Vector3 lastFacing;
-
+    public RaycastHit hit;
     [HideInInspector]
     public float ikvalue;
 
@@ -31,6 +46,8 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        MarkObject = Instantiate(MarkObject, transform);
+        MarkObject.SetActive(false);
 
 	}
 	
@@ -78,6 +95,10 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
+                MarkObject.transform.SetParent(transform);
+                MarkObject.transform.localScale = Vector3.one;
+                MarkObject.SetActive(false);
+                MarkObject.transform.rotation = Quaternion.identity;
                 StopCoroutine(actionInProcess);
                 actionInProcess = null;
             }
@@ -128,7 +149,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && !interacting && !endGame)
         {
-            RaycastHit hit;
+           
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
             {
