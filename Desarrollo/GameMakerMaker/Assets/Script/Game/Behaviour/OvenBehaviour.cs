@@ -188,6 +188,7 @@ public class OvenBehaviour : Interactuable
         progress.color = new Color(1, 1, 1);
         currentBrokenTime = 0;
         anim.SetTrigger(Constantes.ANIMATION_OVEN_FIXED);
+        GameManager.Instance.StoreProp(CookingProp.gameObject);
         ovenState = State.Empty;
     }
 
