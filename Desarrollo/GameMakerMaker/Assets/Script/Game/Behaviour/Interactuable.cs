@@ -10,14 +10,14 @@ public abstract class Interactuable : MonoBehaviour {
 
     public virtual bool PreAction(PlayerController player) {
         player.MarkObject.SetActive(true);
-        player.MarkObject.transform.position = transform.position;
         player.MarkObject.transform.SetParent(transform);
+        player.MarkObject.transform.localPosition = Vector3.zero;
         return true;
     }
+
     public virtual void PostAction(PlayerController player) {
-        player.MarkObject.transform.SetParent(player.transform);
-        player.MarkObject.transform.localScale = Vector3.one;
-        player.MarkObject.transform.rotation = Quaternion.identity;
+        player.MarkObject.transform.SetParent(null);
+        player.MarkObject.transform.rotation = Quaternion.Euler(0,0,0);
         player.MarkObject.SetActive(false);
     }
     public abstract void PostActionAnim(PlayerController player);
