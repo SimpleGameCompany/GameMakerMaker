@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
     public float ikvalue;
 
     bool win;
+    [HideInInspector]
+    public bool endGame;
 
     void Start () {
         agent = GetComponent<NavMeshAgent>();
@@ -55,7 +57,14 @@ public class PlayerController : MonoBehaviour {
         agent.CalculatePath(agent.destination, agent.path);
         yield return new WaitUntil(() => { return !agent.pathPending; });
         agent.isStopped = true;
-        yield return StartCoroutine(RotateTo(agent.path.corners[1]));
+        if (agent.path.corners.Length > 1)
+        {
+            yield return StartCoroutine(RotateTo(agent.path.corners[1]));
+        }
+        else
+        {
+            yield return StartCoroutine(RotateTo(agent.path.corners[0]));
+        }
        
         agent.isStopped = false;
         
@@ -91,6 +100,7 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator EndAnim(bool win)
     {
+        endGame = true;
         yield return StartCoroutine(RotateTo(Camera.main.transform.position));
 
         this.win = win;
@@ -103,6 +113,7 @@ public class PlayerController : MonoBehaviour {
 
     public void EndGame()
     {
+        
         if (win)
         {
             GameManager.Instance.WinGame();
@@ -115,7 +126,7 @@ public class PlayerController : MonoBehaviour {
 
     void Move()
     {
-        if (Input.GetMouseButtonDown(0) && !interacting)
+        if (Input.GetMouseButtonDown(0) && !interacting && !endGame)
         {
             RaycastHit hit;
 

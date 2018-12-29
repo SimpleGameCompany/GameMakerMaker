@@ -231,6 +231,7 @@ public class GameManager : MonoBehaviour
     public void EndGame(bool winlose)
     {
         StopAllCoroutines();
+        
         player.StartCoroutine(player.EndAnim(winlose));
     }
 
