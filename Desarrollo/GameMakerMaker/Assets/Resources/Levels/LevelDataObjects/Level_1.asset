@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07360ff9137617243b10b3241faecdc7, type: 3}
+  m_Name: Level_1
+  m_EditorClassIdentifier: 
+  levelID: 0
+  LevelName: Level_1
+  Scenario: {fileID: 1769935423584404, guid: ae010458d2db35642a0a85d3e15ee825, type: 2}
+  velocity: 0.4
+  ratio: 10
+  Props:
+  - {fileID: 114338480776357180, guid: adcf2413170788e4c891eaf8b19114e4, type: 2}
+  - {fileID: 114882813895430062, guid: 1644fa2d2e7ae3549a2911b615b1507d, type: 2}
+  - {fileID: 114410257893941718, guid: beb9bea6a6de2c2439fad5d1d93de0a6, type: 2}
+  - {fileID: 114899188864112308, guid: d57ca70732008d645895161c90b20d8b, type: 2}
+  MaxProps: 02000000020000000200000002000000
+  winCount: 10
+  MaxScore: 0
+  Layout:
+  - list:
+    - {fileID: 1099910976434034, guid: 060d13cfaef9521498524376c22d6640, type: 2}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 1189807797765618, guid: 8fbf78d0db241ab44bd097c681db7e95, type: 2}
+    - {fileID: 1324802098944256, guid: f676974f31b08974dbbe29e642e7d07d, type: 2}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 1324802098944256, guid: 9eb326631675bab4dbb9d71573862dce, type: 2}
+    - {fileID: 0}
+  - list:
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1331873463616114, guid: b5ce99a9e740a094cb527142fab7b611, type: 2}
+  - list:
+    - {fileID: 1080775590213090, guid: 39c6cd517650f4f4092ab1697183fe97, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1320180390003168, guid: 5d3c0dc0f86128d4c81b34b69f966c19, type: 2}
+  - list:
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1987998720118706, guid: 3eee294f4f81c2046ac081042aa23aec, type: 2}
+  - list:
+    - {fileID: 1080775590213090, guid: 39c6cd517650f4f4092ab1697183fe97, type: 2}
+    - {fileID: 1721671137663750, guid: 913b570bda15b1d46bca1b550c4b6e83, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+  - list:
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1470697045477098, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+    - {fileID: 1470697045477098, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+    - {fileID: 1470697045477098, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+    - {fileID: 1379432940817712, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
+  - list:
+    - {fileID: 1120233810612996, guid: 3f75f6c23eb5e91409eaedfbc7b4a072, type: 2}
+    - {fileID: 1470697045477098, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+    - {fileID: 1470697045477098, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+    - {fileID: 1470697045477098, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+    - {fileID: 1470697045477098, guid: 50d4064fd04ad9647ae8c4693efeef49, type: 2}
+    - {fileID: 1394163791902194, guid: be72a6a3224cb15448da5efcaf3c0164, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  floor: {fileID: 1622648823092482, guid: d1825e78e633d9c4e9097440ebbf3d59, type: 2}
+  ambientColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
