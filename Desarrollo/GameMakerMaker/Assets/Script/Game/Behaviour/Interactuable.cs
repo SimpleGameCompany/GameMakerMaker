@@ -18,6 +18,7 @@ public abstract class Interactuable : MonoBehaviour {
     public virtual void PostAction(PlayerController player) {
         player.MarkObject.transform.SetParent(null);
         player.MarkObject.transform.rotation = Quaternion.Euler(0,0,0);
+        player.MarkObject.transform.localScale = Vector3.one;
         player.MarkObject.SetActive(false);
     }
     public abstract void PostActionAnim(PlayerController player);

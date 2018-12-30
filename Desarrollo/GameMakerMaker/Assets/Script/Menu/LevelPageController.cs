@@ -32,7 +32,18 @@ public class LevelPageController : MonoBehaviour {
     {
         ActualPage = 0;
 
+        int maxlevel = 0;
+        if (PlayerPrefs.HasKey("maxlevel"))
+        {
+            maxlevel = PlayerPrefs.GetInt("maxlevel");
+        }
 
+        List<LevelScore> levelScore = new List<LevelScore>();
+        if (PlayerPrefs.HasKey(Constantes.PREFERENCES_LEVEL_SCORE))
+        {
+            string t = PlayerPrefs.GetString(Constantes.PREFERENCES_LEVEL_SCORE);
+            levelScore = JsonConvert.DeserializeObject<List<LevelScore>>(t);
+        }
 
         for (int i = 0; i < maxPage; i++)
         {
@@ -44,9 +55,18 @@ public class LevelPageController : MonoBehaviour {
                 {
                     LevelLoaderButton b1 = b[j];
                     b1.GetComponent<Button>().interactable = false;
-                    if (index <= GameManager.Instance.maxlevel)
+                    if (index <= maxlevel)
                     {
                         b1.GetComponent<Button>().interactable = true;
+                    }
+                    LevelScore l = (from x in levelScore where x.levelID == index select x).FirstOrDefault();
+                    if (l != null)
+                    {
+                        Image[] stars = b1.Stars.GetComponentsInChildren<Image>();
+                        for (int v = 0; v < l.score; v++)
+                        {
+                            stars[v].sprite = fillStar;
+                        }
                     }
                 }
                 else
@@ -60,20 +80,8 @@ public class LevelPageController : MonoBehaviour {
 
     private void Awake()
     {
-        int maxlevel = 0;
-        if (PlayerPrefs.HasKey("maxlevel"))
-        {
-            maxlevel = PlayerPrefs.GetInt("maxlevel");
-        }
-        List<LevelScore> levelScore = new List<LevelScore>();
-        if (PlayerPrefs.HasKey(Constantes.PREFERENCES_LEVEL_SCORE))
-        {
-            string t = PlayerPrefs.GetString(Constantes.PREFERENCES_LEVEL_SCORE);
-            levelScore = JsonConvert.DeserializeObject<List<LevelScore>>(t);
-        }
-
-
-
+        
+        
 
         Level [] levels = Resources.LoadAll<Level>(Constantes.LEVEL_GAME_PATH).OrderBy(x => x.levelID).ToArray();
         GameManager.Instance.levels = levels;
@@ -91,23 +99,8 @@ public class LevelPageController : MonoBehaviour {
                 if (index <levels.Length)
                 {
                     LevelLoaderButton b1 = b[j];
-                    LevelScore l = (from x in levelScore where x.levelID == index select x).FirstOrDefault();
-                    if (l != null)
-                    {
-                        Image[] stars = b1.Stars.GetComponentsInChildren<Image>();
-                        for (int v = 0; v<l.score; v++)
-                        {
-                            stars[v].sprite = fillStar;
-                        }
-                    }
-                    
-                    
                     b1.level = levels[index];
                     b1.gameObject.SetActive(true);
-                    if (index<=maxlevel)
-                    {
-                        b1.GetComponent<Button>().interactable = true;
-                    }
                 }
                 else
                 {

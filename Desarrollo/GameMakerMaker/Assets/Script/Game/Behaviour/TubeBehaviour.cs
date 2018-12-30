@@ -66,6 +66,9 @@ public class TubeBehaviour : Interactuable {
             StartCoroutine(Reparing());
         }
 
+        player.PickedObjet.transform.parent = this.transform;
+        player.PickedObjet.transform.localPosition = Vector3.zero;
+        player.PickedObjet.transform.rotation = Quaternion.Euler(0, 0, 0);
         GameManager.Instance.StoreProp(player.PickedObjet.gameObject);
         player.PickedObjet = null;
         player.interacting = false;
