@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour {
     Interactuable actualTask;
 
     public GameObject MarkObject;
+    public GameObject MarkObjectFloor;
+    [HideInInspector]
+    public Vector3 click;
     private PropBehaviour prop;
     [HideInInspector]
     public PropBehaviour PickedObjet { get { return prop; } set
@@ -46,10 +49,12 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        MarkObject = Instantiate(MarkObject, transform);
+        MarkObject = Instantiate(MarkObject, null);
         MarkObject.SetActive(false);
+        MarkObjectFloor = Instantiate(MarkObjectFloor, null);
+        MarkObjectFloor.SetActive(false);
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -69,8 +74,6 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator GoToPoint()
     {
-
-
         agent.CalculatePath(agent.destination, agent.path);
         yield return new WaitUntil(() => { return !agent.pathPending; });
         agent.isStopped = true;
@@ -95,10 +98,10 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                MarkObject.transform.SetParent(transform);
-                MarkObject.transform.localScale = Vector3.one;
-                MarkObject.SetActive(false);
-                MarkObject.transform.rotation = Quaternion.identity;
+                //MarkObject.transform.SetParent(transform);
+                //MarkObject.transform.localScale = Vector3.one;
+                //MarkObject.SetActive(false);
+                //MarkObject.transform.rotation = Quaternion.identity;
                 StopCoroutine(actionInProcess);
                 actionInProcess = null;
             }
@@ -162,6 +165,7 @@ public class PlayerController : MonoBehaviour {
 
                 if (inter != null)
                 {
+                    click = hit.point;
                     actualTask = inter;
                     if (actionInProcess != null)
                     {
@@ -171,19 +175,22 @@ public class PlayerController : MonoBehaviour {
                     }
                     if (inter.PreAction(this))
                     {
-                        
+
                         if (SetDestination(hit.point))
                             actionInProcess = StartCoroutine(GoToPoint());
-                        
+
                     }
                 }
-                else if(agent.velocity.magnitude < 0.1f && !interacting)
+                else if (!interacting && hit.collider.CompareTag("Player")) 
                 {
-                    anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICK);
-                }
-                else if (!interacting)
-                {
-                    anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICKMOV);
+                    if (agent.velocity.magnitude < 0.1f)
+                    {
+                        anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICK);
+                    }
+                    else
+                    {
+                        anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICKMOV);
+                    }
                 }
             }
         }

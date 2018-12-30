@@ -21,6 +21,7 @@ public abstract class Interactuable : MonoBehaviour {
         player.MarkObject.transform.localScale = Vector3.one;
         player.MarkObject.SetActive(false);
     }
+
     public abstract void PostActionAnim(PlayerController player);
     public virtual bool UpdatePosition(PlayerController player)
     {
