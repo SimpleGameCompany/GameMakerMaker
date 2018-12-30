@@ -19,6 +19,7 @@ public class LifeController : MonoBehaviour {
 
         set
         {
+            
             lifes = value;
 
             for (int i = 0; i < 3; i++)
@@ -26,7 +27,7 @@ public class LifeController : MonoBehaviour {
                 Sprites[i].SetActive(i < lifes);
             }
 
-            if (lifes == 0)
+            if (lifes == 0 &&  GameManager.Instance.playing)
             {
                 GameManager.Instance.EndGame(false);
             }

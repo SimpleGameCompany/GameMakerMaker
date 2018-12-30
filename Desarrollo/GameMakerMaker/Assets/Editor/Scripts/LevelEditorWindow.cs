@@ -17,6 +17,7 @@ public class LevelEditorWindow : EditorWindow {
     static bool Pick = false;
     static int[] MaxProps;
     static Color AmbientColor;
+   
     [SerializeField]
     PropBehaviour[] Props;
     [SerializeField]
@@ -139,6 +140,7 @@ public class LevelEditorWindow : EditorWindow {
         level.MaxProps = MaxProps;
         level.ambientColor = AmbientColor;
         level = g.Save(level);
+        
         string path = Constantes.LEVEL_ASSET_PATH +levelName+ ".asset";
         AssetDatabase.CreateAsset(level, path);
         AssetDatabase.SaveAssets();

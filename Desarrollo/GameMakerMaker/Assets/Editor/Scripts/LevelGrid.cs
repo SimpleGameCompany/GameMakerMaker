@@ -300,6 +300,7 @@ public class LevelGrid
    public Level Save(Level l)
     {
         l.floor = floorPref;
+        l.FloorMaterial = levelFloor;
         l.Layout = new MatrixContainer[x];
         
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelID: 1
   LevelName: Level_1
-  Scenario: {fileID: 1362636794839542, guid: ae010458d2db35642a0a85d3e15ee825, type: 2}
+  Scenario: {fileID: 1774426264293330, guid: ae010458d2db35642a0a85d3e15ee825, type: 2}
   velocity: 0.3
   ratio: 10
   Props:
@@ -23,7 +23,7 @@ MonoBehaviour:
   - {fileID: 114899188864112308, guid: d57ca70732008d645895161c90b20d8b, type: 2}
   MaxProps: 02000000020000000200000002000000
   winCount: 10
-  MaxScore: 1
+  MaxScore: 0
   Layout:
   - list:
     - {fileID: 1099910976434034, guid: 060d13cfaef9521498524376c22d6640, type: 2}
@@ -116,4 +116,5 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   floor: {fileID: 1622648823092482, guid: d1825e78e633d9c4e9097440ebbf3d59, type: 2}
+  FloorMaterial: {fileID: 2100000, guid: a9e98ae532cdd784287bb48790a82bb0, type: 2}
   ambientColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
