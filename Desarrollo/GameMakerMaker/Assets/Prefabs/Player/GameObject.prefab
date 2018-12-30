@@ -1189,7 +1189,7 @@ MonoBehaviour:
   _guid: 916ad961-e52c-4ba6-a97a-f2521bc1c0e0
 --- !u!114 &114715839892359684
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721671137663750}
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   _guid: f7d7c839-ed06-42f2-be5c-8941a16e516d
 --- !u!114 &114948505435937048
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721671137663750}
@@ -1372,9 +1372,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.2
-  m_Height: 2
+  m_Height: 0.7
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.35, z: 0}
 --- !u!137 &137573294047659958
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

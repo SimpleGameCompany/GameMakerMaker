@@ -15,6 +15,7 @@ public class LevelPageController : MonoBehaviour {
     [SerializeField]
     private GameObject previous;
     public Sprite fillStar;
+    public Sprite emptyStar;
     private int page;
     private int maxPage;
     public int ActualPage { get { return page; }
@@ -54,18 +55,24 @@ public class LevelPageController : MonoBehaviour {
                 if (index < GameManager.Instance.levels.Length)
                 {
                     LevelLoaderButton b1 = b[j];
+                    Image[] stars = b1.Stars.GetComponentsInChildren<Image>();
+                    stars[0].sprite = emptyStar;
+                    stars[1].sprite = emptyStar;
+                    stars[2].sprite = emptyStar;
                     b1.GetComponent<Button>().interactable = false;
                     if (index <= maxlevel)
                     {
                         b1.GetComponent<Button>().interactable = true;
                     }
-                    LevelScore l = (from x in levelScore where x.levelID == index select x).FirstOrDefault();
-                    if (l != null)
+                    if (levelScore.Count > 0)
                     {
-                        Image[] stars = b1.Stars.GetComponentsInChildren<Image>();
-                        for (int v = 0; v < l.score; v++)
+                        LevelScore l = (from x in levelScore where x.levelID == index select x).FirstOrDefault();
+                        if (l != null)
                         {
-                            stars[v].sprite = fillStar;
+                            for (int v = 0; v < l.score; v++)
+                            {
+                                stars[v].sprite = fillStar;
+                            }
                         }
                     }
                 }
