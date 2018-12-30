@@ -8245,7 +8245,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4b3e6c74b284e854283340ec2a47258d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19676,8 +19676,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 5
-  m_Acceleration: 15
+  m_Speed: 6
+  m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 360
   m_StoppingDistance: 0.4
