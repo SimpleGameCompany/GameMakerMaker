@@ -22,6 +22,10 @@ public class FloorBehaviour : Interactuable {
         return true;
     }
 
+    public override bool HasToStare()
+    {
+        return false;
+    }
 
     // Use this for initialization
     void Start () {

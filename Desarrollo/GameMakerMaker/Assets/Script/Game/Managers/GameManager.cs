@@ -43,7 +43,8 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public Level loadedLevel;
-    private bool playing;
+    [HideInInspector]
+    public bool playing;
     internal Vector3 PositionStart;
     internal Button Recipies;
     private GameObject UI;
@@ -237,7 +238,7 @@ public class GameManager : MonoBehaviour
     public void EndGame(bool winlose)
     {
         StopAllCoroutines();
-        
+        playing = false;
         player.StartCoroutine(player.EndAnim(winlose));
     }
 

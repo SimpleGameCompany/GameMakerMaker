@@ -98,10 +98,14 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                //MarkObject.transform.SetParent(transform);
-                //MarkObject.transform.localScale = Vector3.one;
-                //MarkObject.SetActive(false);
-                //MarkObject.transform.rotation = Quaternion.identity;
+                MarkObject.transform.SetParent(transform);
+                MarkObject.transform.localScale = Vector3.one;
+                MarkObject.SetActive(false);
+                MarkObjectFloor.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                MarkObjectFloor.transform.rotation = Quaternion.Euler(0, 0, 0);
+                MarkObjectFloor.transform.localScale = Vector3.one;
+                MarkObjectFloor.SetActive(false);
                 StopCoroutine(actionInProcess);
                 actionInProcess = null;
             }
@@ -169,7 +173,9 @@ public class PlayerController : MonoBehaviour {
                     actualTask = inter;
                     if (actionInProcess != null)
                     {
-                        //StopCoroutine(actionInProcess);
+                        MarkObjectFloor.transform.rotation = Quaternion.Euler(0, 0, 0);
+                        MarkObjectFloor.transform.localScale = Vector3.one;
+                        MarkObjectFloor.SetActive(false);
                         StopAllCoroutines();
                         actionInProcess = null;
                     }
@@ -177,7 +183,10 @@ public class PlayerController : MonoBehaviour {
                     {
 
                         if (SetDestination(hit.point))
+                        {
+                            
                             actionInProcess = StartCoroutine(GoToPoint());
+                        }
 
                     }
                 }
