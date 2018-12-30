@@ -105,7 +105,7 @@ public class LevelEditorWindow : EditorWindow {
                 ID = l.levelID;
                 velocity = l.velocity;
                 winCount = l.winCount;
-                ratio = l.winCount;
+                ratio = l.ratio;
                 MaxProps = l.MaxProps;
                 AmbientColor = l.ambientColor;
                 PrefabUtility.InstantiatePrefab(l.Scenario);
