@@ -68,7 +68,7 @@ public class OvenBehaviour : Interactuable
             case State.Coocking:
                 return false;
             case State.Prepare:          
-                return base.PreAction(player);
+                return player.PickedObjet == null && base.PreAction(player);
             case State.Wasted:
                 return false;
             case State.Broken:
