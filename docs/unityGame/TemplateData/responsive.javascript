@@ -21,7 +21,7 @@
     }
 
     const setDimensions = () => {
-        gameContainer.style.position = 'relative';
+        gameContainer.style.position = 'absolute';
         gCanvasElement.style.display = 'none';
         var winW = parseInt(window.getComputedStyle(gameContainer).width, 10);
         var winH = parseInt(window.getComputedStyle(gameContainer).height, 10);
@@ -63,6 +63,7 @@
             new MutationObserver(function (attributesMutation) {
                 this.disconnect();
                 setTimeout(setDimensions, 1)
+                q('.simmer').classList.add('hide');
             }).observe(canvas, {attributes:true});
 
             this.disconnect();
