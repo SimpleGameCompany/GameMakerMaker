@@ -412,6 +412,8 @@ GameObject:
   - component: {fileID: 114842316233155524}
   - component: {fileID: 114271940597398114}
   - component: {fileID: 114397681229785804}
+  - component: {fileID: 114766822368025550}
+  - component: {fileID: 135521189731490836}
   m_Layer: 0
   m_Name: pacman
   m_TagString: Untagged
@@ -11236,7 +11238,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 4b3e6c74b284e854283340ec2a47258d, type: 2}
+  - {fileID: 2100000, guid: 09a73868cbca2aa499513c972dee244d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22269,7 +22271,6 @@ MonoBehaviour:
   _referenceCollection:
     _collection:
     - {fileID: 1936999152933984}
-    - {fileID: 0}
     - {fileID: 1803709945949618}
     - {fileID: 1072353038587564}
   _assetGuid: 9eb326631675bab4dbb9d71573862dce
@@ -22603,6 +22604,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 727029104
+--- !u!114 &114766822368025550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072353038587564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 807371362, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 135521189731490836}
 --- !u!114 &114767040269535736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23384,7 +23400,6 @@ MonoBehaviour:
   _guid: c7f80471-c775-4863-8800-80c2ab7b0b0a
   _referenceCollection:
     _collection:
-    - {fileID: 0}
     - {fileID: 1072353038587564}
   _assetGuid: c508e809562e9db4390845e0b97cc781
 --- !u!114 &114842665520452744
@@ -25170,6 +25185,18 @@ MonoBehaviour:
   m_Script: {fileID: 1491221649, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135521189731490836
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072353038587564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.40000004
+  m_Center: {x: -0.3941361, y: -0.055184044, z: -0.00000007450581}
 --- !u!135 &135750443718644320
 SphereCollider:
   m_ObjectHideFlags: 1
