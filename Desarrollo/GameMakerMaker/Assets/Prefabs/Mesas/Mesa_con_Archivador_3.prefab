@@ -81,6 +81,8 @@ GameObject:
   - component: {fileID: 114944155202649814}
   - component: {fileID: 114429571524719530}
   - component: {fileID: 114556670323965374}
+  - component: {fileID: 65415006180959636}
+  - component: {fileID: 114768047477709308}
   m_Layer: 0
   m_Name: Mesa1x2
   m_TagString: Untagged
@@ -345,6 +347,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493760771882584}
   m_Mesh: {fileID: 4300000, guid: 7731cca8e68c88e4eb9a2a23ee99f161, type: 3}
+--- !u!65 &65415006180959636
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493760771882584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.0000002, z: 1.0000002}
+  m_Center: {x: -0.5, y: 0, z: 0.000000014901165}
 --- !u!114 &114003273781785250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,7 +401,7 @@ MonoBehaviour:
   _guid: 115021787
 --- !u!114 &114144706541293612
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331873463616114}
@@ -466,6 +480,19 @@ MonoBehaviour:
     _collection:
     - {fileID: 1428302973281088}
   _assetGuid: 6defd10d04d239b49bd04dadfdd2632c
+--- !u!114 &114768047477709308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493760771882584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 807371362, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 65415006180959636}
 --- !u!114 &114796273728431668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,7 +507,7 @@ MonoBehaviour:
   _guid: 115021787
 --- !u!114 &114826667557139708
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331873463616114}

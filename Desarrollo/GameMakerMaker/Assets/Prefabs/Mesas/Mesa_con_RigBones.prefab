@@ -61,8 +61,8 @@ GameObject:
   - component: {fileID: 114756309159127488}
   - component: {fileID: 114626459528613392}
   - component: {fileID: 114708132058588750}
-  - component: {fileID: 65865524766055888}
   - component: {fileID: 114379729991847242}
+  - component: {fileID: 65904362670494372}
   m_Layer: 0
   m_Name: Mesa1x1
   m_TagString: Untagged
@@ -195,7 +195,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1345496473325708}
   m_Mesh: {fileID: 4300000, guid: 2e3909336cc17494fb93994a8b8b9d30, type: 3}
---- !u!65 &65865524766055888
+--- !u!65 &65904362670494372
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
-  - {fileID: 65865524766055888}
+  - {fileID: 0}
 --- !u!114 &114393751986767558
 MonoBehaviour:
   m_ObjectHideFlags: 1

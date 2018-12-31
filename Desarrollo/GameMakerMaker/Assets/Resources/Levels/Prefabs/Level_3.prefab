@@ -2670,6 +2670,7 @@ GameObject:
   - component: {fileID: 114007385613252322}
   - component: {fileID: 114520389568637044}
   - component: {fileID: 114894762375610188}
+  - component: {fileID: 65093142391206588}
   m_Layer: 0
   m_Name: Mesa1x1
   m_TagString: Untagged
@@ -3627,6 +3628,8 @@ GameObject:
   - component: {fileID: 114725948827740384}
   - component: {fileID: 114195680674330644}
   - component: {fileID: 114887912967494070}
+  - component: {fileID: 65572633953777440}
+  - component: {fileID: 114482771456905302}
   m_Layer: 0
   m_Name: Mesa1x2
   m_TagString: Untagged
@@ -13965,6 +13968,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Center: {x: 0, y: 0, z: 0.000000014901165}
+--- !u!65 &65093142391206588
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1500618639983258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 1.0000002}
+  m_Center: {x: 0, y: 6.310888e-30, z: 0.000000014901165}
 --- !u!65 &65117795932783098
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -14109,6 +14124,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65572633953777440
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706753228331608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.0000002, z: 1.0000002}
+  m_Center: {x: -0.5, y: 0, z: 0.000000014901165}
 --- !u!65 &65610883050849522
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -19454,6 +19481,19 @@ MonoBehaviour:
   m_Script: {fileID: 1491221649, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114482771456905302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706753228331608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 807371362, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 65572633953777440}
 --- !u!114 &114483315641238512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24213,6 +24253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _components:
   - {fileID: 0}
+  - {fileID: 65093142391206588}
 --- !u!114 &114897137616088160
 MonoBehaviour:
   m_ObjectHideFlags: 1

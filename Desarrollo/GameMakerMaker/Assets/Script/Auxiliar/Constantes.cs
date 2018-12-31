@@ -40,6 +40,7 @@ public static class Constantes
     public const string ANIMATION_PLAYER_ROTATE = "Rotate";
     public const string ANIMATION_PLAYER_CLICK = "Click";
     public const string ANIMATION_PLAYER_CLICKMOV = "ClickMov";
+    public const string ANIMATION_PLAYER_CLICINVALID = "InvalidClick";
 
     public const string ANIMATION_OVEN_DROP_OBJECT = "DropObject";
     public const string ANIMATION_OVEN_GET_OBJECT = "GetObject";

@@ -189,6 +189,10 @@ public class PlayerController : MonoBehaviour {
                         }
 
                     }
+                    else
+                    {
+                        anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICINVALID);
+                    }
                 }
                 else if (!interacting && hit.collider.CompareTag("Player")) 
                 {
@@ -200,6 +204,10 @@ public class PlayerController : MonoBehaviour {
                     {
                         anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICKMOV);
                     }
+                }
+                else
+                {
+                    anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICINVALID);
                 }
             }
         }
