@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LifeController : MonoBehaviour {
 
 
     private static LifeController _instance;
 
+    public Sprite FullHearth;
+    public Sprite HalfHearth;
+    public Sprite EmptyHearth;
+
+    int maxLifes;
 
     private int lifes = 3;
 
@@ -22,9 +28,9 @@ public class LifeController : MonoBehaviour {
             
             lifes = value;
 
-            for (int i = 0; i < 3; i++)
+            for (int i = lifes; i < maxLifes; i++)
             {
-                Sprites[i].SetActive(i < lifes);
+                Sprites[i].GetComponent<Image>().sprite = EmptyHearth;
             }
 
             if (lifes == 0 &&  GameManager.Instance.playing)
@@ -57,6 +63,11 @@ public class LifeController : MonoBehaviour {
 
     void Start () {
         Sprites = GameObject.FindGameObjectsWithTag(Constantes.TAG_LIFES);
-        Lifes = 3;
+        maxLifes = Sprites.Length;
+        for (int i = 0; i < maxLifes; i++)
+        {
+            Sprites[i].GetComponent<Image>().sprite = FullHearth;
+        }
+        Lifes = maxLifes;
 	}
 }
