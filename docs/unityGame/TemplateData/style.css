@@ -1,5 +1,5 @@
 .webgl-content * {border: 0; margin: 0; padding: 0}
-.webgl-content {top: 0; left: 0;}
+.webgl-content {top: 0; left: 0; position: relative; padding-bottom: 37%}
 
 .webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
 .webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
@@ -21,11 +21,21 @@ body, html{
     margin:0;
     padding:0;
 }
-
-#gameContainer canvas{
-
+#padding{
+    position: absolute;
+    padding-bottom: 56.25%;
+}
+#gameContainer {
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
 
 }
+
+
 
 .simmer{
     position:absolute;

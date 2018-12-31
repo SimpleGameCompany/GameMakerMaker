@@ -53,8 +53,11 @@
                 <!-- Canvas -->
                 <section id="game_section" class="wow bounceInRight">
                         <div id="div_game" class="row">
+                                      
+                                       
                                 <div class="col-2"></div>
                                 <div class="webgl-content canvasContainer col-8 ">
+                                        <div id ="padding"></div>
                                         <div id="gameContainer"></div>
                                 </div>
                                 <div class="col-2"></div>  
@@ -403,10 +406,14 @@
                 </div> -->
 
                 <script>
+                         var gameInstance 
                                 window.addEventListener("load",function(){
-                                        var gameInstance = UnityLoader.instantiate("gameContainer", "unityGame/Build/unityGame.json", {onProgress: UnityProgress});
+                                        gameInstance = UnityLoader.instantiate("gameContainer", "unityGame/Build/unityGame.json", {onProgress: UnityProgress});
+                                        
                                         document.getElementById("#canvas").height = 720;
                                         document.getElementById("#canvas").width = 1280;
+                                        document.getElementById("gameContainer").style.position= "absolute";
+                                        document.getElementById("gameContainer").style.padding = null;
                                 })
                         </script>
 
