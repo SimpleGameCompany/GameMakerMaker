@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114968827055617950}
   - component: {fileID: 114440742529068834}
   - component: {fileID: 114670388902841542}
+  - component: {fileID: 65935995145773550}
+  - component: {fileID: 114731535001385928}
   m_Layer: 0
   m_Name: TorretaPortal
   m_TagString: Untagged
@@ -121,6 +123,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096523281916468}
   m_Mesh: {fileID: 4300000, guid: 9c45a48737418d249942e59a7e399b20, type: 3}
+--- !u!65 &65935995145773550
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096523281916468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.80094194, y: 1.0015256, z: 0.5870929}
+  m_Center: {x: 0, y: 0.50075436, z: -0.03932087}
 --- !u!95 &95429546734446306
 Animator:
   serializedVersion: 3
@@ -170,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
   world: 1
-  recipe: {fileID: 0}
+  recipe: {fileID: 11400000, guid: e1600d2e2bec58540931c7fdd9eea0db, type: 2}
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
@@ -213,6 +227,19 @@ MonoBehaviour:
   m_Script: {fileID: 1491221649, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114731535001385928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096523281916468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 807371362, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 65935995145773550}
 --- !u!114 &114905253888928364
 MonoBehaviour:
   m_ObjectHideFlags: 1
