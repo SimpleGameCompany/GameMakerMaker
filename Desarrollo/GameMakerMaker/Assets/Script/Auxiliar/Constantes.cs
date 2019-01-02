@@ -46,12 +46,14 @@ public static class Constantes
     public const string ANIMATION_OVEN_GET_OBJECT = "GetObject";
     public const string ANIMATION_OVEN_BREAK = "Break";
     public const string ANIMATION_OVEN_FIXED = "Fixed";
+    public const string ANIMATION_OVEN_COOK = "Cook";
 
     public const string ANIMATION_PROP_SPAWN = "Spawn";
     public const string ANIMATION_PROP_DESTROY = "Destroy";
     public const string ANIMATION_PROP_GRAB = "Grabed";
     public const string ANIMATION_PROP_SCALEUP = "ScaleUp";
     public const string ANIMATION_PROP_SCALEDOWN = "ScaleDown";
+    public const string ANIMATION_OVEN_COOK_END = "EndCook";
 
 
     #endregion
@@ -59,5 +61,9 @@ public static class Constantes
     #region PlayerPreferences
     public const string PREFERENCES_MAX_SCORE = "maxscore";
     public const string PREFERENCES_LEVEL_SCORE = "levelScore";
+
+    
+
+
     #endregion
 }

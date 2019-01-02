@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SoundController))]
 public class OvenBehaviour : Interactuable
 {
     public Image progress;
@@ -22,7 +22,7 @@ public class OvenBehaviour : Interactuable
     Coroutine explosion;
 
     [HideInInspector]
-    public Animator anim;
+    public SoundController anim;
     public TextMeshProUGUI textDebug;
 
     public float TimeToCook;
@@ -52,7 +52,7 @@ public class OvenBehaviour : Interactuable
     {
         wait = new WaitForEndOfFrame();
         ovenState = State.Empty;
-        anim = GetComponent<Animator>();
+        anim = GetComponent<SoundController>();
         Indicator = (from x in GetComponentsInChildren<Transform>() where x.CompareTag(Constantes.TAG_INDICATOR) select x.gameObject).FirstOrDefault();
         Indicator.SetActive(false);
     }
@@ -116,6 +116,7 @@ public class OvenBehaviour : Interactuable
         OvenInstruction task = (from x in CookingProp.recipe.Tasks where x.Type == this.Type && !x.Complete  select x ).FirstOrDefault();
         //Debug.Log(task.Complete);
         if (task != null) {
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_COOK);
             ovenState = State.Coocking;
             textDebug.text = ("Por fin haces algo bien");
             while (time < TimeToCook)
@@ -130,6 +131,7 @@ public class OvenBehaviour : Interactuable
             task.Complete = true;
             time = 0;
             ovenState = State.Prepare;
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_COOK_END);
             explosion = StartCoroutine(Explosion());
             yield return explosion;
         }

@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
     private Coroutine actionInProcess;
     private Coroutine rotationInProcess;
     [HideInInspector]
-    public Animator anim;
+    public SoundController anim;
     [HideInInspector]
     public bool interacting;
     public float rotateSpeed = 135;
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start () {
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        anim = GetComponent<SoundController>();
         MarkObject = Instantiate(MarkObject, null);
         MarkObject.SetActive(false);
         MarkObjectFloor = Instantiate(MarkObjectFloor, null);
@@ -265,8 +265,8 @@ public class PlayerController : MonoBehaviour {
 
         if(ikvalue > 0)
         {
-            anim.SetLookAtPosition(Camera.main.transform.position);
-            anim.SetLookAtWeight(ikvalue);
+            anim.anim.SetLookAtPosition(Camera.main.transform.position);
+            anim.anim.SetLookAtWeight(ikvalue);
         }
     }
 
