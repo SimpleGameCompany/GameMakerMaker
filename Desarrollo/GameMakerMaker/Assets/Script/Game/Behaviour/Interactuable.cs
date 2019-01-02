@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+[RequireComponent(typeof(SoundController))]
 public abstract class Interactuable : MonoBehaviour {
 
 

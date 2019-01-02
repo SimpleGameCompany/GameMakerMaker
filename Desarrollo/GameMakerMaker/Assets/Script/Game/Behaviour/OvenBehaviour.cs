@@ -22,7 +22,7 @@ public class OvenBehaviour : Interactuable
     Coroutine explosion;
 
     [HideInInspector]
-    public Animator anim;
+    public SoundController anim;
     public TextMeshProUGUI textDebug;
 
     public float TimeToCook;
@@ -52,7 +52,7 @@ public class OvenBehaviour : Interactuable
     {
         wait = new WaitForEndOfFrame();
         ovenState = State.Empty;
-        anim = GetComponent<Animator>();
+        anim = GetComponent<SoundController>();
         Indicator = (from x in GetComponentsInChildren<Transform>() where x.CompareTag(Constantes.TAG_INDICATOR) select x.gameObject).FirstOrDefault();
         Indicator.SetActive(false);
     }
