@@ -10,6 +10,7 @@ ModelImporter:
     100008: rgb
     100010: top
     100012: wheel
+    100014: root
     400000: //RootNode
     400002: body
     400004: bottom
@@ -17,7 +18,8 @@ ModelImporter:
     400008: rgb
     400010: top
     400012: wheel
-    7400000: Take 001
+    400014: root
+    7400000: Idle_tex
     9500000: //RootNode
     11100000: //RootNode
     11400000: //RootNode
@@ -28,6 +30,7 @@ ModelImporter:
     11400010: rgb
     11400012: top
     11400014: wheel
+    11400016: root
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -56,7 +59,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle_tex
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -73,7 +104,7 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
+    preserveHierarchy: 1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001

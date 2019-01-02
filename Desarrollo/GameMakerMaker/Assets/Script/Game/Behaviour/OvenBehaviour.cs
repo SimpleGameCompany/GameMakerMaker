@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SoundController))]
 public class OvenBehaviour : Interactuable
 {
     public Image progress;

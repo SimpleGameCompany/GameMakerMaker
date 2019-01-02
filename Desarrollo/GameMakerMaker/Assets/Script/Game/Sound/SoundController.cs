@@ -5,7 +5,7 @@ using System.Linq;
 
 
 
-[RequireComponent(typeof(Animator))]
+
 [RequireComponent(typeof(AudioSource))]
 public class SoundController : MonoBehaviour  {
 
@@ -18,6 +18,10 @@ public class SoundController : MonoBehaviour  {
     public void Start()
     {
         anim = GetComponent<Animator>();
+        if(anim == null)
+        {
+            anim = GetComponentInChildren<Animator>();
+        }
         soundDealer = GetComponent<AudioSource>();
 
     }
