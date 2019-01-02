@@ -1,33 +1,22 @@
 fileFormatVersion: 2
-guid: f0c6d43adb369c049bb04727a35de751
+guid: dfff8789b55ccef4589cb91e8401343d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: base
-    100004: handle1
-    100006: handle2
-    100008: middle
+    100002: sp1
+    100004: sp2
+    100006: sp3
+    100008: sp4
     100010: top
-    100012: root
     400000: //RootNode
-    400002: base
-    400004: handle1
-    400006: handle2
-    400008: middle
+    400002: sp1
+    400004: sp2
+    400006: sp3
+    400008: sp4
     400010: top
-    400012: root
-    7400000: Magic_Idle
+    7400000: Take 001
     9500000: //RootNode
-    11100000: //RootNode
-    11400000: //RootNode
-    11400002: //RootNode
-    11400004: base
-    11400006: handle1
-    11400008: handle2
-    11400010: middle
-    11400012: top
-    11400014: root
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -48,42 +37,14 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Magic_Idle
-      takeName: Take 001
-      firstFrame: 0
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -100,7 +61,7 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 1
+    preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -115,7 +76,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
-  copyAvatar: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human: []
@@ -131,8 +92,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 39c285e1693dd394d9a1ef1a34febcd3,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
