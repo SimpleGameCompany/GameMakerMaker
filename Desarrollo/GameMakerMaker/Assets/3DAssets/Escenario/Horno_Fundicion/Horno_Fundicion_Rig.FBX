@@ -1,18 +1,18 @@
-; FBX 7.4.0 project file
+; FBX 7.5.0 project file
 ; ----------------------------------------------------
 
 FBXHeaderExtension:  {
 	FBXHeaderVersion: 1003
-	FBXVersion: 7400
+	FBXVersion: 7500
 	CreationTimeStamp:  {
 		Version: 1000
-		Year: 2018
-		Month: 12
-		Day: 31
-		Hour: 14
-		Minute: 31
-		Second: 6
-		Millisecond: 427
+		Year: 2019
+		Month: 1
+		Day: 2
+		Hour: 12
+		Minute: 23
+		Second: 48
+		Millisecond: 405
 	}
 	Creator: "FBX SDK/FBX Plugins version 2018.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -28,24 +28,22 @@ FBXHeaderExtension:  {
 			Comment: ""
 		}
 		Properties70:  {
-			P: "DocumentUrl", "KString", "Url", "", "X:\Alex\Career\Education\Degrees\Grado en Diseño y Desarrollo de Videojuegos\Cuarto\Primer Cuatrimestre\Juegos para Web y Redes Sociales\Prácticas\Práctica 2\3D Assets\Rigging\Hornos\Horno_Fundición\Horno_Fundición_Rig.FBX"
-             
-			P: "SrcDocumentUrl", "KString", "Url", "", "X:\Alex\Career\Education\Degrees\Grado en Diseño y Desarrollo de Videojuegos\Cuarto\Primer Cuatrimestre\Juegos para Web y Redes Sociales\Prácticas\Práctica 2\3D Assets\Rigging\Hornos\Horno_Fundición\Horno_Fundición_Rig.FBX"
-             
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\Alex\Desktop\Horno_Fundicion_Rig.FBX"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\Alex\Desktop\Horno_Fundicion_Rig.FBX"
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2018"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "31/12/2018 13:31:06.427"
-			P: "Original|FileName", "KString", "", "", "X:\Alex\Career\Education\Degrees\Grado en Diseño y Desarrollo de Videojuegos\Cuarto\Primer Cuatrimestre\Juegos para Web y Redes Sociales\Prácticas\Práctica 2\3D Assets\Rigging\Hornos\Horno_Fundición\Horno_Fundición_Rig.FBX"
-             
+			P: "Original|DateTime_GMT", "DateTime", "", "", "02/01/2019 11:23:48.404"
+			P: "Original|FileName", "KString", "", "", "C:\Users\Alex\Desktop\Horno_Fundicion_Rig.FBX"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2018"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "31/12/2018 13:31:06.427"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "02/01/2019 11:23:48.404"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\Alex\Documents\3dsMax"
-			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\Alex\Documents\3dsMax\autoback\AutoBackup03.max"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "X:\Alex\Career\Education\Degrees\Grado en Diseño y Desarrollo de Videojuegos\Cuarto\Primer Cuatrimestre\Juegos para Web y Redes Sociales\Prácticas\Práctica 2\3D Assets\Rigging\Hornos\Horno_Fundicion\Horno_Fundicion_Rig.max"
+             
 		}
 	}
 }
@@ -80,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1662597988544, "", "Scene" {
+	Document: 2196825784512, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -267,16 +265,16 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	NodeAttribute: 1662587108400, "NodeAttribute::", "Null" {
+	NodeAttribute: 2194882110160, "NodeAttribute::", "Null" {
 		TypeFlags: "Null"
 	}
-	NodeAttribute: 1662587109280, "NodeAttribute::", "Null" {
+	NodeAttribute: 2194882107872, "NodeAttribute::", "Null" {
 		TypeFlags: "Null"
 	}
-	NodeAttribute: 1662587111040, "NodeAttribute::", "Null" {
+	NodeAttribute: 2194882105936, "NodeAttribute::", "Null" {
 		TypeFlags: "Null"
 	}
-	Geometry: 1662646871184, "Geometry::", "Mesh" {
+	Geometry: 2194884481824, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.764705882352941,0.345098039215686,0.882352941176471
 		}
@@ -383,19 +381,19 @@ Objects:  {
 			}
 		}
 	}
-	NodeAttribute: 1662589526144, "NodeAttribute::", "LimbNode" {
+	NodeAttribute: 2196634436976, "NodeAttribute::", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",442.038528442383
 		}
 		TypeFlags: "Skeleton"
 	}
-	NodeAttribute: 1662589534208, "NodeAttribute::", "LimbNode" {
+	NodeAttribute: 2196634438320, "NodeAttribute::", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",286.543167114258
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 1662263620288, "Model::root", "Null" {
+	Model: 2194880410448, "Model::root", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
@@ -404,14 +402,13 @@ Objects:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "GeometricTranslation", "Vector3D", "Vector", "",2.8421709430404e-14,7.105427357601e-15,2.38418579101563e-07
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",0,50,-0
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000025044781,-0,-90.0000093346676
 			P: "MaxHandle", "int", "Integer", "UH",138
 		}
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 1662263640016, "Model::top", "LimbNode" {
+	Model: 2194880430176, "Model::top", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -424,7 +421,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 1662263635632, "Model::base", "LimbNode" {
+	Model: 2194880406064, "Model::base", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -437,7 +434,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 1662263611520, "Model::Fundicion", "Mesh" {
+	Model: 2194880421408, "Model::Fundicion", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
@@ -454,18 +451,18 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Pose: 1662587114032, "Pose::BIND_POSES", "BindPose" {
+	Pose: 2194882114032, "Pose::BIND_POSES", "BindPose" {
 		Type: "BindPose"
 		Version: 100
 		NbPoseNodes: 1
 		PoseNode:  {
-			Node: 1662263611520
+			Node: 2194880421408
 			Matrix: *16 {
 				a: 100,0,0,0,0,0,-100,0,0,100,0,0,0,50,0,1
 			} 
 		}
 	}
-	Deformer: 1662589533632, "Deformer::", "Skin" {
+	Deformer: 2196634438128, "Deformer::", "Skin" {
 		Version: 101
 		Link_DeformAcuracy: 50
 		SkinningType: "Blend"
@@ -476,7 +473,7 @@ Objects:  {
 			a: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 		} 
 	}
-	Deformer: 1662640515920, "SubDeformer::", "Cluster" {
+	Deformer: 2194876513312, "SubDeformer::", "Cluster" {
 		Version: 100
 		UserData: "", ""
 		Indexes: *81 {
@@ -492,7 +489,7 @@ Objects:  {
 			a: 1.62920684560091e-07,0,1,0,-4.3711388225505e-08,1,7.12148929277119e-15,0,-1,-4.37113882255062e-08,1.62920684560091e-07,0,-1.18034449769766e-07,9.06526184082031,-1.92302228828323e-14,1
 		} 
 	}
-	Deformer: 1662640511408, "SubDeformer::", "Cluster" {
+	Deformer: 2194876514064, "SubDeformer::", "Cluster" {
 		Version: 100
 		UserData: "", ""
 		Indexes: *200 {
@@ -508,13 +505,13 @@ Objects:  {
 			a: 1.62920684560091e-07,0,1,0,-4.3711388225505e-08,1,7.12148929277119e-15,0,-1,-4.37113882255062e-08,1.62920684560091e-07,0,5.12787300976925e-06,113.148361206055,8.35436646078047e-13,1
 		} 
 	}
-	AnimationStack: 1662191323328, "AnimStack::Take 001", "" {
+	AnimationStack: 2195128471568, "AnimStack::Take 001", "" {
 		Properties70:  {
 			P: "LocalStop", "KTime", "Time", "",153953860000
 			P: "ReferenceStop", "KTime", "Time", "",153953860000
 		}
 	}
-	AnimationCurve: 1662346457536, "AnimCurve::", "" {
+	AnimationCurve: 2196825880464, "AnimCurve::", "" {
 		Default: 0
 		KeyVer: 4009
 		KeyTime: *1 {
@@ -535,7 +532,7 @@ Objects:  {
 			a: 1
 		} 
 	}
-	AnimationCurve: 1662346454976, "AnimCurve::", "" {
+	AnimationCurve: 2196825879344, "AnimCurve::", "" {
 		Default: 0
 		KeyVer: 4009
 		KeyTime: *1 {
@@ -556,7 +553,7 @@ Objects:  {
 			a: 1
 		} 
 	}
-	AnimationCurve: 1662346454176, "AnimCurve::", "" {
+	AnimationCurve: 2196825886864, "AnimCurve::", "" {
 		Default: 0
 		KeyVer: 4009
 		KeyTime: *1 {
@@ -577,21 +574,21 @@ Objects:  {
 			a: 1
 		} 
 	}
-	AnimationCurveNode: 1662191331648, "AnimCurveNode::R", "" {
+	AnimationCurveNode: 2195128474688, "AnimCurveNode::R", "" {
 		Properties70:  {
 			P: "d|X", "Number", "", "A",0
 			P: "d|Y", "Number", "", "A",0
 			P: "d|Z", "Number", "", "A",0
 		}
 	}
-	AnimationLayer: 1662980209504, "AnimLayer::BaseLayer", "" {
+	AnimationLayer: 2195129153184, "AnimLayer::BaseLayer", "" {
 	}
-	CollectionExclusive: 1662589535936, "DisplayLayer::Mesh", "DisplayLayer" {
+	CollectionExclusive: 2196634436784, "DisplayLayer::Mesh", "DisplayLayer" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.694117647058824,0.580392156862745,0.105882352941176
 		}
 	}
-	CollectionExclusive: 1662589528064, "DisplayLayer::Bones", "DisplayLayer" {
+	CollectionExclusive: 2196634436016, "DisplayLayer::Bones", "DisplayLayer" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.768627450980392,0.345098039215686,0.882352941176471
 		}
@@ -604,73 +601,73 @@ Objects:  {
 Connections:  {
 	
 	;Model::root, Model::RootNode
-	C: "OO",1662263620288,0
+	C: "OO",2194880410448,0
 	
 	;Model::Fundicion, Model::RootNode
-	C: "OO",1662263611520,0
+	C: "OO",2194880421408,0
 	
 	;AnimLayer::BaseLayer, AnimStack::Take 001
-	C: "OO",1662980209504,1662191323328
+	C: "OO",2195129153184,2195128471568
 	
 	;AnimCurveNode::R, AnimLayer::BaseLayer
-	C: "OO",1662191331648,1662980209504
+	C: "OO",2195128474688,2195129153184
 	
 	;Model::top, Model::root
-	C: "OO",1662263640016,1662263620288
+	C: "OO",2194880430176,2194880410448
 	
 	;Model::base, Model::root
-	C: "OO",1662263635632,1662263620288
+	C: "OO",2194880406064,2194880410448
 	
 	;NodeAttribute::, Model::root
-	C: "OO",1662587108400,1662263620288
+	C: "OO",2194882110160,2194880410448
 	
 	;NodeAttribute::, Model::top
-	C: "OO",1662589526144,1662263640016
+	C: "OO",2196634436976,2194880430176
 	
 	;NodeAttribute::, Model::base
-	C: "OO",1662589534208,1662263635632
+	C: "OO",2196634438320,2194880406064
 	
 	;Geometry::, Model::Fundicion
-	C: "OO",1662646871184,1662263611520
+	C: "OO",2194884481824,2194880421408
 	
 	;AnimCurveNode::R, Model::Fundicion
-	C: "OP",1662191331648,1662263611520, "Lcl Rotation"
+	C: "OP",2195128474688,2194880421408, "Lcl Rotation"
 	
 	;Deformer::, Geometry::
-	C: "OO",1662589533632,1662646871184
+	C: "OO",2196634438128,2194884481824
 	
 	;Model::Fundicion, DisplayLayer::Mesh
-	C: "OO",1662263611520,1662589535936
+	C: "OO",2194880421408,2196634436784
 	
 	;Model::base, DisplayLayer::Bones
-	C: "OO",1662263635632,1662589528064
+	C: "OO",2194880406064,2196634436016
 	
 	;Model::top, DisplayLayer::Bones
-	C: "OO",1662263640016,1662589528064
+	C: "OO",2194880430176,2196634436016
 	
 	;Model::root, DisplayLayer::Bones
-	C: "OO",1662263620288,1662589528064
+	C: "OO",2194880410448,2196634436016
 	
 	;AnimCurve::, AnimCurveNode::R
-	C: "OP",1662346457536,1662191331648, "d|X"
+	C: "OP",2196825880464,2195128474688, "d|X"
 	
 	;AnimCurve::, AnimCurveNode::R
-	C: "OP",1662346454976,1662191331648, "d|Y"
+	C: "OP",2196825879344,2195128474688, "d|Y"
 	
 	;AnimCurve::, AnimCurveNode::R
-	C: "OP",1662346454176,1662191331648, "d|Z"
+	C: "OP",2196825886864,2195128474688, "d|Z"
 	
 	;SubDeformer::, Deformer::
-	C: "OO",1662640515920,1662589533632
+	C: "OO",2194876513312,2196634438128
 	
 	;SubDeformer::, Deformer::
-	C: "OO",1662640511408,1662589533632
+	C: "OO",2194876514064,2196634438128
 	
 	;Model::base, SubDeformer::
-	C: "OO",1662263635632,1662640515920
+	C: "OO",2194880406064,2194876513312
 	
 	;Model::top, SubDeformer::
-	C: "OO",1662263640016,1662640511408
+	C: "OO",2194880430176,2194876514064
 }
 ;Takes section
 ;----------------------------------------------------
