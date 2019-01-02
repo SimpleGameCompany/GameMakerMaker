@@ -1,29 +1,29 @@
 fileFormatVersion: 2
-guid: de9b5a1e203965949a1147ae8dd1fc35
+guid: 39c285e1693dd394d9a1ef1a34febcd3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: base
-    100004: handle1
-    100006: handle2
-    100008: middle
-    100010: top
-    400000: //RootNode
-    400002: base
-    400004: handle1
-    400006: handle2
-    400008: middle
-    400010: top
+    100000: base
+    100002: handle1
+    100004: handle2
+    100006: Horno_Magia
+    100008: //RootNode
+    100010: middle
+    100012: root
+    100014: top
+    400000: base
+    400002: handle1
+    400004: handle2
+    400006: Horno_Magia
+    400008: //RootNode
+    400010: middle
+    400012: root
+    400014: top
+    2100000: No Name
+    4300000: Horno_Magia
     7400000: Take 001
     9500000: //RootNode
-    11400000: //RootNode
-    11400002: //RootNode
-    11400004: base
-    11400006: handle1
-    11400008: handle2
-    11400010: middle
-    11400012: top
+    13700000: Horno_Magia
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -44,7 +44,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -83,7 +83,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
-  copyAvatar: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human: []
@@ -99,8 +99,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 39c285e1693dd394d9a1ef1a34febcd3,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
