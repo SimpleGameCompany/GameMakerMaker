@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
-
-
+using System;
 
 [RequireComponent(typeof(AudioSource))]
 public class SoundController : MonoBehaviour  {
 
     public Animator anim;
     public AudioSource soundDealer;
-    public List<AudioClip> clips;
+    public Sound[] sounds;
     public List<string> TriggerName;
 
 
@@ -23,7 +21,10 @@ public class SoundController : MonoBehaviour  {
             anim = GetComponentInChildren<Animator>();
         }
         soundDealer = GetComponent<AudioSource>();
-
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            sounds[i].name = TriggerName[i];
+        }
     }
 
     public void SetTrigger(string Trigger)
@@ -37,6 +38,7 @@ public class SoundController : MonoBehaviour  {
     public void SetFloat(string name,float value)
     {
         anim.SetFloat(name, value);
+        SetSound(name);
     }
 
     public void SetBool(string name, bool value)
@@ -48,11 +50,14 @@ public class SoundController : MonoBehaviour  {
     public void SetSound(string name)
     {
         soundDealer.Stop();
-        int t = TriggerName.IndexOf(name);
-        if (t != -1)
+
+        if (TriggerName.Contains(name))
         {
-            AudioClip clipToPlay = clips[t];
-            soundDealer.PlayOneShot(clipToPlay);
+            Sound s = Array.Find(sounds, sound => sound.name == name);
+            soundDealer.loop = s.loop;
+            soundDealer.volume = s.volume;
+            soundDealer.pitch = s.pitch;
+            soundDealer.PlayOneShot(s.clip);
         }
     }
 
