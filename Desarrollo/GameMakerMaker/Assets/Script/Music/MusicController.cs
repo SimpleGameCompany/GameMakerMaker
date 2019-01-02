@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicController : MonoBehaviour {
+public class MusicControllerBULERIABULERIA_VIVAESPAÑAYVIVAELREY : MonoBehaviour {
 
-
+    /*
     private static MusicController _instance;
 
 
@@ -41,7 +41,7 @@ public class MusicController : MonoBehaviour {
         audioSource.UnPause();
     }
 
-    void Start () {
+    private void Start () {
         _instance = this;
         audioSource = GetComponent<AudioSource>();
         clipsID = new Dictionary<string, int>();
@@ -62,6 +62,6 @@ public class MusicController : MonoBehaviour {
     }
 
     
-	
+	*/
 
 }

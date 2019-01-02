@@ -72,8 +72,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 1, y: 1, z: -2.471}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4418639256997236}
@@ -166,7 +166,7 @@ MonoBehaviour:
   _guid: 2902335559
 --- !u!114 &114062785764481554
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
@@ -202,11 +202,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
   world: 0
-  recipe: {fileID: 11400000, guid: 03c64dba40ddac84aad9cbaf319fa682, type: 2}
+  recipe: {fileID: 0}
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
   - {fileID: 2100000, guid: dc689ebe11701ad41b600246cfae1ff5, type: 2}
+  - {fileID: 2100000, guid: 75c6dd846f00a60438e77630bfcdf946, type: 2}
   - {fileID: 2100000, guid: 5bfbca376b621034aa8c457f4f742891, type: 2}
   anim: {fileID: 0}
   grab: 0
@@ -239,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114820404839777552
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
