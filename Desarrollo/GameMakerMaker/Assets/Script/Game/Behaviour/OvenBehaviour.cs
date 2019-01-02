@@ -116,6 +116,7 @@ public class OvenBehaviour : Interactuable
         OvenInstruction task = (from x in CookingProp.recipe.Tasks where x.Type == this.Type && !x.Complete  select x ).FirstOrDefault();
         //Debug.Log(task.Complete);
         if (task != null) {
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_COOK);
             ovenState = State.Coocking;
             textDebug.text = ("Por fin haces algo bien");
             while (time < TimeToCook)
@@ -130,6 +131,7 @@ public class OvenBehaviour : Interactuable
             task.Complete = true;
             time = 0;
             ovenState = State.Prepare;
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_COOK_END);
             explosion = StartCoroutine(Explosion());
             yield return explosion;
         }
