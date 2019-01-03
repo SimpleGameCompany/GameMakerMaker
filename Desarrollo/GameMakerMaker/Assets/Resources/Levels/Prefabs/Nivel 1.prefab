@@ -21226,6 +21226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
+  Canvas: {fileID: 0}
+  pages: []
 --- !u!114 &114780337352404572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21977,7 +21979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   MarkObject: {fileID: 1343445103030048, guid: 91bce32957fd92b44b4940f97ac9a474, type: 2}
-  MarkObjectFloor: {fileID: 1616671481376996, guid: c82256f811fa3eb4cac6a9585aa92d10,
+  MarkObjectFloor: {fileID: 1255812393175296, guid: cb251d9ed444ae144a9cf8c79bc19bed,
     type: 2}
   click: {x: 0, y: 0, z: 0}
   anim: {fileID: 0}
@@ -22729,7 +22731,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  sounds: []
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: aa6f2dd3a3c45a94dbb561d7eb36e580, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
   TriggerName:
   - Click
 --- !u!114 &114930243040901296
