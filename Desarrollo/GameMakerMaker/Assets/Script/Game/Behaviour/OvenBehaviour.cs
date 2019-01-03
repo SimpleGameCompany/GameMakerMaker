@@ -145,7 +145,7 @@ public class OvenBehaviour : Interactuable
         {
             ovenState = State.Broken;
             anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
-            explode.Play(true);
+            explode.gameObject.SetActive(true);
             //broken.Play(true);
             textDebug.text = ("Ya la has cagado");
             progress.color = new Color(1, 0, 0);
