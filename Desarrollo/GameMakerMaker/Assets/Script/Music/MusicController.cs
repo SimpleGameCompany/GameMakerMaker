@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicControllerBULERIABULERIA_VIVAESPAÑAYVIVAELREY : MonoBehaviour {
+public class MusicController : MonoBehaviour {
 
-    /*
+    
     private static MusicController _instance;
 
 
@@ -62,6 +62,6 @@ public class MusicControllerBULERIABULERIA_VIVAESPAÑAYVIVAELREY : MonoBehaviour
     }
 
     
-	*/
+	
 
 }

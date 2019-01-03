@@ -287,7 +287,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420614018974088}
   m_LocalRotation: {x: 0.000000015454312, y: 0.7071067, z: -0.000000015454308, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4107051923346878}
@@ -791,9 +791,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  clips:
-  - {fileID: 8300000, guid: 5db02fabcd6d21b4fa293a61a946b1c0, type: 3}
-  - {fileID: 8300000, guid: 599785934bc4a8741a1a486adf9cc6b5, type: 3}
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: 5db02fabcd6d21b4fa293a61a946b1c0, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 599785934bc4a8741a1a486adf9cc6b5, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
   TriggerName:
   - Break
   - GetObject

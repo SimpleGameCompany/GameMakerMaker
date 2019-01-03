@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33370326578240038}
   - component: {fileID: 23776387893140462}
   - component: {fileID: 114461688114231152}
+  - component: {fileID: 65844222470800008}
   m_Layer: 0
   m_Name: Diamante
   m_TagString: Untagged
@@ -120,6 +121,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247025775063378}
   m_Mesh: {fileID: 4300000, guid: cdf946b934c4e594ea832c891802191e, type: 3}
+--- !u!65 &65844222470800008
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247025775063378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.37573, y: 1.5028937, z: 0.2086249}
+  m_Center: {x: -0.007961214, y: 0, z: -0.10431245}
 --- !u!82 &82265809353504462
 AudioSource:
   m_ObjectHideFlags: 1
@@ -235,7 +248,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114062785764481554
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
@@ -258,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionIcon: {fileID: 0}
   world: 5
-  recipe: {fileID: 0}
+  recipe: {fileID: 11400000, guid: 3b1aa3fa6803fd049b4fe5bb97a9ab44, type: 2}
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
@@ -269,7 +282,7 @@ MonoBehaviour:
   grab: 0
 --- !u!114 &114461688114231152
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247025775063378}
@@ -292,11 +305,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  clips: []
+  sounds: []
   TriggerName: []
 --- !u!114 &114820404839777552
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}

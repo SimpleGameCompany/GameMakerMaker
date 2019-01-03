@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4861319891576474}
-  - component: {fileID: 95313304471812932}
   - component: {fileID: 114940931785945418}
   - component: {fileID: 114426457302573840}
   - component: {fileID: 114957845980180678}
@@ -428,7 +427,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1080775590213090}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 2.119}
+  m_LocalPosition: {x: 0, y: 0, z: 14.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224607568433282162}
@@ -584,8 +583,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.011000003, y: 0.020900283, z: 0.010885088}
-  m_Center: {x: -3.4468453e-10, y: -0.010083137, z: -0.000103734645}
+  m_Size: {x: 1, y: 2.1205447, z: 1}
+  m_Center: {x: 0, y: -0.5602729, z: 0}
 --- !u!82 &82612053341064184
 AudioSource:
   m_ObjectHideFlags: 1
@@ -692,24 +691,6 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 7243e5d5fff7de74fbe9c28e35b06b06, type: 3}
   m_Controller: {fileID: 9100000, guid: 622055586a8bb00469deeeaf2f1303f2, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95313304471812932
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1080775590213090}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 622055586a8bb00469deeeaf2f1303f2, type: 2}
-  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -1086,9 +1067,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  clips:
-  - {fileID: 8300000, guid: 363c7cc07f9218d47b053dd67077ca92, type: 3}
-  - {fileID: 8300000, guid: 09db51231b08a92459c5c6b5d903b84e, type: 3}
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: 363c7cc07f9218d47b053dd67077ca92, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 09db51231b08a92459c5c6b5d903b84e, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
   TriggerName:
   - Break
   - GetObject

@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 4750746993153150}
   - component: {fileID: 95224061523607318}
   - component: {fileID: 114340738028795892}
+  - component: {fileID: 65509349424141014}
   m_Layer: 0
   m_Name: Horno_Magia_Rig
   m_TagString: Untagged
@@ -350,7 +351,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094262821678906}
   m_LocalRotation: {x: 0.000000015454312, y: 0.7071067, z: -0.000000015454308, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4503640006456434}
@@ -447,6 +448,18 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1483066765217906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65509349424141014
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1622075089027674}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -772,9 +785,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  clips:
-  - {fileID: 8300000, guid: 5db02fabcd6d21b4fa293a61a946b1c0, type: 3}
-  - {fileID: 8300000, guid: a3f32a76b0f6929428280b021f8f59e8, type: 3}
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: aa6f2dd3a3c45a94dbb561d7eb36e580, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: a3f32a76b0f6929428280b021f8f59e8, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
   TriggerName:
   - Break
   - GetObject
