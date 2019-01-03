@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 4177337376952896}
   - component: {fileID: 114167741223134992}
   - component: {fileID: 114647886034339008}
+  - component: {fileID: 65955908279543438}
   m_Layer: 9
   m_Name: Cinta_Fin_Arriba_Abajo
   m_TagString: Untagged
@@ -283,7 +284,7 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!23 &23860049141573288
 MeshRenderer:
-  m_ObjectHideFlags: 9
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855407154907326}
@@ -318,7 +319,7 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!33 &33179390919892360
 MeshFilter:
-  m_ObjectHideFlags: 9
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855407154907326}
@@ -344,9 +345,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221829389941006}
   m_Mesh: {fileID: 4300000, guid: 93ad6a34defde0e429e368a693ee8418, type: 3}
+--- !u!65 &65955908279543438
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1633892133898498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114096087032840960
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855407154907326}
@@ -368,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114167741223134992
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633892133898498}
@@ -423,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114551337763555522
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855407154907326}
@@ -451,7 +464,7 @@ MonoBehaviour:
   _assetGuid: 40667f9ce66811f4c8b4eabdc2644f33
 --- !u!114 &114647886034339008
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633892133898498}
@@ -491,7 +504,7 @@ MonoBehaviour:
   _guid: 2088459589
 --- !u!114 &114756753034986288
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855407154907326}
