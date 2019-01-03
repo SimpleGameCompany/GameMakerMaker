@@ -2813,6 +2813,10 @@ Prefab:
       propertyPath: m_Name
       value: GameObject (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1721671137663750, guid: 913b570bda15b1d46bca1b550c4b6e83, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 913b570bda15b1d46bca1b550c4b6e83, type: 2}
   m_IsPrefabAsset: 0
@@ -3378,6 +3382,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114694490634145438, guid: 913b570bda15b1d46bca1b550c4b6e83,
+        type: 2}
+      propertyPath: sounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4258168967447970, guid: 913b570bda15b1d46bca1b550c4b6e83, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -3413,6 +3422,31 @@ Prefab:
     - target: {fileID: 4258168967447970, guid: 913b570bda15b1d46bca1b550c4b6e83, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -198.486
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694490634145438, guid: 913b570bda15b1d46bca1b550c4b6e83,
+        type: 2}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aa6f2dd3a3c45a94dbb561d7eb36e580, type: 3}
+    - target: {fileID: 114694490634145438, guid: 913b570bda15b1d46bca1b550c4b6e83,
+        type: 2}
+      propertyPath: sounds.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82712532575661002, guid: 913b570bda15b1d46bca1b550c4b6e83,
+        type: 2}
+      propertyPath: MinDistance
+      value: 12.989021
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694490634145438, guid: 913b570bda15b1d46bca1b550c4b6e83,
+        type: 2}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82712532575661002, guid: 913b570bda15b1d46bca1b550c4b6e83,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 913b570bda15b1d46bca1b550c4b6e83, type: 2}

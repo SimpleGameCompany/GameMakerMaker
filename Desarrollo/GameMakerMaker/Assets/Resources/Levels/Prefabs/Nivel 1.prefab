@@ -1667,6 +1667,7 @@ GameObject:
   - component: {fileID: 114957811458831302}
   - component: {fileID: 65683959688955776}
   - component: {fileID: 114828546288728590}
+  - component: {fileID: 95737329116852766}
   m_Layer: 0
   m_Name: PCPokemon
   m_TagString: Untagged
@@ -2807,6 +2808,7 @@ GameObject:
   - component: {fileID: 114502825163436632}
   - component: {fileID: 65612918619202494}
   - component: {fileID: 114821177419580304}
+  - component: {fileID: 95705931491172140}
   m_Layer: 0
   m_Name: CraftingTable
   m_TagString: Untagged
@@ -13295,6 +13297,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95705931491172140
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536199828882630}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95727040197528340
 Animator:
   serializedVersion: 3
@@ -13305,6 +13325,24 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 39b0f54389ff7314ab4d34ea1ddbdce9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95737329116852766
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1295260319760488}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 373d749ac22a33b44951bcb16d0c9f58, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
     public bool isDone = false;
     [HideInInspector]
     public List<OvenBehaviour> ovens;
+    [HideInInspector]
+    public GameObject RecetasPage;
     // Use this for initialization
     void Start()
     {
@@ -135,6 +137,28 @@ public class GameManager : MonoBehaviour
         recetas.onClick.AddListener(delegate { PlayGame(); });
         Recipies = recetas;
 
+        GameObject[] RecetasContainer = GameObject.FindGameObjectsWithTag(Constantes.TAG_RECIPIES_CONTAINER);
+        Recipe[] r = (from x in loadedLevel.Props select x.recipe).ToArray();
+        GameObject Page  = Instantiate(RecetasPage) ;
+        List<GameObject> Pages = new List<GameObject>();
+        for(int i = 0; i<r.Length; i++)
+        {
+            Instantiate(r[i].RecipePrefab, Page.transform);
+            if (i%4 == 3)
+            {
+                Page.transform.parent = RecetasContainer[0].transform;
+                Page.GetComponent<RectTransform>().localScale = Vector3.one;
+                Instantiate(Page, RecetasContainer[1].transform);
+                Pages.Add(Page);
+                Page = Instantiate(RecetasPage);
+                Page.SetActive(false);
+            }
+           
+        }
+        Page.transform.parent = RecetasContainer[0].transform;
+        Instantiate(Page, RecetasContainer[1].transform);
+        BookBehaviour.instance.pages = Pages.ToArray();
+        BookBehaviour.instance.Canvas.SetActive(false);
         player = FindObjectOfType<PlayerController>();
         progress = 1f;
         isDone = true;

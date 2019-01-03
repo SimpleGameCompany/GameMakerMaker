@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameStarter : MonoBehaviour {
 
-	// Use this for initialization
+    public GameObject PageRecetas;
 	void Start () {
+        GameManager.Instance.RecetasPage = PageRecetas;
         GameManager.Instance.StartLevelFromCourutine();
 	}
 	

@@ -5,11 +5,24 @@ using UnityEngine.UI;
 
 public class BookBehaviour : Interactuable {
 
-    GameObject Canvas;
+    public GameObject Canvas;
     float t = 0;
     Vector2 screenPoint;
     Button close;
     Animator anim;
+    public GameObject[] pages;
+
+    public static BookBehaviour instance;
+    private int pageActual;
+    public int Page { get { return pageActual; } set {
+
+            pages[pageActual].SetActive(false);
+            pageActual = value;
+            pages[pageActual].SetActive(true);
+
+
+        } }
+
 
     public override void PostActionAnim(PlayerController player)
     {
@@ -58,12 +71,13 @@ public class BookBehaviour : Interactuable {
 
     // Use this for initialization
     void Start () {
+        instance = this;
         screenPoint = Camera.main.WorldToScreenPoint(this.transform.position);
         Canvas = GameObject.FindGameObjectWithTag("Recetas");
         close = GameObject.FindGameObjectWithTag("CerrarRecetas").GetComponent<Button>();
         close.onClick.AddListener(Close);
         anim = Canvas.GetComponent<Animator>();
-        Canvas.SetActive(false);
+        //Canvas.SetActive(false);
     }
 	
     public void Close()

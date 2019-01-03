@@ -39,7 +39,7 @@ public class SoundController : MonoBehaviour  {
     public void SetFloat(string name,float value)
     {
         anim.SetFloat(name, value);
-        SetSound(name);
+        //SetSound(name);
     }
 
     public void SetBool(string name, bool value)
@@ -54,11 +54,13 @@ public class SoundController : MonoBehaviour  {
 
         if (TriggerName.Contains(name))
         {
+            
             Sound s = Array.Find(sounds, sound => sound.name == name);
             soundDealer.loop = s.loop;
             soundDealer.volume = s.volume;
             soundDealer.pitch = s.pitch;
-            soundDealer.PlayOneShot(s.clip);
+            soundDealer.clip = s.clip;
+            soundDealer.Play();
         }
     }
 

@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 114570537011829532}
   - component: {fileID: 65968962484624936}
   - component: {fileID: 114529382276911386}
+  - component: {fileID: 95539238563493132}
   m_Layer: 0
   m_Name: PCPokemon
   m_TagString: Untagged
@@ -316,6 +317,24 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 39b0f54389ff7314ab4d34ea1ddbdce9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95539238563493132
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670152977712036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 373d749ac22a33b44951bcb16d0c9f58, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -604,6 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _components:
   - {fileID: 65968962484624936}
+  - {fileID: 95539238563493132}
 --- !u!114 &114570537011829532
 MonoBehaviour:
   m_ObjectHideFlags: 1

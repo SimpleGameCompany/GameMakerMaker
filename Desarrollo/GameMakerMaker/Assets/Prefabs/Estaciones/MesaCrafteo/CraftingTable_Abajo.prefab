@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114683676534905702}
   - component: {fileID: 65566233635295414}
   - component: {fileID: 114572362684974246}
+  - component: {fileID: 95897835035207544}
   m_Layer: 0
   m_Name: CraftingTable
   m_TagString: Untagged
@@ -325,6 +326,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95897835035207544
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210102335716320}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114020858184891588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _components:
   - {fileID: 65566233635295414}
+  - {fileID: 95897835035207544}
 --- !u!114 &114573255297591740
 MonoBehaviour:
   m_ObjectHideFlags: 1

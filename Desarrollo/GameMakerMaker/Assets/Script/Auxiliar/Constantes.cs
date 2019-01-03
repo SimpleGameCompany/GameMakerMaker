@@ -64,7 +64,9 @@ public static class Constantes
     public const string PREFERENCES_MAX_SCORE = "maxscore";
     public const string PREFERENCES_LEVEL_SCORE = "levelScore";
 
-    
+    public const string TAG_RECIPIES_CONTAINER = "RecetasContainer";
+
+
 
 
     #endregion
