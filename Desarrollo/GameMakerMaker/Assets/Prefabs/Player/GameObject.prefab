@@ -563,8 +563,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721671137663750}
-  m_LocalRotation: {x: -0, y: -0.9996211, z: -0, w: -0.027526908}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.9870162, z: -0, w: -0.1606208}
+  m_LocalPosition: {x: -3, y: -1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4972566519304464}
@@ -572,7 +572,7 @@ Transform:
   - {fileID: 4129507569679816}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -183.155, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -198.486, z: 0}
 --- !u!4 &4294447557895822
 Transform:
   m_ObjectHideFlags: 1
@@ -1297,8 +1297,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  clips:
-  - {fileID: 8300000, guid: aa6f2dd3a3c45a94dbb561d7eb36e580, type: 3}
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: aa6f2dd3a3c45a94dbb561d7eb36e580, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
   TriggerName:
   - Click
 --- !u!114 &114715839892359684

@@ -164,7 +164,10 @@ public class PlayerController : MonoBehaviour {
 
                 if(inter == null)
                 {
-                    inter = hit.transform.parent.GetComponent<Interactuable>();
+                    if (hit.transform.parent != null)
+                    {
+                        inter = hit.transform.parent.GetComponent<Interactuable>();
+                    }
                 }
 
                 if (inter != null)

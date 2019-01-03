@@ -28,6 +28,26 @@ public class SoundController : MonoBehaviour  {
         }
     }
 
+    public void Update()
+    {
+        if (soundDealer.isPlaying)
+        {
+            Debug.Log("sonando");
+        }
+        if (soundDealer.clip.loadState == AudioDataLoadState.Loaded)
+        {
+            Debug.Log("cargado");
+        }
+        if (soundDealer.clip.loadState == AudioDataLoadState.Failed)
+        {
+            Debug.Log("no cargado");
+        }
+        if (soundDealer.clip.loadState == AudioDataLoadState.Loading)
+        {
+            Debug.Log("cargando");
+        }
+    }
+
     public void SetTrigger(string Trigger)
     {
 
@@ -39,7 +59,7 @@ public class SoundController : MonoBehaviour  {
     public void SetFloat(string name,float value)
     {
         anim.SetFloat(name, value);
-        SetSound(name);
+        //SetSound(name);
     }
 
     public void SetBool(string name, bool value)
@@ -58,9 +78,9 @@ public class SoundController : MonoBehaviour  {
             soundDealer.loop = s.loop;
             soundDealer.volume = s.volume;
             soundDealer.pitch = s.pitch;
-            soundDealer.PlayOneShot(s.clip);
+            soundDealer.clip = s.clip;
+            soundDealer.Play();
         }
     }
-
 
 }
