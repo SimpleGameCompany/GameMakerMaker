@@ -6,28 +6,31 @@ using TMPro;
 [RequireComponent(typeof(SoundController))]
 public class OvenBehaviour : Interactuable
 {
+    [Header("UI")]
     public Image progress;
     public Image danger;
-    // Use this for initialization
+    public GameObject Indicator;
 
-    PropBehaviour CookingProp;
-    WaitForEndOfFrame wait;
-    float time = 0;
-
+    [Header("Timers")]
     public float brokenTime;
     float currentBrokenTime = 0;
-
     public float explosionTime;
     float currentExplosionTime = 0;
     Coroutine explosion;
+    public float TimeToCook;
+    float time = 0;
+
+    [Header("ParticleSystem")]
+    public ParticleSystem cooking;
+    public ParticleSystem explode;
+    //public ParticleSystem broken;
+
+    PropBehaviour CookingProp;
+    WaitForEndOfFrame wait;
 
     [HideInInspector]
     public SoundController anim;
     public TextMeshProUGUI textDebug;
-
-    public float TimeToCook;
-
-    public GameObject Indicator;
 
     public enum OvenType
     {
@@ -50,6 +53,7 @@ public class OvenBehaviour : Interactuable
     public OvenType Type;
     void Start()
     {
+        cooking.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         wait = new WaitForEndOfFrame();
         ovenState = State.Empty;
         anim = GetComponent<SoundController>();
@@ -116,6 +120,7 @@ public class OvenBehaviour : Interactuable
         OvenInstruction task = (from x in CookingProp.recipe.Tasks where x.Type == this.Type && !x.Complete  select x ).FirstOrDefault();
         //Debug.Log(task.Complete);
         if (task != null) {
+            cooking.Play(true);
             anim.SetTrigger(Constantes.ANIMATION_OVEN_COOK);
             ovenState = State.Coocking;
             textDebug.text = ("Por fin haces algo bien");
@@ -133,13 +138,15 @@ public class OvenBehaviour : Interactuable
             ovenState = State.Prepare;
             anim.SetTrigger(Constantes.ANIMATION_OVEN_COOK_END);
             explosion = StartCoroutine(Explosion());
+            cooking.Stop(true,ParticleSystemStopBehavior.StopEmitting);
             yield return explosion;
         }
         else
         {
-            anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
             ovenState = State.Broken;
-            
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
+            explode.Play(true);
+            //broken.Play(true);
             textDebug.text = ("Ya la has cagado");
             progress.color = new Color(1, 0, 0);
             while (currentBrokenTime < brokenTime)
@@ -155,11 +162,13 @@ public class OvenBehaviour : Interactuable
             anim.SetTrigger(Constantes.ANIMATION_OVEN_FIXED);
             GameManager.Instance.StoreProp(CookingProp.gameObject);
             ovenState = State.Empty;
+            //broken.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         }
     }
 
     IEnumerator Explosion()
     {
+        cooking.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         while (currentExplosionTime/explosionTime < 0.25f)
         {
             currentExplosionTime += Time.deltaTime;
@@ -174,9 +183,11 @@ public class OvenBehaviour : Interactuable
             currentExplosionTime += Time.deltaTime;
             yield return wait;
         }
+        ovenState = State.Broken;
+        explode.gameObject.SetActive(true);
+        //broken.Play(true);
         anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
         currentExplosionTime = 0;
-        ovenState = State.Broken;
         danger.gameObject.SetActive(false);
         textDebug.text = ("Se te ha quemado tonto");
         progress.color = new Color(1, 0, 0);
@@ -193,6 +204,7 @@ public class OvenBehaviour : Interactuable
         anim.SetTrigger(Constantes.ANIMATION_OVEN_FIXED);
         GameManager.Instance.StoreProp(CookingProp.gameObject);
         ovenState = State.Empty;
+        //broken.Stop(true, ParticleSystemStopBehavior.StopEmitting);
     }
 
     public override void PostActionAnim(PlayerController player)

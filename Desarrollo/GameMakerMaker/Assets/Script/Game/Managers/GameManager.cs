@@ -203,6 +203,7 @@ public class GameManager : MonoBehaviour
             //prop.transform.rotation = Quaternion.Euler(0, 0, 0);
             prop.SetActive(true);
             prop.GetComponent<PropBehaviour>().grab = true;
+            prop.GetComponent<PropBehaviour>().glow.Stop(true,ParticleSystemStopBehavior.StopEmitting);
             prop.GetComponentInChildren<Collider>().enabled = true;
             prop.GetComponent<Animator>().SetBool(Constantes.ANIMATION_PROP_GRAB,false);
             prop.transform.position = PositionStart;

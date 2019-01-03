@@ -22,7 +22,7 @@ public class PropBehaviour : Interactuable {
 
     public bool Completed { get { return tasksCompleted == recipe.Tasks.Length; } }
 
-
+    public ParticleSystem glow;
 
 
     //Esto realmente no se donde meterlo jajaja
@@ -53,6 +53,10 @@ public class PropBehaviour : Interactuable {
         {
             tasksCompleted = value;
             render.material = ProcessSkins[tasksCompleted];
+            if(tasksCompleted == ProcessSkins.Length - 1)
+            {
+                glow.Play(true);
+            }
         }
     }
 

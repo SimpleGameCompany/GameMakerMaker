@@ -914,12 +914,14 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   progress: {fileID: 114816248518601774}
   danger: {fileID: 114934055242650714}
+  Indicator: {fileID: 0}
   brokenTime: 3
   explosionTime: 5
+  TimeToCook: 8
+  cooking: {fileID: 0}
+  explode: {fileID: 0}
   anim: {fileID: 0}
   textDebug: {fileID: 0}
-  TimeToCook: 8
-  Indicator: {fileID: 0}
   Type: 0
 --- !u!114 &114934055242650714
 MonoBehaviour:

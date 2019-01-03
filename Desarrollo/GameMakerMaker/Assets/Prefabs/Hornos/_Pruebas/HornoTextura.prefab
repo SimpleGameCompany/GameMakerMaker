@@ -952,12 +952,14 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   progress: {fileID: 114886229697578202}
   danger: {fileID: 114534713602095780}
+  Indicator: {fileID: 0}
   brokenTime: 3
   explosionTime: 5
+  TimeToCook: 10
+  cooking: {fileID: 0}
+  explode: {fileID: 0}
   anim: {fileID: 0}
   textDebug: {fileID: 0}
-  TimeToCook: 10
-  Indicator: {fileID: 0}
   Type: 2
 --- !u!222 &222175718750984206
 CanvasRenderer:
