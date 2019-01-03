@@ -28,26 +28,6 @@ public class SoundController : MonoBehaviour  {
         }
     }
 
-    public void Update()
-    {
-        if (soundDealer.isPlaying)
-        {
-            Debug.Log("sonando");
-        }
-        if (soundDealer.clip.loadState == AudioDataLoadState.Loaded)
-        {
-            Debug.Log("cargado");
-        }
-        if (soundDealer.clip.loadState == AudioDataLoadState.Failed)
-        {
-            Debug.Log("no cargado");
-        }
-        if (soundDealer.clip.loadState == AudioDataLoadState.Loading)
-        {
-            Debug.Log("cargando");
-        }
-    }
-
     public void SetTrigger(string Trigger)
     {
 
