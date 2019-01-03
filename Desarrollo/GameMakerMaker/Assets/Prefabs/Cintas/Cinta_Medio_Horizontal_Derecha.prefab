@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 4102607830404790}
   - component: {fileID: 114029076843440270}
   - component: {fileID: 114627923996672870}
+  - component: {fileID: 65319953372917692}
   m_Layer: 9
   m_Name: Cinta_Medio_Horizontal_Derecha
   m_TagString: Untagged
@@ -269,9 +270,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524451855179328}
   m_Mesh: {fileID: 4300000, guid: 53ef9602ad484de469fe960c72605ea1, type: 3}
+--- !u!65 &65319953372917692
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959189110259808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114029076843440270
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959189110259808}
@@ -379,7 +392,7 @@ MonoBehaviour:
   _assetGuid: 2a6416ab1660f004b9009ab4ba745592
 --- !u!114 &114627923996672870
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959189110259808}

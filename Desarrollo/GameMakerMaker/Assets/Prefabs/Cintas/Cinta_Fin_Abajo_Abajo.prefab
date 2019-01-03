@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4949932951322726}
   - component: {fileID: 114630134794728506}
   - component: {fileID: 114390844936235160}
+  - component: {fileID: 65975208938700834}
   m_Layer: 9
   m_Name: Cinta_Fin_Abajo_Abajo
   m_TagString: Untagged
@@ -344,6 +345,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1990156470157184}
   m_Mesh: {fileID: 4300000, guid: 40667f9ce66811f4c8b4eabdc2644f33, type: 3}
+--- !u!65 &65975208938700834
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120233810612996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114034037941403582
 MonoBehaviour:
   m_ObjectHideFlags: 1
