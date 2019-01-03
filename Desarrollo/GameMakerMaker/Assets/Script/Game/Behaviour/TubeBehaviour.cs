@@ -11,6 +11,7 @@ public class TubeBehaviour : Interactuable {
     private PropBehaviour.PropWorld world;
     public float brokenTime;
     float currentBrokenTime;
+    SoundController anim;
     WaitForEndOfFrame wait;
 
 
@@ -43,24 +44,29 @@ public class TubeBehaviour : Interactuable {
         progress.fillAmount = 0;
         currentBrokenTime = 0;
         Debug.Log("arreglado");
+        anim.SetTrigger(Constantes.ANIMATION_TUBE_FIXED);
         broken = false;
     }
 
     // Use this for initialization
     void Start () {
         broken = false;
+        anim = GetComponent<SoundController>();
 	}
 
     public override void PostActionAnim(PlayerController player)
     {
+        anim.SetTrigger(Constantes.ANIMATION_OVEN_GET_OBJECT);
         base.PostAction(player);
         if (player.PickedObjet.world == world && player.PickedObjet.Completed)
         {
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
             ScoreController.Instance.scoreNumber += player.PickedObjet.recipe.score;
             ScoreController.Instance.Score += 1; 
         }
         else
         {
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
             broken = true;
             Debug.Log("roto");
             StartCoroutine(Reparing());

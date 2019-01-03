@@ -55,6 +55,8 @@ public static class Constantes
     public const string ANIMATION_PROP_SCALEDOWN = "ScaleDown";
     public const string ANIMATION_OVEN_COOK_END = "EndCook";
 
+    public const string ANIMATION_TUBE_FIXED = "Fix";
+
 
     #endregion
 

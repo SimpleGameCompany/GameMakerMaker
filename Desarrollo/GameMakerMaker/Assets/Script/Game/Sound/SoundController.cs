@@ -6,14 +6,15 @@ using System;
 
 [RequireComponent(typeof(AudioSource))]
 public class SoundController : MonoBehaviour  {
-
+    [HideInInspector]
     public Animator anim;
+    [HideInInspector]
     public AudioSource soundDealer;
     public Sound[] sounds;
     public List<string> TriggerName;
 
 
-    public void Start()
+    public void Awake()
     {
         anim = GetComponent<Animator>();
         if(anim == null)

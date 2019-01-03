@@ -84,8 +84,24 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/body
+        weight: 1
+      - path: root/body/bottom
+        weight: 1
+      - path: root/body/bottom/cilinder
+        weight: 1
+      - path: root/body/top
+        weight: 1
+      - path: root/body/top/rgb
+        weight: 1
+      - path: root/body/top/wheel
+        weight: 1
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     isReadable: 1
