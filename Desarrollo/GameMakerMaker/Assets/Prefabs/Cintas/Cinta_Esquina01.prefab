@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 4624603778064680}
   - component: {fileID: 114720678822661660}
   - component: {fileID: 114082833158633058}
+  - component: {fileID: 65710034300161444}
   m_Layer: 0
   m_Name: Cinta_Esquina01
   m_TagString: Untagged
@@ -344,9 +345,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001611558990832}
   m_Mesh: {fileID: 4300000, guid: 6bbeea3b92dece74ab052b29c691e873, type: 3}
+--- !u!65 &65710034300161444
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922759497843740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114082833158633058
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1922759497843740}
@@ -459,7 +472,7 @@ MonoBehaviour:
   _assetGuid: 6c733578640ecaf4cae0900783a44826
 --- !u!114 &114720678822661660
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1922759497843740}
