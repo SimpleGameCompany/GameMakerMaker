@@ -35,5 +35,8 @@ public class GameStarter : MonoBehaviour {
         GameManager.Instance.ResumeGame();
         GameManager.Instance.NextLevel();
     }
-
+    public void PauseMenu()
+    {
+        GameManager.Instance.PauseGame(0);
+    }
 }

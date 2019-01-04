@@ -315,7 +315,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 227864460}
-  key: GAME_STATUS_YOU_WIN
+  key: GAME_STATUS_YOU_LOSE
   maintainTextAlignment: 0
 --- !u!114 &227864460
 MonoBehaviour:
@@ -503,7 +503,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Has perdido...
+  m_text: "\xA1Pierdes!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ad03c4ce9e635c4796673b5f6aa0c48, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 6ad03c4ce9e635c4796673b5f6aa0c48,
@@ -572,10 +572,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 227864460}
-    characterCount: 14
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1407,7 +1407,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -1752,7 +1752,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 657137791}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 900e263e2c7456048a8825f53dab8806, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: de53d19ba895b504db500de2bbda9609, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1771,12 +1771,12 @@ VideoPlayer:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 01
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 0
+  m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
 --- !u!114 &657137794
 MonoBehaviour:
@@ -2270,11 +2270,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cintas:
   - {fileID: 2100000, guid: a2228bc5ede097b44b493e7abb1fe02a, type: 2}
-  - {fileID: 2100000, guid: b31d4a571f787834cb52114b7fca5895, type: 2}
+  - {fileID: 0}
   - {fileID: 2100000, guid: 3305a250625016c41bf13124c14409eb, type: 2}
-  - {fileID: 2100000, guid: 4e5ff23292053054786ae092646abdf8, type: 2}
+  - {fileID: 0}
   velX: 0
   velY: 1.75
+  offsetsY: []
   setTo0: 0
 --- !u!4 &806451952
 Transform:
@@ -2440,7 +2441,7 @@ MonoBehaviour:
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
-  m_inputSource: 3
+  m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
@@ -3270,7 +3271,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1006520677}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 29e0e78b080c92945b1451ee9833d8ca, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 32995a6634a87c348940fdcae2a27c47, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -3289,12 +3290,12 @@ VideoPlayer:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 01
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 0
+  m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
 --- !u!114 &1006520680
 MonoBehaviour:
@@ -3544,7 +3545,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -5284,6 +5285,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1882017452}
+        m_MethodName: PauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1889795989
@@ -5701,7 +5713,7 @@ MonoBehaviour:
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
-  m_inputSource: 3
+  m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
