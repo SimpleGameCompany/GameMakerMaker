@@ -51,6 +51,7 @@ public class TubeBehaviour : Interactuable {
     // Use this for initialization
     void Start () {
         broken = false;
+        wait = new WaitForEndOfFrame();
         anim = GetComponent<SoundController>();
 	}
 

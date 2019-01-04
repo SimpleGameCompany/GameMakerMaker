@@ -132,7 +132,7 @@ public class PropBehaviour : Interactuable {
 
     public void SetNavMeshDestination()
     {
-       bool prueba = agent.SetDestination(GameManager.Instance.EndPosition);
+       agent.SetDestination(GameManager.Instance.EndPosition);
     }
 
 

@@ -60,8 +60,6 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         Move();
         Vector3 s = agent.transform.InverseTransformDirection(agent.velocity).normalized;
-        float speed = s.z;
-        float turn = s.x;
 
         Vector3 currentFacing = transform.forward;
         float currentAngularVelocity = Vector3.Angle(currentFacing, lastFacing) / Time.deltaTime; //degrees per second
@@ -133,10 +131,7 @@ public class PlayerController : MonoBehaviour {
 
         this.win = win;
 
-        if (win)
-            anim.SetTrigger(Constantes.ANIMATION_PLAYER_WIN);
-        else
-            anim.SetTrigger(Constantes.ANIMATION_PLAYER_LOSE);
+        EndGame();
     }
 
     public void EndGame()

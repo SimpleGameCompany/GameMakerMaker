@@ -8,7 +8,7 @@ public class MusicController : MonoBehaviour {
     private static MusicController _instance;
 
 
-    private AudioClip[] clips;
+    public AudioClip[] clips;
     private Dictionary<string, int> clipsID;
     private AudioSource audioSource;
 
