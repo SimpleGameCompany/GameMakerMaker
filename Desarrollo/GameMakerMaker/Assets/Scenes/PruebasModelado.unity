@@ -1674,12 +1674,12 @@ Prefab:
     - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
         type: 2}
       propertyPath: cintas.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
         type: 2}
       propertyPath: offsetsY.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4463512333305514, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1717,7 +1717,7 @@ Prefab:
         type: 2}
       propertyPath: cintas.Array.data[6]
       value: 
-      objectReference: {fileID: 2100000, guid: 767c7c1d4df1fd4429e49abe4f82aedd, type: 2}
+      objectReference: {fileID: 2100000, guid: 12549bf726666a34894a218bf4387ec8, type: 2}
     - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
         type: 2}
       propertyPath: cintas.Array.data[7]
@@ -1731,8 +1731,48 @@ Prefab:
     - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
         type: 2}
       propertyPath: offsetsY.Array.data[6]
-      value: 0.055
+      value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: cintas.Array.data[8]
+      value: 
+      objectReference: {fileID: 2100000, guid: dcb358a04e3ebad47860ea4073caa696, type: 2}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: offsetsY.Array.data[8]
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: cintas.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c1a5f79dfc518c40be87b41a2f30a11, type: 2}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: cintas.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f25ecdf191791c148966329d624221a9, type: 2}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: cintas.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: a2228bc5ede097b44b493e7abb1fe02a, type: 2}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: cintas.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3305a250625016c41bf13124c14409eb, type: 2}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: cintas.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 767c7c1d4df1fd4429e49abe4f82aedd, type: 2}
+    - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
+        type: 2}
+      propertyPath: cintas.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: dcb358a04e3ebad47860ea4073caa696, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca, type: 2}
   m_IsPrefabAsset: 0
@@ -4297,6 +4337,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 12549bf726666a34894a218bf4387ec8, type: 2}
+    - target: {fileID: 2300004, guid: 7b21b3b62b47b6d4cb902f5b36722278, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dcb358a04e3ebad47860ea4073caa696, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b21b3b62b47b6d4cb902f5b36722278, type: 3}
   m_IsPrefabAsset: 0

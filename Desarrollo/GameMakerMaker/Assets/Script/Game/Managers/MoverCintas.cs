@@ -44,7 +44,7 @@ public class MoverCintas : MonoBehaviour {
         
         foreach(GameObject rodillo in rodillos)
         {
-            rodillo.transform.Rotate(new Vector3(0.0f, 0.0f, velY * 2));
+            rodillo.transform.Rotate(new Vector3(0.0f, 0.0f, velY * 200*Time.deltaTime));
         }
 		
 	}
