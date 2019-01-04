@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PlayerMenu : MonoBehaviour {
+public class PlayerMenu : MonoBehaviour, IPointerClickHandler {
 
     [Header("Timers")]
     public float TimeToAchoos;
@@ -12,20 +13,11 @@ public class PlayerMenu : MonoBehaviour {
     public SoundController anim;
     bool interacting;
 
+    public PlayerMenu shadow;
 
     void Start()
     {
         anim = GetComponent<SoundController>();
-    }
-
-    private void OnMouseDown()
-    {
-        if (!interacting)
-        {
-            interacting = true;
-            anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICK);
-            StartCoroutine(Achoos());
-        }
     }
 
     IEnumerator Achoos()
@@ -38,5 +30,19 @@ public class PlayerMenu : MonoBehaviour {
         time = 0;
 
         interacting = false;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (!interacting)
+        {
+            if (shadow != null)
+            {
+                shadow.OnPointerClick(eventData);
+            }
+            interacting = true;
+            anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICK);
+            StartCoroutine(Achoos());
+        }
     }
 }

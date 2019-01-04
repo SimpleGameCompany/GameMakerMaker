@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class TexturizadorMenu : MonoBehaviour
+public class TexturizadorMenu : MonoBehaviour, IPointerClickHandler
 {
     [Header("Timers")]
     public float TimeToCook;
@@ -22,16 +23,6 @@ public class TexturizadorMenu : MonoBehaviour
         anim = GetComponent<SoundController>();
     }
 
-    private void OnMouseDown()
-    {
-        if (!cook)
-        {
-            cook = true;
-            anim.SetTrigger(Constantes.ANIMATION_OVEN_GET_OBJECT);
-            StartCoroutine(Cooking());
-        }
-    }
-
     IEnumerator Cooking()
     {
         cooking.Play(true);
@@ -48,4 +39,13 @@ public class TexturizadorMenu : MonoBehaviour
         cook = false;
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (!cook)
+        {
+            cook = true;
+            anim.SetTrigger(Constantes.ANIMATION_OVEN_GET_OBJECT);
+            StartCoroutine(Cooking());
+        }
+    }
 }
