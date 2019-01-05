@@ -46,7 +46,7 @@ public class MusicController : MonoBehaviour {
         Volume = 0;
         foreach(var e in FindObjectsOfType<AudioSource>())
         {
-            e.volume = 0;
+            e.mute = true;
         }
     }
 
@@ -55,7 +55,7 @@ public class MusicController : MonoBehaviour {
         Volume = 1;
         foreach (var e in FindObjectsOfType<AudioSource>())
         {
-            e.volume = 1;
+            e.mute = false;
         }
     }
 

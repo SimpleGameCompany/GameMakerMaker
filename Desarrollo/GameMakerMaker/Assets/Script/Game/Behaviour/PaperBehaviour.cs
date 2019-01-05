@@ -20,8 +20,9 @@ public class PaperBehaviour : MonoBehaviour
         }
 
 
-        if(p != null)
+        if(p != null && p.agent.enabled)
         {
+
             p.grab = false;
             p.anim.SetTrigger(Constantes.ANIMATION_PROP_DESTROY);
             anim.SetTrigger("Trash");
