@@ -19,6 +19,7 @@ public class StarFiller : MonoBehaviour {
 	
     public IEnumerator FillStars(float points,float maxPoints)
     {
+        maxPoints = maxPoints == 0 ? points : maxPoints;
         float completed = (points) / maxPoints;
         
         for(int i = 0; i < 3; i++)

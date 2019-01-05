@@ -44,11 +44,19 @@ public class MusicController : MonoBehaviour {
     public void Mute()
     {
         Volume = 0;
+        foreach(var e in FindObjectsOfType<AudioSource>())
+        {
+            e.volume = 0;
+        }
     }
 
     public void UnMute()
     {
         Volume = 1;
+        foreach (var e in FindObjectsOfType<AudioSource>())
+        {
+            e.volume = 1;
+        }
     }
 
 

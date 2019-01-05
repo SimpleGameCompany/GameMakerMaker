@@ -26,12 +26,16 @@ public class SoundController : MonoBehaviour  {
         {
             sounds[i].name = TriggerName[i];
         }
+        if(anim != null)
+        anim.logWarnings = false;
     }
 
     public void SetTrigger(string Trigger)
     {
-
-        anim.SetTrigger(Trigger);
+        if (anim != null && anim.runtimeAnimatorController != null)
+        {
+            anim.SetTrigger(Trigger);
+        }
         SetSound(Trigger);
         
     }
