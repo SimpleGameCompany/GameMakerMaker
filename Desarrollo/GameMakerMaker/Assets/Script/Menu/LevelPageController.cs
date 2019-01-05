@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -108,6 +109,7 @@ public class LevelPageController : MonoBehaviour {
                     LevelLoaderButton b1 = b[j];
                     b1.level = levels[index];
                     b1.gameObject.SetActive(true);
+                    
                 }
                 else
                 {
