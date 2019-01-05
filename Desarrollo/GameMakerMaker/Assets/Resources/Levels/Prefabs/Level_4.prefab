@@ -2731,6 +2731,7 @@ GameObject:
   - component: {fileID: 82895673036137890}
   - component: {fileID: 114763563661637574}
   - component: {fileID: 114453981545891474}
+  - component: {fileID: 95098951351317896}
   m_Layer: 0
   m_Name: Suelo central
   m_TagString: Untagged
@@ -19905,6 +19906,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95098951351317896
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394561966102438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48296f14b63a5dd45920404837eef2bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95127671679997268
 Animator:
   serializedVersion: 3
@@ -26202,7 +26221,6 @@ MonoBehaviour:
   cooking: {fileID: 198261720122943126}
   explode: {fileID: 198137970973090098}
   anim: {fileID: 0}
-  textDebug: {fileID: 114572395933037440}
   Type: 2
 --- !u!114 &114485024221584170
 MonoBehaviour:
@@ -27998,7 +28016,6 @@ MonoBehaviour:
   cooking: {fileID: 198761887186975188}
   explode: {fileID: 198785548129397310}
   anim: {fileID: 0}
-  textDebug: {fileID: 114898107571269210}
   Type: 1
 --- !u!114 &114592107300458510
 MonoBehaviour:
@@ -31855,7 +31872,6 @@ MonoBehaviour:
   cooking: {fileID: 198824657176154544}
   explode: {fileID: 198891044777550464}
   anim: {fileID: 0}
-  textDebug: {fileID: 114782296386773462}
   Type: 2
 --- !u!114 &114864822821497922
 MonoBehaviour:
@@ -32079,7 +32095,6 @@ MonoBehaviour:
   cooking: {fileID: 198937680383857176}
   explode: {fileID: 198428339168952404}
   anim: {fileID: 0}
-  textDebug: {fileID: 114055120909407118}
   Type: 1
 --- !u!114 &114891793134186576
 MonoBehaviour:
@@ -33109,7 +33124,6 @@ MonoBehaviour:
   cooking: {fileID: 198234916424387804}
   explode: {fileID: 198827825606910976}
   anim: {fileID: 0}
-  textDebug: {fileID: 114264489503877640}
   Type: 0
 --- !u!114 &114996127436738104
 MonoBehaviour:
