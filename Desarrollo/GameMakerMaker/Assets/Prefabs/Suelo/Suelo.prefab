@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23483128077483796}
   - component: {fileID: 65089028900447206}
   - component: {fileID: 114917196073879212}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Suelo izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 23055384253910898}
   - component: {fileID: 65836262463117786}
   - component: {fileID: 114216476010353952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Suelo derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,8 @@ GameObject:
   - component: {fileID: 82976170422253922}
   - component: {fileID: 114895376695226244}
   - component: {fileID: 114664547654668592}
-  m_Layer: 0
+  - component: {fileID: 95671033052570362}
+  m_Layer: 10
   m_Name: Suelo central
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +82,7 @@ GameObject:
   - component: {fileID: 4354586698535838}
   - component: {fileID: 114692779325784494}
   - component: {fileID: 114635239307124280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,8 +109,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1637536541139624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -2.67, z: 8.89}
+  m_LocalScale: {x: 1, y: 1, z: 2.7934}
   m_Children:
   - {fileID: 4443799831256002}
   - {fileID: 4841239171456692}
@@ -400,6 +401,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95671033052570362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423517467406524}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114216476010353952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,8 +499,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  sounds: []
-  TriggerName: []
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: d1c417f0c2c7d3d46bf07739c271415a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  TriggerName:
+  - Click
 --- !u!114 &114917196073879212
 MonoBehaviour:
   m_ObjectHideFlags: 1

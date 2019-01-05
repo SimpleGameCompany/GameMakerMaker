@@ -30,7 +30,6 @@ public class OvenBehaviour : Interactuable
 
     [HideInInspector]
     public SoundController anim;
-    public TextMeshProUGUI textDebug;
 
     public enum OvenType
     {
@@ -123,7 +122,6 @@ public class OvenBehaviour : Interactuable
             cooking.Play(true);
             anim.SetTrigger(Constantes.ANIMATION_OVEN_COOK);
             ovenState = State.Coocking;
-            textDebug.text = ("Por fin haces algo bien");
             while (time < TimeToCook)
             {
                 time += Time.deltaTime;
@@ -131,7 +129,6 @@ public class OvenBehaviour : Interactuable
                 yield return wait;
             }
             CookingProp.TasksCompleted++;
-            textDebug.text = ("Seguro que ha salido amorfo");
             progress.color = new Color(0, 1, 0);
             task.Complete = true;
             time = 0;
@@ -147,7 +144,6 @@ public class OvenBehaviour : Interactuable
             anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
             explode.gameObject.SetActive(true);
             //broken.Play(true);
-            textDebug.text = ("Ya la has cagado");
             progress.color = new Color(1, 0, 0);
             while (currentBrokenTime < brokenTime)
             {
@@ -155,7 +151,6 @@ public class OvenBehaviour : Interactuable
                 progress.fillAmount = (currentBrokenTime / brokenTime);
                 yield return wait;
             }
-            textDebug.text = ("Aprende de tus errores, tonto");
             progress.fillAmount = 0;
             progress.color = new Color(1, 1, 1);
             currentBrokenTime = 0;
@@ -174,7 +169,7 @@ public class OvenBehaviour : Interactuable
             currentExplosionTime += Time.deltaTime;
             yield return wait;
         }
-        textDebug.text = ("Corre Gilipollas");
+        anim.SetTrigger("Burning");
         progress.fillAmount = 0;
         progress.color = new Color(1, 1, 1);
         danger.gameObject.SetActive(true);
@@ -189,7 +184,6 @@ public class OvenBehaviour : Interactuable
         anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
         currentExplosionTime = 0;
         danger.gameObject.SetActive(false);
-        textDebug.text = ("Se te ha quemado tonto");
         progress.color = new Color(1, 0, 0);
         while (currentBrokenTime < brokenTime)
         {
@@ -197,7 +191,6 @@ public class OvenBehaviour : Interactuable
             progress.fillAmount = (currentBrokenTime / brokenTime);
             yield return wait;
         }
-        textDebug.text = ("Todo te sale mal");
         progress.fillAmount = 0;
         progress.color = new Color(1, 1, 1);
         currentBrokenTime = 0;

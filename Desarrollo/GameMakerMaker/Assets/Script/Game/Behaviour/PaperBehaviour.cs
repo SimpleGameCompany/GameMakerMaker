@@ -3,7 +3,12 @@ using System.Collections;
 
 public class PaperBehaviour : MonoBehaviour
 {
+    SoundController anim;
 
+    public void Start()
+    {
+        anim = GetComponent<SoundController>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +24,7 @@ public class PaperBehaviour : MonoBehaviour
         {
             p.grab = false;
             p.anim.SetTrigger(Constantes.ANIMATION_PROP_DESTROY);
+            anim.SetTrigger("Trash");
         }
         
     }
