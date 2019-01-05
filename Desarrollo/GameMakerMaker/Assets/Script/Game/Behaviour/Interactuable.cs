@@ -12,6 +12,7 @@ public abstract class Interactuable : MonoBehaviour {
 
     public virtual bool PreAction(PlayerController player) {
         player.MarkObject.SetActive(true);
+        player.MarkObject.GetComponent<SoundController>().SetTrigger("Click");
         player.MarkObject.transform.SetParent(transform);
         player.MarkObject.transform.localPosition = Vector3.zero;
         return true;
