@@ -75,15 +75,18 @@ public class PlayerController : MonoBehaviour {
         agent.CalculatePath(agent.destination, agent.path);
         yield return new WaitUntil(() => { return !agent.pathPending; });
         agent.isStopped = true;
-        if (agent.path.corners.Length > 1)
+
+        if (agent.remainingDistance > agent.stoppingDistance)
         {
-            yield return StartCoroutine(RotateTo(agent.path.corners[1]));
+            if (agent.path.corners.Length > 1)
+            {
+                yield return StartCoroutine(RotateTo(agent.path.corners[1]));
+            }
+            else
+            {
+                yield return StartCoroutine(RotateTo(agent.path.corners[0]));
+            }
         }
-        else
-        {
-            yield return StartCoroutine(RotateTo(agent.path.corners[0]));
-        }
-       
         agent.isStopped = false;
         
 
