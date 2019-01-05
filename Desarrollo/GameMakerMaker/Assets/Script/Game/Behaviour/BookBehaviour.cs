@@ -39,7 +39,7 @@ public class BookBehaviour : Interactuable {
 
     public override void PostAction(PlayerController player)
     {
-        //base.PostAction(player);
+        base.PostAction(player);
         StartCoroutine(PageAnimOpen());
         anim.SetTrigger("Open");
     }
