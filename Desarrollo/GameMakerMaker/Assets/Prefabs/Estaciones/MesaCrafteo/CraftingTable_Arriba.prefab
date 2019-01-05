@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300622867590044}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -8.243379, y: -1.0550001, z: -14.631723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4331286046684636}
@@ -615,8 +615,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  sounds: []
-  TriggerName: []
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: 9391c1b2a4d800142942c8dc3c62920d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: c327198525cb8824b9bc88d51e5fb499, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  TriggerName:
+  - DropObject
+  - Break
 --- !u!114 &114543191319568594
 MonoBehaviour:
   m_ObjectHideFlags: 1

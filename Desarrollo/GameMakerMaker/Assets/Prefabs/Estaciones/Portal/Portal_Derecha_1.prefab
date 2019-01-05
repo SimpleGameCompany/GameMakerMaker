@@ -345,8 +345,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  sounds: []
-  TriggerName: []
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: c327198525cb8824b9bc88d51e5fb499, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 98fbb7512752f81459c15819c2caca2f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  TriggerName:
+  - Break
+  - DropObject
 --- !u!114 &114165904728562006
 MonoBehaviour:
   m_ObjectHideFlags: 1

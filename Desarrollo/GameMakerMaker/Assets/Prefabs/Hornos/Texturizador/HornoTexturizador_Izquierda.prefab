@@ -511,7 +511,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1080775590213090}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalPosition: {x: 0.29287338, y: -1.0550001, z: -11.174926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224607568433282162}
@@ -1246,17 +1246,29 @@ MonoBehaviour:
   sounds:
   - name: 
     clip: {fileID: 8300000, guid: 363c7cc07f9218d47b053dd67077ca92, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
+    loop: 1
+  - name: 
+    clip: {fileID: 8300000, guid: 58b77a8618f83804f9672b6d9567322c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+  - name: 
+    clip: {fileID: 8300000, guid: af5f02f238aee9d4a97d3faaa5a83ec5, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
   - name: 
-    clip: {fileID: 8300000, guid: 09db51231b08a92459c5c6b5d903b84e, type: 3}
-    volume: 0
-    pitch: 0
-    loop: 0
+    clip: {fileID: 8300000, guid: ea40124eccc46f84d8c1ecfd953be87e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
   TriggerName:
   - Break
-  - GetObject
+  - Cook
+  - EndCook
+  - Burning
 --- !u!114 &114838174513959754
 MonoBehaviour:
   m_ObjectHideFlags: 1

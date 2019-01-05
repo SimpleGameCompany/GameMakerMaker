@@ -188,7 +188,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114062785764481554
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
@@ -239,7 +239,6 @@ MonoBehaviour:
   agent: {fileID: 0}
   ProcessSkins:
   - {fileID: 2100000, guid: 6058d3a8a5066a640bafaa31f8d94fe7, type: 2}
-  - {fileID: 2100000, guid: dc689ebe11701ad41b600246cfae1ff5, type: 2}
   - {fileID: 2100000, guid: a9c4704c359e62646a36b5031fac382e, type: 2}
   - {fileID: 2100000, guid: 9ea115600765a734d99829066bc3de85, type: 2}
   anim: {fileID: 0}
@@ -285,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114820404839777552
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
