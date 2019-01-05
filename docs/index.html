@@ -1,19 +1,12 @@
 ﻿<html>
         <head>
-                <link rel="icon" href="assets/img/Website_icon.png">
+                <link rel="icon" href="assets/img/Web/favicon.png">
 
                 <!-- CSS -->
                 <link href="style/bootstrap4.min.css" rel="stylesheet">
                 <link href="style/font-awesome.min.css" rel="stylesheet">
                 <link href="style/animate.css" rel="stylesheet">
                 <link href="style/main.css" rel="stylesheet">
-                <link rel="shortcut icon" href="unityGame/TemplateData/favicon.ico">
-                <link rel="stylesheet" href="unityGame/TemplateData/style.css">
-
-                <script src="unityGame/TemplateData/UnityProgress.javascript"></script>  
-                <script src="unityGame/Build/UnityLoader.js"></script>
-
-                
 
                 <title>Game Maker Maker</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -28,6 +21,7 @@
                                                 <a class="nav-link js-scroll-trigger english" href="#page-top" id="buttonSpanish">Español</a>
                                                 <a class="nav-link js-scroll-trigger spanish" href="#page-top" id="buttonEnglish" hidden>English</a>
                                         </h1>-->
+                                        
                                         <img src="assets/img/Web/Logo.png" class="center">
                                 </div>
                                 <div class="col-4"></div>
@@ -53,16 +47,13 @@
                 <!-- Canvas -->
                 <section id="game_section" class="wow bounceInRight">
                         <div id="div_game" class="row">
-                                      
-                                       
-                                <div class="col-2"></div>
-                                <div class="webgl-content canvasContainer col-8 ">
-                                        <div id ="padding"></div>
-                                        <div id="gameContainer"></div>
+                                <div id="col_div_border_game_01" class="col-2"></div>
+                                <div class="canvasContainer col-8">
+                                        <canvas width="1280" height="720">
                                 </div>
-                                <div class="col-2"></div>  
-                        </div>       
-                <br/>
+                                <div id="col_div_border_game_02" class="col-2"></div>
+                        </div>
+                        <br/>
                 </section>
 
                 <!-- How To Play -->
@@ -359,6 +350,7 @@
                 <script src="js/wow.min.js"></script>
         
                 <script src="js/placeholder.js"></script>
+                <script src="js/divgame.js"></script>
 
                 <!-- Inicializamos las animaciones -->
                 <script>
@@ -404,21 +396,5 @@
                                 <audio id="theme_die" src="assets/audio/Music/Theme_Die.ogg"></audio>
                         </div>
                 </div> -->
-
-                <script>
-                         var gameInstance 
-                                window.addEventListener("load",function(){
-                                        gameInstance = UnityLoader.instantiate("gameContainer", "unityGame/Build/unityGame.json", {onProgress: UnityProgress});
-                                        
-                                        document.getElementById("#canvas").height = 720;
-                                        document.getElementById("#canvas").width = 1280;
-                                        document.getElementById("gameContainer").style.position= "absolute";
-                                        document.getElementById("gameContainer").style.padding = null;
-                                })
-                        </script>
-
-
-                
-                
         </body>
 </html>
