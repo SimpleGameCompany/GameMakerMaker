@@ -40,8 +40,6 @@ GameObject:
   - component: {fileID: 222037761712578106}
   - component: {fileID: 114304086430599232}
   - component: {fileID: 114508837779465260}
-  - component: {fileID: 114501818766690212}
-  - component: {fileID: 114230458530572400}
   - component: {fileID: 114748614874108746}
   m_Layer: 5
   m_Name: Text
@@ -144,20 +142,6 @@ MonoBehaviour:
     - {fileID: 1129893048293812}
     - {fileID: 1840129236982348}
   _assetGuid: a3cb8ab53cc829541811566bf7fe22f4
---- !u!114 &114230458530572400
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1339442558984870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114304086430599232}
-  key: MAIN_MENU_LEVEL1
-  maintainTextAlignment: 0
 --- !u!114 &114304086430599232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,7 +161,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: Nivel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ad03c4ce9e635c4796673b5f6aa0c48, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 6ad03c4ce9e635c4796673b5f6aa0c48,
@@ -403,20 +387,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114501818766690212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1339442558984870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114304086430599232}
-  key: MAIN_MENU_LEVEL1
-  maintainTextAlignment: 0
 --- !u!114 &114506209244343558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -478,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 114304086430599232}
-  key: MAIN_MENU_LEVEL2
+  key: GAME_CHARACTER_LEVEL
   maintainTextAlignment: 0
 --- !u!114 &114894298752026476
 MonoBehaviour:

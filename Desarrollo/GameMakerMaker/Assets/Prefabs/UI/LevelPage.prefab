@@ -120,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1397525851407462
 GameObject:
   m_ObjectHideFlags: 1
@@ -194,7 +194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1560523280917380
 GameObject:
   m_ObjectHideFlags: 1
@@ -261,8 +261,6 @@ GameObject:
   - component: {fileID: 114628432340232076}
   - component: {fileID: 114007946922136372}
   - component: {fileID: 114672030038978226}
-  - component: {fileID: 114168339467160884}
-  - component: {fileID: 114206730898255654}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -316,8 +314,6 @@ GameObject:
   - component: {fileID: 114567929053563274}
   - component: {fileID: 114038958438872864}
   - component: {fileID: 114741239960026074}
-  - component: {fileID: 114835241873647082}
-  - component: {fileID: 114505706377728476}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -346,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1898106966658558
 GameObject:
   m_ObjectHideFlags: 1
@@ -359,8 +355,6 @@ GameObject:
   - component: {fileID: 114497791528137012}
   - component: {fileID: 114976843905396764}
   - component: {fileID: 114353419455853678}
-  - component: {fileID: 114392074225212850}
-  - component: {fileID: 114072493410244198}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -382,7 +376,7 @@ MonoBehaviour:
   _guid: c7063481-3612-4983-bee4-00683ea331c7
 --- !u!114 &114035724416151890
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1470723024240352}
@@ -469,23 +463,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114072493410244198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1898106966658558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114497791528137012}
-  key: MAIN_MENU_LEVEL2
-  maintainTextAlignment: 0
 --- !u!114 &114077544369559154
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829420401983466}
@@ -550,7 +530,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114164601766028406
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371207514053358}
@@ -559,20 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 1491221649, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114168339467160884
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1610126931236212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114628432340232076}
-  key: MAIN_MENU_LEVEL1
-  maintainTextAlignment: 0
 --- !u!114 &114204358704631824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -585,20 +551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: b579a4fa-8010-4726-97ec-810aa8137139
---- !u!114 &114206730898255654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1610126931236212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114628432340232076}
-  key: MAIN_MENU_LEVEL2
-  maintainTextAlignment: 0
 --- !u!114 &114243828102171420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -703,7 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 114497791528137012}
-  key: MAIN_MENU_LEVEL1
+  key: GAME_CHARACTER_LEVEL
   maintainTextAlignment: 0
 --- !u!114 &114356048067758954
 MonoBehaviour:
@@ -808,20 +760,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114392074225212850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1898106966658558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114497791528137012}
-  key: MAIN_MENU_LEVEL1
-  maintainTextAlignment: 0
 --- !u!114 &114394260072162920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -878,7 +816,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114453928699691598
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1470723024240352}
@@ -943,7 +881,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: Nivel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ad03c4ce9e635c4796673b5f6aa0c48, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 6ad03c4ce9e635c4796673b5f6aa0c48,
@@ -1050,20 +988,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 3b02d0c5-2932-4e92-9838-4db070c152f6
---- !u!114 &114505706377728476
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810639385577084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114567929053563274}
-  key: MAIN_MENU_LEVEL2
-  maintainTextAlignment: 0
 --- !u!114 &114524955114451758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1164,7 +1088,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: Nivel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ad03c4ce9e635c4796673b5f6aa0c48, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 6ad03c4ce9e635c4796673b5f6aa0c48,
@@ -1273,7 +1197,7 @@ MonoBehaviour:
   _guid: 3b02d0c5-2932-4e92-9838-4db070c152f6
 --- !u!114 &114601354025796854
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829420401983466}
@@ -1311,7 +1235,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: Nivel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ad03c4ce9e635c4796673b5f6aa0c48, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 6ad03c4ce9e635c4796673b5f6aa0c48,
@@ -1408,7 +1332,7 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114638008620838354
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371207514053358}
@@ -1430,7 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 114628432340232076}
-  key: MAIN_MENU_LEVEL1
+  key: GAME_CHARACTER_LEVEL
   maintainTextAlignment: 0
 --- !u!114 &114741239960026074
 MonoBehaviour:
@@ -1444,7 +1368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 114567929053563274}
-  key: MAIN_MENU_LEVEL1
+  key: GAME_CHARACTER_LEVEL
   maintainTextAlignment: 0
 --- !u!114 &114747714070764096
 MonoBehaviour:
@@ -1530,7 +1454,7 @@ MonoBehaviour:
   _guid: 78843b8e-66e6-4a5d-869f-cdbd33f09591
 --- !u!114 &114820500802841762
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1829420401983466}
@@ -1578,20 +1502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: b579a4fa-8010-4726-97ec-810aa8137139
---- !u!114 &114835241873647082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810639385577084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 114567929053563274}
-  key: MAIN_MENU_LEVEL1
-  maintainTextAlignment: 0
 --- !u!114 &114907044221549132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1618,7 +1528,7 @@ MonoBehaviour:
   _guid: 1fa34b76-e13f-4573-bd02-ad7e7ab2cb29
 --- !u!114 &114938376218156746
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371207514053358}
@@ -1639,7 +1549,7 @@ MonoBehaviour:
   _assetGuid: a3cb8ab53cc829541811566bf7fe22f4
 --- !u!114 &114976408322572462
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1470723024240352}
