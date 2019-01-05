@@ -111,6 +111,7 @@ public class PropBehaviour : Interactuable {
         render = GetComponentInChildren<MeshRenderer>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        
         TasksCompleted = 0;
     }
 

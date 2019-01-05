@@ -174,6 +174,13 @@ public class PlayerController : MonoBehaviour {
                         MarkObjectFloor.transform.rotation = Quaternion.Euler(0, 0, 0);
                         MarkObjectFloor.transform.localScale = Vector3.one;
                         MarkObjectFloor.SetActive(false);
+
+                        MarkObject.transform.SetParent(null);
+                        MarkObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                        MarkObject.transform.localScale = Vector3.one;
+                        MarkObject.SetActive(false);
+
+
                         StopAllCoroutines();
                         actionInProcess = null;
                     }
