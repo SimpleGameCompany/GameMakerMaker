@@ -1301,13 +1301,31 @@ MonoBehaviour:
   - name: 
     clip: {fileID: 8300000, guid: aa6f2dd3a3c45a94dbb561d7eb36e580, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 3e459fbdd115a4946852f909c87646d5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: cfd29d7a682fa1b4b8dced4a5e77513a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: 
+    clip: {fileID: 8300000, guid: 7976ee37eab2e574dbbdfcd5ea28877e, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
   TriggerName:
   - Click
+  - InvalidClick
+  - GetObject
+  - DropObject
 --- !u!114 &114715839892359684
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721671137663750}
@@ -1413,7 +1431,7 @@ MonoBehaviour:
   _guid: f7d7c839-ed06-42f2-be5c-8941a16e516d
 --- !u!114 &114948505435937048
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721671137663750}
