@@ -276,15 +276,19 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         
-        maxlevel++;
+        if(loadedLevel.levelID == maxlevel)
+        {
+            maxlevel++;
+        }
         PlayerPrefs.SetInt("maxlevel",maxlevel);
         WinGameUI.SetActive(true);
         StarFiller a = GameObject.FindGameObjectWithTag(Constantes.TAG_STARS).GetComponent<StarFiller>();
         a.StartCoroutine(a.FillStars(ScoreController.Instance.scoreNumber,loadedLevel.MaxScore));
+
         LevelScore l = new LevelScore()
         {
             levelID = loadedLevel.levelID,
-            score = Mathf.FloorToInt(((ScoreController.Instance.scoreNumber / loadedLevel.MaxScore) * 3))
+            score = a.finalScore
         };
 
         LevelScore previous = (from x in levelScore where x.levelID == l.levelID select x).FirstOrDefault();
