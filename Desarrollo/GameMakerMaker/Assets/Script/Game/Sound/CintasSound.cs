@@ -18,7 +18,7 @@ public class CintasSound : MonoBehaviour {
     {
         anim.SetTrigger("Init");
         float i = 0;
-        while (i < 5f)
+        while (i < 4f)
         {
             i += Time.deltaTime;
             yield return null;
