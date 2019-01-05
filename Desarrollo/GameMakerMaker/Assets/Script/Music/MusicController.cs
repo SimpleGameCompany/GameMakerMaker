@@ -64,7 +64,7 @@ public class MusicController : MonoBehaviour {
         }
     }
 
-    private void Start () {
+    private void Awake () {
         DontDestroyOnLoad(gameObject);
         _instance = this;
         audioSource = GetComponent<AudioSource>();

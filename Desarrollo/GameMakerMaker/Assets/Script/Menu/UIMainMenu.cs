@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour {
 
     public GameObject UI;
     public GameObject Load;
+    public Button Spanish, English;
 	public void ChangeScene(string scene)
     {
         //UI.SetActive(false);
@@ -24,6 +26,11 @@ public class UIMainMenu : MonoBehaviour {
     [DllImport("__Internal")]
     private static extern void SetEnglish();
 
+    public void Awake()
+    {
+        Spanish.interactable = false;
+    }
+
     IEnumerator SceneLoad(string scene)
     {
         AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(scene);
@@ -36,6 +43,8 @@ public class UIMainMenu : MonoBehaviour {
     public void SelectSpanish()
     {
         Localization.Instance.SelectLanguage(Language.Spanish);
+        Spanish.interactable = false;
+        English.interactable = true;
         SetSpanish();
     }
 
@@ -43,6 +52,8 @@ public class UIMainMenu : MonoBehaviour {
     {
         
         Localization.Instance.SelectLanguage(Language.English);
+        Spanish.interactable = true;
+        English.interactable = false;
         SetEnglish();
     }
 

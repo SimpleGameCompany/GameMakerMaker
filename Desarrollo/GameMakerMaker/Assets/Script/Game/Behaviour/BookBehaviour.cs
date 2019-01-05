@@ -9,7 +9,7 @@ public class BookBehaviour : Interactuable {
     float t = 0;
     Vector2 screenPoint;
     Button close;
-    Animator anim;
+    SoundController anim;
     public GameObject[] pages;
 
     public static BookBehaviour instance;
@@ -19,6 +19,7 @@ public class BookBehaviour : Interactuable {
             pages[pageActual].SetActive(false);
             pageActual = value;
             pages[pageActual].SetActive(true);
+
 
 
         } }
@@ -38,7 +39,9 @@ public class BookBehaviour : Interactuable {
 
     public override void PostAction(PlayerController player)
     {
+        //base.PostAction(player);
         StartCoroutine(PageAnimOpen());
+        anim.SetTrigger("Open");
     }
 
     IEnumerator PageAnimOpen()
@@ -76,7 +79,7 @@ public class BookBehaviour : Interactuable {
         Canvas = GameObject.FindGameObjectWithTag("Recetas");
         close = GameObject.FindGameObjectWithTag("CerrarRecetas").GetComponent<Button>();
         close.onClick.AddListener(Close);
-        anim = Canvas.GetComponent<Animator>();
+        anim = Canvas.GetComponent<SoundController>();
         //Canvas.SetActive(false);
     }
 	
