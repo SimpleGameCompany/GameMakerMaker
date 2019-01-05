@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 23199781855716010}
   - component: {fileID: 65828344192413562}
   - component: {fileID: 114199371874164774}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Suelo derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2563,7 +2563,8 @@ GameObject:
   - component: {fileID: 82943363795707022}
   - component: {fileID: 114785816578597332}
   - component: {fileID: 114737949675791318}
-  m_Layer: 0
+  - component: {fileID: 95037319663713388}
+  m_Layer: 10
   m_Name: Suelo central
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4122,7 +4123,7 @@ GameObject:
   - component: {fileID: 23685667213577788}
   - component: {fileID: 65076332268971000}
   - component: {fileID: 114777467010889956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Suelo izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5685,7 +5686,7 @@ GameObject:
   - component: {fileID: 114423612682592014}
   - component: {fileID: 114811791507930442}
   - component: {fileID: 114189590650177520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21828,6 +21829,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95037319663713388
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1402471006849560}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48296f14b63a5dd45920404837eef2bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95091716526224520
 Animator:
   serializedVersion: 3
@@ -23144,7 +23163,6 @@ MonoBehaviour:
   cooking: {fileID: 198116346034360304}
   explode: {fileID: 198852577862690876}
   anim: {fileID: 0}
-  textDebug: {fileID: 114780482864186462}
   Type: 1
 --- !u!114 &114082909142430510
 MonoBehaviour:
@@ -26002,7 +26020,6 @@ MonoBehaviour:
   cooking: {fileID: 198003289648453336}
   explode: {fileID: 198567152909968066}
   anim: {fileID: 0}
-  textDebug: {fileID: 114211028505944446}
   Type: 2
 --- !u!114 &114302388821119912
 MonoBehaviour:
@@ -32417,8 +32434,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   soundDealer: {fileID: 0}
-  sounds: []
-  TriggerName: []
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: d1c417f0c2c7d3d46bf07739c271415a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  TriggerName:
+  - Click
 --- !u!114 &114790855512131216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34869,7 +34892,6 @@ MonoBehaviour:
   cooking: {fileID: 198343426678970272}
   explode: {fileID: 198223888632697338}
   anim: {fileID: 0}
-  textDebug: {fileID: 114969688056251012}
   Type: 0
 --- !u!114 &114975369574615568
 MonoBehaviour:
@@ -35094,7 +35116,6 @@ MonoBehaviour:
   cooking: {fileID: 198947362113779842}
   explode: {fileID: 198550726849068338}
   anim: {fileID: 0}
-  textDebug: {fileID: 114553250898481808}
   Type: 2
 --- !u!114 &114999530730418698
 MonoBehaviour:
