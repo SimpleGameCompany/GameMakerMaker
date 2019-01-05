@@ -25,7 +25,7 @@ public class MusicController : MonoBehaviour {
         }
     }
 
-    public float Volume { get { return audioSource.volume; } set { audioSource.volume = Volume; } }
+    public float Volume { get { return audioSource.volume; } set { audioSource.volume = value; } }
     public void Stop()
     {
         audioSource.Stop();
@@ -41,7 +41,31 @@ public class MusicController : MonoBehaviour {
         audioSource.UnPause();
     }
 
+    public void Mute()
+    {
+        Volume = 0;
+    }
+
+    public void UnMute()
+    {
+        Volume = 1;
+    }
+
+
+    public void MuteButton()
+    {
+        if (Volume > 0)
+        {
+            Mute();
+        }
+        else
+        {
+            UnMute();
+        }
+    }
+
     private void Start () {
+        DontDestroyOnLoad(gameObject);
         _instance = this;
         audioSource = GetComponent<AudioSource>();
         clipsID = new Dictionary<string, int>();
@@ -49,6 +73,7 @@ public class MusicController : MonoBehaviour {
         {
             clipsID.Add(clips[i].name, i);
         }
+        Volume = 1;
 	}
 
     public void PlaySong(string clipName)
@@ -57,7 +82,10 @@ public class MusicController : MonoBehaviour {
         if(clipsID.TryGetValue(clipName,out n))
         {
             //TODO Habria que hacer que hiciese el mixer y demas bien.
-            audioSource.PlayOneShot(clips[n]);
+            audioSource.Stop();
+            audioSource.clip = clips[n];
+
+            audioSource.Play();
         }
     }
 

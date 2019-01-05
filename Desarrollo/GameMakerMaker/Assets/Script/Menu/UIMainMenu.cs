@@ -1,6 +1,7 @@
 ﻿using Polyglot;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,14 @@ public class UIMainMenu : MonoBehaviour {
         StartCoroutine(SceneLoad(scene));
     }
 
+
+    [DllImport("__Internal")]
+    private static extern void GoCredits();
+    [DllImport("__Internal")]
+    private static extern void SetSpanish();
+    [DllImport("__Internal")]
+    private static extern void SetEnglish();
+
     IEnumerator SceneLoad(string scene)
     {
         AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(scene);
@@ -27,11 +36,14 @@ public class UIMainMenu : MonoBehaviour {
     public void SelectSpanish()
     {
         Localization.Instance.SelectLanguage(Language.Spanish);
+        SetSpanish();
     }
 
     public void SelectEnglish()
     {
+        
         Localization.Instance.SelectLanguage(Language.English);
+        SetEnglish();
     }
 
     public void ClearData()
@@ -39,5 +51,10 @@ public class UIMainMenu : MonoBehaviour {
         PlayerPrefs.DeleteKey("maxlevel");
         GameManager.Instance.maxlevel = 0;
         PlayerPrefs.DeleteKey(Constantes.PREFERENCES_LEVEL_SCORE);
+    }
+
+    public void Credits()
+    {
+        GoCredits();
     }
 }

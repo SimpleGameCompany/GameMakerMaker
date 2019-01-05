@@ -55,9 +55,9 @@ public class SoundController : MonoBehaviour  {
         if (TriggerName.Contains(name))
         {
             
-            Sound s = Array.Find(sounds, sound => sound.name == name);
+            Sound s = Array.Find(sounds, sound => sound.name == name)  ;
             soundDealer.loop = s.loop;
-            soundDealer.volume = s.volume;
+            soundDealer.volume = s.volume * MusicController.Instance.Volume;
             soundDealer.pitch = s.pitch;
             soundDealer.clip = s.clip;
             soundDealer.Play();
