@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 1247025775063378}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44871, y: 0.44871023, z: 0.44871023}
+  m_LocalScale: {x: 0.35601994, y: 0.35602015, z: 0.35602015}
   m_Children: []
   m_Father: {fileID: 4968478794790666}
   m_RootOrder: 0
@@ -105,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.24, y: 0, z: 0}
+  m_LocalPosition: {x: -7.24, y: 0, z: -15.453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4962460169672436}
@@ -165,7 +165,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.37573, y: 1.5028937, z: 0.2086249}
+  m_Size: {x: 1.91, y: 2.01, z: 0.2086249}
   m_Center: {x: -0.007961214, y: 0, z: -0.10431245}
 --- !u!82 &82121628640190812
 AudioSource:
@@ -282,7 +282,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114062785764481554
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
@@ -349,7 +349,7 @@ MonoBehaviour:
   TriggerName: []
 --- !u!114 &114820404839777552
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560721569369146}
@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e1bdecfb7e05c49807244ad5ad2e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4968478794790666}
   actionIcon: {fileID: 0}
   glow: {fileID: 198128281261113166}
   world: 5
@@ -1050,7 +1051,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 180, y: 0, z: 0}
-    m_Scale: {x: 0.44871, y: 0.44871, z: 0.44871}
+    m_Scale: {x: 0.3560199, y: 0.3560199, z: 0.3560199}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0.05

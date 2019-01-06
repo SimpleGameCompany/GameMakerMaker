@@ -63,6 +63,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1294680183574282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4232056813837184}
+  - component: {fileID: 114729185995048046}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1386232485196596
 GameObject:
   m_ObjectHideFlags: 1
@@ -197,11 +213,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1816956095312804}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.246458, y: -1.0550001, z: -13.265549}
+  m_LocalPosition: {x: -1.51, y: -0.37, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224587745903752422}
   - {fileID: 4110390832630684}
+  - {fileID: 4232056813837184}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -220,6 +237,19 @@ Transform:
   m_Father: {fileID: 4018039729688894}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!4 &4232056813837184
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294680183574282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4018039729688894}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4327395892342750
 Transform:
   m_ObjectHideFlags: 1
@@ -563,6 +593,7 @@ MonoBehaviour:
     - {fileID: 1710131536801858}
     - {fileID: 1480476035281368}
     - {fileID: 1006000816829808}
+    - {fileID: 1294680183574282}
   _assetGuid: bb143d279fa43d5429b13a63a9af08ed
 --- !u!114 &114076616153128476
 MonoBehaviour:
@@ -638,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4232056813837184}
   actionIcon: {fileID: 0}
   progress: {fileID: 114076616153128476}
   world: 4
@@ -812,6 +844,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 77cdd0a6-34e8-4870-b09d-08baaf6fa485
+--- !u!114 &114729185995048046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294680183574282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 4df3c9cf-52fe-4691-842c-efcb0bfb31d0
 --- !u!114 &114952974136109302
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,13 +7,14 @@ using UnityEngine.UI;
 [RequireComponent(typeof(SoundController))]
 public abstract class Interactuable : MonoBehaviour {
 
+    public Transform markPoint;
 
     public Image actionIcon;
 
     public virtual bool PreAction(PlayerController player) {
         player.MarkObject.SetActive(true);
         player.MarkObject.GetComponent<SoundController>().SetTrigger("Click");
-        player.MarkObject.transform.SetParent(transform);
+        player.MarkObject.transform.SetParent(markPoint);
         player.MarkObject.transform.localPosition = Vector3.zero;
         return true;
     }

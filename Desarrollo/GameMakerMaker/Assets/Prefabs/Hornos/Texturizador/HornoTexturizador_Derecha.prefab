@@ -246,6 +246,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1687252995106704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4248453872248988}
+  - component: {fileID: 114687245296020434}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1689023311260914
 GameObject:
   m_ObjectHideFlags: 1
@@ -393,6 +409,19 @@ Transform:
   m_Father: {fileID: 4861319891576474}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!4 &4248453872248988
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1687252995106704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4861319891576474}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4369310254133106
 Transform:
   m_ObjectHideFlags: 1
@@ -511,7 +540,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1080775590213090}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -6.7307835, y: -1.0550001, z: -10.151052}
+  m_LocalPosition: {x: 0, y: -0.66, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224607568433282162}
@@ -520,6 +549,7 @@ Transform:
   - {fileID: 4612920938261110}
   - {fileID: 4214657793798250}
   - {fileID: 4716765626163010}
+  - {fileID: 4248453872248988}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -1022,6 +1052,7 @@ MonoBehaviour:
     - {fileID: 1767867862100176}
     - {fileID: 1784448942999622}
     - {fileID: 1669182770166946}
+    - {fileID: 1687252995106704}
   _assetGuid: 97614efb195904d4d9d04e5baf321abc
 --- !u!114 &114439418399108688
 MonoBehaviour:
@@ -1175,6 +1206,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: ccbf0b6d-9b4b-4930-a981-f0eecd81f12e
+--- !u!114 &114687245296020434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1687252995106704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: d4e815d4-d67e-4afc-83cc-1458f6c2e6c2
 --- !u!114 &114720474408975900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1437,6 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3c67fd05d13ea43a3c3fedd430e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4248453872248988}
   actionIcon: {fileID: 0}
   progress: {fileID: 114753816575740340}
   danger: {fileID: 114250948958478338}

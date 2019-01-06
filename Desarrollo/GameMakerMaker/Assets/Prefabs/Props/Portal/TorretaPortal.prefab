@@ -107,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633571813420150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.94, y: 0, z: 0}
+  m_LocalPosition: {x: -14.94, y: 0, z: -15.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4814088151285066}
@@ -167,7 +167,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.80094194, y: 1.0015256, z: 0.5870929}
+  m_Size: {x: 0.93, y: 1.48, z: 0.5870929}
   m_Center: {x: 0, y: 0.50075436, z: -0.03932087}
 --- !u!95 &95429546734446306
 Animator:
@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e1bdecfb7e05c49807244ad5ad2e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4998908745226782}
   actionIcon: {fileID: 0}
   glow: {fileID: 198706117520417076}
   world: 1
@@ -264,7 +265,7 @@ MonoBehaviour:
   _guid: 2612437883
 --- !u!114 &114492828796085418
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633571813420150}
@@ -300,7 +301,7 @@ MonoBehaviour:
   - {fileID: 65935995145773550}
 --- !u!114 &114905253888928364
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633571813420150}

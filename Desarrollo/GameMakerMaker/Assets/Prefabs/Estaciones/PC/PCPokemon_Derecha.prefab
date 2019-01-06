@@ -111,6 +111,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &1779784427488140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4342357670163204}
+  - component: {fileID: 114216645271628136}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1918487292901170
 GameObject:
   m_ObjectHideFlags: 1
@@ -130,6 +146,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 0
+--- !u!4 &4342357670163204
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779784427488140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4393936678567886}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4393936678567886
 Transform:
   m_ObjectHideFlags: 1
@@ -137,11 +166,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1087454496173744}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -3.247801, y: -1.0550001, z: -13.368914}
+  m_LocalPosition: {x: -3.822, y: -0.516, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4859103532645538}
   - {fileID: 224160990848347578}
+  - {fileID: 4342357670163204}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -405,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4342357670163204}
   actionIcon: {fileID: 0}
   progress: {fileID: 114620133548974380}
   world: 3
@@ -433,6 +464,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: d0584f5a-b616-4470-bff5-8d30fd71bb9e
+--- !u!114 &114216645271628136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779784427488140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: a7eda312-f48c-4504-b403-7280044c9575
 --- !u!114 &114296159101030834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -722,6 +765,7 @@ MonoBehaviour:
     - {fileID: 1087454496173744}
     - {fileID: 1670152977712036}
     - {fileID: 1429866812884994}
+    - {fileID: 1779784427488140}
   _assetGuid: 59a4640c1e8706d4c858297755d3f2b4
 --- !u!114 &114987241211943216
 MonoBehaviour:

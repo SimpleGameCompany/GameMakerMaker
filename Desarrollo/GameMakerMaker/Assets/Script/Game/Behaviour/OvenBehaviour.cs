@@ -164,7 +164,7 @@ public class OvenBehaviour : Interactuable
     IEnumerator Explosion()
     {
         cooking.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-        while (currentExplosionTime/explosionTime < 0.25f)
+        while (currentExplosionTime/explosionTime < 0.5f)
         {
             currentExplosionTime += Time.deltaTime;
             yield return wait;
