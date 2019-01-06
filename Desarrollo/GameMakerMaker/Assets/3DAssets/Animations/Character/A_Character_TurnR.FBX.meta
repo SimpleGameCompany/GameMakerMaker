@@ -59,6 +59,7 @@ ModelImporter:
     400052: toe_r
     7400000: TurnR
     9500000: //RootNode
+    11100000: //RootNode
     11400000: //RootNode
     11400002: //RootNode
     11400004: ankle_l
@@ -100,18 +101,15 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid copied Avatar Rig Configuration:\n\tNo human bone found.
+      Ensure both rig type match\n"
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\n\t'spine1' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'spine4' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'spine5'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importAnimatedCustomProperties: 1
+    importConstraints: 1
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -182,191 +180,7 @@ ModelImporter:
   copyAvatar: 1
   humanDescription:
     serializedVersion: 2
-    human:
-    - boneName: pelvis
-      humanName: Hips
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: leg1_l
-      humanName: LeftUpperLeg
-      limit:
-        min: {x: -60, y: -60, z: -90}
-        max: {x: 60, y: 60, z: 50}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: leg1_r
-      humanName: RightUpperLeg
-      limit:
-        min: {x: -60, y: -60, z: -90}
-        max: {x: 60, y: 60, z: 50}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: leg2_l
-      humanName: LeftLowerLeg
-      limit:
-        min: {x: -90, y: 0, z: -80}
-        max: {x: 90, y: 0, z: 80}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: leg2_r
-      humanName: RightLowerLeg
-      limit:
-        min: {x: -90, y: 0, z: -80}
-        max: {x: 90, y: 0, z: 80}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: ankle_l
-      humanName: LeftFoot
-      limit:
-        min: {x: 0, y: -30, z: -50}
-        max: {x: 0, y: 30, z: 50}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: ankle_r
-      humanName: RightFoot
-      limit:
-        min: {x: 0, y: -30, z: -50}
-        max: {x: 0, y: 30, z: 50}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: spine2
-      humanName: Spine
-      limit:
-        min: {x: -40, y: -40, z: -40}
-        max: {x: 40, y: 40, z: 40}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: spine3
-      humanName: Chest
-      limit:
-        min: {x: -40, y: -40, z: -40}
-        max: {x: 40, y: 40, z: 40}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: neck
-      humanName: Neck
-      limit:
-        min: {x: -40, y: -40, z: -40}
-        max: {x: 40, y: 40, z: 40}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: head
-      humanName: Head
-      limit:
-        min: {x: -40, y: -40, z: -40}
-        max: {x: 40, y: 40, z: 40}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: clavicle_l
-      humanName: LeftShoulder
-      limit:
-        min: {x: 0, y: -15, z: -15}
-        max: {x: 0, y: 15, z: 30}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: clavicle_r
-      humanName: RightShoulder
-      limit:
-        min: {x: 0, y: -15, z: -15}
-        max: {x: 0, y: 15, z: 30}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: arm1_l
-      humanName: LeftUpperArm
-      limit:
-        min: {x: -90, y: -100, z: -60}
-        max: {x: 90, y: 100, z: 100}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: arm1_r
-      humanName: RightUpperArm
-      limit:
-        min: {x: -90, y: -100, z: -60}
-        max: {x: 90, y: 100, z: 100}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: arm2_l
-      humanName: LeftLowerArm
-      limit:
-        min: {x: -90, y: 0, z: -80}
-        max: {x: 90, y: 0, z: 80}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: arm2_r
-      humanName: RightLowerArm
-      limit:
-        min: {x: -90, y: 0, z: -80}
-        max: {x: 90, y: 0, z: 80}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: hand_l
-      humanName: LeftHand
-      limit:
-        min: {x: 0, y: -40, z: -80}
-        max: {x: 0, y: 40, z: 80}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: hand_r
-      humanName: RightHand
-      limit:
-        min: {x: 0, y: -40, z: -80}
-        max: {x: 0, y: 40, z: 80}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: toe_l
-      humanName: LeftToes
-      limit:
-        min: {x: 0, y: 0, z: -50}
-        max: {x: 0, y: 0, z: 50}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: toe_r
-      humanName: RightToes
-      limit:
-        min: {x: 0, y: 0, z: -50}
-        max: {x: 0, y: 0, z: 50}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: face
-      humanName: LeftEye
-      limit:
-        min: {x: 0, y: -20, z: -10}
-        max: {x: 0, y: 20, z: 15}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: chest
-      humanName: UpperChest
-      limit:
-        min: {x: -20, y: -20, z: -20}
-        max: {x: 20, y: 20, z: 20}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
+    human: []
     skeleton:
     - name: Character_Rig(Clone)
       parentName: 
@@ -526,7 +340,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2f97a4bcf9b40c74e8779c2ed49c846c,
     type: 3}
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
