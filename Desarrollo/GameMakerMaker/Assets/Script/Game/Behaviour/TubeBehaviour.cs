@@ -53,6 +53,7 @@ public class TubeBehaviour : Interactuable {
         broken = false;
         wait = new WaitForEndOfFrame();
         anim = GetComponent<SoundController>();
+        progress.fillAmount = 0;
 	}
 
     public override void PostActionAnim(PlayerController player)

@@ -66,6 +66,7 @@ public class OvenBehaviour : Interactuable
         anim = GetComponent<SoundController>();
         Indicator = (from x in GetComponentsInChildren<Transform>() where x.CompareTag(Constantes.TAG_INDICATOR) select x.gameObject).FirstOrDefault();
         Indicator.SetActive(false);
+        progress.fillAmount = 0;
     }
 
 

@@ -93,8 +93,12 @@ public class LevelPageController : MonoBehaviour {
 
         Level [] levels = Resources.LoadAll<Level>(Constantes.LEVEL_GAME_PATH).OrderBy(x => x.levelID).ToArray();
         GameManager.Instance.levels = levels;
-
-        maxPage = (levels.Length / 4) + 1;
+        int count = levels.Length;
+        while (count > 0)
+        {
+            count -= 3;
+            maxPage ++;
+        }
         PageList = new GameObject[maxPage];
         for(int i = 0; i < maxPage; i++)
         {

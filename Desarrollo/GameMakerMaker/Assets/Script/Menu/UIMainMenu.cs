@@ -28,7 +28,13 @@ public class UIMainMenu : MonoBehaviour {
 
     public void Awake()
     {
-        Spanish.interactable = false;
+        if (Localization.Instance.SelectedLanguage == Language.Spanish)
+        {
+            Spanish.interactable = false;
+        }else if(Localization.Instance.SelectedLanguage == Language.English)
+        {
+            English.interactable = false;
+        }
     }
 
     IEnumerator SceneLoad(string scene)
