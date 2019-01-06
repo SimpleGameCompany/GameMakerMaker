@@ -10,6 +10,12 @@ public class OvenBehaviour : Interactuable
     public Image progress;
     public Image danger;
     public GameObject Indicator;
+    public GameObject RigObject;
+    public Renderer render;
+    public Material RenderMaterial;
+    public Material Highlight;
+
+
 
     [Header("Timers")]
     public float brokenTime;
@@ -52,6 +58,8 @@ public class OvenBehaviour : Interactuable
     public OvenType Type;
     void Start()
     {
+        render = RigObject.GetComponentInChildren<Renderer>();
+        RenderMaterial = render.material;
         cooking.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         wait = new WaitForEndOfFrame();
         ovenState = State.Empty;

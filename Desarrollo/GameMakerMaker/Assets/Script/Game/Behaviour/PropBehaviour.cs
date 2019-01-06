@@ -149,6 +149,7 @@ public class PropBehaviour : Interactuable {
             if (e.Indicator.activeSelf)
             {
                 e.Indicator.SetActive(false);
+                e.render.material = e.RenderMaterial;
             }
         }
     }
@@ -162,6 +163,7 @@ public class PropBehaviour : Interactuable {
         foreach(var e in toactivate)
         {
             e.Indicator.SetActive(true);
+            e.render.material = e.Highlight;
         }
 
 

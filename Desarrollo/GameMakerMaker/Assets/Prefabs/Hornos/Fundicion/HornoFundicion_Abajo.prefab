@@ -447,7 +447,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1138700864335302}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -878,6 +878,10 @@ MonoBehaviour:
   progress: {fileID: 114652225471803918}
   danger: {fileID: 114452600263145168}
   Indicator: {fileID: 1138700864335302}
+  RigObject: {fileID: 1913409081099322}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 2100000, guid: e656d1dfb74305046b174bf9caaddd41, type: 2}
   brokenTime: 10
   explosionTime: 14
   TimeToCook: 7
