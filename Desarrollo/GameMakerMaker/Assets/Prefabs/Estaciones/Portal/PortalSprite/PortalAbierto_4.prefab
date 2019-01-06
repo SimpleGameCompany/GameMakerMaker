@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4902803109164288}
   - component: {fileID: 212931695808459398}
-  - component: {fileID: 95754141949414532}
   - component: {fileID: 114311864531858174}
   - component: {fileID: 114730576752841748}
   - component: {fileID: 65678845846791540}
@@ -89,24 +88,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.99, y: 4.98, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95754141949414532
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1097395507884980}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 79be7342038af2b4fbbba9b8e928aa6a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114043700988982150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114311864531858174
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1097395507884980}
@@ -165,7 +146,7 @@ MonoBehaviour:
   _assetGuid: 8f0b42c9a2f11bb4fad0856477859b5a
 --- !u!114 &114730576752841748
 MonoBehaviour:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1097395507884980}

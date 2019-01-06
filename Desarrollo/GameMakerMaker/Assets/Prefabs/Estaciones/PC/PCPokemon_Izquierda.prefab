@@ -112,6 +112,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &1699780921866368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4492446277232068}
+  - component: {fileID: 114964254154451456}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1907462040240638
 GameObject:
   m_ObjectHideFlags: 1
@@ -137,11 +153,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1101059072154450}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.8735001, y: -1.0550001, z: -12.423503}
+  m_LocalPosition: {x: -3.822, y: -0.516, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4195217720371530}
   - {fileID: 224625044945062518}
+  - {fileID: 4492446277232068}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -158,6 +175,19 @@ Transform:
   m_Father: {fileID: 4024365052092304}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
+--- !u!4 &4492446277232068
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699780921866368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4024365052092304}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23060414887022008
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -386,6 +416,7 @@ MonoBehaviour:
     - {fileID: 1101059072154450}
     - {fileID: 1658043165363726}
     - {fileID: 1216361013013456}
+    - {fileID: 1699780921866368}
   _assetGuid: 2d328888ca680b1448c9eb0d080e1ac4
 --- !u!114 &114201423897125166
 MonoBehaviour:
@@ -459,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4492446277232068}
   actionIcon: {fileID: 0}
   progress: {fileID: 114201616754637190}
   world: 3
@@ -750,6 +782,18 @@ MonoBehaviour:
   TriggerName:
   - Break
   - DropObject
+--- !u!114 &114964254154451456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699780921866368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: a3fa35c6-330e-4b82-a35d-ccb0bd7a41b4
 --- !u!222 &222482366923790666
 CanvasRenderer:
   m_ObjectHideFlags: 1

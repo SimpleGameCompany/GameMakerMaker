@@ -11,6 +11,22 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1324802098944256}
   m_IsPrefabAsset: 1
+--- !u!1 &1249773382032430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4237574932861310}
+  - component: {fileID: 114392450888599604}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1324802098944256
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +240,19 @@ Transform:
   m_Father: {fileID: 4370922535732416}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4237574932861310
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249773382032430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4370922535732416}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4370922535732416
 Transform:
   m_ObjectHideFlags: 1
@@ -231,11 +260,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1324802098944256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.888232, y: -1.0550001, z: -13.872215}
+  m_LocalPosition: {x: -4.76, y: -0.15, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224249528959738390}
   - {fileID: 4227387846886240}
+  - {fileID: 4237574932861310}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -495,6 +525,7 @@ MonoBehaviour:
     - {fileID: 1324802098944256}
     - {fileID: 1797920951901116}
     - {fileID: 1684357273667798}
+    - {fileID: 1249773382032430}
   _assetGuid: 9eb326631675bab4dbb9d71573862dce
 --- !u!114 &114197559654322266
 MonoBehaviour:
@@ -656,6 +687,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 2626077785
+--- !u!114 &114392450888599604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249773382032430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 60570f35-a77f-4bfb-8caf-085b8190ffd4
 --- !u!114 &114483739432319018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -853,6 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4237574932861310}
   actionIcon: {fileID: 0}
   progress: {fileID: 114725682028905842}
   world: 2
