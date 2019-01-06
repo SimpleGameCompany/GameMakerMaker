@@ -73,15 +73,23 @@ public class MusicController : MonoBehaviour {
     }
 
     private void Awake () {
-        DontDestroyOnLoad(gameObject);
-        _instance = this;
-        audioSource = GetComponent<AudioSource>();
-        clipsID = new Dictionary<string, int>();
-        for(int i = 0; i<clips.Length; i++)
+        if (Instance != null)
         {
-            clipsID.Add(clips[i].name, i);
+
+            Destroy(gameObject);
         }
-        Volume = 1;
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            _instance = this;
+            audioSource = GetComponent<AudioSource>();
+            clipsID = new Dictionary<string, int>();
+            for (int i = 0; i < clips.Length; i++)
+            {
+                clipsID.Add(clips[i].name, i);
+            }
+            Volume = 1;
+        }
 	}
 
     public void PlaySong(string clipName)
@@ -97,7 +105,24 @@ public class MusicController : MonoBehaviour {
         }
     }
 
-    
+    public void MuteOtherSounds()
+    {
+        foreach (var e in FindObjectsOfType<AudioSource>())
+        {
+            e.mute = true;
+        }
+
+        audioSource.mute = false;
+
+    }
+    public void UnMuteInGame()
+    {
+
+        foreach (var e in FindObjectsOfType<AudioSource>())
+        {
+            e.mute = false;
+        }
+    }
 	
 
 }

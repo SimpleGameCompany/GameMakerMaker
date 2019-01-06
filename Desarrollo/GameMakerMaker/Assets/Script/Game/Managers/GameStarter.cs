@@ -28,6 +28,7 @@ public class GameStarter : MonoBehaviour {
 
     public void Continue()
     {
+        MusicController.Instance.UnMuteInGame();
         GameManager.Instance.ResumeGame();
     }
 
@@ -37,6 +38,7 @@ public class GameStarter : MonoBehaviour {
     }
     public void PauseMenu()
     {
+        MusicController.Instance.MuteOtherSounds();
         GameManager.Instance.PauseGame(0);
     }
 }

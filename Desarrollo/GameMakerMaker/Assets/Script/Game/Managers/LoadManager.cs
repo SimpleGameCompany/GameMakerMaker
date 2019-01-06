@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Polyglot;
+using UnityEngine.Video;
 
 [RequireComponent(typeof(Animator),typeof(RectTransform),typeof(Canvas))]
 [RequireComponent(typeof(CanvasScaler), typeof(GraphicRaycaster))]
@@ -170,6 +171,17 @@ public class LoadManager : MonoBehaviour
         // Play the fade in animation:
         //animator.SetTrigger("Show");
         // Reset the fade out animation flag:
+        VideoPlayer[] p = GetComponentsInChildren<VideoPlayer>();
+        foreach (var v in p)
+        {
+            v.Prepare();
+            v.time = 0;
+            v.Play();
+        }
+        RenderTexture t = p[ Random.Range(0, p.Length)].targetTexture;
+        GetComponentInChildren<RawImage>().texture = t;
+
+
         type = LoadingType.GameManager;
         didTriggerFadeOutAnimation = false;
         isLoading = true;
@@ -190,6 +202,16 @@ public class LoadManager : MonoBehaviour
         // Play the fade in animation:
         //animator.SetTrigger("Show");
         // Reset the fade out animation flag:
+        VideoPlayer[] p = GetComponentsInChildren<VideoPlayer>();
+        foreach (var v in p)
+        {
+            v.Prepare();
+            v.time = 0;
+            v.Play();
+        }
+        RenderTexture t = p[Random.Range(0, p.Length)].targetTexture;
+        GetComponentInChildren<RawImage>().texture = t;
+
         didTriggerFadeOutAnimation = false;
         type = LoadingType.Async;
         isLoading = true;
