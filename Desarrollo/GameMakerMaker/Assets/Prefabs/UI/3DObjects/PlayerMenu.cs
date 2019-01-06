@@ -15,9 +15,14 @@ public class PlayerMenu : MonoBehaviour, IPointerClickHandler {
 
     public PlayerMenu shadow;
 
+    public bool autochange = false;
+
+    System.Random r;
+
     void Start()
     {
         anim = GetComponent<SoundController>();
+        r = new System.Random();
     }
 
     IEnumerator Achoos()
@@ -44,5 +49,24 @@ public class PlayerMenu : MonoBehaviour, IPointerClickHandler {
             anim.SetTrigger(Constantes.ANIMATION_PLAYER_CLICK);
             StartCoroutine(Achoos());
         }
+    }
+
+    public void ChangeIdle()
+    {
+        if (autochange)
+        {
+            float x = r.Next(0, 3);
+            anim.SetFloat("IdlePose", x);
+            if (shadow != null)
+            {
+                shadow.ChangeIdleLate(x);
+            }
+        }
+
+    }
+
+    public void ChangeIdleLate(float x)
+    {
+        anim.SetFloat("IdlePose", x);
     }
 }

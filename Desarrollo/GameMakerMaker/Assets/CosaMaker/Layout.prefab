@@ -4321,15 +4321,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3c67fd05d13ea43a3c3fedd430e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114950237649446312}
   danger: {fileID: 0}
+  Indicator: {fileID: 0}
+  RigObject: {fileID: 0}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 0}
   brokenTime: 3
   explosionTime: 0
-  anim: {fileID: 0}
-  textDebug: {fileID: 114241317522142796}
   TimeToCook: 0
-  Indicator: {fileID: 0}
+  cooking: {fileID: 0}
+  explode: {fileID: 0}
+  anim: {fileID: 0}
   Type: 2
 --- !u!114 &114043651702504210
 MonoBehaviour:
@@ -4363,6 +4369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4880419807834596}
   actionIcon: {fileID: 0}
 --- !u!114 &114046966142391958
 MonoBehaviour:
@@ -4496,6 +4503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114803796004240758}
   world: 0
@@ -4702,15 +4710,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3c67fd05d13ea43a3c3fedd430e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114384669904703360}
   danger: {fileID: 0}
+  Indicator: {fileID: 0}
+  RigObject: {fileID: 0}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 0}
   brokenTime: 3
   explosionTime: 0
-  anim: {fileID: 0}
-  textDebug: {fileID: 114632906232020624}
   TimeToCook: 0
-  Indicator: {fileID: 0}
+  cooking: {fileID: 0}
+  explode: {fileID: 0}
+  anim: {fileID: 0}
   Type: 0
 --- !u!114 &114176672287638734
 MonoBehaviour:
@@ -4867,6 +4881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114216933409369024
 MonoBehaviour:
@@ -5103,6 +5118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114265873944562484
 MonoBehaviour:
@@ -5143,6 +5159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114275383076054918
 MonoBehaviour:
@@ -5231,6 +5248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114332762575272348
 MonoBehaviour:
@@ -5568,6 +5586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4296063803694880}
   actionIcon: {fileID: 0}
 --- !u!114 &114383928298311522
 MonoBehaviour:
@@ -5712,6 +5731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4398760604479684}
   actionIcon: {fileID: 0}
 --- !u!114 &114425796514849098
 MonoBehaviour:
@@ -6446,6 +6466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4509116421747346}
   actionIcon: {fileID: 0}
 --- !u!114 &114526084949976118
 MonoBehaviour:
@@ -6644,6 +6665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114495993813910858}
   world: 2
@@ -6683,6 +6705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7893ab6f043094481530528a7be51b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114611344069011118
 MonoBehaviour:
@@ -6853,6 +6876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4171797496601108}
   actionIcon: {fileID: 0}
 --- !u!114 &114619551726679278
 MonoBehaviour:
@@ -7273,6 +7297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4742941126405352}
   actionIcon: {fileID: 0}
 --- !u!114 &114655558877063528
 MonoBehaviour:
@@ -7349,15 +7374,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3c67fd05d13ea43a3c3fedd430e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114752220580010954}
   danger: {fileID: 0}
+  Indicator: {fileID: 0}
+  RigObject: {fileID: 0}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 0}
   brokenTime: 3
   explosionTime: 0
-  anim: {fileID: 0}
-  textDebug: {fileID: 114778869539326536}
   TimeToCook: 0
-  Indicator: {fileID: 0}
+  cooking: {fileID: 0}
+  explode: {fileID: 0}
+  anim: {fileID: 0}
   Type: 1
 --- !u!114 &114688370412317172
 MonoBehaviour:
@@ -7672,6 +7703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4430960897287170}
   actionIcon: {fileID: 0}
 --- !u!114 &114751422500004960
 MonoBehaviour:
@@ -8165,6 +8197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114868658932392286
 MonoBehaviour:
@@ -8544,6 +8577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4803746054743390}
   actionIcon: {fileID: 0}
 --- !u!114 &114985407327058532
 MonoBehaviour:

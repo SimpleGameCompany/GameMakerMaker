@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour {
     public Vector3 click;
     private PropBehaviour prop;
     [HideInInspector]
+
+    System.Random r;
+
     public PropBehaviour PickedObjet { get { return prop; } set
         {
            if(prop != null)
@@ -53,7 +56,7 @@ public class PlayerController : MonoBehaviour {
         MarkObject.SetActive(false);
         MarkObjectFloor = Instantiate(MarkObjectFloor, null);
         MarkObjectFloor.SetActive(false);
-
+        r = new System.Random();
     }
 	
 	// Update is called once per frame
@@ -281,5 +284,12 @@ public class PlayerController : MonoBehaviour {
     public void EndInteraction()
     {
         interacting = false;
+    }
+
+    public void ChangeIdle()
+    {
+        float x = r.Next(0,3);
+        anim.SetFloat("IdlePose", x);
+        
     }
 }

@@ -67,6 +67,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1885549313710038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4972935084380958}
+  - component: {fileID: 114185571462854492}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1987998720118706
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,15 +146,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987998720118706}
   m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.52211976, y: 2.0000002, z: 4.2060947}
+  m_LocalPosition: {x: 0, y: 1, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4696145400864942}
   - {fileID: 4796779623656822}
   - {fileID: 4915865701573198}
+  - {fileID: 4972935084380958}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+--- !u!4 &4972935084380958
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885549313710038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4949519028038142}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23579351131809022
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -247,6 +277,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 12cba012-0ffc-4f8c-b2bf-217d0ffc1ad6
+--- !u!114 &114185571462854492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885549313710038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 05ecc8a2-3de3-4e05-a4ce-4bd96b10fcf7
 --- !u!114 &114270344241482232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,6 +335,7 @@ MonoBehaviour:
     - {fileID: 1042993958607676}
     - {fileID: 1531074782322172}
     - {fileID: 1543267195840714}
+    - {fileID: 1885549313710038}
   _assetGuid: 66a7d0045bc6098418e94395514bd50c
 --- !u!114 &114580658859062690
 MonoBehaviour:
@@ -340,6 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8c40dafde908a4a874259f5ae31061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 4972935084380958}
   actionIcon: {fileID: 0}
   Canvas: {fileID: 0}
   pages: []

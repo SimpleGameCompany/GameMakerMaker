@@ -4022,6 +4022,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1798718960256704
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4320825553625524}
+  - component: {fileID: 114072540741996430}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1800293355105130
 GameObject:
   m_ObjectHideFlags: 1
@@ -5253,6 +5269,7 @@ Transform:
   - {fileID: 4255836992664486}
   - {fileID: 4008297342257742}
   - {fileID: 4121777559145816}
+  - {fileID: 4320825553625524}
   m_Father: {fileID: 4515762272192328}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
@@ -6232,6 +6249,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4227023132732146}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4320825553625524
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798718960256704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4016334559152538}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4326463966830884
 Transform:
@@ -14984,7 +15014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4927180635660754}
   actionIcon: {fileID: 0}
 --- !u!114 &114069864630930564
 MonoBehaviour:
@@ -15010,6 +15040,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 89f9446f-60ef-4d58-9c7f-c58471f40914
+--- !u!114 &114072540741996430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798718960256704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 8c020fe8-b3e8-4c25-b6c9-422e036c43c6
 --- !u!114 &114074752309639114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15124,7 +15166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4535248017254360}
   actionIcon: {fileID: 0}
 --- !u!114 &114094126475538022
 MonoBehaviour:
@@ -15485,7 +15527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4790745062283402}
   actionIcon: {fileID: 0}
 --- !u!114 &114126078630580150
 MonoBehaviour:
@@ -15592,7 +15634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4823607138401492}
   actionIcon: {fileID: 0}
 --- !u!114 &114141735412643416
 MonoBehaviour:
@@ -15960,7 +16002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4217879848224482}
   actionIcon: {fileID: 0}
 --- !u!114 &114185303385244294
 MonoBehaviour:
@@ -16143,7 +16185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4704381410835712}
   actionIcon: {fileID: 0}
 --- !u!114 &114204221307554806
 MonoBehaviour:
@@ -16890,7 +16932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4723554871266614}
   actionIcon: {fileID: 0}
 --- !u!114 &114279248457944034
 MonoBehaviour:
@@ -18567,7 +18609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4502070455450104}
   actionIcon: {fileID: 0}
 --- !u!114 &114431347799296686
 MonoBehaviour:
@@ -19044,7 +19086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4409288147212140}
   actionIcon: {fileID: 0}
 --- !u!114 &114473681546866952
 MonoBehaviour:
@@ -21134,7 +21176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4580434284180892}
   actionIcon: {fileID: 0}
 --- !u!114 &114721540215179396
 MonoBehaviour:
@@ -21424,7 +21466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4883192431628242}
   actionIcon: {fileID: 0}
 --- !u!114 &114754033334919520
 MonoBehaviour:
@@ -22978,7 +23020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
-  MarkObject: {fileID: 1343445103030048, guid: 91bce32957fd92b44b4940f97ac9a474, type: 2}
+  MarkObject: {fileID: 1564221277138574, guid: 6da882b523ba47149aba04477bc26864, type: 2}
   MarkObjectFloor: {fileID: 1255812393175296, guid: cb251d9ed444ae144a9cf8c79bc19bed,
     type: 2}
   click: {x: 0, y: 0, z: 0}
@@ -23199,6 +23241,7 @@ MonoBehaviour:
     - {fileID: 1161994186749988}
     - {fileID: 1664767718465766}
     - {fileID: 1490045162766624}
+    - {fileID: 1798718960256704}
   _assetGuid: 3f8c7bbbaa840044bb337bdac9d0c354
 --- !u!114 &114920122573602738
 MonoBehaviour:
@@ -23211,7 +23254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8c40dafde908a4a874259f5ae31061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4320825553625524}
   actionIcon: {fileID: 0}
   Canvas: {fileID: 0}
   pages: []
