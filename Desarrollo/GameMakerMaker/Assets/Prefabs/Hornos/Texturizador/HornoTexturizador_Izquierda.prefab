@@ -1439,10 +1439,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3c67fd05d13ea43a3c3fedd430e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114753816575740340}
   danger: {fileID: 114250948958478338}
   Indicator: {fileID: 1278238609017112}
+  RigObject: {fileID: 0}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 0}
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 7.5

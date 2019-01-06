@@ -188,22 +188,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1764284782956348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4820492659657250}
-  - component: {fileID: 114147395872689528}
-  m_Layer: 0
-  m_Name: MarkPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1918975155100156
 GameObject:
   m_ObjectHideFlags: 1
@@ -266,7 +250,6 @@ Transform:
   m_Children:
   - {fileID: 224261628634389478}
   - {fileID: 4288005418838424}
-  - {fileID: 4820492659657250}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -337,19 +320,6 @@ Transform:
   m_Father: {fileID: 4927943732184734}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 1.8856282e-13, y: 1.3203306e-13, z: 34.99999}
---- !u!4 &4820492659657250
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764284782956348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4286914311802312}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4927943732184734
 Transform:
   m_ObjectHideFlags: 1
@@ -404,7 +374,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 3.5026736, z: 1.6527724}
+  m_Size: {x: 0.9619746, y: 3.5026736, z: 1.6527724}
   m_Center: {x: 0, y: 0.7379916, z: 0.3263862}
 --- !u!82 &82965497710940490
 AudioSource:
@@ -662,18 +632,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114147395872689528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764284782956348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _guid: fecfbff2-20ca-4c8d-a846-a52586ae5550
 --- !u!114 &114155051146746388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -709,7 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4820492659657250}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114358269748045626}
   world: 0
@@ -789,7 +747,7 @@ MonoBehaviour:
     - {fileID: 1943368580411140}
     - {fileID: 1051175623559330}
     - {fileID: 1047483328011294}
-    - {fileID: 1764284782956348}
+    - {fileID: 0}
   _assetGuid: 230e11decb1cb5445a624ee75ed96f29
 --- !u!114 &114567387561814378
 MonoBehaviour:
@@ -1137,7 +1095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 50.000004, y: -90.00001, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.19, y: 3.0149999}
+  m_AnchoredPosition: {x: -0.26999974, y: 2.9299998}
   m_SizeDelta: {x: 5, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224334836055193966

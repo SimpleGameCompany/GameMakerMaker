@@ -81,22 +81,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1346107815564630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4756662111553802}
-  - component: {fileID: 114708209681452076}
-  m_Layer: 0
-  m_Name: MarkPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1454840291402698
 GameObject:
   m_ObjectHideFlags: 1
@@ -263,7 +247,6 @@ Transform:
   m_Children:
   - {fileID: 224249528959738390}
   - {fileID: 4628526289101018}
-  - {fileID: 4756662111553802}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -323,19 +306,6 @@ Transform:
   - {fileID: 4605278389411168}
   m_Father: {fileID: 4370922535732416}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4756662111553802
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1346107815564630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4370922535732416}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &82446658204053464
 AudioSource:
@@ -570,7 +540,7 @@ MonoBehaviour:
     - {fileID: 1324802098944256}
     - {fileID: 1797920951901116}
     - {fileID: 1539593880749786}
-    - {fileID: 1346107815564630}
+    - {fileID: 0}
   _assetGuid: 18281755927e9a34fb150145e378302a
 --- !u!114 &114197559654322266
 MonoBehaviour:
@@ -816,18 +786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: ccbf0b6d-9b4b-4930-a981-f0eecd81f12e
---- !u!114 &114708209681452076
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1346107815564630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _guid: bea8f6f1-d24b-487a-9ee1-cebab5e15416
 --- !u!114 &114725682028905842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -905,7 +863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c134b36e72b7c4288035b18be56768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4756662111553802}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114725682028905842}
   world: 2
