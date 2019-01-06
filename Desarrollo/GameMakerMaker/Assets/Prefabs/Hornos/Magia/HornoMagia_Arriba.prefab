@@ -191,22 +191,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1574489361765980
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4817380590579172}
-  - component: {fileID: 114093060673063064}
-  m_Layer: 0
-  m_Name: MarkPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1684444715907148
 GameObject:
   m_ObjectHideFlags: 1
@@ -359,7 +343,6 @@ Transform:
   - {fileID: 4662946309723604}
   - {fileID: 4996267622166736}
   - {fileID: 4912828291071240}
-  - {fileID: 4817380590579172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -446,19 +429,6 @@ Transform:
   m_Father: {fileID: 4381316722359842}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4817380590579172
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574489361765980}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4381316722359842}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4830740425857084
 Transform:
   m_ObjectHideFlags: 1
@@ -517,7 +487,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1926445487374650}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -748,18 +718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: a2636a14-ee34-4b75-b7f0-5a17b557ba37
---- !u!114 &114093060673063064
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574489361765980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _guid: b7967ac9-0704-449d-b497-f405b52a9d26
 --- !u!114 &114100816653308748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -966,15 +924,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3c67fd05d13ea43a3c3fedd430e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4817380590579172}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   progress: {fileID: 114977961424503394}
   danger: {fileID: 114334628631358494}
   Indicator: {fileID: 1926445487374650}
-  RigObject: {fileID: 1120568296624812}
+  RigObject: {fileID: 0}
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
-  Highlight: {fileID: 2100000, guid: 05454ce590d5aa74f95d05f8cff73a9e, type: 2}
+  Highlight: {fileID: 0}
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 9
@@ -1079,7 +1037,7 @@ MonoBehaviour:
     - {fileID: 1036312373707376}
     - {fileID: 1695892935123006}
     - {fileID: 1562527237531448}
-    - {fileID: 1574489361765980}
+    - {fileID: 0}
   _assetGuid: 5d3c0dc0f86128d4c81b34b69f966c19
 --- !u!114 &114723348273622654
 MonoBehaviour:
