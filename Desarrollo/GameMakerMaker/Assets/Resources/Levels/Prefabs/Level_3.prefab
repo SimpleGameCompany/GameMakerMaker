@@ -12664,7 +12664,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691431959791752}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13609,7 +13609,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891262559824090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13819,7 +13819,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1854109245098226}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15464,7 +15464,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1154561143252754}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -19990,6 +19990,10 @@ MonoBehaviour:
   progress: {fileID: 114412259045831796}
   danger: {fileID: 114419195381848368}
   Indicator: {fileID: 1854109245098226}
+  RigObject: {fileID: 1531467222499274}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
   brokenTime: 6
   explosionTime: 12
   TimeToCook: 3
@@ -22906,6 +22910,10 @@ MonoBehaviour:
   progress: {fileID: 114560361240181492}
   danger: {fileID: 114721746764208196}
   Indicator: {fileID: 1154561143252754}
+  RigObject: {fileID: 1103293599042200}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 2100000, guid: e656d1dfb74305046b174bf9caaddd41, type: 2}
   brokenTime: 10
   explosionTime: 14
   TimeToCook: 7
@@ -30618,6 +30626,10 @@ MonoBehaviour:
   progress: {fileID: 114533756975545466}
   danger: {fileID: 114850141535307610}
   Indicator: {fileID: 1891262559824090}
+  RigObject: {fileID: 1884564499618750}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 2100000, guid: 05454ce590d5aa74f95d05f8cff73a9e, type: 2}
   brokenTime: 10
   explosionTime: 12
   TimeToCook: 3
@@ -31420,6 +31432,10 @@ MonoBehaviour:
   progress: {fileID: 114134575587551762}
   danger: {fileID: 114321513448902886}
   Indicator: {fileID: 1691431959791752}
+  RigObject: {fileID: 1355737911666618}
+  render: {fileID: 0}
+  RenderMaterial: {fileID: 0}
+  Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
   brokenTime: 6
   explosionTime: 12
   TimeToCook: 3
