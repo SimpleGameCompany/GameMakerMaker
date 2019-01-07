@@ -13,9 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelID: 7
   LevelName: Level_8
-  Scenario: {fileID: 1522562547773196, guid: ee90e992ac70d824bb331f0226f73301, type: 2}
+  Scenario: {fileID: 1406142702045562, guid: ee90e992ac70d824bb331f0226f73301, type: 2}
   velocity: 0.125
   ratio: 12
+  minRatio: 0
+  maxRatio: 0
   Props:
   - {fileID: 114178957813367286, guid: ab9f055f5baaf12478f3796602f261f1, type: 2}
   - {fileID: 114415007560323278, guid: 76bb2823a84de69439d21bb6531bcbdd, type: 2}
@@ -275,4 +277,4 @@ MonoBehaviour:
     - {fileID: 1558810028558620, guid: 2bb43f61ef91d4d45bda2382b7796149, type: 2}
   floor: {fileID: 1622648823092482, guid: d1825e78e633d9c4e9097440ebbf3d59, type: 2}
   FloorMaterial: {fileID: 0}
-  ambientColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 0}
+  ambientColor: {r: 0.4862745, g: 0.5411765, b: 0.5058824, a: 0}
