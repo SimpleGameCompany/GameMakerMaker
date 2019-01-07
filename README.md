@@ -545,7 +545,7 @@ Dificultad de las sagas: *Mario = Pacman < Minecraft = Portal < Pokemon < Zelda*
 
 *Nivel 3*: Pacman, Mario, Minecraft (20).
 
-*Nivel 4*: Minecraft, Portal (20).
+*Nivel 4*: Pacman, Minecraft, Portal (20).
 
 *Nivel 5*: Pacman, Portal, Pokémon (25).
 
@@ -665,8 +665,8 @@ Las notificaciones serán las siguientes:
 - Cuando el horno está cocinando algo, aparecerá un icono circular que mostrará el tiempo restante para cocinar o trabajar el objeto en su interior. Avanzará de forma horaria hasta completarse.
 - Cuando el horno se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
 
-**Tubería**:
-Cuando la tubería se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
+**Tubería**: 
+- Cuando la tubería se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
 
 
 
