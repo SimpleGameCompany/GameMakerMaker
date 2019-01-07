@@ -545,7 +545,7 @@ Dificultad de las sagas: *Mario = Pacman < Minecraft = Portal < Pokemon < Zelda*
 
 *Nivel 3*: Pacman, Mario, Minecraft (20).
 
-*Nivel 4*: Minecraft, Portal (20).
+*Nivel 4*: Pacman, Minecraft, Portal (20).
 
 *Nivel 5*: Pacman, Portal, Pokémon (25).
 
