@@ -16,8 +16,8 @@ MonoBehaviour:
   Scenario: {fileID: 1406142702045562, guid: ee90e992ac70d824bb331f0226f73301, type: 2}
   velocity: 0.125
   ratio: 12
-  minRatio: 0
-  maxRatio: 0
+  minRatio: 12
+  maxRatio: 16
   Props:
   - {fileID: 114178957813367286, guid: ab9f055f5baaf12478f3796602f261f1, type: 2}
   - {fileID: 114415007560323278, guid: 76bb2823a84de69439d21bb6531bcbdd, type: 2}
@@ -33,7 +33,7 @@ MonoBehaviour:
   - {fileID: 114432570524220384, guid: f3382ef2cd8e9b946b332c490f7a7fad, type: 2}
   MaxProps: 030000000300000003000000010000000300000002000000020000000300000003000000030000000300000003000000
   winCount: 50
-  MaxScore: 0
+  MaxScore: 10000
   Layout:
   - list:
     - {fileID: 1427621842303102, guid: 79fbf5cc83e548e409840954223c39bc, type: 2}

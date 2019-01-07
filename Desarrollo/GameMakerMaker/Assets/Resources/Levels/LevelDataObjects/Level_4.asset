@@ -13,11 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelID: 3
   LevelName: Level_4
-  Scenario: {fileID: 1045716932567490, guid: aeb5d035983d721408e194d049094333, type: 2}
+  Scenario: {fileID: 1751674832729106, guid: aeb5d035983d721408e194d049094333, type: 2}
   velocity: 0.22
   ratio: 10
-  minRatio: 0
-  maxRatio: 0
+  minRatio: 10
+  maxRatio: 14
   Props:
   - {fileID: 114338480776357180, guid: ce84f80d1690a3c4b94aec62db344a3b, type: 2}
   - {fileID: 114943029330661672, guid: 529047134003ba34b8866be680025e39, type: 2}
@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 114410257893941718, guid: beb9bea6a6de2c2439fad5d1d93de0a6, type: 2}
   MaxProps: 020000000200000003000000020000000100000002000000
   winCount: 20
-  MaxScore: 0
+  MaxScore: 4200
   Layout:
   - list:
     - {fileID: 1517928775750514, guid: 4985edff86370694ebb9e5b42bd28f06, type: 2}
@@ -159,7 +159,7 @@ MonoBehaviour:
     - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
     - {fileID: 1939313062504444, guid: 15dfc07cf02c1b44d8e7b6844b850e94, type: 2}
     - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
-    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 1324802098944256, guid: 3c282fef8cdc53f4483b1f0a6aa2e7f7, type: 2}
     - {fileID: 1099910976434034, guid: 060d13cfaef9521498524376c22d6640, type: 2}
   floor: {fileID: 1622648823092482, guid: d1825e78e633d9c4e9097440ebbf3d59, type: 2}
   FloorMaterial: {fileID: 0}
