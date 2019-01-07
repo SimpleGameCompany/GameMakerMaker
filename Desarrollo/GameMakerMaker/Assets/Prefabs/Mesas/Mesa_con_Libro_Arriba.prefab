@@ -49,6 +49,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1700259234575718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4308427780779650}
+  - component: {fileID: 114164255743348868}
+  m_Layer: 0
+  m_Name: MarkPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1752298844736192
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,6 +100,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4308427780779650
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700259234575718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4949519028038142}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4513758497067134
 Transform:
   m_ObjectHideFlags: 1
@@ -136,6 +165,7 @@ Transform:
   - {fileID: 4582776588553802}
   - {fileID: 4696145400864942}
   - {fileID: 4513758497067134}
+  - {fileID: 4308427780779650}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
@@ -258,10 +288,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8c40dafde908a4a874259f5ae31061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
+  markPoint: {fileID: 4308427780779650}
   actionIcon: {fileID: 0}
   Canvas: {fileID: 0}
   pages: []
+--- !u!114 &114164255743348868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700259234575718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 8c020fe8-b3e8-4c25-b6c9-422e036c43c6
 --- !u!114 &114270344241482232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,6 +363,7 @@ MonoBehaviour:
     - {fileID: 1752298844736192}
     - {fileID: 1666341777292058}
     - {fileID: 0}
+    - {fileID: 1700259234575718}
   _assetGuid: 3f8c7bbbaa840044bb337bdac9d0c354
 --- !u!114 &114580658859062690
 MonoBehaviour:
