@@ -150,6 +150,7 @@ public class PropBehaviour : Interactuable {
             {
                 e.Indicator.SetActive(false);
                 e.render.material = e.RenderMaterial;
+                e.anim.anim.SetFloat(Constantes.ANIMATION_OVEN_MARKED,0);
             }
         }
     }
@@ -164,6 +165,7 @@ public class PropBehaviour : Interactuable {
         {
             e.Indicator.SetActive(true);
             e.render.material = e.Highlight;
+            e.anim.anim.SetFloat(Constantes.ANIMATION_OVEN_MARKED, 1);
         }
 
 

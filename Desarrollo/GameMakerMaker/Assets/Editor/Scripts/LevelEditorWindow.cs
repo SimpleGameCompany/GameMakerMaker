@@ -17,7 +17,9 @@ public class LevelEditorWindow : EditorWindow {
     static bool Pick = false;
     static int[] MaxProps;
     static Color AmbientColor;
-   
+    static float minratio = 10;
+    static float maxratio = 14;
+    static float maxScore;
     [SerializeField]
     PropBehaviour[] Props;
     [SerializeField]
@@ -58,7 +60,9 @@ public class LevelEditorWindow : EditorWindow {
         EditorGUILayout.PropertyField(o.FindProperty("countProps"), true);
         velocity = EditorGUILayout.FloatField("Velocity", velocity);
         ratio = EditorGUILayout.FloatField("Ratio", ratio);
-
+        minratio = EditorGUILayout.FloatField("MinRatio", minratio);
+        maxratio = EditorGUILayout.FloatField("MaxRatio", maxratio);
+        maxScore = EditorGUILayout.FloatField("MaxPoints", maxScore);
         winCount = EditorGUILayout.IntField("Props to Win", winCount);
         GUIContent n = new GUIContent("AmbienColor");
         AmbientColor =  EditorGUILayout.ColorField(n, AmbientColor,true,false,true);
@@ -109,6 +113,9 @@ public class LevelEditorWindow : EditorWindow {
                 ratio = l.ratio;
                 MaxProps = l.MaxProps;
                 AmbientColor = l.ambientColor;
+                maxScore = l.MaxScore;
+                minratio = l.minRatio;
+                maxratio = l.maxRatio;
                 PrefabUtility.InstantiatePrefab(l.Scenario);
                 Pick = false;
                 g.Load(l);
@@ -139,8 +146,13 @@ public class LevelEditorWindow : EditorWindow {
         level.Props = Props;
         level.MaxProps = MaxProps;
         level.ambientColor = AmbientColor;
+        level.maxRatio = maxratio;
+        level.minRatio = minratio;
+        level.MaxScore = maxScore;
         level = g.Save(level);
         
+
+
         string path = Constantes.LEVEL_ASSET_PATH +levelName+ ".asset";
         AssetDatabase.CreateAsset(level, path);
         AssetDatabase.SaveAssets();

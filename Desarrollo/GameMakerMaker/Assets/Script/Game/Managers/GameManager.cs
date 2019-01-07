@@ -214,17 +214,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator GenerateProp(WaitForSeconds waiter)
+    IEnumerator GenerateProp(WaitForSeconds waiter, float minrange ,float maxrange)
     {
         System.Random r = new System.Random();
         WaitUntil until = new WaitUntil(() => { return totalProps.Count > 0; });
+        float range = maxrange - minrange;
         while (playing)
         {
+            if (range > 0)
+            {
+                float random = (float)r.NextDouble();
+                random = (random * range) + maxrange;
+                waiter = new WaitForSeconds(random);
+            }
             yield return until;
             int i = r.Next(0, totalProps.Count);
             GameObject prop = totalProps[i];
             totalProps.RemoveAt(i);
-            //prop.transform.rotation = Quaternion.Euler(0, 0, 0);
             prop.SetActive(true);
             prop.GetComponent<PropBehaviour>().grab = true;
             prop.GetComponent<PropBehaviour>().glow.Stop(true,ParticleSystemStopBehavior.StopEmitting);
@@ -233,7 +239,6 @@ public class GameManager : MonoBehaviour
             prop.transform.position = PositionStart;
             NavMeshAgent agent = prop.GetComponent<NavMeshAgent>();
             agent.enabled = true;
-            //agent.SetDestination(EndPosition);
             yield return waiter;
             
         }
@@ -245,7 +250,7 @@ public class GameManager : MonoBehaviour
         Recipies.transform.parent.parent.gameObject.SetActive(false);
         WaitForSeconds seconds = new WaitForSeconds(loadedLevel.ratio);
         playing = true;
-        StartCoroutine(GenerateProp(seconds));
+        StartCoroutine(GenerateProp(seconds,loadedLevel.minRatio,loadedLevel.maxRatio));
     }
 
 

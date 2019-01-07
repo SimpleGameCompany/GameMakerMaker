@@ -19,6 +19,10 @@ public class LevelPageController : MonoBehaviour {
     public Sprite emptyStar;
     private int page;
     private int maxPage;
+    public Sprite[] LockLevel;
+    public Sprite[] UnLockLevel;
+
+
     public int ActualPage { get { return page; }
         set {
             
@@ -61,8 +65,10 @@ public class LevelPageController : MonoBehaviour {
                     stars[1].sprite = emptyStar;
                     stars[2].sprite = emptyStar;
                     b1.GetComponent<Button>().interactable = false;
+                    b1.GetComponent<Image>().sprite = LockLevel[b1.level.levelID];
                     if (index <= maxlevel)
                     {
+                        b1.GetComponent<Image>().sprite = UnLockLevel[b1.level.levelID];
                         b1.GetComponent<Button>().interactable = true;
                     }
                     if (levelScore.Count > 0)

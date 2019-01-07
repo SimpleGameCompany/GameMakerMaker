@@ -9,6 +9,8 @@ public class Level : ScriptableObject  {
     public GameObject Scenario;
     public float velocity;
     public float ratio;
+    public float minRatio;
+    public float maxRatio;
     public PropBehaviour[] Props;
     public int[] MaxProps;
     public int winCount;

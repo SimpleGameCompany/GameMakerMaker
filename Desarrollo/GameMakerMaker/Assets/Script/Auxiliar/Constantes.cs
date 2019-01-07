@@ -66,6 +66,8 @@ public static class Constantes
 
     public const string TAG_RECIPIES_CONTAINER = "RecetasContainer";
 
+    public const string ANIMATION_OVEN_MARKED = "Highlight";
+
 
 
 
