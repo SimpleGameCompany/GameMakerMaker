@@ -32,22 +32,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1238110492983952
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4659086577635030}
-  - component: {fileID: 114031633347688644}
-  m_Layer: 0
-  m_Name: MarkPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1453090660939662
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,19 +85,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4659086577635030
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1238110492983952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4949519028038142}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4696145400864942
 Transform:
   m_ObjectHideFlags: 1
@@ -153,7 +124,6 @@ Transform:
   - {fileID: 4990227791183776}
   - {fileID: 4696145400864942}
   - {fileID: 4856784148770644}
-  - {fileID: 4659086577635030}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,18 +236,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: -0.5, z: 0.18}
---- !u!114 &114031633347688644
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1238110492983952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _guid: 83d1000c-f2f9-4776-a63f-f2bbc7675d7a
 --- !u!114 &114270344241482232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8c40dafde908a4a874259f5ae31061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4659086577635030}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
   Canvas: {fileID: 0}
   pages: []
@@ -339,7 +297,7 @@ MonoBehaviour:
     - {fileID: 1042993958607676}
     - {fileID: 1453090660939662}
     - {fileID: 1693483472617100}
-    - {fileID: 1238110492983952}
+    - {fileID: 0}
   _assetGuid: 3eee294f4f81c2046ac081042aa23aec
 --- !u!114 &114580658859062690
 MonoBehaviour:
