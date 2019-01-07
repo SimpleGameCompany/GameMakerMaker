@@ -1749,7 +1749,7 @@ Prefab:
     - target: {fileID: 114615808857895994, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca,
         type: 2}
       propertyPath: offsetsY.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4463512333305514, guid: 041c1ad3c1ef34544a1d36e5b99dc1ca, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3995,6 +3995,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef028b7d26b708478adde7acbfd15fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mats_Funcionamiento:
+  - {fileID: 2100000, guid: 65eb21734d4de0c4584b868753b887df, type: 2}
+  - {fileID: 2100000, guid: a307a0dafa4b55644a9512a8d75c5996, type: 2}
+  - {fileID: 2100000, guid: b45dc920e49b2d9458ad8571e5d2cbd9, type: 2}
+  - {fileID: 2100000, guid: 3f80b171b8654d746accbe348a2d9033, type: 2}
+  - {fileID: 2100000, guid: 545b181b8772d664b856b2cde6909687, type: 2}
+  - {fileID: 2100000, guid: cc627934295948d4bbbb61588f0c1553, type: 2}
+  Mat_Apagado: {fileID: 2100000, guid: 3471b1e9422218e409a409f12897082b, type: 2}
 --- !u!23 &1606429021
 MeshRenderer:
   m_ObjectHideFlags: 0
