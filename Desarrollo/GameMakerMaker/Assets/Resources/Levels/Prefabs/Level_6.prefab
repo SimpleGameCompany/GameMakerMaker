@@ -7223,7 +7223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1575267841669822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4468075153754954}
@@ -20784,7 +20784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4455727900228040}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114003493023794744
 MonoBehaviour:
@@ -21966,7 +21966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4748058682058332}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114092515499877288
 MonoBehaviour:
@@ -23041,7 +23041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4915665918736104}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114169237387440746
 MonoBehaviour:
@@ -30934,7 +30934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4598309354177714}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114729373011332164
 MonoBehaviour:
@@ -31094,7 +31094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4882092149001164}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114742617402593710
 MonoBehaviour:
@@ -32651,7 +32651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554d4f54ddf1f2147aff4497443f3ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markPoint: {fileID: 4897143482429794}
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114858234031515028
 MonoBehaviour:
@@ -81625,7 +81625,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
   EmissionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
