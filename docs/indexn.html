@@ -1,0 +1,424 @@
+﻿<html>
+        <head>
+                <link rel="icon" href="assets/img/Website_icon.png">
+
+                <!-- CSS -->
+                <link href="style/bootstrap4.min.css" rel="stylesheet">
+                <link href="style/font-awesome.min.css" rel="stylesheet">
+                <link href="style/animate.css" rel="stylesheet">
+                <link href="style/main.css" rel="stylesheet">
+                <link rel="icon" href="assets/img/Web/favicon.png">
+                <link rel="stylesheet" href="unityGame/TemplateData/style.css">
+
+                <script src="unityGame/TemplateData/UnityProgress.javascript"></script>  
+                <script src="unityGame/Build/UnityLoader.js"></script>
+
+                
+
+                <title>Game Maker Maker</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        </head>
+
+        <body>
+                <!-- Title and header -->
+                <section id="header">
+                        <div id="title_row" class="row justify-content-md-center"  class="wow bounceInLeft">
+                                <div class="col-12">
+                                        <!--<h1 id="header_title" class="title-color wow bounceInLeft"><span id="gametit1"> GAME MAKER </span><span id="gametit2"> MAKER</span>
+                                                <a class="nav-link js-scroll-trigger english" href="#page-top" id="buttonSpanish">Español</a>
+                                                <a class="nav-link js-scroll-trigger spanish" href="#page-top" id="buttonEnglish" hidden>English</a>
+                                        </h1>-->
+                                        <img src="assets/img/Web/Logo.png" class="center">
+                                </div>
+                                <div class="col-4"></div>
+                                <div class="col-4 center-text"></div>
+                                <div class="col-4"></div>
+                        </div>
+
+                        <div id="subtitle_row" class="row">
+                                <div class="col-2"></div>
+                                <div class="col-3 pl-4" style="text-align: right;">
+                                        <a class="navbar-brand js-scroll-trigger title-color header_sub english wow bounceInRight" href="#howto_section"><span class="unitytitle unitytext hov"><img src="assets/img/Web/howtoicon.png" class="iconsize"> How to play? </span></a>
+                                        <a class="navbar-brand js-scroll-trigger title-color header_sub spanish wow bounceInRight" href="#howto_section"><span class="unitytitle unitytext hov"><img src="assets/img/Web/howtoicon.png" class="iconsize"> Cómo jugar </span></a>
+                                </div>
+                                <div class="col-2 center-text"><h3> </h3 style="border"></div>
+                                <div class="col-3" style="text-align: left;">
+                                        <a class="navbar-brand js-scroll-trigger title-color header_sub english wow bounceInRight" href="#team_section"><span class="unitytitle unitytext hov"><img src="assets/img/Web/peopleicon.png" class="iconsize"> Meet the team! </span></a>
+                                        <a class="navbar-brand js-scroll-trigger title-color header_sub spanish wow bounceInRight" href="#team_section"><span class="unitytitle unitytext hov"><img src="assets/img/Web/peopleicon.png" class="iconsize"> Conócenos </span></a>
+                                </div>
+                                <div class="col-2"></div>
+                        </div>
+                </section>
+
+                <!-- Canvas -->
+                <section id="game_section" class="wow bounceInRight">
+                        <div id="div_game" class="row">
+                                      
+                                       
+                                <div class="col-2"></div>
+                                <div class="webgl-content canvasContainer col-8 ">
+                                        <div id ="padding"></div>
+                                        <div id="gameContainer"></div>
+                                </div>
+                                <div class="col-2"></div>  
+                        </div>       
+                <br/>
+                </section>
+
+                <!-- How To Play -->
+                <section id="howto_section" class="wow fadeInLeft" data-wow-delay="0.2s">
+                        <div id="how_row" class="row ">
+                                <div class="col-2"></div>
+                                <div class="col-8 text-light howto-color row-top-howto top-row-rounded">
+                                        <h1 class=" title-section english"><span class="unitytext unitytitle"><img src="assets/img/Web/howtoicon.png" class="iconsize">  How to play?</span></h1>
+                                        <h1 class=" title-section spanish"><span class="unitytext unitytitle"><img src="assets/img/Web/howtoicon.png" class="iconsize">  Cómo jugar</span></h1>
+                                </div>
+                                <div class="col-2"></div>
+                                <div class="col-2"></div>
+                                <div class="col-8 text-light howto-color row-bottom-howto bottom-row-rounded">
+                                        <p class="text-justify lead english unitytext">We all know <em>Super Mario's</em> mushrooms, <em>Pokémon's</em> Pokeballs, 
+                                        or <em>Pac-Man's</em> fruits, but where do they come from? Here, in <em>Game Maker Maker</em>, we have the answer!
+                                        Take the role of an employee at the World-Wide Prop Factory, and get ready to bring to life all those franchises you love so much!
+                                        Be careful, though: it won't be an easy task. You'll need haste and coordination. 
+                                        
+                                        <br /><br />
+
+                                        During the game, objects will start appearing on the level's conveyor belt. Your job is to pick them up, take them to cooking points according to their recipe,
+                                        and, after going through all the process, hand them in at the corresponding game point. You shall watch out so the objects on the conveyor belt aren't destroyed,
+                                        pick up the items at the cooking points before they overheat, and not hand in props at a wrong game point.
+                                        At the start of the game, you'll be able to see the recipe book for the level's objects, and you may also check it out anytime by interacting with it in the scene.
+                                        In order to move to a certain position, or interact with an element, you'll have to click on it, taking into account it will override the previous action.
+                                        
+                                        <br /><br />
+
+                                        Will you be up to the challenge of being a true game developer?
+                                        </p>
+
+                                        <p class="text-justify lead spanish unitytext">Todos conocemos las setas de <em>Super Mario</em>, las Pokeballs de <em>Pokémon</em>, 
+                                        o las frutas del <em>Pac-Man</em>, pero ¿de dónde vienen? En <em>Game Maker Maker</em>, ¡tenemos la respuesta!
+                                        ¡Ponte en  los zapatos de un empleado de la Fábrica Mundial de Props, y prepárate para dar vida a todas esas sagas que tanto adoras! 
+                                        Pero, cuidado: no va a ser tarea fácil. Necesitarás mucha rapidez y coordinación.
+                                        
+                                        <br /><br />
+
+                                        Durante el juego, irán apareciendo objetos por la cinta transportadora. Tu labor será recogerlos, llevarlos a los puntos de preparado indicados
+                                        en su receta, y, tras superar todo el proceso, entregar el objeto en el punto correspondiente a su saga. Deberás tener cuidado para que los objetos de la cinta no sean destruidos, 
+                                        sacar los objetos de los puntos de preparado antes de que se sobrecarguen y no entregar objetos en los puntos de entrega de sagas equivocadas.
+                                        Al principio de la partida podrás ver el libro de recetas de los objetos del nivel, y podrás consultarlo acercándote a él en el escenario, en cuaquier momento.
+                                        Para moverte a un punto o interactuar con un elemento, bastará con pulsar sobre él, teniendo en cuenta que anularemos nuestra acción anterior.
+
+                                        <br /><br />
+
+                                        ¿Estarás a la altura del reto que supone ser un verdadero creador de videojuegos?
+                                        </p>
+                                </div>
+                                <div class="col-2"></div>
+                        </div>
+                </section>
+
+                <!-- Meet the team -->
+                <section id="team_section" class="wow fadeInRight" data-wow-delay="0.4s">
+                        <div id="team_row" class="row">
+                                <div class="col-2"></div>
+                                <div class="col-8 text-light team-color row-top-team top-row-rounded">
+                                        <h1 class="title-section english"><span class="unitytext unitytitle"><img src="assets/img/Web/peopleicon.png" class="iconsize">  Meet the team!</span></h1>
+                                        <h1 class="title-section spanish"><span class="unitytext unitytitle"><img src="assets/img/Web/peopleicon.png" class="iconsize">  Conócenos</span></h1>
+                                </div>
+                                <div class="col-2"></div>
+                        </div>
+                        <div class="row">
+                                <div class="col-2"></div>
+
+                                <!-- Los 6 en fila en XL -->
+                                <div class="col-8 d-none d-xl-block text-light team-color row-bottom-team bottom-row-rounded">
+                                        <div class="d-flex flex-row bd-highlight">
+                                                <div class="p-2 flex-fill bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Camu.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Alejandro <br /> Camuñas Casas</h4>
+                                                                <p class="teamRole english">Game designer/3D Animator/Marketing</p>
+                                                                <p class="teamRole spanish">Diseñador de jugabilidad/Animador 3D/Marketing</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2 flex-fill bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Andres.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Andrés <br /> Felipe García</h4>
+                                                                <p class="teamRole english">3D Modeler/Web developer</p>
+                                                                <p class="teamRole spanish">Modelador 3D/Desarrollador web</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2 flex-fill bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Guille.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Guillermo <br /> Amigó Urda</h4>
+                                                                <p class="teamRole english">Game designer/Sound designer</p>
+                                                                <p class="teamRole spanish">Diseñador de jugabilidad/Diseñador de sonido</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/JoseDaniel.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Jose Daniel<br /> Campos Galán</h4>
+                                                                <p class="teamRole english">Game programmer</p>
+                                                                <p class="teamRole spanish">Programador de juego</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web//Pablo.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Pablo<br /> Rodríguez Vicente</h4>
+                                                                <p class="teamRole english">Game programmer</p>
+                                                                <p class="teamRole spanish">Programador de juego</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2  bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Raquel.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Raquel<br /> Gastón Vicente</h4>
+                                                                <p class="teamRole english">2D Artist/3D Modeler</p>
+                                                                <p class="teamRole spanish">Artista 2D/Modeladora 3D</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- De 3 en 3 en LG -->
+                                <div class="col-8 d-none d-sm-block d-xl-none text-light team-color row-bottom-team bottom-row-rounded unitytext">
+                                        <div class="d-flex flex-row bd-highlight">
+                                                <div class="p-2  bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Camu.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Alejandro <br /> Camuñas Casas</h4>
+                                                                <p class="teamRole english">Game designer/3D Animator/Marketing</p>
+                                                                <p class="teamRole spanish">Diseñador de jugabilidad/Animador 3D/Marketing</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2  bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Andres.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Andrés<br /> Felipe García</h4>
+                                                                <p class="teamRole english">3D Modeler/Web developer</p>
+                                                                <p class="teamRole spanish">Modelador 3D/Desarrollador web</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Guille.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Guille<br /> Amigó Urda</h4>
+                                                                <p class="teamRole english">Game designer/Sound designer</p>
+                                                                <p class="teamRole spanish">Diseñador de jugabilidad/Diseñador de sonido</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row bd-highlight">
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/JoseDaniel.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Jose Daniel<br /> Campos Galán</h4>
+                                                                <p class="teamRole english">Game programmer</p>
+                                                                <p class="teamRole spanish">Programador de juego</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Pablo.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Pablo<br /> Rodríguez Vicente</h4>
+                                                                <p class="teamRole english">Game programmer</p>
+                                                                <p class="teamRole spanish">Programador de juego</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2  bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Raquel.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Raquel<br /> Gastón Vicente</h4>
+                                                                <p class="teamRole english">2D Artist/3D Modeler</p>
+                                                                <p class="teamRole spanish">Artista 2D/Modeladora 3D</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- De 2 en 2 en XS -->
+                                <div class="col-8 d-block d-sm-none text-light team-color row-bottom-team bottom-row-rounded">
+                                        <div class="d-flex flex-row bd-highlight">
+                                                <div class="p-2  bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Camu.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Alejandro<br /> Camuñas Casas</h4>
+                                                                <p class="teamRole english">Game designer/3D Animator/Marketing</p>
+                                                                <p class="teamRole spanish">Diseñador de jugabilidad/Animador 3D/Marketing</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2  bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Andres.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Andrés <br /> Felipe García</h4>
+                                                                <p class="teamRole english">3D Modeler/Web developer</p>
+                                                                <p class="teamRole spanish">Modelador 3D/Desarrollador web</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row bd-highlight">
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Guille.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Guille<br /> Amigó Urda</h4>
+                                                                <p class="teamRole english">Game designer/Sound designer</p>
+                                                                <p class="teamRole spanish">Diseñador de jugabilidad/Diseñador de
+                                                                        sonido
+                                                                </p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/JoseDaniel.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Jose Daniel<br /> Campos Galán</h4>
+                                                                <p class="teamRole english">Game programmer</p>
+                                                                <p class="teamRole spanish">Programador de juego</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="d-flex flex-row bd-highlight">
+                                                <div class="p-2 bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Pablo.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Pablo <br /> Rodríguez Vicente</h4>
+                                                                <p class="teamRole english">Game programmer</p>
+                                                                <p class="teamRole spanish">Programador de juego</p>
+                                                        </div>
+                                                </div>
+                                                <div class="p-2  bd-highlight">
+                                                        <div class="box-team unitytext">
+                                                                <img src="assets/img/Web/Raquel.jpg" alt="" class="rounded-circle img-fluid teamImage">
+                                                                <h4 class="teamName">Raquel <br /> Gastón Vicente</h4>
+                                                                <p class="teamRole english">2D Artist/3D Modeler</p>
+                                                                <p class="teamRole spanish">Artista 2D/Modeladora 3D</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-2"></div>
+                        </div>
+                </section>
+
+                <!-- Contact us! -->
+                <section id="merchandising_section" class="wow fadeInUp" data-wow-delay="0.6s">
+                        <div>
+                                <div class="row ">
+                                        <div class="col-2"></div>
+                                        <div class="col-8 merchandising-color top-row-rounded all-rounded" class="container-fluid" onclick="window.open('https://simplegamecompany.github.io/portfolio/','mywindow');"
+                                                style="cursor: pointer;">
+                                                <p class="title-contact unitytext english">Contact us!</p>
+                                                <p class="title-contact unitytext spanish">Contáctanos</p>
+                                        </div>
+                                        <div class="col-2"></div>
+                                </div>
+                        </div>
+
+                        <div class="row mb-5 ocultar">
+                                <div class="col-2"></div>
+                                <div class="col-8  merchandising-color bottom-row-rounded">
+                                        <p class="h4"><br></p>
+                                </div>
+                                <div class="col-2"></div>
+                        </div>
+                        </div>
+                </section>
+
+                <!-- Footer -->
+                <section id="contact_section" data-wow-delay="0.5s">
+                        <footer>
+                                <div class="container-fluid">
+                                        <div class="row text-light futer">
+                                                <div class="col-12 mt-6 center-text">
+                                                        <h2 class="display-4 title-footer unitytext">Simple Game Company</h2>
+
+                                                        <p class="PDays english unitytext">We’ve been working hard to make new games for the past %% days!</p>
+                                                        <p class="PDays spanish unitytext">¡Llevamos %% días creando videojuegos!</p>
+
+                                                        <p class="english unitytext"> --- <br> &copy; 2018 - 2019 Copyright <a href="https://simplegamecompany.github.io/portfolio/" style="color:bisque">SimpleGameCompany.</a> All rights reserved.
+                                                        </p>
+                                                        <p class="spanish unitytext"> --- <br> &copy; 2018 - 2019 Copyright <a href="https://simplegamecompany.github.io/portfolio/" style="color:bisque">SimpleGameCompany.</a> Todos los derechos reservados.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </footer>
+                </section>
+
+                <!-- Botón de back-to-top -->
+                <button id="back-to-top"><i class="fa fa-chevron-up"></i></button>
+
+                <!--Resto de Scripts para Juego-->
+                <script src="js/library/jquery-3.3.1.min.js"></script>
+                <script src="js/library/bootstrap4.min.js"></script>
+                <script src="js/wow.min.js"></script>
+        
+                <script src="js/placeholder.js"></script>
+
+                <!-- Inicializamos las animaciones -->
+                <script>
+                        new WOW().init();
+                </script>
+
+                <!-- Funcionalidad del botón back-to-top -->
+                <script>
+                        // Back to top button
+                        $(window).scroll(function () {
+                                if ($(this).scrollTop() > 100) {
+                                        $('#back-to-top').fadeIn('slow');
+                                } else {
+                                        $('#back-to-top').fadeOut('slow');
+                                }
+                        });
+
+                        $('#back-to-top').click(function () {
+                                $('html, body').animate({ scrollTop: 0 }, 800);
+                                return false;
+                        });
+                </script>
+
+                <!-- Plugins para Scroll -->
+                <script src="js/library/jquery-easing/jquery.easing.min.js"></script>
+
+                <!-- Script para que el scroll funcione -->
+                <script src="js/library/creative.js"></script>
+
+                <!-- Idioma -->
+                <script src="js/languaje.js"></script>
+
+                <!-- Audios
+                <div id="audios">
+                        <div id="fx"></div>
+                        <div id="music">
+                                <audio id="music_menu" autoplay loop>
+                                        <source src="assets/audio/Music/Theme_Menu.mp3" type="audio/mpeg">
+                                </audio>
+                                <audio id="music_nivel1" src="assets/audio/Music/Theme_nivel1.mp3" loop></audio>
+                                <audio id="music_nivel2" src="assets/audio/Music/Theme_nivel2.mp3" loop></audio>
+                                <audio id="music_nivel3" src="assets/audio/Music/Theme_nivel3.mp3" loop></audio>
+                                <audio id="theme_die" src="assets/audio/Music/Theme_Die.ogg"></audio>
+                        </div>
+                </div> -->
+
+                <script>
+                         var gameInstance 
+                                window.addEventListener("load",function(){
+                                        gameInstance = UnityLoader.instantiate("gameContainer", "unityGame/Build/unityGame.json", {onProgress: UnityProgress});
+                                        
+                                        document.getElementById("#canvas").height = 720;
+                                        document.getElementById("#canvas").width = 1280;
+                                        document.getElementById("gameContainer").style.position= "absolute";
+                                        document.getElementById("gameContainer").style.padding = null;
+                                })
+                        </script>
+
+
+                
+                
+        </body>
+</html>
