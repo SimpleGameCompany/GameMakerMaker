@@ -536,19 +536,18 @@ El jugador podrá llevar los props que **salgan de la cinta transportadora a una
 En todo momento podrá consultar el **libro de recetas o combinaciones,** colocado en un lugar generalmente alejado de la acción.
 
 **Lista final de niveles:**
-Dificultad de las sagas:
 
-*Mario = Pacman < Minecraft = Portal < Pokemon < Zelda*
+Dificultad de las sagas: *Mario = Pacman < Minecraft = Portal < Pokemon < Zelda*
 
-*Nivel 1*: Pacman y Mario (10).
+*Nivel 1*: Pacman, Mario (10).
 
 *Nivel 2*: Mario, Minecraft (15).
 
-*Nivel 3*: Pacman, Mario y Minecraft (20).
+*Nivel 3*: Pacman, Mario, Minecraft (20).
 
-*Nivel 4*: Pacman, Minecraft y Portal (20).
+*Nivel 4*: Minecraft, Portal (20).
 
-*Nivel 5*: Minecraft, Portal, Pokémon (25).
+*Nivel 5*: Pacman, Portal, Pokémon (25).
 
 *Nivel 6*: Mario, Minecraft, Portal, Pokémon (30).
 
@@ -682,9 +681,6 @@ Cuando la tubería se rompa, aparecerá un icono circular rojo que mostrará el 
 ## **4.1. Arte**
 
 El apartado artístico del videojuego será colorido y alegre, animaciones algo exageradas y, en general, una estética de 3D cartoon.
-
-El arte final se irá incorporando conforme se tengan los recursos necesarios.
-
 
 <div id="Sonido"></ol>
 
