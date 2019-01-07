@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.46169633, g: 0.51241815, b: 0.5899342, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028481, g: 0.22571582, b: 0.3069242, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 227864460}
-  key: GAME_STATUS_YOU_LOSE
+  key: GAME_STATUS_GAME_OVER
   maintainTextAlignment: 0
 --- !u!114 &227864460
 MonoBehaviour:
@@ -627,7 +627,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\xA1Pierdes!"
+  m_text: "\xA1Has perdido!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ad03c4ce9e635c4796673b5f6aa0c48, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 6ad03c4ce9e635c4796673b5f6aa0c48,
@@ -696,10 +696,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 227864460}
-    characterCount: 9
+    characterCount: 13
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1441,6 +1441,7 @@ GameObject:
   - component: {fileID: 487579791}
   - component: {fileID: 487579793}
   - component: {fileID: 487579792}
+  - component: {fileID: 487579794}
   m_Layer: 5
   m_Name: TextMeshPro Text
   m_TagString: Untagged
@@ -1587,6 +1588,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487579790}
   m_CullTransparentMesh: 0
+--- !u!114 &487579794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487579790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1069032140}
+  key: MENU_LABEL_PAUSE
+  maintainTextAlignment: 0
 --- !u!1 &501026402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,6 +2162,7 @@ GameObject:
   - component: {fileID: 689338852}
   - component: {fileID: 689338854}
   - component: {fileID: 689338853}
+  - component: {fileID: 689338855}
   m_Layer: 5
   m_Name: TextMeshPro Text
   m_TagString: Untagged
@@ -2201,8 +2217,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293853347
-  m_fontColor: {r: 0.6392157, g: 0, b: 0.93725497, a: 1}
+    rgba: 4278228976
+  m_fontColor: {r: 0.9411765, g: 0.5921569, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -2293,6 +2309,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689338851}
   m_CullTransparentMesh: 0
+--- !u!114 &689338855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689338851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1069032140}
+  key: _RECIPES
+  maintainTextAlignment: 0
 --- !u!1 &755742768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,7 +2657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 820952810}
-  key: GAME_LABEL_LIFES
+  key: GAME_LABEL_LIVES
   maintainTextAlignment: 0
 --- !u!114 &820952810
 MonoBehaviour:
@@ -2929,6 +2959,7 @@ GameObject:
   - component: {fileID: 889444240}
   - component: {fileID: 889444242}
   - component: {fileID: 889444241}
+  - component: {fileID: 889444243}
   m_Layer: 5
   m_Name: TextMeshPro Text
   m_TagString: Untagged
@@ -2983,8 +3014,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293853347
-  m_fontColor: {r: 0.6392157, g: 0, b: 0.93725497, a: 1}
+    rgba: 4278228976
+  m_fontColor: {r: 0.9411765, g: 0.5921569, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -3075,6 +3106,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889444239}
   m_CullTransparentMesh: 0
+--- !u!114 &889444243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 889444239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1069032140}
+  key: _RECIPES
+  maintainTextAlignment: 0
 --- !u!1 &895760456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3454,7 +3499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1003158097}
-  key: GAME_STATUS_YOU_WIN
+  key: GAME_STATUS_YOU_HAVE_WON
   maintainTextAlignment: 0
 --- !u!114 &1003158097
 MonoBehaviour:
@@ -3817,7 +3862,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Salir
+  m_text: Recetas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ad03c4ce9e635c4796673b5f6aa0c48, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 6ad03c4ce9e635c4796673b5f6aa0c48,
@@ -3894,12 +3939,12 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
+  m_isInputParsingRequired: 1
+  m_inputSource: 3
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
@@ -3931,7 +3976,7 @@ GameObject:
   - component: {fileID: 1137551884}
   - component: {fileID: 1137551883}
   m_Layer: 0
-  m_Name: Continuar
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5971,7 +6016,7 @@ GameObject:
   - component: {fileID: 1922141926}
   - component: {fileID: 1922141929}
   m_Layer: 0
-  m_Name: Continue
+  m_Name: Cerrar
   m_TagString: CerrarRecetas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
