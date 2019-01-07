@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: MAt_PCPokemon_Funcionando_01
-  m_Shader: {fileID: 4800000, guid: 2a612d95889898b438b7fa0ad7c89b86, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0544d473fd90ba04a9248b3d97e32d79, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -38,6 +38,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmissionTex:
+        m_Texture: {fileID: 2800000, guid: 66777b69a3e54f0489cbe8e44acc8672, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Illum:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -64,6 +68,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EmisionMultiplier: 1
+    - _EmissionMul: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1

@@ -6,6 +6,7 @@ public class PCFuncionando : MonoBehaviour {
 
     public List<Material> Mats_Funcionamiento;
     public Material Mat_Apagado;
+    public Material Mat_Roto;
     private int currentMaterial = 0;
 	// Use this for initialization
 	void Start () {
@@ -22,17 +23,21 @@ public class PCFuncionando : MonoBehaviour {
     }
     public void pararPC()
     {
+        CancelInvoke("nextMaterial");
         GetComponent<Renderer>().material = Mat_Apagado;
     }
     private void nextMaterial()
     {
         if (currentMaterial >= Mats_Funcionamiento.Count)
             currentMaterial = 0;
+
         GetComponent<Renderer>().material = Mats_Funcionamiento[currentMaterial];
         currentMaterial++;
         Debug.Log(currentMaterial);
-        
-
-
     }
+    public void romperPC()
+    {
+        GetComponent<Renderer>().material = Mat_Roto;
+    }
+    
 }
