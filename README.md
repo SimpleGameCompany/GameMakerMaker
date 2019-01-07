@@ -441,7 +441,7 @@ Los controles consistirán únicamente del **click o pulsación sobre la región
 
 Cabe mencionar que, si mientras se está desplazando o realizando una acción, recibe otra orden (hacemos click en otro punto de la pantalla), **se anulará la acción anterior, dando prioridad a la nueva.**
 
-Al **pulsar** en un lugar donde **no hay una acción** (por ejemplo, una mesa vacía cuando no tenemos objetos equipados, o fuera del escenario) **el personaje no hará nada**, es decir, cancelará su acción actual pero no hará nada más, quedándose en su sitio hasta que se le indique una acción válida. Se **reproducirá un sonido** que indica que es un movimiento prohibido o sin valor, además de **un pequeño indicador visual** sobre el punto.
+Al **pulsar** en un lugar donde **no hay una acción** (por ejemplo, una mesa vacía cuando no tenemos objetos equipados, o fuera del escenario) **el personaje no hará nada**, es decir, cancelará su acción actual pero no hará nada más, quedándose en su sitio hasta que se le indique una acción válida. Se **reproducirá un sonido** que indica que es un movimiento prohibido o sin valor, además de **un pequeño indicador visual** sobre el personaje.
 
 A continuación se incluye una tabla que explica cada interacción posible durante el juego:
 
@@ -523,7 +523,7 @@ A continuación se incluye una tabla que explica cada interacción posible duran
 
 ## **2.7. Niveles**
 
-En la idea inicial, se podían diferenciar **dos niveles completos distintos,** con props y distribución espacial diferentes. Posteriormente, se ha planteado ampliar la lista de niveles del juego, debido a la gran escalabilidad del sistema.
+En la idea inicial, se podían diferenciar **dos niveles completos distintos,** con props y distribución espacial diferentes. Posteriormente, se ha planteado ampliar la lista de niveles del juego, debido a la gran escalabilidad del sistema, gracias a la implementación de un editor de niveles por parte del equipo de desarrollo.
 
 Un ejemplo de diseño de nivel esquemático sería el siguiente:
 
@@ -535,11 +535,10 @@ El jugador podrá llevar los props que **salgan de la cinta transportadora a una
 
 En todo momento podrá consultar el **libro de recetas o combinaciones,** colocado en un lugar generalmente alejado de la acción.
 
-**Lista de niveles:**
+**Lista final de niveles:**
 Dificultad de las sagas:
 
 *Mario = Pacman < Minecraft = Portal < Pokemon < Zelda*
-Plantilla: *Nivel - Sagas - (nº de props para finalizar el nivel).*
 
 *Nivel 1*: Pacman y Mario (10).
 
@@ -597,7 +596,7 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 ![image alt text](assets/GDD/image_33.png)
 
-Al igual que en la práctica anterior, se ha incluido esta pantalla directamente en la página web del videojuego, debido a su estructura y diseño:
+Finalmente, se ha incluido esta pantalla directamente en la página web del videojuego, debido a su estructura y diseño:
 
 ![image alt text](assets/GDD/PantalladeCreditos2.PNG)
 
@@ -663,8 +662,6 @@ Las notificaciones serán las siguientes:
 
 **Selección de objeto**: Se señalan los rebordes de la casilla que contiene al objetivo. Esta selección se dibujará cada vez que el jugador interactúe con un objeto usable, véase: hornos, mesas, objetos, tuberías, libro. En caso de moverse el objeto (cinta) la señal de selección se moverá con el objeto.
 
-**Acción errónea**: Un icono como de prohibido cuando el jugador realice una acción errónea, como hacer click fuera del escenario. Marcarán que la acción es errónea y no hará nada. Habrá un sonido de negación también.
-
 **Horno**: 
 - Cuando el horno está cocinando algo, aparecerá un icono circular que mostrará el tiempo restante para cocinar o trabajar el objeto en su interior. Avanzará de forma horaria hasta completarse.
 - Cuando el horno se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
@@ -696,8 +693,6 @@ El arte final se irá incorporando conforme se tengan los recursos necesarios.
 Los sonidos del juego deberán acompañar a su estilo visual y a su concepto. Este concepto será el de un juego de crear juegos. 
 
 Por tanto, se ha decidido realizar un concepto metajuego, es decir, son cosas “placeholder”, temporales o inacabadas (sin detalle, colores, etc) las que realizan estas acciones, pues no tendría sentido que los creadores de props tuvieran un grandísimo detalle. EL sonido y la música por lo tanto deben adaptarse a este concepto para ser simples, pero efectivos. Que parezcan placeholders pero realicen bien su acción. 
-
-El sonido se irá incorporando conforme se tengan los recursos necesarios.
 
 
 <div id="roles"></ol>
