@@ -665,8 +665,8 @@ Las notificaciones serán las siguientes:
 - Cuando el horno está cocinando algo, aparecerá un icono circular que mostrará el tiempo restante para cocinar o trabajar el objeto en su interior. Avanzará de forma horaria hasta completarse.
 - Cuando el horno se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
 
-**Tubería**:
-Cuando la tubería se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
+**Tubería**: 
+- Cuando la tubería se rompa, aparecerá un icono circular rojo que mostrará el tiempo restante para repararse.Avanzará de forma horaria hasta completarse.
 
 
 
