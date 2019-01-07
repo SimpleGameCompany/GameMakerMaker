@@ -6,7 +6,7 @@ public class MinecraftBehavior : TubeBehaviour {
 
     public ParticleSystem entrega;
 
-    public new void PostActionAnim(PlayerController player)
+    public override void PostActionAnim(PlayerController player)
     {
         entrega.gameObject.SetActive(true);
         base.PostActionAnim(player);
