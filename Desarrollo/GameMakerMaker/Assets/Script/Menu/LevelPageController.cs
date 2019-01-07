@@ -127,6 +127,7 @@ public class LevelPageController : MonoBehaviour {
                 }
             }
         }
+        gameObject.SetActive(false);
     }
 
     public void nextPage()
