@@ -199,7 +199,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809891939610904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4653849330362904}
@@ -667,7 +667,6 @@ MonoBehaviour:
     _collection:
     - {fileID: 1874828844269872}
     - {fileID: 1011852213754950}
-    - {fileID: 0}
     - {fileID: 1921953843694912}
   _assetGuid: b8fe972166dd4094e825e947f44e1d77
 --- !u!114 &114873535133203294
@@ -1509,7 +1508,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
   EmissionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FloorBehaviour : Interactuable {
 
-    SoundController anim;
 
     public override void PostActionAnim(PlayerController player)
     {
@@ -20,8 +19,8 @@ public class FloorBehaviour : Interactuable {
 
     public override bool PreAction(PlayerController player)
     {
-        anim.SetTrigger("Click");
         player.MarkObjectFloor.SetActive(true);
+        player.MarkObjectFloor.GetComponentInChildren<SoundController>().SetTrigger("MoveClick");
         player.MarkObjectFloor.transform.position = player.click;
         
         return true;
@@ -34,11 +33,5 @@ public class FloorBehaviour : Interactuable {
 
     // Use this for initialization
     void Start () {
-        anim = GetComponent<SoundController>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
