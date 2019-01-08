@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07360ff9137617243b10b3241faecdc7, type: 3}
+  m_Name: Level_Tutorial
+  m_EditorClassIdentifier: 
+  levelID: 0
+  LevelName: Level_Tutorial
+  Scenario: {fileID: 1131658537529262, guid: a5c6f0426c20b8f4780b975fa26c3c14, type: 2}
+  velocity: 0.2
+  ratio: 10
+  minRatio: 5
+  maxRatio: 10
+  Props:
+  - {fileID: 114882813895430062, guid: 1644fa2d2e7ae3549a2911b615b1507d, type: 2}
+  MaxProps: 01000000
+  winCount: 1
+  MaxScore: 100
+  Layout:
+  - list:
+    - {fileID: 0}
+    - {fileID: 1099910976434034, guid: 060d13cfaef9521498524376c22d6640, type: 2}
+    - {fileID: 1590030696911328, guid: 230e11decb1cb5445a624ee75ed96f29, type: 2}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 1987998720118706, guid: 66a7d0045bc6098418e94395514bd50c, type: 2}
+    - {fileID: 1712920928839982, guid: a20f006eac2b5f94a9227cfe86fed49c, type: 2}
+    - {fileID: 1212647561298522, guid: 8f30f4b586cb1e24aa8639b4e25fc858, type: 2}
+  - list:
+    - {fileID: 1934090515449162, guid: b64e3f735b830e749963f5f728e786a9, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1379432940817712, guid: a931ef829caded544873fcc2dfe2c1d1, type: 2}
+  - list:
+    - {fileID: 1331873463616114, guid: b5ce99a9e740a094cb527142fab7b611, type: 2}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1449546860015134, guid: c420a10c9cb097d4697606f65e949d4a, type: 2}
+  - list:
+    - {fileID: 1427621842303102, guid: 79fbf5cc83e548e409840954223c39bc, type: 2}
+    - {fileID: 1080775590213090, guid: 39c6cd517650f4f4092ab1697183fe97, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1721671137663750, guid: 913b570bda15b1d46bca1b550c4b6e83, type: 2}
+    - {fileID: 1416196782593846, guid: c0054246f29a40246b5ec1591dd98dd7, type: 2}
+  - list:
+    - {fileID: 1189807797765618, guid: 8fbf78d0db241ab44bd097c681db7e95, type: 2}
+    - {fileID: 1846130087450870, guid: 8ca80774da168dd448c47a216cf8953f, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1416196782593846, guid: c0054246f29a40246b5ec1591dd98dd7, type: 2}
+  - list:
+    - {fileID: 1212647561298522, guid: 8f30f4b586cb1e24aa8639b4e25fc858, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1416196782593846, guid: c0054246f29a40246b5ec1591dd98dd7, type: 2}
+  - list:
+    - {fileID: 1517928775750514, guid: 4985edff86370694ebb9e5b42bd28f06, type: 2}
+    - {fileID: 1752370717954710, guid: 1fd74b934eb5e6f44ad66800881d9ed8, type: 2}
+    - {fileID: 1752370717954710, guid: 1fd74b934eb5e6f44ad66800881d9ed8, type: 2}
+    - {fileID: 1752370717954710, guid: 1fd74b934eb5e6f44ad66800881d9ed8, type: 2}
+    - {fileID: 1752370717954710, guid: 1fd74b934eb5e6f44ad66800881d9ed8, type: 2}
+    - {fileID: 1148983332013060, guid: bb47b1af979dcaf4583e53f66da0dd49, type: 2}
+    - {fileID: 1558810028558620, guid: 2bb43f61ef91d4d45bda2382b7796149, type: 2}
+  floor: {fileID: 1622648823092482, guid: d1825e78e633d9c4e9097440ebbf3d59, type: 2}
+  FloorMaterial: {fileID: 0}
+  ambientColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 0}
