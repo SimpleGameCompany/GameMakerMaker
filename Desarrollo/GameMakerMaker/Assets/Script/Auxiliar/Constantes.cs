@@ -68,6 +68,8 @@ public static class Constantes
 
     public const string ANIMATION_OVEN_MARKED = "Highlight";
 
+    public const string NAME_NEXT = "Next";
+
 
 
 

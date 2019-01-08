@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour {
 
     void Move()
     {
-        if (Input.GetMouseButtonDown(0) && !interacting && !endGame)
+        if (Input.GetMouseButtonDown(0) && !interacting && !endGame && !GameManager.Instance.pause)
         {
            
 

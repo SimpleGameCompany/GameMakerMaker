@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public GameObject RecetasPage;
     // Use this for initialization
+    public bool pause;
     void Start()
     {
         totalProps = new List<GameObject>();
@@ -111,6 +112,7 @@ public class GameManager : MonoBehaviour
 
      public IEnumerator StartGame()
     {
+        pause = true;
         EndGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_END);
         WinGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_WIN);
         WinGameUI.SetActive(false);
@@ -156,6 +158,7 @@ public class GameManager : MonoBehaviour
             }
            
         }
+        
         Page.transform.parent = RecetasContainer[0].transform;
         Instantiate(Page, RecetasContainer[1].transform);
         BookBehaviour.instance.pages = Pages.ToArray();
@@ -165,6 +168,7 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         progress = 1f;
         isDone = true;
+        
     }
 
 
@@ -250,6 +254,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
+        pause = false;
         Recipies.transform.parent.parent.gameObject.SetActive(false);
         BookBehaviour.instance.Page = 0;
         BookBehaviour.instance.InitPage = 0;
@@ -258,14 +263,24 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GenerateProp(seconds,loadedLevel.minRatio,loadedLevel.maxRatio));
     }
 
+    public void FreezeTime()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void unFreezeTime() {
+        Time.timeScale = 1;
+    }
 
     public void PauseGame(float timeScale)
     {
+        pause = true;
         Time.timeScale = timeScale;
     }
 
     public void ResumeGame()
     {
+        pause = false;
         Time.timeScale = 1;
     }
 
@@ -274,6 +289,7 @@ public class GameManager : MonoBehaviour
     {
         StopAllCoroutines();
         playing = false;
+        MusicController.Instance.MuteOtherSounds();
         player.StartCoroutine(player.EndAnim(winlose));
     }
 
@@ -290,6 +306,7 @@ public class GameManager : MonoBehaviour
         {
             maxlevel++;
         }
+        
         PlayerPrefs.SetInt("maxlevel",maxlevel);
         WinGameUI.SetActive(true);
         StarFiller a = GameObject.FindGameObjectWithTag(Constantes.TAG_STARS).GetComponent<StarFiller>();

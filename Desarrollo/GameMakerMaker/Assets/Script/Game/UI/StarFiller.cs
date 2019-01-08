@@ -48,7 +48,12 @@ public class StarFiller : MonoBehaviour {
         GameObject button = GameObject.FindGameObjectWithTag(Constantes.TAG_WIN_BUTTONS);
         foreach(var but in button.GetComponentsInChildren<Button>())
         {
+            
             but.interactable = true;
+            if(but.name == Constantes.NAME_NEXT && GameManager.Instance.loadedLevel.levelID >= 7)
+            {
+                but.interactable = false;
+            }
         }
     }
 }
