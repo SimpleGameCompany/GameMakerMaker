@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 82208121861593744}
   - component: {fileID: 114954283569674658}
   - component: {fileID: 114920787142927180}
+  - component: {fileID: 95847424517410386}
   m_Layer: 0
   m_Name: PCPokemon_Abajo(Clone)
   m_TagString: Untagged
@@ -23894,6 +23895,24 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 05c700f24f8d891498b7c784fc0428ca, type: 3}
   m_Controller: {fileID: 9100000, guid: 67d06d7deefb9784f8097cb60165a810, type: 2}
   m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95847424517410386
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026911938826464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4026612ba7dfe74fb63708820e874d1, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
