@@ -141,14 +141,15 @@ public class GameManager : MonoBehaviour
         Recipe[] r = (from x in loadedLevel.Props select x.recipe).ToArray();
         GameObject Page  = Instantiate(RecetasPage) ;
         List<GameObject> Pages = new List<GameObject>();
-        for(int i = 0; i<r.Length; i++)
+        List<GameObject> PagesInit = new List<GameObject>();
+        for (int i = 0; i<r.Length; i++)
         {
             Instantiate(r[i].RecipePrefab, Page.transform);
             if (i%4 == 3)
             {
                 Page.transform.parent = RecetasContainer[0].transform;
                 Page.GetComponent<RectTransform>().localScale = Vector3.one;
-                Instantiate(Page, RecetasContainer[1].transform);
+                PagesInit.Add(Instantiate(Page, RecetasContainer[1].transform));
                 Pages.Add(Page);
                 Page = Instantiate(RecetasPage);
                 Page.SetActive(false);
@@ -158,7 +159,9 @@ public class GameManager : MonoBehaviour
         Page.transform.parent = RecetasContainer[0].transform;
         Instantiate(Page, RecetasContainer[1].transform);
         BookBehaviour.instance.pages = Pages.ToArray();
+        BookBehaviour.instance.pagesInit = PagesInit.ToArray();
         BookBehaviour.instance.Canvas.SetActive(false);
+        GameStarter.instance.ActivaArrows();
         player = FindObjectOfType<PlayerController>();
         progress = 1f;
         isDone = true;
@@ -248,6 +251,8 @@ public class GameManager : MonoBehaviour
     public void PlayGame()
     {
         Recipies.transform.parent.parent.gameObject.SetActive(false);
+        BookBehaviour.instance.Page = 0;
+        BookBehaviour.instance.InitPage = 0;
         WaitForSeconds seconds = new WaitForSeconds(loadedLevel.ratio);
         playing = true;
         StartCoroutine(GenerateProp(seconds,loadedLevel.minRatio,loadedLevel.maxRatio));

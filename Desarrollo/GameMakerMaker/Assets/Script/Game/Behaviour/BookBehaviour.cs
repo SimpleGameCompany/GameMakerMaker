@@ -11,19 +11,39 @@ public class BookBehaviour : Interactuable {
     Button close;
     SoundController anim;
     public GameObject[] pages;
+    public GameObject[] pagesInit;
 
     public static BookBehaviour instance;
     private int pageActual;
-    public int Page { get { return pageActual; } set {
+    public int InitPage { get { return pageActual; } set {
 
-            pages[pageActual].SetActive(false);
-            pageActual = value;
-            pages[pageActual].SetActive(true);
+            
+            StartCoroutine(NextPageCourutine(value, pages));
 
 
 
         } }
+    public int Page
+    {
+        get { return pageActual; }
+        set
+        {
 
+            StartCoroutine(NextPageCourutine(value, pagesInit));
+
+        }
+    }
+
+    IEnumerator NextPageCourutine(int value,GameObject[] array)
+    {
+        array[pageActual].SetActive(false); 
+        pageActual = value;
+        array[pageActual].SetActive(true);
+        yield return null;
+        array[pageActual].SetActive(false);
+        array[pageActual].SetActive(true);
+
+    }
 
     public override void PostActionAnim(PlayerController player)
     {
@@ -74,6 +94,7 @@ public class BookBehaviour : Interactuable {
 
     // Use this for initialization
     void Start () {
+        pageActual = 0;
         instance = this;
         screenPoint = Camera.main.WorldToScreenPoint(this.transform.position);
         Canvas = GameObject.FindGameObjectWithTag("Recetas");

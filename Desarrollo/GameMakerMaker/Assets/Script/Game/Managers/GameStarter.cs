@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameStarter : MonoBehaviour {
-
+    public static GameStarter instance;
     public GameObject PageRecetas;
-	void Start () {
+    public GameObject[] NextPageButton;
+    public GameObject[] BackPageButton;
+    void Start () {
+        instance = this;
         GameManager.Instance.RecetasPage = PageRecetas;
         GameManager.Instance.StartLevelFromCourutine();
 	}
@@ -40,5 +43,78 @@ public class GameStarter : MonoBehaviour {
     {
         MusicController.Instance.MuteOtherSounds();
         GameManager.Instance.PauseGame(0);
+    }
+
+
+    public void NextPageInit()
+    {
+        BookBehaviour.instance.InitPage++;
+        if(BookBehaviour.instance.Page == BookBehaviour.instance.pages.Length-1)
+        {
+            NextPageButton[1].SetActive(false);
+        }
+        if(BookBehaviour.instance.Page > 0)
+        {
+            BackPageButton[1].SetActive(true);
+        }
+
+    }
+
+    public void backPageInit()
+    {
+        BookBehaviour.instance.InitPage--;
+        if (BookBehaviour.instance.Page < BookBehaviour.instance.pages.Length-1)
+        {
+            NextPageButton[1].SetActive(true);
+        }
+        if (BookBehaviour.instance.Page == 0)
+        {
+            BackPageButton[1].SetActive(false);
+        }
+    }
+
+    public void NextPage()
+    {
+        BookBehaviour.instance.Page++;
+        if (BookBehaviour.instance.Page == BookBehaviour.instance.pages.Length-1)
+        {
+            NextPageButton[0].SetActive(false);
+        }
+        if (BookBehaviour.instance.Page > 0)
+        {
+            BackPageButton[0].SetActive(true);
+        }
+        
+    }
+
+    public void backPage()
+    {
+
+        BookBehaviour.instance.Page--;
+        if (BookBehaviour.instance.Page < BookBehaviour.instance.pages.Length-1)
+        {
+            NextPageButton[0].SetActive(true);
+        }
+        if (BookBehaviour.instance.Page == 0)
+        {
+            BackPageButton[0].SetActive(false);
+        }
+
+    }
+
+    public void ActivaArrows()
+    {
+        if(BookBehaviour.instance.pages.Length < 2)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                NextPageButton[i].SetActive(false);
+            }
+
+        }
+        for (int i = 0; i < 2; i++)
+        {
+            BackPageButton[i].SetActive(false);
+        }
     }
 }
