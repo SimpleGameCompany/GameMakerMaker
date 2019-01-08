@@ -18978,6 +18978,7 @@ MonoBehaviour:
   progress: {fileID: 114964377610185890}
   world: 5
   brokenTime: 10
+  score: 0
   entrega: {fileID: 198802528804896966}
 --- !u!114 &114006285055927466
 MonoBehaviour:
@@ -19261,6 +19262,7 @@ MonoBehaviour:
   progress: {fileID: 114690692705110236}
   world: 2
   brokenTime: 10
+  score: 0
 --- !u!114 &114028889054347288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19395,6 +19397,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 05454ce590d5aa74f95d05f8cff73a9e, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 9
@@ -19451,7 +19454,7 @@ MonoBehaviour:
     loop: 1
   - name: 
     clip: {fileID: 8300000, guid: 58b77a8618f83804f9672b6d9567322c, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
   - name: 
@@ -20888,7 +20891,7 @@ MonoBehaviour:
     loop: 1
   - name: 
     clip: {fileID: 8300000, guid: 58b77a8618f83804f9672b6d9567322c, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
   - name: 
@@ -23991,6 +23994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd38a936c50d54429d6e7713983ee22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!114 &114410476832639636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24487,6 +24491,7 @@ MonoBehaviour:
   progress: {fileID: 114451994660474768}
   world: 0
   brokenTime: 10
+  score: 0
 --- !u!114 &114443356477164768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26701,6 +26706,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 7.5
@@ -28035,6 +28041,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 7.5
@@ -29298,6 +29305,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: e656d1dfb74305046b174bf9caaddd41, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 12

@@ -22974,6 +22974,7 @@ MonoBehaviour:
   progress: {fileID: 114374037430276274}
   world: 3
   brokenTime: 10
+  score: 0
 --- !u!114 &114018636833248912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24011,6 +24012,7 @@ MonoBehaviour:
   progress: {fileID: 114424203676219182}
   world: 1
   brokenTime: 10
+  score: 0
   entrega: {fileID: 198174005417796832}
 --- !u!114 &114084557684296386
 MonoBehaviour:
@@ -24207,6 +24209,7 @@ MonoBehaviour:
   progress: {fileID: 114487512200316810}
   world: 0
   brokenTime: 10
+  score: 0
 --- !u!114 &114099885527105914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24718,7 +24721,7 @@ MonoBehaviour:
     loop: 1
   - name: 
     clip: {fileID: 8300000, guid: 58b77a8618f83804f9672b6d9567322c, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
   - name: 
@@ -24985,6 +24988,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 05454ce590d5aa74f95d05f8cff73a9e, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 9
@@ -25290,6 +25294,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: e656d1dfb74305046b174bf9caaddd41, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 12
@@ -27072,6 +27077,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 7.5
@@ -27099,6 +27105,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 7.5
@@ -27243,6 +27250,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: e656d1dfb74305046b174bf9caaddd41, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 12
@@ -28530,6 +28538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd38a936c50d54429d6e7713983ee22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!114 &114395802932679058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34317,7 +34326,7 @@ MonoBehaviour:
     loop: 1
   - name: 
     clip: {fileID: 8300000, guid: 58b77a8618f83804f9672b6d9567322c, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
   - name: 
@@ -34387,6 +34396,7 @@ MonoBehaviour:
   progress: {fileID: 114008241165187450}
   world: 2
   brokenTime: 10
+  score: 0
 --- !u!114 &114801428611536272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34521,6 +34531,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 7.5
@@ -35880,6 +35891,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 05454ce590d5aa74f95d05f8cff73a9e, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 9
@@ -35908,7 +35920,7 @@ MonoBehaviour:
     loop: 1
   - name: 
     clip: {fileID: 8300000, guid: 58b77a8618f83804f9672b6d9567322c, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
   - name: 
