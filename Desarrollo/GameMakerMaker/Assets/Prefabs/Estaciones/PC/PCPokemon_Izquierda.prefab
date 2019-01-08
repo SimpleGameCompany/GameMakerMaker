@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114475787679048334}
   - component: {fileID: 82742526132649366}
   - component: {fileID: 114920011358671172}
+  - component: {fileID: 95044086746943082}
   m_Layer: 0
   m_Name: PCPokemon_Izquierda
   m_TagString: Untagged
@@ -319,6 +320,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95044086746943082
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1101059072154450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4026612ba7dfe74fb63708820e874d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95216393131871472
 Animator:
   serializedVersion: 3

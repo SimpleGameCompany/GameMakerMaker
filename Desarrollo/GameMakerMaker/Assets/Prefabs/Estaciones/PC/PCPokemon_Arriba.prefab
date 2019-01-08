@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 114025347496443656}
   - component: {fileID: 82194330881859348}
   - component: {fileID: 114482394216897598}
+  - component: {fileID: 95095825521373722}
   m_Layer: 0
   m_Name: PCPokemon_Arriba
   m_TagString: Untagged
@@ -319,6 +320,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95095825521373722
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493952025628288}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4026612ba7dfe74fb63708820e874d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95361345669409242
 Animator:
   serializedVersion: 3
