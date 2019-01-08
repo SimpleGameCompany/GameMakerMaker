@@ -688,7 +688,7 @@ El apartado artístico del videojuego será colorido y alegre, animaciones algo 
 
 Los sonidos del juego deberán acompañar a su estilo visual y a su concepto. Este concepto será el de un juego de crear juegos.  Los sonidos serán todos sacados de librerías o bien creados de cero para conseguir el efecto deseado. Todas estarán en formato ogg para ahorrar al máximo espacio de la aplicación, puesto el objetivo de realizarlo para web. 
 
-Sonidos usados:
+**Sonidos usados:**
 Cinta_init: Sonido de una cinta al empezar su mecanismo.
 Cinta_Loop: Sonido estático de la cinta transportadora.
 
@@ -726,6 +726,11 @@ Estornudo: Sonido de la animación especial estornudo.
 
 Boton: Botón básico de menú.
 
+**Música usada:**
+
+Menú: *Canny Bag-a Tudor*, by Elvis Herod: Sin modificaciones, de *licencia Atributtion-NonShareAlike*
+
+Ingame: *The Shoes They Wear*, by Blue Dot Sessions: Sin modificaciones, de *licencia Atributtion-NonCommercial*
 
 <div id="roles"></ol>
 
