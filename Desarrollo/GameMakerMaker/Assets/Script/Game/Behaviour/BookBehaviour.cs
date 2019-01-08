@@ -90,6 +90,7 @@ public class BookBehaviour : Interactuable {
         }
         t = 0;
         Canvas.SetActive(false);
+        GameManager.Instance.ResumeGame();
     }
 
     // Use this for initialization

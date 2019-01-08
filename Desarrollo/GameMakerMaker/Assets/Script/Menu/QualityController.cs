@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QualityController : MonoBehaviour {
-    int actualLevel;
+    static int actualLevel = 2;
     public string[] KeyQualityTypes;
     public LocalizedTextMeshProUGUI text;
+
 	void Start () {
-        actualLevel = 2;
-        QualitySettings.SetQualityLevel(2);
+       
+        QualitySettings.SetQualityLevel(actualLevel);
         text.Key = KeyQualityTypes[actualLevel];
 	}
 	
