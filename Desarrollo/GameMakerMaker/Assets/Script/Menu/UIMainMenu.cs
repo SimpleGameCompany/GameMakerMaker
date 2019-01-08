@@ -30,7 +30,14 @@ public class UIMainMenu : MonoBehaviour {
 
     public void Awake()
     {
-        Resize();
+        try
+        {
+            Resize();
+        }
+        catch
+        {
+            Debug.Log("Funcion de javaScript");
+        }
         if (Localization.Instance.SelectedLanguage == Language.Spanish)
         {
             Spanish.interactable = false;
@@ -54,7 +61,14 @@ public class UIMainMenu : MonoBehaviour {
         Localization.Instance.SelectLanguage(Language.Spanish);
         Spanish.interactable = false;
         English.interactable = true;
-        SetSpanish();
+        try
+        {
+            SetSpanish();
+        }
+        catch
+        {
+            Debug.Log("Funcion de javaScript");
+        }
     }
 
     public void SelectEnglish()
@@ -63,7 +77,14 @@ public class UIMainMenu : MonoBehaviour {
         Localization.Instance.SelectLanguage(Language.English);
         Spanish.interactable = true;
         English.interactable = false;
-        SetEnglish();
+        try
+        {
+            SetEnglish();
+        }
+        catch
+        {
+            Debug.Log("Funcion de javaScript");
+        }
     }
 
     public void ClearData()
