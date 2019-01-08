@@ -2808,6 +2808,7 @@ GameObject:
   - component: {fileID: 590460378}
   - component: {fileID: 590460377}
   - component: {fileID: 590460376}
+  - component: {fileID: 590460380}
   m_Layer: 5
   m_Name: props_medios
   m_TagString: Untagged
@@ -2998,6 +2999,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590460374}
   m_Mesh: {fileID: 0}
+--- !u!114 &590460380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 590460374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1636780582}
+  key: _PROPS_MEDIOS
+  maintainTextAlignment: 0
 --- !u!1 &619602150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4132,6 +4147,7 @@ GameObject:
   - component: {fileID: 790531631}
   - component: {fileID: 790531630}
   - component: {fileID: 790531629}
+  - component: {fileID: 790531633}
   m_Layer: 5
   m_Name: props_complejos
   m_TagString: Untagged
@@ -4324,6 +4340,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 790531627}
   m_Mesh: {fileID: 0}
+--- !u!114 &790531633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790531627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1636780582}
+  key: _PROPS_COMPLEJOS
+  maintainTextAlignment: 0
 --- !u!1 &806451950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,6 +5260,7 @@ GameObject:
   - component: {fileID: 921424148}
   - component: {fileID: 921424147}
   - component: {fileID: 921424146}
+  - component: {fileID: 921424150}
   m_Layer: 5
   m_Name: hornos_averiados
   m_TagString: Untagged
@@ -5420,6 +5451,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921424144}
   m_Mesh: {fileID: 0}
+--- !u!114 &921424150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921424144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1636780582}
+  key: _HORNOS_AVERIADOS
+  maintainTextAlignment: 0
 --- !u!1 &962254040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6960,6 +7005,7 @@ GameObject:
   - component: {fileID: 1293439269}
   - component: {fileID: 1293439268}
   - component: {fileID: 1293439267}
+  - component: {fileID: 1293439271}
   m_Layer: 5
   m_Name: props_sencillos
   m_TagString: Untagged
@@ -7150,6 +7196,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1293439265}
   m_Mesh: {fileID: 0}
+--- !u!114 &1293439271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1293439265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1636780582}
+  key: _PROPS_SENCILLOS
+  maintainTextAlignment: 0
 --- !u!1 &1298576327
 GameObject:
   m_ObjectHideFlags: 0
@@ -8179,6 +8239,7 @@ GameObject:
   - component: {fileID: 1666888464}
   - component: {fileID: 1666888463}
   - component: {fileID: 1666888462}
+  - component: {fileID: 1666888466}
   m_Layer: 5
   m_Name: entregas_incorrectas
   m_TagString: Untagged
@@ -8369,6 +8430,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1666888460}
   m_Mesh: {fileID: 0}
+--- !u!114 &1666888466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666888460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1636780582}
+  key: _ENTREGAS_INCORRECTAS
+  maintainTextAlignment: 0
 --- !u!1 &1723444142
 GameObject:
   m_ObjectHideFlags: 0
@@ -10323,6 +10398,7 @@ GameObject:
   - component: {fileID: 2147376831}
   - component: {fileID: 2147376830}
   - component: {fileID: 2147376829}
+  - component: {fileID: 2147376833}
   m_Layer: 5
   m_Name: props_perdidos
   m_TagString: Untagged
@@ -10513,3 +10589,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2147376827}
   m_Mesh: {fileID: 0}
+--- !u!114 &2147376833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2147376827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27798c389c988da48b345a899559ce5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1636780582}
+  key: _PROPS_PERDIDOS
+  maintainTextAlignment: 0
