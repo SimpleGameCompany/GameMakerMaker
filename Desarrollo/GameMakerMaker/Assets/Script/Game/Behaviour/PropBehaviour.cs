@@ -131,7 +131,7 @@ public class PropBehaviour : Interactuable {
     }
 
 
-    public void SetNavMeshDestination()
+    public virtual void  SetNavMeshDestination()
     {
        agent.SetDestination(GameManager.Instance.EndPosition);
     }

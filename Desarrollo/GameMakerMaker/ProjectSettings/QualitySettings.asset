@@ -81,10 +81,10 @@ QualitySettings:
     shadowResolution: 0
     shadowProjection: 0
     shadowCascades: 1
-    shadowDistance: 80
+    shadowDistance: 25.001043
     shadowNearPlaneOffset: 0
     shadowCascade2Split: 0.33333334
-    shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
+    shadowCascade4Split: {x: 0.08, y: 0.16, z: 0.48}
     shadowmaskMode: 0
     blendWeights: 2
     textureQuality: 0
@@ -142,4 +142,7 @@ QualitySettings:
     asyncUploadBufferSize: 4
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    Android: 0
+    Standalone: 0
+    WebGL: 0

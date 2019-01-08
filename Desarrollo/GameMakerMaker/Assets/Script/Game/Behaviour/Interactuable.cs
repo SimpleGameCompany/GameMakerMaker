@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-[RequireComponent(typeof(SoundController))]
+
 public abstract class Interactuable : MonoBehaviour {
 
     public Transform markPoint;

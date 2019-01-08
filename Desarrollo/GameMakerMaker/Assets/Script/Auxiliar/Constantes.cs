@@ -68,7 +68,21 @@ public static class Constantes
 
     public const string ANIMATION_OVEN_MARKED = "Highlight";
 
+
+    
+
+
+
+
     public const string NAME_NEXT = "Next";
+
+    public const string KEY_OVEN_TAKE = "GAME_TUTORIAL_OVEN_TAKE";
+
+    public const string KEY_OVEN_GOTO = "GAME_TUTORIAL_OVEN_GOTO";
+
+    public const string KEY_OVEN_COOKING = "GAME_TUTORIAL_OVEN_COOKING";
+
+    public const string KEY_TUBE_GOTO = "GAME_TUTORIAL_TUBE_GOTO";
 
 
 

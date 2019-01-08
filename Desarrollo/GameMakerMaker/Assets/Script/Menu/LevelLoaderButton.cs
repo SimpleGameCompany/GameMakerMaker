@@ -23,6 +23,10 @@ public class LevelLoaderButton : MonoBehaviour
     private void OnEnable()
     {
         TextMeshProUGUI text = GetComponentInChildren<TextMeshProUGUI>();
-        text.text = text.text + " "+ (level.levelID + 1);
+        if(level.levelID == 0)
+        {
+            text.text = "Tutorial";
+        }else
+            text.text = text.text + " "+ (level.levelID);
     }
 }

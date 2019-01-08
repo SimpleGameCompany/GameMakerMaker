@@ -56,7 +56,7 @@ public class OvenBehaviour : Interactuable
 
 
     public OvenType Type;
-    void Start()
+    public void Start()
     {
         render = RigObject.GetComponentInChildren<Renderer>();
         RenderMaterial = render.material;
@@ -123,7 +123,7 @@ public class OvenBehaviour : Interactuable
     }
 
 
-    IEnumerator Cooking()
+   public virtual IEnumerator Cooking()
     {
         OvenInstruction task = (from x in CookingProp.recipe.Tasks where x.Type == this.Type && !x.Complete  select x ).FirstOrDefault();
         //Debug.Log(task.Complete);
@@ -137,6 +137,7 @@ public class OvenBehaviour : Interactuable
                 progress.fillAmount = (time / TimeToCook);
                 yield return wait;
             }
+            AfterCook();
             CookingProp.TasksCompleted++;
             progress.color = new Color(0, 1, 0);
             task.Complete = true;
@@ -232,7 +233,11 @@ public class OvenBehaviour : Interactuable
                 player.PickedObjet.anim.SetTrigger(Constantes.ANIMATION_PROP_SCALEUP);
                 ovenState = State.Empty;
                 player.interacting = false;
+                AfterPick();
                 break;
         }
     }
+
+    protected virtual void AfterCook() { }
+    protected virtual void AfterPick() { }
 }
