@@ -697,29 +697,29 @@ Oven_burning: Sonido de fuego bajito cuando se quema un prop.
 Fundicion_Broken: Sonido de llamarada cuando se quema un prop en la fundición.
 Fundicion_Loop: Sonido de cocinado del prop en la fundición.
 
-Magia_Loop:Sonido de cocinado del prop en el caldero de magia.
-Magia_Broken:Sonido de quemado y caída de caldero cuando se quema un prop en el caldero de magia.
+Magia_Loop: Sonido de cocinado del prop en el caldero de magia.
+Magia_Broken: Sonido de quemado y caída de caldero cuando se quema un prop en el caldero de magia.
 
 Texturizador_Loop: Sonido de cocinado de un prop en el texturizador.
-Texturizador_Broken:Sonido de interferencias y atasco cuando se quema un prop en el texturizador.
+Texturizador_Broken: Sonido de interferencias y atasco cuando se quema un prop en el texturizador.
 
 
 Libro_Close: Cerrar el libro de recetas.
-Libro_Open:Abrir el libro de recetas.
+Libro_Open: Abrir el libro de recetas.
 Libro_Pasar_Página: Pasar página del libro de recetas.
 
 Tuberia_Broken: Sonido de tubería rota, una pequeña explosión indicativa.
 Tuberia_Mario: Sonido de confirmación característico.
-Tuberia_Zelda:Sonido de confirmación característico.
-Tuberia_Portal:Sonido de confirmación característico.
-Tuberia_Pokemon:Sonido de confirmación característico.
-Tuberia_Pacman:Sonido de confirmación característico.
+Tuberia_Zelda: Sonido de confirmación característico.
+Tuberia_Portal: Sonido de confirmación característico.
+Tuberia_Pokemon: Sonido de confirmación característico.
+Tuberia_Pacman: Sonido de confirmación característico.
 
 Papelera_Eliminar: Sonido de reciclaje de la papelera.
 
-Accion_Coger_Objeto: Sonido como gota para cojer objeto.
+Accion_Coger_Objeto: Sonido como gota para coger objeto.
 Accion_Custom: Sonido como gota para usar en algunas ocasiones.
-Accion_Dejar_Objeto:  Sonido como gota para dejar objeto.
+Accion_Dejar_Objeto: Sonido como gota para dejar objeto.
 Accion_Mover: Sonido como gota para el marker de movimiento.
 Personaje_Negative_1: Sonido de negación del personaje.
 Estornudo: Sonido de la animación especial estornudo.
