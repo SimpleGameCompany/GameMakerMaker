@@ -14,7 +14,7 @@ public class OvenBehaviour : Interactuable
     public Renderer render;
     public Material RenderMaterial;
     public Material Highlight;
-
+    public float score;
 
 
     [Header("Timers")]
@@ -151,6 +151,7 @@ public class OvenBehaviour : Interactuable
         else
         {
             ovenState = State.Broken;
+            ScoreController.Instance.AddScore(0, score, Constantes.OVEN);
             anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
             explode.gameObject.SetActive(true);
             //broken.Play(true);
@@ -189,6 +190,7 @@ public class OvenBehaviour : Interactuable
             yield return wait;
         }
         ovenState = State.Broken;
+        ScoreController.Instance.AddScore(0, score, Constantes.OVEN);
         explode.gameObject.SetActive(true);
         //broken.Play(true);
         anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);

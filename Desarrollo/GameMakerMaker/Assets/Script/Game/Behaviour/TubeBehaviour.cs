@@ -13,6 +13,7 @@ public class TubeBehaviour : Interactuable {
     float currentBrokenTime;
     SoundController anim;
     WaitForEndOfFrame wait;
+    public float score;
 
 
     public override void PostAction(PlayerController player)
@@ -64,12 +65,14 @@ public class TubeBehaviour : Interactuable {
         {
             anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
             ScoreController.Instance.scoreNumber += player.PickedObjet.recipe.score;
-            ScoreController.Instance.Score += 1; 
+
+            ScoreController.Instance.AddScore(1,player.PickedObjet.recipe.score,"prop_"+ player.PickedObjet.recipe.complexity); 
         }
         else
         {
             anim.SetTrigger(Constantes.ANIMATION_OVEN_BREAK);
             broken = true;
+            ScoreController.Instance.AddScore(0, score, Constantes.TUBE);
             Debug.Log("roto");
             StartCoroutine(Reparing());
         }

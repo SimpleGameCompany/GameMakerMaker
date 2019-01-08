@@ -4,6 +4,7 @@ using System.Collections;
 public class PaperBehaviour : MonoBehaviour
 {
     SoundController anim;
+    public float score;
 
     public void Start()
     {
@@ -26,6 +27,7 @@ public class PaperBehaviour : MonoBehaviour
             p.grab = false;
             p.anim.SetTrigger(Constantes.ANIMATION_PROP_DESTROY);
             anim.SetTrigger("Trash");
+            ScoreController.Instance.AddScore(0, score, Constantes.PAPER);
         }
         
     }

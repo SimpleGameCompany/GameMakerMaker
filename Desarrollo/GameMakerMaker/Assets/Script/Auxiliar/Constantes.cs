@@ -88,4 +88,13 @@ public static class Constantes
 
 
     #endregion
+
+    #region Score
+    public const string PROP_BASIC = "prop_Basic";
+    public const string PROP_MEDIUM = "prop_Medium";
+    public const string PROP_HARD = "prop_Hard";
+    public const string TUBE = "Tube";
+    public const string OVEN = "Oven";
+    public const string PAPER = "Paper";
+    #endregion
 }
