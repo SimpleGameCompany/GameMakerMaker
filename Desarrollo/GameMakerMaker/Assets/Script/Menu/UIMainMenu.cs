@@ -25,9 +25,12 @@ public class UIMainMenu : MonoBehaviour {
     private static extern void SetSpanish();
     [DllImport("__Internal")]
     private static extern void SetEnglish();
+    [DllImport("__Internal")]
+    private static extern void Resize();
 
     public void Awake()
     {
+        Resize();
         if (Localization.Instance.SelectedLanguage == Language.Spanish)
         {
             Spanish.interactable = false;

@@ -44,11 +44,11 @@ public class LevelPageController : MonoBehaviour {
             maxlevel = PlayerPrefs.GetInt("maxlevel");
         }
 
-        List<LevelScore> levelScore = new List<LevelScore>();
+        LevelContainer levelScore = new LevelContainer();
         if (PlayerPrefs.HasKey(Constantes.PREFERENCES_LEVEL_SCORE))
         {
             string t = PlayerPrefs.GetString(Constantes.PREFERENCES_LEVEL_SCORE);
-            levelScore = JsonConvert.DeserializeObject<List<LevelScore>>(t);
+            levelScore = JsonUtility.FromJson<LevelContainer>(t);
         }
 
         for (int i = 0; i < maxPage; i++)
@@ -71,9 +71,9 @@ public class LevelPageController : MonoBehaviour {
                         b1.GetComponent<Image>().sprite = UnLockLevel[b1.level.levelID];
                         b1.GetComponent<Button>().interactable = true;
                     }
-                    if (levelScore.Count > 0)
+                    if (levelScore.Scores.Count > 0)
                     {
-                        LevelScore l = (from x in levelScore where x.levelID == index select x).FirstOrDefault();
+                        LevelScore l = (from x in levelScore.Scores where x.levelID == index select x).FirstOrDefault();
                         if (l != null)
                         {
                             for (int v = 0; v < l.score; v++)

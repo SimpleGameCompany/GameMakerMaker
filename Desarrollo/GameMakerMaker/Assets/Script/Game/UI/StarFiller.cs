@@ -24,6 +24,7 @@ public class StarFiller : MonoBehaviour {
         maxPoints = maxPoints == 0 ? points : maxPoints;
         float completed = (points) / maxPoints;
         finalScore = Mathf.FloorToInt(completed * 3);
+        finalScore = Mathf.Max(1, finalScore);
         for(int i = 0; i < 3; i++)
         {
             Image star = stars[i];

@@ -69,11 +69,11 @@ AnimatorController:
       m_State: {fileID: 0}
       m_Motion: {fileID: 7400000, guid: c083058c318d77c408ac9fed7bf9d00b, type: 2}
     - serializedVersion: 2
-      m_State: {fileID: 1102266279865757536}
-      m_Motion: {fileID: 206553436404911852}
+      m_State: {fileID: 0}
+      m_Motion: {fileID: 0}
     - serializedVersion: 2
-      m_State: {fileID: 1102188046173745510}
-      m_Motion: {fileID: 206091761422110724}
+      m_State: {fileID: 0}
+      m_Motion: {fileID: 0}
     - serializedVersion: 2
       m_State: {fileID: 1102766926856721832}
       m_Motion: {fileID: 206835973619857142}
@@ -90,36 +90,6 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!206 &206091761422110724
-BlendTree:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Idle
-  m_Childs:
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: bbd21c105b6cef940b1f2a5fcace979d, type: 2}
-    m_Threshold: 0
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Highlight
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 80814dacd37053341b99d2b143194320, type: 2}
-    m_Threshold: 1
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Highlight
-    m_Mirror: 0
-  m_BlendParameter: Highlight
-  m_BlendParameterY: Highlight
-  m_MinThreshold: 0
-  m_MaxThreshold: 1
-  m_UseAutomaticThresholds: 1
-  m_NormalizedBlendValues: 0
-  m_BlendType: 0
 --- !u!206 &206369670011375812
 BlendTree:
   m_ObjectHideFlags: 1
@@ -157,36 +127,6 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs: []
-  m_BlendParameter: Highlight
-  m_BlendParameterY: Highlight
-  m_MinThreshold: 0
-  m_MaxThreshold: 1
-  m_UseAutomaticThresholds: 1
-  m_NormalizedBlendValues: 0
-  m_BlendType: 0
---- !u!206 &206553436404911852
-BlendTree:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Idle
-  m_Childs:
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: bbd21c105b6cef940b1f2a5fcace979d, type: 2}
-    m_Threshold: 0
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Highlight
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 80814dacd37053341b99d2b143194320, type: 2}
-    m_Threshold: 1
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Highlight
-    m_Mirror: 0
   m_BlendParameter: Highlight
   m_BlendParameterY: Highlight
   m_MinThreshold: 0
@@ -589,56 +529,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &1102188046173745510
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Idle 1
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1102266279865757536
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Idle 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &1102636284839473576
 AnimatorState:
   serializedVersion: 5
@@ -808,12 +698,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102173634868638870}
     m_Position: {x: 276, y: 216, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102266279865757536}
-    m_Position: {x: 0, y: 0, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102188046173745510}
-    m_Position: {x: 0, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102766926856721832}
     m_Position: {x: 276, y: 432, z: 0}

@@ -12,6 +12,18 @@ SetSpanish : function (){
 
 SetEnglish : function (){
     ponerIngles();
+},
+
+Resize : function(){
+    var canvas = document.getElementById("#canvas");
+    var w = canvas.width;
+    var h = canvas.height;
+
+    canvas.addEventListener("resize",function(){
+        canvas.height = h;
+        canvas.width = w;
+
+    })
 }
 
 });

@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Level[] levels;
     [HideInInspector]
-    public List<LevelScore> levelScore;
+    public LevelContainer levelScore;
     public float progress = 0;
     public bool isDone = false;
     [HideInInspector]
@@ -80,11 +80,11 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.HasKey(Constantes.PREFERENCES_LEVEL_SCORE))
         {
             string t = PlayerPrefs.GetString(Constantes.PREFERENCES_LEVEL_SCORE);
-            levelScore = JsonConvert.DeserializeObject<List<LevelScore>>(t);
+            levelScore = JsonUtility.FromJson<LevelContainer>(t);
         }
         else
         {
-            levelScore = new List<LevelScore>();
+            levelScore = new LevelContainer();
         }
     }
 
@@ -296,20 +296,20 @@ public class GameManager : MonoBehaviour
             score = a.finalScore
         };
 
-        LevelScore previous = (from x in levelScore where x.levelID == l.levelID select x).FirstOrDefault();
+        LevelScore previous = (from x in levelScore.Scores where x.levelID == l.levelID select x).FirstOrDefault();
         
         if (previous != null)
         {
-            levelScore.Remove(previous);
+            levelScore.Scores.Remove(previous);
             if (previous.score > l.score)
             {           
                 l = previous;
             }
         }
 
-        levelScore.Add(l);
+        levelScore.Scores.Add(l);
 
-        string t = JsonConvert.SerializeObject(levelScore);
+        string t = JsonUtility.ToJson(levelScore);
         PlayerPrefs.SetString(Constantes.PREFERENCES_LEVEL_SCORE, t);
 
     }
