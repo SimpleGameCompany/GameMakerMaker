@@ -170,7 +170,7 @@ public class PlayerController : MonoBehaviour {
                         inter = hit.transform.parent.GetComponent<Interactuable>();
                     }
                 }
-
+                anim.SetFloat("IdlePose", 0);
                 if (inter != null)
                 {
                     click = hit.point;

@@ -36,42 +36,46 @@ public class ScoreController : MonoBehaviour {
 
     public void AddScore(float p,float s, string type)
     {
-        score += p;
-        Mathf.Clamp(scoreNumber += s,0,int.MaxValue);
-        textComponent.text = text + ": " + score + "/" + GameManager.Instance.loadedLevel.winCount;
-
-        switch(type){
-            case Constantes.PROP_BASIC:
-                propBasico++;
-                propBasicoScore += score;
-                break;
-            case Constantes.PROP_MEDIUM:
-                propNormal++;
-                propNormalScore += score;
-                break;
-            case Constantes.PROP_HARD:
-                propComplejo++;
-                propComplejoScore += score;
-                break;
-            case Constantes.TUBE:
-                entregas++;
-                entregasScore += score;
-                break;
-            case Constantes.OVEN:
-                hornos++;
-                hornosScore += score;
-                break;
-            case Constantes.PAPER:
-                papelera++;
-                papeleraScore += score;
-                break;
-            default:
-                break;
-        }
-
-        if (score == GameManager.Instance.loadedLevel.winCount)
+        if (GameManager.Instance.playing)
         {
-            GameManager.Instance.EndGame(true);
+            score += p;
+            Mathf.Clamp(scoreNumber += s, 0, int.MaxValue);
+            textComponent.text = text + ": " + score + "/" + GameManager.Instance.loadedLevel.winCount;
+
+            switch (type)
+            {
+                case Constantes.PROP_BASIC:
+                    propBasico++;
+                    propBasicoScore += score;
+                    break;
+                case Constantes.PROP_MEDIUM:
+                    propNormal++;
+                    propNormalScore += score;
+                    break;
+                case Constantes.PROP_HARD:
+                    propComplejo++;
+                    propComplejoScore += score;
+                    break;
+                case Constantes.TUBE:
+                    entregas++;
+                    entregasScore += score;
+                    break;
+                case Constantes.OVEN:
+                    hornos++;
+                    hornosScore += score;
+                    break;
+                case Constantes.PAPER:
+                    papelera++;
+                    papeleraScore += score;
+                    break;
+                default:
+                    break;
+            }
+
+            if (score == GameManager.Instance.loadedLevel.winCount)
+            {
+                GameManager.Instance.EndGame(true);
+            }
         }
     }
 

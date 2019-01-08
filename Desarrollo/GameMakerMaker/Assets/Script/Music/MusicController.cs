@@ -11,7 +11,7 @@ public class MusicController : MonoBehaviour {
     public AudioClip[] clips;
     private Dictionary<string, int> clipsID;
     private AudioSource audioSource;
-
+    private float firstVolume;
     public static MusicController Instance
     {
         get
@@ -52,7 +52,7 @@ public class MusicController : MonoBehaviour {
 
     public void UnMute()
     {
-        Volume = 1;
+        Volume = firstVolume;
         foreach (var e in FindObjectsOfType<AudioSource>())
         {
             e.mute = false;
@@ -80,15 +80,20 @@ public class MusicController : MonoBehaviour {
         }
         else
         {
+            
             DontDestroyOnLoad(gameObject);
             _instance = this;
             audioSource = GetComponent<AudioSource>();
+            audioSource.clip = clips[0];
+            audioSource.loop = true;
+            audioSource.Play();
+            firstVolume = Volume;
             clipsID = new Dictionary<string, int>();
             for (int i = 0; i < clips.Length; i++)
             {
                 clipsID.Add(clips[i].name, i);
             }
-            Volume = 1;
+            //Volume = 1;
         }
 	}
 
