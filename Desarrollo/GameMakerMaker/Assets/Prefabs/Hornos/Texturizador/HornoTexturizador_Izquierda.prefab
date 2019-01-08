@@ -509,7 +509,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1080775590213090}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.29287338, y: -1.0550001, z: -11.174926}
+  m_LocalPosition: {x: -5.441705, y: -2.0354757, z: -1.3920622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224607568433282162}
@@ -1264,7 +1264,7 @@ MonoBehaviour:
     loop: 1
   - name: 
     clip: {fileID: 8300000, guid: 58b77a8618f83804f9672b6d9567322c, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
   - name: 
@@ -1347,6 +1347,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: 8174183db636eec4faddb748fc175f3b, type: 2}
+  score: 0
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 7.5
