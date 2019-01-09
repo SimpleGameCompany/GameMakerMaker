@@ -612,7 +612,7 @@ Finalmente, se ha incluido esta pantalla directamente en la página web del vide
 
 ## **3.5. Pantalla de Selección de nivel**
 
-El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+El planteamiento inicial de la interfaz se puede ver en las siguientes figuras:
 
  ![image alt text](assets/GDD/PantalladeSelecciondenivel.png)
  
