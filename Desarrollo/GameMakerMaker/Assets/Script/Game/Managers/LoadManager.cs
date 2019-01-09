@@ -19,7 +19,7 @@ public class LoadManager : MonoBehaviour
     }
 
     #region LoadVariables
-    private VideoPlayer[] videoCount;
+   
 
     public static LoadManager Instance;
     // Make sure the loading screen shows for at least 1 second:
@@ -79,15 +79,7 @@ public class LoadManager : MonoBehaviour
     private void Configure()
     {
         //Prepare the videos
-        VideoPlayer[] p = GetComponentsInChildren<VideoPlayer>();
-        foreach (var v in p)
-        {
-            v.Prepare();
-            
-            v.time = 0;
-            v.Play();
-        }
-        videoCount = p;
+       
         // Save the bar fill's initial local scale:
         barFillLocalScale = barFillRectTransform.localScale;
         // Enable/disable the progress bar based on configuration:
@@ -183,9 +175,9 @@ public class LoadManager : MonoBehaviour
         // Play the fade in animation:
         //animator.SetTrigger("Show");
         // Reset the fade out animation flag:
-       
-        RenderTexture t = videoCount[ Random.Range(0, videoCount.Length)].targetTexture;
-        GetComponentInChildren<RawImage>().texture = t;
+
+
+        GetComponentInChildren<RawImage>().texture = VideoPage.instance.getRandomVideo();
 
 
         type = LoadingType.GameManager;
@@ -209,8 +201,7 @@ public class LoadManager : MonoBehaviour
         //animator.SetTrigger("Show");
         // Reset the fade out animation flag:
 
-        RenderTexture t = videoCount[Random.Range(0, videoCount.Length)].targetTexture;
-        GetComponentInChildren<RawImage>().texture = t;
+        GetComponentInChildren<RawImage>().texture = VideoPage.instance.getRandomVideo();
 
         didTriggerFadeOutAnimation = false;
         type = LoadingType.Async;
@@ -220,6 +211,8 @@ public class LoadManager : MonoBehaviour
     public void Hide()
     {
         // Disable the loading screen:
+        if(VideoPage.instance != null)
+            VideoPage.instance.StopVideo();
         gameObject.SetActive(false);
         currentLoadingOperation = null;
         currentAsync = null;
