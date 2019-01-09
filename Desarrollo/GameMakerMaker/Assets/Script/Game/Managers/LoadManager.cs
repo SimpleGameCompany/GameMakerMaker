@@ -78,7 +78,7 @@ public class LoadManager : MonoBehaviour
     #region LoadMethods
     private void Configure()
     {
-        //Prepare the videos
+        Application.targetFrameRate = -1;
        
         // Save the bar fill's initial local scale:
         barFillLocalScale = barFillRectTransform.localScale;

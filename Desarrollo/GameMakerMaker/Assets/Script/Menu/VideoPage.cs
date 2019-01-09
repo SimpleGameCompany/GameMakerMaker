@@ -43,6 +43,7 @@ public class VideoPage : MonoBehaviour {
 
     public Texture getRandomVideo()
     {
+        gameObject.SetActive(true);
         if(CompletedVideos.Count < 1)
         {
             ActualVideo = null;
@@ -62,7 +63,7 @@ public class VideoPage : MonoBehaviour {
         if(ActualVideo != null)
         {
             ActualVideo.Pause();
-            
+            gameObject.SetActive(false);
             
         }
 
