@@ -29,7 +29,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1666341777292058
 GameObject:
@@ -47,7 +47,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1700259234575718
 GameObject:
@@ -63,7 +63,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1752298844736192
 GameObject:
@@ -81,7 +81,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1987998720118706
 GameObject:
@@ -98,7 +98,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4308427780779650
 Transform:
@@ -292,6 +292,7 @@ MonoBehaviour:
   actionIcon: {fileID: 0}
   Canvas: {fileID: 0}
   pages: []
+  pagesInit: []
 --- !u!114 &114164255743348868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,7 +335,7 @@ MonoBehaviour:
   _guid: b424096d-20fe-4648-a1f6-1065b306f78d
 --- !u!114 &114428251412478662
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987998720118706}
@@ -346,7 +347,7 @@ MonoBehaviour:
   _guid: 4d60fb31-bcf1-4d8e-90af-554bcea975eb
 --- !u!114 &114490326690677210
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987998720118706}
@@ -362,7 +363,6 @@ MonoBehaviour:
     - {fileID: 1042993958607676}
     - {fileID: 1752298844736192}
     - {fileID: 1666341777292058}
-    - {fileID: 0}
     - {fileID: 1700259234575718}
   _assetGuid: 3f8c7bbbaa840044bb337bdac9d0c354
 --- !u!114 &114580658859062690

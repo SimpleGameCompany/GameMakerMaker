@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958413709589706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.14, y: -0.05, z: -15.44}
+  m_LocalPosition: {x: -11.261276, y: 0.24023676, z: -0.35099077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4665484878282358}
@@ -329,7 +329,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '[GAME_TUTORIAL_PROP_TAKE]'
+  m_text: Grab the props before they reach the recycle bin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 828ca772ecfa1f541b5446136b67bbc3, type: 2}
   m_sharedMaterial: {fileID: 21520751536260474, guid: 828ca772ecfa1f541b5446136b67bbc3,
@@ -357,14 +357,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.15
-  m_fontSizeBase: 36
+  m_fontSize: 0.25
+  m_fontSizeBase: 1.3
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 0
+  m_fontSizeMin: 0.25
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -373,9 +373,9 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
+  m_wordWrappingRatios: 1
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 27
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -398,12 +398,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 114160953668130884}
-    characterCount: 25
+    characterCount: 48
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 4
+    spaceCount: 8
+    wordCount: 9
     linkCount: 0
-    lineCount: 1
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -5294,18 +5294,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1345136706537650}
-  m_LocalRotation: {x: 0.23621887, y: -0, z: -0, w: 0.97169983}
+  m_LocalRotation: {x: 0.3083529, y: 0, z: 0, w: 0.95127213}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224913192167733286}
   m_Father: {fileID: 4862098018651050}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 27.327002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 35.92, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.696}
-  m_SizeDelta: {x: 2, y: 0.7047}
+  m_AnchoredPosition: {x: 0, y: 0.902}
+  m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224913192167733286
 RectTransform:
