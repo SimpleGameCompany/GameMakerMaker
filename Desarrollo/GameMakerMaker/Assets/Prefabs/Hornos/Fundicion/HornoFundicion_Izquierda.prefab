@@ -703,7 +703,7 @@ MonoBehaviour:
   _assetGuid: 60022a583ed8da040828bd83acc3bdc0
 --- !u!114 &114104281680176644
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1921403665430978}
@@ -884,6 +884,7 @@ MonoBehaviour:
   render: {fileID: 0}
   RenderMaterial: {fileID: 0}
   Highlight: {fileID: 2100000, guid: e656d1dfb74305046b174bf9caaddd41, type: 2}
+  score: -10
   brokenTime: 10
   explosionTime: 18
   TimeToCook: 12
@@ -1076,7 +1077,7 @@ MonoBehaviour:
   _guid: d1007d99-3f9e-474b-bd90-e343930aba94
 --- !u!114 &114850442018303922
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1921403665430978}

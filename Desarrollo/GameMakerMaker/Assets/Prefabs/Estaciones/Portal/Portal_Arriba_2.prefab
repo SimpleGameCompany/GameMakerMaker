@@ -767,7 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114765566334235980
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1467611607933748}
@@ -805,10 +805,11 @@ MonoBehaviour:
   progress: {fileID: 114046351971201770}
   world: 1
   brokenTime: 10
+  score: -50
   entrega: {fileID: 198160637022690176}
 --- !u!114 &114865640797412720
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1467611607933748}

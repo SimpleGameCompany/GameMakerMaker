@@ -446,7 +446,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114003010901328384
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453678923106754}
@@ -458,7 +458,7 @@ MonoBehaviour:
   _guid: 7baeea3f-ebf9-428a-8dcb-f65eea95a590
 --- !u!114 &114032972983954042
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1453678923106754}
@@ -859,6 +859,7 @@ MonoBehaviour:
   progress: {fileID: 114217078675294740}
   world: 1
   brokenTime: 10
+  score: -50
   entrega: {fileID: 198460581032553564}
 --- !u!198 &198208779258566152
 ParticleSystem:

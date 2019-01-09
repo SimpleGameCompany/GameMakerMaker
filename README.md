@@ -577,6 +577,10 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 ![image alt text](assets/GDD/PantalladeMenuPrincipal.png)
 
+Esta es la apariencia final del menú:
+
+![image alt text](assets/GDD/ui1.png)
+
 
 <div id="PantalladeOpciones"></ol>
 
@@ -585,6 +589,10 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 ![image alt text](assets/GDD/PantalladeOpciones.png)
+
+Esta es la apariencia final del menú:
+
+![image alt text](assets/GDD/ui2.png)
 
 
 <div id="PantalladeCreditos"></ol>
@@ -604,11 +612,17 @@ Finalmente, se ha incluido esta pantalla directamente en la página web del vide
 
 ## **3.5. Pantalla de Selección de nivel**
 
-El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
+El planteamiento inicial de la interfaz se puede ver en las siguientes figuras:
 
  ![image alt text](assets/GDD/PantalladeSelecciondenivel.png)
  
  ![image alt text](assets/GDD/PantalladeSelecciondenivel2.png)
+ 
+ Esta es la apariencia final de este menú:
+
+![image alt text](assets/GDD/ui3.png)
+
+![image alt text](assets/GDD/ui4.png)
 
 
 <div id="PantalladeNivel"></ol>
@@ -617,11 +631,15 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 En las siguientes imágenes vemos un esbozo inicial y esquemático de los elementos que constituyen el HUD del juego (su distribución, forma y color pueden no coincidir necesariamente con los de la versión final, se trata simplemente de una aproximación al concepto):
 
- ![image alt text](assets/GDD/image_13.png)
+![image alt text](assets/GDD/image_13.png)
 
 Como vemos, se visualiza el progreso en el nivel (los props entregados sobre el total necesario), y las vidas restantes del jugador.
 
 La idea fundamental detrás del diseño de interfaces del juego es minimizar el número de elementos y menús, para que sea lo más usable posible en pantallas de dispositivos móviles.
+
+La apariencia definitiva del HUD se muestra a continuación:
+
+![image alt text](assets/GDD/ui5.png)
 
 
 <div id="PantalladePausa"></ol>
@@ -630,7 +648,11 @@ La idea fundamental detrás del diseño de interfaces del juego es minimizar el 
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
- ![image alt text](assets/GDD/PantalladePausa.png)
+![image alt text](assets/GDD/PantalladePausa.png)
+
+Esta es la apariencia final de este menú:
+
+![image alt text](assets/GDD/ui6.png)
 
 
 <div id="PantalladeFindelnivel"></ol>
@@ -639,7 +661,11 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
- ![image alt text](assets/GDD/PantalladeFindelnivel.png)
+![image alt text](assets/GDD/PantalladeFindelnivel.png)
+
+Esta es la apariencia final de este menú, cuyo fondo es una imagen animada:
+
+![image alt text](assets/GDD/ui7.png)
 
 
 <div id="PantalladeGameOver"></ol>
@@ -647,7 +673,11 @@ El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 ## **3.9. Pantalla de Game Over**
 El planteamiento inicial de la interfaz se puede ver en la siguiente figura:
 
- ![image alt text](assets/GDD/PantalladeGameOver.png)
+![image alt text](assets/GDD/PantalladeGameOver.png)
+
+Al igual que en el caso anterior, se ha utilizado una imagen animada de fondo para este menú:
+
+![image alt text](assets/GDD/ui8.png)
 
 
 <div id="Notificaciones"></ol>
@@ -680,7 +710,25 @@ Las notificaciones serán las siguientes:
 
 ## **4.1. Arte**
 
-El apartado artístico del videojuego será colorido y alegre, animaciones algo exageradas y, en general, una estética de 3D cartoon.
+Partiendo de la temática y la mezcla de referencias a distintos videojuegos, el apartado artístico del videojuego será alegre, con una estética de 3D cartoon. 
+
+Sobre una base de grises en los escenarios y el diseño de la página web, como guiño a la interfaz del motor Unity, destacará una gran variedad de colores vivos. Sumado a los diseños de los props, se presentan nuevos elementos con paletas saturadas (personaje, interfaces, puntos de preparación). Este carácter está continuamente apoyado por animaciones exageradas, así como sistemas de partículas originales.
+
+El videojuego ha pasado por un minucioso proceso de concept art, en el cual se han considerado cuestiones como la adecuación de las interfaces para personas con daltonismo y la inclusión de iconos y señales redundantes como apoyo al gameplay.
+
+A continuación se muestran algunos ejemplos visuales:
+
+ ![image alt text](assets/GDD/arte1.png)
+ 
+ ![image alt text](assets/GDD/arte2.png)
+ 
+ ![image alt text](assets/GDD/arte3.png)
+ 
+ ![image alt text](assets/GDD/arte4.png)
+ 
+ ![image alt text](assets/GDD/arte5.png)
+ 
+ ![image alt text](assets/GDD/arte6.png)
 
 <div id="Sonido"></ol>
 
@@ -688,7 +736,8 @@ El apartado artístico del videojuego será colorido y alegre, animaciones algo 
 
 Los sonidos del juego deberán acompañar a su estilo visual y a su concepto. Este concepto será el de un juego de crear juegos.  Los sonidos serán todos sacados de librerías o bien creados de cero para conseguir el efecto deseado. Todas estarán en formato ogg para ahorrar al máximo espacio de la aplicación, puesto el objetivo de realizarlo para web. 
 
-**Sonidos usados:**
+**Lista de sonidos:**
+
 Cinta_init: Sonido de una cinta al empezar su mecanismo.
 Cinta_Loop: Sonido estático de la cinta transportadora.
 
