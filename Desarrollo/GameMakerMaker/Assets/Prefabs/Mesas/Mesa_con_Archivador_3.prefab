@@ -181,7 +181,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -291.264}
 --- !u!23 &23233446400951864
 MeshRenderer:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 9
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565882424427884}
@@ -216,7 +216,7 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!23 &23585125106816482
 MeshRenderer:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 9
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493760771882584}
@@ -229,7 +229,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7731cca8e68c88e4eb9a2a23ee99f161, type: 3}
+  - {fileID: 2100000, guid: f8966c08bed5e91489e4cc2bc33f003e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -321,7 +321,7 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!33 &33020131046718866
 MeshFilter:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 9
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565882424427884}
@@ -342,7 +342,7 @@ MeshFilter:
   m_Mesh: {fileID: 4300000, guid: 6defd10d04d239b49bd04dadfdd2632c, type: 3}
 --- !u!33 &33877666009225942
 MeshFilter:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 9
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493760771882584}
@@ -361,7 +361,7 @@ BoxCollider:
   m_Center: {x: -0.5, y: 0, z: 0.000000014901165}
 --- !u!114 &114003273781785250
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565882424427884}
@@ -401,7 +401,7 @@ MonoBehaviour:
   _guid: 115021787
 --- !u!114 &114144706541293612
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331873463616114}
@@ -421,7 +421,7 @@ MonoBehaviour:
   _assetGuid: b5ce99a9e740a094cb527142fab7b611
 --- !u!114 &114352313331358400
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565882424427884}
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &114429571524719530
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493760771882584}
@@ -444,7 +444,7 @@ MonoBehaviour:
   _guid: 798375989
 --- !u!114 &114556670323965374
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493760771882584}
@@ -482,7 +482,7 @@ MonoBehaviour:
   _assetGuid: 6defd10d04d239b49bd04dadfdd2632c
 --- !u!114 &114768047477709308
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493760771882584}
@@ -495,7 +495,7 @@ MonoBehaviour:
   - {fileID: 65415006180959636}
 --- !u!114 &114796273728431668
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565882424427884}
@@ -507,7 +507,7 @@ MonoBehaviour:
   _guid: 115021787
 --- !u!114 &114826667557139708
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331873463616114}
@@ -535,7 +535,7 @@ MonoBehaviour:
   _assetGuid: 6defd10d04d239b49bd04dadfdd2632c
 --- !u!114 &114944155202649814
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493760771882584}
