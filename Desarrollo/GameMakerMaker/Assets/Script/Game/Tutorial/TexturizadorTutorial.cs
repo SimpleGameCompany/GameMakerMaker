@@ -22,6 +22,7 @@ public class TexturizadorTutorial : OvenBehaviour {
 
     public override IEnumerator Cooking()
     {
+        GetComponentInChildren<Light>().gameObject.SetActive(false);
         text.gameObject.SetActive(true);
         text.Key = Constantes.KEY_OVEN_COOKING;
         return base.Cooking();
@@ -29,7 +30,11 @@ public class TexturizadorTutorial : OvenBehaviour {
 
     protected override void AfterPick()
     {
+        
         text.gameObject.SetActive(false);
+        LocalizedTextMeshProUGUI l =  FindObjectOfType<TubeBehaviour>().GetComponentInChildren<LocalizedTextMeshProUGUI>(true);
+        l.gameObject.SetActive(true);
+        l.transform.parent.parent.GetComponentInChildren<Light>(true).gameObject.SetActive(true);
     }
 
 

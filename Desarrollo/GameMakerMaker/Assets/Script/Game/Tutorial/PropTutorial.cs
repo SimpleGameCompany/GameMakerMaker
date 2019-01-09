@@ -20,6 +20,7 @@ public class PropTutorial : PropBehaviour {
         base.PostActionAnim(player);
         TexturizadorTutorial.instance.text.gameObject.SetActive(true);
         TexturizadorTutorial.instance.text.Key = Constantes.KEY_OVEN_GOTO;
+        TexturizadorTutorial.instance.GetComponentInChildren<Light>(true).gameObject.SetActive(true); 
         text.gameObject.SetActive(false);
     }
 

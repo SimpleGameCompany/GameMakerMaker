@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
             maxlevel = PlayerPrefs.GetInt("maxlevel");
         }else
         {
-            maxlevel = 0;
+            maxlevel = 1;
         }
         if (PlayerPrefs.HasKey(Constantes.PREFERENCES_LEVEL_SCORE))
         {
@@ -113,6 +113,7 @@ public class GameManager : MonoBehaviour
      public IEnumerator StartGame()
     {
         pause = true;
+        MusicController.Instance.PlaySong("Game_Music");
         EndGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_END);
         WinGameUI = GameObject.FindGameObjectWithTag(Constantes.TAG_WIN);
         WinGameUI.SetActive(false);
@@ -168,7 +169,7 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         progress = 1f;
         isDone = true;
-        
+       
     }
 
 
@@ -255,11 +256,13 @@ public class GameManager : MonoBehaviour
     public void PlayGame()
     {
         pause = false;
+        
         Recipies.transform.parent.parent.gameObject.SetActive(false);
         BookBehaviour.instance.Page = 0;
         BookBehaviour.instance.InitPage = 0;
         WaitForSeconds seconds = new WaitForSeconds(loadedLevel.ratio);
         playing = true;
+        ScoreController.Instance.AddScore(0, 0, "None");
         StartCoroutine(GenerateProp(seconds,loadedLevel.minRatio,loadedLevel.maxRatio));
     }
 

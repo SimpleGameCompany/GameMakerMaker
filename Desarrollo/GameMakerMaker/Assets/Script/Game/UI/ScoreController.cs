@@ -36,6 +36,7 @@ public class ScoreController : MonoBehaviour {
 
     public void AddScore(float p,float s, string type)
     {
+
         if (GameManager.Instance.playing)
         {
             score += p;

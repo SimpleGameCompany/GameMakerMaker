@@ -97,7 +97,6 @@ public class PlayerController : MonoBehaviour {
         {
             if (actualTask.UpdatePosition(this))
             {
-                Debug.DrawRay(transform.position + Vector3.up, agent.destination - transform.position, Color.black);
                 yield return null;
             }
             else
@@ -249,7 +248,6 @@ public class PlayerController : MonoBehaviour {
 
             transform.forward = Vector3.RotateTowards(transform.forward, PointDir, Mathf.Deg2Rad * rotateSpeed * Time.deltaTime, 0.0f);
             t = Mathf.Abs(Vector3.Angle(PointDir, transform.forward));
-            Debug.DrawRay(transform.position + Vector3.up, PointDir, Color.red);
             yield return null;
 
         }

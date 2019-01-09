@@ -38,7 +38,7 @@ public class LevelPageController : MonoBehaviour {
     {
         ActualPage = 0;
 
-        int maxlevel = 0;
+        int maxlevel = 1;
         if (PlayerPrefs.HasKey("maxlevel"))
         {
             maxlevel = PlayerPrefs.GetInt("maxlevel");

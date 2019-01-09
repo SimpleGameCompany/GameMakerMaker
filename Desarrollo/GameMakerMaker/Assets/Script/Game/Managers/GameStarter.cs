@@ -20,6 +20,7 @@ public class GameStarter : MonoBehaviour {
         GameManager.Instance.ResumeGame();
         GameManager.Instance.Clear();
         AsyncOperation load = SceneManager.LoadSceneAsync(Constantes.SCENE_MENU);
+        MusicController.Instance.PlaySong("Menu_Music");
         LoadManager.Instance.Show(load);
     }
 

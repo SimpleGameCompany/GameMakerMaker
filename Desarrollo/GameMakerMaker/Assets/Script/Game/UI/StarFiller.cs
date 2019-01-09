@@ -31,6 +31,12 @@ public class StarFiller : MonoBehaviour {
 	
     public IEnumerator FillStars(float points,float maxPoints)
     {
+        finalScore = 0;
+        maxPoints = maxPoints == 0 ? points : maxPoints;
+        float completed = (points) / maxPoints;
+        finalScore = Mathf.FloorToInt(completed * 3);
+        finalScore = Mathf.Max(1, finalScore);
+        finalScore = Mathf.Min(finalScore, 3);
         yield return wait;
         if (ScoreController.Instance.propComplejo > 0)
         {
@@ -70,11 +76,7 @@ public class StarFiller : MonoBehaviour {
 
 
 
-        finalScore = 0;
-        maxPoints = maxPoints == 0 ? points : maxPoints;
-        float completed = (points) / maxPoints;
-        finalScore = Mathf.FloorToInt(completed * 3);
-        finalScore = Mathf.Max(1, finalScore);
+        
         yield return wait;
         for (int i = 0; i < 3; i++)
         {

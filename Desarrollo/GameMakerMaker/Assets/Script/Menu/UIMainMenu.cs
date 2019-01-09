@@ -90,7 +90,7 @@ public class UIMainMenu : MonoBehaviour {
     public void ClearData()
     {
         PlayerPrefs.DeleteKey("maxlevel");
-        GameManager.Instance.maxlevel = 0;
+        GameManager.Instance.maxlevel = 1;
         PlayerPrefs.DeleteKey(Constantes.PREFERENCES_LEVEL_SCORE);
     }
 
