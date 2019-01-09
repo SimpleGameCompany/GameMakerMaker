@@ -6,7 +6,7 @@ using System;
 using UnityEngine.AI;
 using System.Linq;
 using UnityEngine.UI;
-using Newtonsoft.Json;
+
 
 public class GameManager : MonoBehaviour
 {

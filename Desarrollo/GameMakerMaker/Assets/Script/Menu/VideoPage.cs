@@ -63,8 +63,7 @@ public class VideoPage : MonoBehaviour {
         if(ActualVideo != null)
         {
             ActualVideo.Pause();
-            gameObject.SetActive(false);
-            
+            gameObject.SetActive(false);            
         }
 
     }
