@@ -57,12 +57,11 @@ public class LifeController : MonoBehaviour {
         }
     }
 
-    private GameObject[] Sprites;
+    public GameObject[] Sprites;
 
 
 
     void Start () {
-        Sprites = GameObject.FindGameObjectsWithTag(Constantes.TAG_LIFES);
         maxLifes = Sprites.Length;
         for (int i = 0; i < maxLifes; i++)
         {

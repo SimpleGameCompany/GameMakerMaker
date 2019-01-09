@@ -17,5 +17,6 @@ public class CintaScroll : MonoBehaviour {
         offset += (Time.deltaTime * 0.25f);
         offset = offset % 1;
         render.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
+        render.material.SetTextureOffset("_BumpMap", new Vector2(0, offset));
     }
 }
