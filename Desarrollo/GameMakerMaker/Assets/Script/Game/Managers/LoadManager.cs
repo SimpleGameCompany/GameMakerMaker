@@ -83,6 +83,7 @@ public class LoadManager : MonoBehaviour
         foreach (var v in p)
         {
             v.Prepare();
+            
             v.time = 0;
             v.Play();
         }
