@@ -11,11 +11,15 @@
 .webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
 .webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
 
- .footer {margin-top: -15px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;  } 
+ .footer {margin-top: -15px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 1.5vw;  } 
  .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;} 
  .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
  .footer .title {margin-right: 10px; float: right;}
- .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+ .footer .fullscreen {background-image: url('fullscreen.png'); width: 2.5vw; background-size: contain; float: right;}
+
+ .fullscreen:hover {
+    background-image: url('fullscreenH.png');
+}
 
 body, html{
     margin:0;
