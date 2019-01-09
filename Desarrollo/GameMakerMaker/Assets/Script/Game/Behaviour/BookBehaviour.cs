@@ -36,12 +36,15 @@ public class BookBehaviour : Interactuable {
 
     IEnumerator NextPageCourutine(int value,GameObject[] array)
     {
-        array[pageActual].SetActive(false); 
-        pageActual = value;
-        array[pageActual].SetActive(true);
-        yield return null;
-        array[pageActual].SetActive(false);
-        array[pageActual].SetActive(true);
+        if (array.Length > 0)
+        {
+            array[pageActual].SetActive(false);
+            pageActual = value;
+            array[pageActual].SetActive(true);
+            yield return null;
+            array[pageActual].SetActive(false);
+            array[pageActual].SetActive(true);
+        }
 
     }
 

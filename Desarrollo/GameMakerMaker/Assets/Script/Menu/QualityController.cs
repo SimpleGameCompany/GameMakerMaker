@@ -11,6 +11,7 @@ public class QualityController : MonoBehaviour {
 	void Start () {
        
         QualitySettings.SetQualityLevel(actualLevel);
+        
         text.Key = KeyQualityTypes[actualLevel];
 	}
 	
