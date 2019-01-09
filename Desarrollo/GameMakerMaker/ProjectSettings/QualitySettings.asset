@@ -4,11 +4,11 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 3
+  m_CurrentQuality: 2
   m_QualitySettings:
   - serializedVersion: 2
     name: Tegra
-    pixelLightCount: 4
+    pixelLightCount: 0
     shadows: 0
     shadowResolution: 0
     shadowProjection: 0
@@ -42,7 +42,7 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Low
-    pixelLightCount: 4
+    pixelLightCount: 1
     shadows: 1
     shadowResolution: 0
     shadowProjection: 0
@@ -76,7 +76,7 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Default
-    pixelLightCount: 4
+    pixelLightCount: 0
     shadows: 1
     shadowResolution: 0
     shadowProjection: 0
@@ -110,7 +110,7 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: High
-    pixelLightCount: 4
+    pixelLightCount: 2
     shadows: 2
     shadowResolution: 2
     shadowProjection: 1
@@ -123,7 +123,7 @@ QualitySettings:
     blendWeights: 4
     textureQuality: 0
     anisotropicTextures: 1
-    antiAliasing: 2
+    antiAliasing: 0
     softParticles: 1
     softVegetation: 0
     realtimeReflectionProbes: 0
@@ -142,7 +142,4 @@ QualitySettings:
     asyncUploadBufferSize: 4
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality:
-    Android: 0
-    Standalone: 0
-    WebGL: 0
+  m_PerPlatformDefaultQuality: {}

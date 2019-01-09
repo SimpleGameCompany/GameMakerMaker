@@ -19,6 +19,8 @@ public class LoadManager : MonoBehaviour
     }
 
     #region LoadVariables
+    private VideoPlayer[] videoCount;
+
     public static LoadManager Instance;
     // Make sure the loading screen shows for at least 1 second:
     private const float MIN_TIME_TO_SHOW = 1f;
@@ -76,6 +78,16 @@ public class LoadManager : MonoBehaviour
     #region LoadMethods
     private void Configure()
     {
+        //Prepare the videos
+        VideoPlayer[] p = GetComponentsInChildren<VideoPlayer>();
+        foreach (var v in p)
+        {
+            v.Prepare();
+            
+            v.time = 0;
+            v.Play();
+        }
+        videoCount = p;
         // Save the bar fill's initial local scale:
         barFillLocalScale = barFillRectTransform.localScale;
         // Enable/disable the progress bar based on configuration:
@@ -171,14 +183,8 @@ public class LoadManager : MonoBehaviour
         // Play the fade in animation:
         //animator.SetTrigger("Show");
         // Reset the fade out animation flag:
-        VideoPlayer[] p = GetComponentsInChildren<VideoPlayer>();
-        foreach (var v in p)
-        {
-            v.Prepare();
-            v.time = 0;
-            v.Play();
-        }
-        RenderTexture t = p[ Random.Range(0, p.Length)].targetTexture;
+       
+        RenderTexture t = videoCount[ Random.Range(0, videoCount.Length)].targetTexture;
         GetComponentInChildren<RawImage>().texture = t;
 
 
@@ -202,14 +208,8 @@ public class LoadManager : MonoBehaviour
         // Play the fade in animation:
         //animator.SetTrigger("Show");
         // Reset the fade out animation flag:
-        VideoPlayer[] p = GetComponentsInChildren<VideoPlayer>();
-        foreach (var v in p)
-        {
-            v.Prepare();
-            v.time = 0;
-            v.Play();
-        }
-        RenderTexture t = p[Random.Range(0, p.Length)].targetTexture;
+
+        RenderTexture t = videoCount[Random.Range(0, videoCount.Length)].targetTexture;
         GetComponentInChildren<RawImage>().texture = t;
 
         didTriggerFadeOutAnimation = false;
