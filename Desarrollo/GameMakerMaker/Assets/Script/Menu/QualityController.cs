@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QualityController : MonoBehaviour {
-    static int actualLevel = 2;
+    static int actualLevel = 0;
     public string[] KeyQualityTypes;
     public LocalizedTextMeshProUGUI text;
     public static int pixelcount = 0;

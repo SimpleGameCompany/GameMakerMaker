@@ -796,7 +796,7 @@ Para la realización del trabajo tendremos un equipo de 6 personas, siguiendo lo
 
 * *Jose Daniel Campos Galán:* Programador de juego.
 
-* *Pablo Rodriguez Vicente:* Programador de juego.
+* *Pablo Rodríguez Vicente:* Programador de juego y Artista VFX.
 
 * *Raquel Gastón Vicente:* Artista 2D y Modeladora 3D.
 
