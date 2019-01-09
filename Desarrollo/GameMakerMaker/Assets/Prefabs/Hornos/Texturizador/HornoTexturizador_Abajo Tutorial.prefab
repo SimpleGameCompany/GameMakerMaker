@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 108084081297394268}
   - component: {fileID: 114802301370714760}
   m_Layer: 0
-  m_Name: Ligth
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,9 +873,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 22.04
-  m_Range: 2.3368685
-  m_SpotAngle: 30
+  m_Intensity: 12
+  m_Range: 2.46
+  m_SpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -888,7 +888,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
