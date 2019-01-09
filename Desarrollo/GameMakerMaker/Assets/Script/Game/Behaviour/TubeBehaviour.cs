@@ -64,7 +64,6 @@ public class TubeBehaviour : Interactuable {
         if (player.PickedObjet.world == world && player.PickedObjet.Completed)
         {
             anim.SetTrigger(Constantes.ANIMATION_OVEN_DROP_OBJECT);
-            ScoreController.Instance.scoreNumber += player.PickedObjet.recipe.score;
 
             ScoreController.Instance.AddScore(1,player.PickedObjet.recipe.score,"prop_"+ player.PickedObjet.recipe.complexity); 
         }
