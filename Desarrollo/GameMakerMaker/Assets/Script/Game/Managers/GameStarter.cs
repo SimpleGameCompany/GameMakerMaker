@@ -10,6 +10,10 @@ public class GameStarter : MonoBehaviour {
     public GameObject[] BackPageButton;
     void Start () {
         instance = this;
+        if(GameManager.Instance.loadedLevel.levelID == 0)
+        {
+            QualitySettings.pixelLightCount = 4;
+        }
         GameManager.Instance.RecetasPage = PageRecetas;
         GameManager.Instance.StartLevelFromCourutine();
 	}
@@ -17,6 +21,7 @@ public class GameStarter : MonoBehaviour {
 
     public void BackToMenu()
     {
+        QualitySettings.pixelLightCount = QualityController.pixelcount;
         GameManager.Instance.ResumeGame();
         GameManager.Instance.Clear();
         AsyncOperation load = SceneManager.LoadSceneAsync(Constantes.SCENE_MENU);

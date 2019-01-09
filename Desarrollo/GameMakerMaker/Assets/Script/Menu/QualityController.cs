@@ -7,11 +7,11 @@ public class QualityController : MonoBehaviour {
     static int actualLevel = 2;
     public string[] KeyQualityTypes;
     public LocalizedTextMeshProUGUI text;
-
+    public static int pixelcount = 0;
 	void Start () {
        
         QualitySettings.SetQualityLevel(actualLevel);
-        
+        pixelcount = QualitySettings.pixelLightCount;
         text.Key = KeyQualityTypes[actualLevel];
 	}
 	
@@ -24,6 +24,7 @@ public class QualityController : MonoBehaviour {
         actualLevel = ++actualLevel % 4;
         text.Key = KeyQualityTypes[actualLevel];
         QualitySettings.SetQualityLevel(actualLevel);
+        pixelcount = QualitySettings.pixelLightCount;
     }
 
     public void BackQuality()
@@ -35,5 +36,6 @@ public class QualityController : MonoBehaviour {
         }
         text.Key = KeyQualityTypes[actualLevel];
         QualitySettings.SetQualityLevel(actualLevel);
+        pixelcount = QualitySettings.pixelLightCount;
     }
 }
