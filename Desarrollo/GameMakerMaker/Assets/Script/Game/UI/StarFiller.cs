@@ -17,7 +17,7 @@ public class StarFiller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        wait = new WaitForSeconds(0.5f);
+        wait = new WaitForSeconds(0.25f);
         stars = GetComponentsInChildren<Image>();
         foreach(var e in stars)
         {
