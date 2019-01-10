@@ -64,7 +64,6 @@ GameObject:
   - component: {fileID: 23130092512919384}
   - component: {fileID: 65270486096475860}
   - component: {fileID: 114356285837035072}
-  - component: {fileID: 114156861368497182}
   m_Layer: 0
   m_Name: Suelo izquierda (1)
   m_TagString: Untagged
@@ -143,7 +142,6 @@ GameObject:
   - component: {fileID: 23924448054488696}
   - component: {fileID: 65542658269907772}
   - component: {fileID: 114561284467390476}
-  - component: {fileID: 114605626142023768}
   m_Layer: 0
   m_Name: Suelo izquierda (1)
   m_TagString: Untagged
@@ -1688,19 +1686,6 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1043079802742652}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
-  actionIcon: {fileID: 0}
---- !u!114 &114156861368497182
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117193560513784}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
@@ -1818,7 +1803,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1186244379085550}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
   m_Name: 
@@ -1869,19 +1854,6 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1384434443144972}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
-  actionIcon: {fileID: 0}
---- !u!114 &114605626142023768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1349197417446840}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
@@ -1969,7 +1941,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625765545416790}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
   m_Name: 

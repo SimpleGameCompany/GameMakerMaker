@@ -18,7 +18,7 @@ public class UIMainMenu : MonoBehaviour {
         StartCoroutine(SceneLoad(scene));
     }
 
-
+#if UNITY_WEBGL
     [DllImport("__Internal")]
     private static extern void GoCredits();
     [DllImport("__Internal")]
@@ -27,7 +27,17 @@ public class UIMainMenu : MonoBehaviour {
     private static extern void SetEnglish();
     [DllImport("__Internal")]
     private static extern void Resize();
+#endif
 
+#if UNITY_ANDROID
+    private static void GoCredits() { }
+    
+    private static  void SetSpanish() { }
+    
+    private static void SetEnglish()    { }
+   
+    private static  void Resize() { }
+#endif
     public void Awake()
     {
         try
@@ -40,10 +50,10 @@ public class UIMainMenu : MonoBehaviour {
         }
         if (Localization.Instance.SelectedLanguage == Language.Spanish)
         {
-            Spanish.interactable = false;
+            SelectSpanish();
         }else if(Localization.Instance.SelectedLanguage == Language.English)
         {
-            English.interactable = false;
+            SelectEnglish();
         }
     }
 

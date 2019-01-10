@@ -82,7 +82,6 @@ GameObject:
   - component: {fileID: 23731982995761960}
   - component: {fileID: 65730633515951252}
   - component: {fileID: 114965986976725720}
-  - component: {fileID: 114598491739887004}
   m_Layer: 0
   m_Name: Suelo izquierda (1)
   m_TagString: Untagged
@@ -855,7 +854,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1872877061332384}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
   m_Name: 
@@ -901,19 +900,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: 3b67b3c4-47b1-47d0-b6eb-b4cbac7d624a
---- !u!114 &114598491739887004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1276065834368028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  markPoint: {fileID: 0}
-  actionIcon: {fileID: 0}
 --- !u!114 &114615422994514458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -932,7 +918,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1020371197812830}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
   m_Name: 

@@ -82,10 +82,10 @@ public class StarFiller : MonoBehaviour {
         {
             Image star = stars[i];
             star.gameObject.SetActive(true);
-            if(completed > 0)
+            if(i<finalScore)
             {
                 
-                completed -= 1/3f;
+                
                 star.sprite = FullStar;
                 star.fillAmount = 0;
                 while(star.fillAmount < 1)
@@ -105,7 +105,7 @@ public class StarFiller : MonoBehaviour {
         {
             
             but.interactable = true;
-            if(but.name == Constantes.NAME_NEXT && GameManager.Instance.loadedLevel.levelID >= 7)
+            if(but.name == Constantes.NAME_NEXT && GameManager.Instance.loadedLevel.levelID > 7)
             {
                 but.interactable = false;
             }
