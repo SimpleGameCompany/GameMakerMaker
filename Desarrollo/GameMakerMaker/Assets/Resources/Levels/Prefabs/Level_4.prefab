@@ -5669,6 +5669,8 @@ GameObject:
   - component: {fileID: 23448460981657128}
   - component: {fileID: 65033727216783646}
   - component: {fileID: 114323701352143596}
+  - component: {fileID: 114907910187276684}
+  - component: {fileID: 114869645402251580}
   m_Layer: 0
   m_Name: Suelo izquierda (1)
   m_TagString: Untagged
@@ -29568,7 +29570,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1097743620163104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
   m_Name: 
@@ -29861,7 +29863,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.055
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 3e4fef17885c3214c8ea43fd714c99c3, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!114 &114731164465193596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31926,6 +31928,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guid: f6520f13-e16d-48f4-9912-334f9ff1ccc0
+--- !u!114 &114869645402251580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1784402538817440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
+  actionIcon: {fileID: 0}
 --- !u!114 &114870566410568496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32162,7 +32177,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259089783505238}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
   m_Name: 
@@ -32443,6 +32458,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markPoint: {fileID: 4643489667908652}
+  actionIcon: {fileID: 0}
+--- !u!114 &114907910187276684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1784402538817440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3927db097a23f1b4eb050457f515f8f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markPoint: {fileID: 0}
   actionIcon: {fileID: 0}
 --- !u!114 &114908109379328488
 MonoBehaviour:

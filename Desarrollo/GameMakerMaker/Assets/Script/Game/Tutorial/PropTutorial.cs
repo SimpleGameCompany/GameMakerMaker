@@ -23,6 +23,7 @@ public class PropTutorial : PropBehaviour {
         b.text.gameObject.SetActive(true);
         b.l.gameObject.SetActive(true);
         text.gameObject.SetActive(false);
+        FindObjectOfType<PaperBehaviour>().GetComponentInChildren<Light>(true).gameObject.SetActive(false);
     }
 
 
