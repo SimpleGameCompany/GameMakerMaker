@@ -5131,8 +5131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 971883252}
   - component: {fileID: 971883253}
-  - component: {fileID: 971883254}
-  - component: {fileID: 971883255}
   m_Layer: 0
   m_Name: VideoContainer
   m_TagString: Untagged
@@ -5169,31 +5167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CompletedVideos: []
-  Default: {fileID: 2800000, guid: fd30bc7a5f6683944908cb5d158602ab, type: 3}
---- !u!114 &971883254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 971883251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b13adda1242b7df49a07b50bafd725a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleMultiplier: 3
---- !u!114 &971883255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 971883251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a61a8d1c2c1648b8a590c9f727ed999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LogIntervalSeconds: 15
+  Default: {fileID: 2800000, guid: 03f45e3dd1116c2429718647c2673c77, type: 3}
 --- !u!1001 &991885351
 Prefab:
   m_ObjectHideFlags: 0
@@ -8636,7 +8610,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: fd30bc7a5f6683944908cb5d158602ab, type: 3}
+  m_Texture: {fileID: 2800000, guid: 03f45e3dd1116c2429718647c2673c77, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

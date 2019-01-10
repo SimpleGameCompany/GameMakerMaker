@@ -51,7 +51,8 @@ public class UIMainMenu : MonoBehaviour {
         if (Localization.Instance.SelectedLanguage == Language.Spanish)
         {
             SelectSpanish();
-        }else if(Localization.Instance.SelectedLanguage == Language.English)
+        }
+        else if(Localization.Instance.SelectedLanguage == Language.English)
         {
             SelectEnglish();
         }
