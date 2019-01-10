@@ -29,7 +29,7 @@ public class UIMainMenu : MonoBehaviour {
     private static extern void Resize();
 #endif
 
-#if UNITY_ANDROID
+#if UNITY_ANDROID || UNITY_STANDALONE
     private static void GoCredits() { }
     
     private static  void SetSpanish() { }
