@@ -161,6 +161,7 @@ public class GameManager : MonoBehaviour
         }
         
         Page.transform.parent = RecetasContainer[0].transform;
+        Page.GetComponent<RectTransform>().localScale = Vector3.one;
         Instantiate(Page, RecetasContainer[1].transform);
         BookBehaviour.instance.pages = Pages.ToArray();
         BookBehaviour.instance.pagesInit = PagesInit.ToArray();
