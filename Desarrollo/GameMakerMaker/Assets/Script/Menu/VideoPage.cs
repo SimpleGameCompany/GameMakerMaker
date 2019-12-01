@@ -20,7 +20,7 @@ public class VideoPage : MonoBehaviour {
 
             foreach(var e in videos)
             {
-                e.Prepare();
+                //e.Prepare();
                 StartCoroutine(LoadVideo(e));
             }
         }
@@ -39,6 +39,7 @@ public class VideoPage : MonoBehaviour {
         }
         Debug.Log("Add video");
         CompletedVideos.Add(player);
+        player.Pause();
     }
 
     public Texture getRandomVideo()
